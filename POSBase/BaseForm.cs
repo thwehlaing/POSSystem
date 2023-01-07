@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POSSystem
+namespace POSBase
 {
-    public partial class frmMain : Form
+    public partial class BaseForm : Form
     {
-        public frmMain()
+        public BaseForm()
         {
             InitializeComponent();
-            menuStrip1.BackColor = Color.MediumBlue;
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
     }
 }

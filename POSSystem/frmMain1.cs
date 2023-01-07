@@ -19,11 +19,6 @@ namespace POSSystem
 
         }
 
-        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
         private void frmMain1_Load(object sender, EventArgs e)
         {
 
@@ -45,6 +40,21 @@ namespace POSSystem
         {
             frmSubCategory frmsubCat = new frmSubCategory();
             frmsubCat.Show();
+        }
+
+        private void menuStrip2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tsmSaleMenu_MouseHover(object sender, EventArgs e)
+        {
+            this.ForeColor = Color.White;
+        }
+
+        private void menuStrip2_MouseHover(object sender, EventArgs e)
+        {
+            this.ForeColor = Color.Black;
         }
     }
 }
