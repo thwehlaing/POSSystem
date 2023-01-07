@@ -63,6 +63,36 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cog_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cog-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ledger30 {
+            get {
+                object obj = ResourceManager.GetObject("ledger30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ledger301 {
+            get {
+                object obj = ResourceManager.GetObject("ledger301", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ledger40 {
             get {
                 object obj = ResourceManager.GetObject("ledger40", resourceCulture);
@@ -83,6 +113,26 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap purchase30 {
+            get {
+                object obj = ResourceManager.GetObject("purchase30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report30 {
+            get {
+                object obj = ResourceManager.GetObject("report30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap report40 {
             get {
                 object obj = ResourceManager.GetObject("report40", resourceCulture);
@@ -96,6 +146,16 @@ namespace POSBase.Properties {
         internal static System.Drawing.Bitmap saleico40 {
             get {
                 object obj = ResourceManager.GetObject("saleico40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sales30 {
+            get {
+                object obj = ResourceManager.GetObject("sales30", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
