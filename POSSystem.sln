@@ -5,7 +5,11 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSSystem", "POSSystem\POSSystem.csproj", "{37870C61-0AE2-471A-BF01-6A5776284514}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSBase", "POSBase\POSBase.csproj", "{AD7B7227-F227-43E7-9FF9-F470B6B5CAAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSBase", "POSBase\POSBase.csproj", "{AD7B7227-F227-43E7-9FF9-F470B6B5CAAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{B4ADEC3B-52FE-47EC-A961-29B4483255F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{AD7B7227-F227-43E7-9FF9-F470B6B5CAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD7B7227-F227-43E7-9FF9-F470B6B5CAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD7B7227-F227-43E7-9FF9-F470B6B5CAAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4ADEC3B-52FE-47EC-A961-29B4483255F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4ADEC3B-52FE-47EC-A961-29B4483255F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4ADEC3B-52FE-47EC-A961-29B4483255F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4ADEC3B-52FE-47EC-A961-29B4483255F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
