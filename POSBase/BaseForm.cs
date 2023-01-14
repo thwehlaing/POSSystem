@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO.Packaging;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -15,42 +16,18 @@ namespace POSBase
 {
     public partial class BaseForm : Form
     {
+        protected List<ToolStripMenuItem> MenuItemList { get; set; }
+        protected List<ToolStripMenuItem> SubMenuItemList { get; set; }
         public BaseForm()
         {
             InitializeComponent();
             tspCurrentDate.Text ="Date :"+ DateTime.Now.ToString("dd/MM/yyyy");
-            tspSaleMenu.MouseEnter += new System.EventHandler(ChangeMenuColor);
-            tspSaleMenu.MouseLeave += new System.EventHandler(ChangeBackMenuColor);
-            tspPurchaseMenu.MouseEnter += new System.EventHandler(ChangeMenuColor);
-            tspPurchaseMenu.MouseLeave += new System.EventHandler(ChangeBackMenuColor);
-            tspLedgerMenu.MouseEnter += new System.EventHandler(ChangeMenuColor);
-            tspLedgerMenu.MouseLeave += new System.EventHandler(ChangeBackMenuColor);
-            tspReportMenu.MouseEnter += new System.EventHandler(ChangeMenuColor);
-            tspReportMenu.MouseLeave += new System.EventHandler(ChangeBackMenuColor);
-            tspSettingMenu.MouseEnter += new System.EventHandler(ChangeMenuColor);
-            tspSettingMenu.MouseLeave += new System.EventHandler(ChangeBackMenuColor);
-        }
-
-        private void tspSaleMenu_Click(object sender, EventArgs e)
-        {
-            this.ForeColor = Color.Black;
-        }
-
-        private void tspSaleMenu_DropDownOpened(object sender, EventArgs e)
-        {
-            this.ForeColor = Color.Black;
-        }
-
-        private void tspSaleMenu_MouseEnter(object sender, EventArgs e)
-        {
-            ToolStripMenuItem TSMI = sender as ToolStripMenuItem;
-            TSMI.ForeColor = Color.Black;
-        }
-
-        private void tspSaleMenu_MouseLeave(object sender, EventArgs e)
-        {
-            ToolStripMenuItem TSMI = sender as ToolStripMenuItem;
-            TSMI.ForeColor = Color.White;
+            this.MenuItemList = new List<ToolStripMenuItem> { tspSaleMenu, tspPurchaseMenu, tspLedgerMenu, tspReportMenu, tspSettingMenu };
+            this.SubMenuItemList = new List<ToolStripMenuItem> { tspSale,tspInvoice,tspDamage,tspPurchase,tspRepackage,tspStockLedger,tspCashLedger,
+                                   tspDailyRpt,tspMonthlyRpt,tspYearlyRpt,tspCategory,tspSubCategory,tspStock,tspSupplier,tspUser,tspPackage};
+            this.MenuItemList.ForEach(x => x.MouseEnter += this.ChangeMenuColor);
+            this.MenuItemList.ForEach(x => x.MouseLeave += this.ChangeBackMenuColor);
+            this.SubMenuItemList.ForEach(x => x.Click += this.MenuItem_Click);
         }
         private void ChangeMenuColor(object sender, EventArgs e)
         {
@@ -60,7 +37,12 @@ namespace POSBase
         private void ChangeBackMenuColor(object sender, EventArgs e)
         {
             ToolStripMenuItem TSMI = sender as ToolStripMenuItem;
-            TSMI.ForeColor = Color.White;
+            TSMI.ForeColor = Color.Black;
+        }
+
+        protected virtual void MenuItem_Click(object sender, EventArgs e)
+        {
+
         }
         protected void StartProgram()
         {

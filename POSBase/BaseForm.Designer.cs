@@ -59,6 +59,8 @@
             this.tspSupplier = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.tspUser = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.tspPackage = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tspLoginUser = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +91,7 @@
             this.menuStrip2.Location = new System.Drawing.Point(1, 0);
             this.menuStrip2.Name = "menuStrip2";
             this.menuStrip2.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip2.Size = new System.Drawing.Size(102, 566);
+            this.menuStrip2.Size = new System.Drawing.Size(95, 566);
             this.menuStrip2.TabIndex = 4;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -102,13 +104,13 @@
             this.toolStripSeparator3,
             this.tspDamage});
             this.tspSaleMenu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspSaleMenu.ForeColor = System.Drawing.Color.White;
-            this.tspSaleMenu.Image = global::POSBase.Properties.Resources.sales30;
+            this.tspSaleMenu.ForeColor = System.Drawing.Color.Black;
+            this.tspSaleMenu.Image = global::POSBase.Properties.Resources.icons8_land_sales_40__2_;
             this.tspSaleMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspSaleMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspSaleMenu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.tspSaleMenu.Name = "tspSaleMenu";
-            this.tspSaleMenu.Size = new System.Drawing.Size(91, 58);
+            this.tspSaleMenu.Size = new System.Drawing.Size(84, 68);
             this.tspSaleMenu.Text = "အရောင်း";
             this.tspSaleMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspSaleMenu.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
@@ -151,13 +153,13 @@
             this.toolStripSeparator4,
             this.tspRepackage});
             this.tspPurchaseMenu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspPurchaseMenu.ForeColor = System.Drawing.Color.White;
-            this.tspPurchaseMenu.Image = global::POSBase.Properties.Resources.purchase30;
+            this.tspPurchaseMenu.ForeColor = System.Drawing.Color.Black;
+            this.tspPurchaseMenu.Image = global::POSBase.Properties.Resources.icons8_ticket_purchase_40;
             this.tspPurchaseMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspPurchaseMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspPurchaseMenu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.tspPurchaseMenu.Name = "tspPurchaseMenu";
-            this.tspPurchaseMenu.Size = new System.Drawing.Size(91, 58);
+            this.tspPurchaseMenu.Size = new System.Drawing.Size(84, 68);
             this.tspPurchaseMenu.Text = "အ၀ယ်";
             this.tspPurchaseMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspPurchaseMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -186,13 +188,13 @@
             this.toolStripSeparator1,
             this.tspCashLedger});
             this.tspLedgerMenu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspLedgerMenu.ForeColor = System.Drawing.Color.White;
-            this.tspLedgerMenu.Image = global::POSBase.Properties.Resources.ledger30;
+            this.tspLedgerMenu.ForeColor = System.Drawing.Color.Black;
+            this.tspLedgerMenu.Image = global::POSBase.Properties.Resources.icons8_ledger_40;
             this.tspLedgerMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspLedgerMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspLedgerMenu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.tspLedgerMenu.Name = "tspLedgerMenu";
-            this.tspLedgerMenu.Size = new System.Drawing.Size(91, 58);
+            this.tspLedgerMenu.Size = new System.Drawing.Size(84, 68);
             this.tspLedgerMenu.Text = "စာရင်း";
             this.tspLedgerMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspLedgerMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -223,13 +225,13 @@
             this.toolStripSeparator6,
             this.tspYearlyRpt});
             this.tspReportMenu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspReportMenu.ForeColor = System.Drawing.Color.White;
-            this.tspReportMenu.Image = global::POSBase.Properties.Resources.report30;
+            this.tspReportMenu.ForeColor = System.Drawing.Color.Black;
+            this.tspReportMenu.Image = global::POSBase.Properties.Resources.icons8_account_40;
             this.tspReportMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspReportMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspReportMenu.Margin = new System.Windows.Forms.Padding(0, 0, 0, 3);
             this.tspReportMenu.Name = "tspReportMenu";
-            this.tspReportMenu.Size = new System.Drawing.Size(91, 58);
+            this.tspReportMenu.Size = new System.Drawing.Size(84, 68);
             this.tspReportMenu.Text = "အစီရင်ခံစာ";
             this.tspReportMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspReportMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -273,14 +275,16 @@
             this.toolStripSeparator9,
             this.tspSupplier,
             this.toolStripSeparator10,
-            this.tspUser});
+            this.tspUser,
+            this.toolStripSeparator11,
+            this.tspPackage});
             this.tspSettingMenu.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspSettingMenu.ForeColor = System.Drawing.Color.White;
-            this.tspSettingMenu.Image = global::POSBase.Properties.Resources.icons8_cog_30;
+            this.tspSettingMenu.ForeColor = System.Drawing.Color.Black;
+            this.tspSettingMenu.Image = global::POSBase.Properties.Resources.icons8_settings_40;
             this.tspSettingMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspSettingMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspSettingMenu.Name = "tspSettingMenu";
-            this.tspSettingMenu.Size = new System.Drawing.Size(91, 58);
+            this.tspSettingMenu.Size = new System.Drawing.Size(84, 68);
             this.tspSettingMenu.Text = "ထိန်းချုပ်မှု";
             this.tspSettingMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspSettingMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
@@ -335,12 +339,24 @@
             this.tspUser.Size = new System.Drawing.Size(176, 28);
             this.tspUser.Text = "အသုံးပြုသူ";
             // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(173, 6);
+            // 
+            // tspPackage
+            // 
+            this.tspPackage.Name = "tspPackage";
+            this.tspPackage.Size = new System.Drawing.Size(176, 28);
+            this.tspPackage.Text = "အထုပ်ထုပ်ရန်";
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Inset;
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.36361F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.63639F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 69.80007F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.19993F));
             this.tableLayoutPanel1.Controls.Add(this.menuStrip1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.Navy;
@@ -360,35 +376,41 @@
             this.tspLoginUser,
             this.tspCurrentDate,
             this.tspLogOut});
-            this.menuStrip1.Location = new System.Drawing.Point(991, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(956, 2);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(379, 57);
+            this.menuStrip1.Size = new System.Drawing.Size(412, 53);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // tspLoginUser
             // 
             this.tspLoginUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspLoginUser.ForeColor = System.Drawing.Color.White;
+            this.tspLoginUser.ForeColor = System.Drawing.Color.Black;
+            this.tspLoginUser.Image = global::POSBase.Properties.Resources.icons8_user_16;
+            this.tspLoginUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspLoginUser.Name = "tspLoginUser";
-            this.tspLoginUser.Size = new System.Drawing.Size(128, 51);
+            this.tspLoginUser.Size = new System.Drawing.Size(144, 47);
             this.tspLoginUser.Text = "Welcome Admin";
             // 
             // tspCurrentDate
             // 
             this.tspCurrentDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspCurrentDate.ForeColor = System.Drawing.Color.White;
+            this.tspCurrentDate.ForeColor = System.Drawing.Color.Black;
+            this.tspCurrentDate.Image = global::POSBase.Properties.Resources.icons8_calendar_16;
+            this.tspCurrentDate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspCurrentDate.Name = "tspCurrentDate";
-            this.tspCurrentDate.Size = new System.Drawing.Size(100, 51);
+            this.tspCurrentDate.Size = new System.Drawing.Size(116, 47);
             this.tspCurrentDate.Text = "MenuItem2";
             // 
             // tspLogOut
             // 
             this.tspLogOut.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tspLogOut.ForeColor = System.Drawing.Color.White;
+            this.tspLogOut.ForeColor = System.Drawing.Color.Black;
+            this.tspLogOut.Image = global::POSBase.Properties.Resources.icons8_login_16;
+            this.tspLogOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspLogOut.Name = "tspLogOut";
-            this.tspLogOut.Size = new System.Drawing.Size(68, 51);
+            this.tspLogOut.Size = new System.Drawing.Size(84, 47);
             this.tspLogOut.Text = "Logout";
             // 
             // panel1
@@ -399,14 +421,13 @@
             this.panel1.Location = new System.Drawing.Point(0, 57);
             this.panel1.Margin = new System.Windows.Forms.Padding(5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(104, 692);
+            this.panel1.Size = new System.Drawing.Size(100, 692);
             this.panel1.TabIndex = 6;
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.toolStripMenuItem5.ForeColor = System.Drawing.Color.White;
-            this.toolStripMenuItem5.Image = global::POSBase.Properties.Resources.setting;
             this.toolStripMenuItem5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.toolStripMenuItem5.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
@@ -418,8 +439,8 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.Yellow;
-            this.label2.Location = new System.Drawing.Point(572, 18);
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(65, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 24);
@@ -431,8 +452,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Yellow;
-            this.label1.Location = new System.Drawing.Point(512, 11);
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(5, 11);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 36);
@@ -443,7 +464,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
@@ -508,5 +529,7 @@
         private ToolStripMenuItem tspUser;
         private Label label2;
         private Label label1;
+        private ToolStripSeparator toolStripSeparator11;
+        private ToolStripMenuItem tspPackage;
     }
 }

@@ -63,9 +63,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_cog_30 {
+        internal static System.Drawing.Bitmap icons8_account_40 {
             get {
-                object obj = ResourceManager.GetObject("icons8-cog-30", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-account-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ledger30 {
+        internal static System.Drawing.Bitmap icons8_calendar_16 {
             get {
-                object obj = ResourceManager.GetObject("ledger30", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-calendar-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ledger301 {
+        internal static System.Drawing.Bitmap icons8_land_sales_40__2_ {
             get {
-                object obj = ResourceManager.GetObject("ledger301", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-land-sales-40 (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ledger40 {
+        internal static System.Drawing.Bitmap icons8_ledger_40 {
             get {
-                object obj = ResourceManager.GetObject("ledger40", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-ledger-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purchase {
+        internal static System.Drawing.Bitmap icons8_login_16 {
             get {
-                object obj = ResourceManager.GetObject("purchase", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-login-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap purchase30 {
+        internal static System.Drawing.Bitmap icons8_settings_40 {
             get {
-                object obj = ResourceManager.GetObject("purchase30", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-settings-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap report30 {
+        internal static System.Drawing.Bitmap icons8_ticket_purchase_40 {
             get {
-                object obj = ResourceManager.GetObject("report30", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-ticket-purchase-40", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,39 +133,9 @@ namespace POSBase.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap report40 {
+        internal static System.Drawing.Bitmap icons8_user_16 {
             get {
-                object obj = ResourceManager.GetObject("report40", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap saleico40 {
-            get {
-                object obj = ResourceManager.GetObject("saleico40", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap sales30 {
-            get {
-                object obj = ResourceManager.GetObject("sales30", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap setting {
-            get {
-                object obj = ResourceManager.GetObject("setting", resourceCulture);
+                object obj = ResourceManager.GetObject("icons8-user-16", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
