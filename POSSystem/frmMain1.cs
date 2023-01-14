@@ -32,8 +32,8 @@ namespace POSSystem
 
         private void tspMenuCategory_Click(object sender, EventArgs e)
         {
-            frmCategory frmcat = new frmCategory();
-            frmcat.Show();
+            //frmCategory frmcat = new frmCategory();
+            //frmcat.Show();
         }
 
         private void tspSubCategoryMenu_Click(object sender, EventArgs e)

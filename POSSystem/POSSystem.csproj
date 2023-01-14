@@ -9,12 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BL\BL.csproj" />
-    <ProjectReference Include="..\Entity\Entity.csproj" />
-    <ProjectReference Include="..\POSBase\POSBase.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Reference Include="BL">
+      <HintPath>..\BL\bin\Debug\net6.0\BL.dll</HintPath>
+    </Reference>
+    <Reference Include="Category">
+      <HintPath>..\..\DLL\Category.dll</HintPath>
+    </Reference>
+    <Reference Include="Entity">
+      <HintPath>..\BL\bin\Debug\net6.0\Entity.dll</HintPath>
+    </Reference>
     <Reference Include="POSBase">
       <HintPath>..\POSBase\bin\Debug\net6.0-windows\POSBase.dll</HintPath>
     </Reference>
