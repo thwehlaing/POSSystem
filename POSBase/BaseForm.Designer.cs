@@ -288,51 +288,51 @@
             // tspCategory
             // 
             this.tspCategory.Name = "tspCategory";
-            this.tspCategory.Size = new System.Drawing.Size(180, 28);
+            this.tspCategory.Size = new System.Drawing.Size(176, 28);
             this.tspCategory.Text = "အမျိုးအစား";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(173, 6);
             // 
             // tspSubCategory
             // 
             this.tspSubCategory.Name = "tspSubCategory";
-            this.tspSubCategory.Size = new System.Drawing.Size(180, 28);
+            this.tspSubCategory.Size = new System.Drawing.Size(176, 28);
             this.tspSubCategory.Text = "အမျိုးအစားခွဲ";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(173, 6);
             // 
             // tspStock
             // 
             this.tspStock.Name = "tspStock";
-            this.tspStock.Size = new System.Drawing.Size(180, 28);
+            this.tspStock.Size = new System.Drawing.Size(176, 28);
             this.tspStock.Text = "ကုန်ပစ္စည်း";
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(173, 6);
             // 
             // tspSupplier
             // 
             this.tspSupplier.Name = "tspSupplier";
-            this.tspSupplier.Size = new System.Drawing.Size(180, 28);
+            this.tspSupplier.Size = new System.Drawing.Size(176, 28);
             this.tspSupplier.Text = "ထောက်ပံ့ပေးသူ";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(173, 6);
             // 
             // tspUser
             // 
             this.tspUser.Name = "tspUser";
-            this.tspUser.Size = new System.Drawing.Size(180, 28);
+            this.tspUser.Size = new System.Drawing.Size(176, 28);
             this.tspUser.Text = "အသုံးပြုသူ";
             // 
             // tableLayoutPanel1
@@ -454,6 +454,7 @@
             this.Name = "BaseForm";
             this.Text = "BaseForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.BaseForm_Load);
             this.menuStrip2.ResumeLayout(false);
             this.menuStrip2.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);

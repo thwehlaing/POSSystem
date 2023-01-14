@@ -66,6 +66,7 @@ namespace POSBase
         {
             string filePath = string.Empty;
             ReadIniFile readIni = new ReadIniFile();
+            //comment out .net 6 is not suitable
             //if (Debugger.IsAttached)
             //{
             //    System.Uri u = new System.Uri(System.Reflection.Assembly.GetExecutingAssembly().CodeBase);
@@ -73,8 +74,9 @@ namespace POSBase
             //}
             //else
             //{
-                filePath = @"C:\\DBConfig\\DBConfig.ini";
-           // }
+            //    filePath = @"C:\\DBConfig\\DBConfig.ini";
+            //}
+            filePath = @"C:\\DBConfig\\DBConfig.ini";
             Dictionary<string, string> dicConfig = readIni.ReadConfig(filePath, "DataBase", "POSDB");
             if (this.GetCmdLine() == false || dicConfig.Count == 0)
             {
@@ -126,6 +128,11 @@ namespace POSBase
             //    return false;
 
             return true;
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+            StartProgram();
         }
     }
 }

@@ -10,67 +10,29 @@ namespace BL
 {
     public class DBAccessBL
     {
-        public bool UseTran;
         public DBAccessBL()
         {
-            UseTran = false;
+          
         }
 
         public DataTable SelectDatatable(string StoreprocedureName, string ConnectionString, params SqlParameter[] para)
         {
-            if (UseTran)
+            DataTable dt = new DataTable();
+            var newCon = new SqlConnection(ConnectionString);
+            using (var adapt = new SqlDataAdapter(StoreprocedureName, newCon))
             {
-                using (SqlConnection sqlConnection = new SqlConnection(ConnectionString))
+                newCon.Open();
+                adapt.SelectCommand.CommandType = CommandType.StoredProcedure;
+                if (para != null)
                 {
-                    sqlConnection.Open();
-                    SqlCommand sqlCommand = sqlConnection.CreateCommand();
-                    SqlTransaction sqlTransaction = sqlConnection.BeginTransaction();
-                    sqlCommand.Connection = sqlConnection;
-                    sqlCommand.Transaction = sqlTransaction;
-                    sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.CommandText = StoreprocedureName;
-
-                    var adapt = new SqlDataAdapter(StoreprocedureName, sqlConnection);
-                    adapt.SelectCommand = sqlCommand;
-
-                    if (para != null)
-                        para = ChangeToDBNull(para);
-                    sqlCommand.Parameters.AddRange(para);
-
-                    DataTable dt = new DataTable();
-
-                    try
-                    {
-                        adapt.Fill(dt);
-                        sqlTransaction.Commit();
-                        return dt;
-                    }
-                    catch (Exception ex)
-                    {
-                        sqlTransaction.Rollback();
-                        throw ex;
-                    }
+                    para = ChangeToDBNull(para);
+                    adapt.SelectCommand.Parameters.AddRange(para);
                 }
-            }
-            else
-            {
-                DataTable dt = new DataTable();
-                var newCon = new SqlConnection(ConnectionString);
-                using (var adapt = new SqlDataAdapter(StoreprocedureName, newCon))
-                {
-                    newCon.Open();
-                    adapt.SelectCommand.CommandType = CommandType.StoredProcedure;
-                    if (para != null)
-                    {
-                        para = ChangeToDBNull(para);
-                        adapt.SelectCommand.Parameters.AddRange(para);
-                    }
 
-                    adapt.Fill(dt);
-                    newCon.Close();
-                }
-                return dt;
+                adapt.Fill(dt);
+                newCon.Close();
             }
+            return dt;
         }
 
 
@@ -93,59 +55,33 @@ namespace BL
             return para;
         }
 
-        public string InsertUpdateDeleteData(string sSQL, string conStr, params SqlParameter[] para)
+        public bool InsertUpdateDeleteData(string sSQL, string conStr, params SqlParameter[] para)
         {
-            if (UseTran)
+            using (SqlConnection sqlConnection = new SqlConnection(conStr))
             {
-                using (SqlConnection sqlConnection = new SqlConnection(conStr))
-                {
-                    sqlConnection.Open();
-                    SqlCommand sqlCommand = sqlConnection.CreateCommand();
-                    SqlTransaction sqlTransaction = sqlConnection.BeginTransaction();
-                    sqlCommand.Connection = sqlConnection;
-                    sqlCommand.Transaction = sqlTransaction;
-                    sqlCommand.CommandType = CommandType.StoredProcedure;
-                    sqlCommand.CommandText = sSQL;
-                    if (para != null)
-                        para = ChangeToDBNull(para);
-                    sqlCommand.Parameters.AddRange(para);
+                sqlConnection.Open();
+                SqlCommand sqlCommand = sqlConnection.CreateCommand();
+                SqlTransaction sqlTransaction = sqlConnection.BeginTransaction();
+                sqlCommand.Connection = sqlConnection;
+                sqlCommand.Transaction = sqlTransaction;
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.CommandText = sSQL;
+                if (para != null)
+                    para = ChangeToDBNull(para);
+                sqlCommand.Parameters.AddRange(para);
 
-                    try
-                    {
-                        sqlCommand.ExecuteNonQuery();
-                        sqlTransaction.Commit();
-                        return "true";
-                    }
-                    catch (Exception ex)
-                    {
-                        sqlTransaction.Rollback();
-                        throw ex;
-                    }
-                }
-            }
-            else
-            {
                 try
                 {
-                    var newCon = new SqlConnection(conStr);
-                    if (para != null)
-                        para = ChangeToDBNull(para);
-                    SqlCommand cmd = new SqlCommand(sSQL, newCon)
-                    {
-                        CommandType = CommandType.StoredProcedure
-                    };
-                    cmd.Parameters.AddRange(para);
-                    cmd.Connection.Open();
-                    cmd.ExecuteNonQuery();
-                    cmd.Connection.Close();
-                    return "true";
+                    sqlCommand.ExecuteNonQuery();
+                    sqlTransaction.Commit();
+                    return true;
                 }
                 catch (Exception ex)
                 {
+                    sqlTransaction.Rollback();
                     throw ex;
                 }
             }
-
         }
     }
 }

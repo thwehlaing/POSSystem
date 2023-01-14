@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSSystem", "POSSystem\POSS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSBase", "POSBase\POSBase.csproj", "{AD7B7227-F227-43E7-9FF9-F470B6B5CAAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{B4ADEC3B-52FE-47EC-A961-29B4483255F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BL", "BL\BL.csproj", "{B4ADEC3B-52FE-47EC-A961-29B4483255F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csproj", "{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Control", "POS_Control\POS_Control.csproj", "{C7EE0262-6350-4BC8-A386-F3B644005954}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D081B0A5-D44C-43B6-AE3C-774FDC9CB808}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7EE0262-6350-4BC8-A386-F3B644005954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7EE0262-6350-4BC8-A386-F3B644005954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7EE0262-6350-4BC8-A386-F3B644005954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7EE0262-6350-4BC8-A386-F3B644005954}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
