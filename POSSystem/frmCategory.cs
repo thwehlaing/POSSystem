@@ -22,9 +22,9 @@ namespace POSSystem
 
         private void frmCategory_Load(object sender, EventArgs e)
         {
-            StartProgram();
-            DataTable dt = new DataTable();
-            dt = bl.Category_Select();
+            //StartProgram();
+            //DataTable dt = new DataTable();
+            //dt = bl.Category_Select();
         }
     }
 }
