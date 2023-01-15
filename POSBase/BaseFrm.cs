@@ -1,5 +1,4 @@
-﻿using POSBase;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POSSystem
+namespace POSBase
 {
-    public partial class frmUser :BaseFrm
+    public partial class BaseFrm : Form
     {
-        public frmUser()
+        public BaseFrm()
         {
             InitializeComponent();
+        }
+
+        private void pButton8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

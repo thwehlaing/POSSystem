@@ -19,8 +19,8 @@ namespace POSSystem
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MainForm frmMain = new MainForm();
-            frmMain.Show();
+            frmUser cat = new frmUser();
+            cat.Show();
         }
     }
 }

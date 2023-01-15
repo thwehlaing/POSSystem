@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace POSSystem
 {
-    public partial class frmUser :BaseFrm
+    public partial class Form1 : BaseFrm
     {
-        public frmUser()
+        public Form1()
         {
             InitializeComponent();
         }
