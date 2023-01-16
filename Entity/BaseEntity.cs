@@ -19,7 +19,8 @@ namespace Entity
         public string ProgramID { get; set; }
         public string InsertOperator { get; set; }
         public string UpdateOperator { get; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
 
-       
     }
 }
