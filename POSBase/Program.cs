@@ -12,7 +12,7 @@ namespace POSBase
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //To  Test
-            Application.Run(new BaseFrm());
+            Application.Run(new BaseForm());
         }
     }
 }

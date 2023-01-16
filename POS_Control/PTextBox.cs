@@ -58,7 +58,7 @@ namespace POS_Control
             bl = new BaseBL();
             errchk = new ErrorCheck();
 
-            base.MinimumSize = new Size(100, 19);
+            base.MinimumSize = new Size(100, 20);
         }
         public override bool AutoSize
         {

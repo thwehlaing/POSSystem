@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace POS_Control
 {
     public class PButton:Button
     {
+        public ButtonType.BType ButtonType { get; set; }
         public PButton()
         {
             this.BackColor = ColorTranslator.FromHtml("#BFBFBF");

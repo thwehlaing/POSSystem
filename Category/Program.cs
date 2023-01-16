@@ -1,5 +1,3 @@
-using POSSystem;
-
 namespace Category
 {
     internal static class Program
@@ -13,7 +11,7 @@ namespace Category
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmCategory());
+            Application.Run(new Category());
         }
     }
 }

@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entity", "Entity\Entity.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS_Control", "POS_Control\POS_Control.csproj", "{C7EE0262-6350-4BC8-A386-F3B644005954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POSMenu", "POSMenu\POSMenu.csproj", "{CBE654F1-4E36-409C-9A30-A628E3AB2B5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSMenu", "POSMenu\POSMenu.csproj", "{CBE654F1-4E36-409C-9A30-A628E3AB2B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Category", "Category\Category.csproj", "{2C620466-8905-4F38-B9A1-D72A7E0474EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{CBE654F1-4E36-409C-9A30-A628E3AB2B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBE654F1-4E36-409C-9A30-A628E3AB2B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CBE654F1-4E36-409C-9A30-A628E3AB2B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C620466-8905-4F38-B9A1-D72A7E0474EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C620466-8905-4F38-B9A1-D72A7E0474EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C620466-8905-4F38-B9A1-D72A7E0474EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C620466-8905-4F38-B9A1-D72A7E0474EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,13 +11,13 @@ namespace POS_Control
     {
         public PLabel() : base()
         {
-            BackColor = Color.FromArgb(255, 230, 153);
+            BackColor = Color.FromArgb(224, 255, 255);
             base.AutoSize = false;
             TextAlign = ContentAlignment.MiddleCenter;
             BorderStyle = BorderStyle.FixedSingle;
             FlatStyle = FlatStyle.Flat;
             base.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold);
-            base.Size = new Size(100, 19);
+            base.Size = new Size(100, 30);
         }
 
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -31,7 +31,7 @@ namespace POS_Control
         {
             base.InitLayout();
             base.AutoSize = false;
-            base.Height = 19;
+            base.Height = 30;
         }
     }
 }
