@@ -21,5 +21,10 @@ namespace POSBase
         {
 
         }
+
+        private void BaseFrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
