@@ -34,16 +34,6 @@ namespace POSBase
         #region Function Button
         protected PButton F1 { get => BtnF1; set => BtnF1 = value; }
         protected PButton F2 { get => BtnF2; set => BtnF2 = value; }
-        protected PButton F3 { get => BtnF3; set => BtnF3 = value; }
-        protected PButton F4 { get => BtnF4; set => BtnF4 = value; }
-        protected PButton F5 { get => BtnF5; set => BtnF5 = value; }
-        protected PButton F6 { get => BtnF6; set => BtnF6 = value; }
-        protected PButton F7 { get => BtnF7; set => BtnF7 = value; }
-        protected PButton F8 { get => BtnF8; set => BtnF8 = value; }
-        protected PButton F9 { get => BtnF9; set => BtnF9 = value; }
-        protected PButton F10 { get => BtnF10; set => BtnF10 = value; }
-        protected PButton F11 { get => BtnF11; set => BtnF11 = value; }
-        protected PButton F12 { get => BtnF12; set => BtnF12 = value; }
         #endregion
         public BaseForm()
         {

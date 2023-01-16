@@ -33,9 +33,9 @@
             this.tspLoginUser = new System.Windows.Forms.ToolStripMenuItem();
             this.tspCurrentDate = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pButton11 = new POS_Control.PButton();
+            this.BtnF1 = new POS_Control.PButton();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.pButton1 = new POS_Control.PButton();
+            this.BtnF2 = new POS_Control.PButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -103,18 +103,18 @@
             this.toolStripMenuItem5.Size = new System.Drawing.Size(212, 54);
             this.toolStripMenuItem5.Text = "ထိန်းချုပ်မှု";
             // 
-            // pButton11
+            // BtnF1
             // 
-            this.pButton11.BackColor = System.Drawing.Color.White;
-            this.pButton11.ButtonType = Entity.ButtonType.BType.Normal;
-            this.pButton11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pButton11.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pButton11.Location = new System.Drawing.Point(3, 3);
-            this.pButton11.Name = "pButton11";
-            this.pButton11.Size = new System.Drawing.Size(147, 48);
-            this.pButton11.TabIndex = 38;
-            this.pButton11.Text = "(F1)";
-            this.pButton11.UseVisualStyleBackColor = false;
+            this.BtnF1.BackColor = System.Drawing.Color.White;
+            this.BtnF1.ButtonType = Entity.ButtonType.BType.Normal;
+            this.BtnF1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnF1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnF1.Location = new System.Drawing.Point(3, 3);
+            this.BtnF1.Name = "BtnF1";
+            this.BtnF1.Size = new System.Drawing.Size(147, 48);
+            this.BtnF1.TabIndex = 38;
+            this.BtnF1.Text = "(F1)";
+            this.BtnF1.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
@@ -132,8 +132,8 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 62F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 112F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 146F));
-            this.tableLayoutPanel3.Controls.Add(this.pButton1, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.pButton11, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.BtnF2, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.BtnF1, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 907);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -143,18 +143,18 @@
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1713, 54);
             this.tableLayoutPanel3.TabIndex = 39;
             // 
-            // pButton1
+            // BtnF2
             // 
-            this.pButton1.BackColor = System.Drawing.Color.White;
-            this.pButton1.ButtonType = Entity.ButtonType.BType.Normal;
-            this.pButton1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.pButton1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pButton1.Location = new System.Drawing.Point(1557, 3);
-            this.pButton1.Name = "pButton1";
-            this.pButton1.Size = new System.Drawing.Size(151, 48);
-            this.pButton1.TabIndex = 39;
-            this.pButton1.Text = "(F1)";
-            this.pButton1.UseVisualStyleBackColor = false;
+            this.BtnF2.BackColor = System.Drawing.Color.White;
+            this.BtnF2.ButtonType = Entity.ButtonType.BType.Normal;
+            this.BtnF2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnF2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnF2.Location = new System.Drawing.Point(1557, 3);
+            this.BtnF2.Name = "BtnF2";
+            this.BtnF2.Size = new System.Drawing.Size(151, 48);
+            this.BtnF2.TabIndex = 39;
+            this.BtnF2.Text = "(F1)";
+            this.BtnF2.UseVisualStyleBackColor = false;
             // 
             // BaseForm
             // 
@@ -184,21 +184,9 @@
         private ToolStripMenuItem tspCurrentDate;
         private ToolStripMenuItem toolStripMenuItem5;
         private TableLayoutPanel tableLayoutPanel2;
-        private POS_Control.PButton BtnF10;
-        private POS_Control.PButton BtnF9;
-        private POS_Control.PButton BtnF8;
-        private POS_Control.PButton BtnF7;
-        private POS_Control.PButton BtnF6;
-        private POS_Control.PButton BtnF5;
-        private POS_Control.PButton BtnF4;
-        private POS_Control.PButton BtnF3;
-        private POS_Control.PButton BtnF2;
         private POS_Control.PButton BtnF1;
-        private POS_Control.PButton BtnF12;
-        private POS_Control.PButton BtnF11;
-        private POS_Control.PButton pButton11;
         private POS_Control.PButton pButton12;
         private TableLayoutPanel tableLayoutPanel3;
-        private POS_Control.PButton pButton1;
+        private POS_Control.PButton BtnF2;
     }
 }

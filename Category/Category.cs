@@ -28,7 +28,7 @@ namespace Category
 
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
            
-            SetButton(ButtonType.BType.Display, F12, "ပြမည်", true);
+            SetButton(ButtonType.BType.Display, F2, "ပြမည်", true);
         }
     }
 }
