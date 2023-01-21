@@ -27,7 +27,7 @@ namespace SubCategory
             ProgramID = "SubCategory";
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Display, F2, "ထည့်မည်", true);
+            SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
             BindCatgory();
             cboCategory.Focus();
         }
@@ -44,7 +44,7 @@ namespace SubCategory
 
         public override void FunctionProcess(string tagID)
         {
-            if (tagID == "12")
+            if (tagID == "2")
             {              
                 DBProcess();
             }
@@ -63,9 +63,10 @@ namespace SubCategory
         private SubCategoryEntity GetInsertSubCategory()
         {
             SubCategoryEntity obj = new SubCategoryEntity();
-            obj.CategoryCD = cboCategory.SelectedValue.ToString();
-            obj.SubCode = "";
+            obj.CategoryCD = cboCategory.SelectedValue.ToString();          
             obj.SubName = txtSubCategory.Text;
+            string selected =cboStatus.GetItemText(cboStatus.SelectedItem);
+            obj.Status = cboStatus.SelectedText.ToString();
             obj.CreatedDate = DateTime.Now;
             obj.CreatedUser = base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;
