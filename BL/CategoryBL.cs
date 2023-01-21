@@ -14,7 +14,8 @@ namespace BL
         {
             DBAccessBL dl = new DBAccessBL();
             var parameters = new SqlParameter[] {};
-            DataTable dt = dl.SelectDatatable("pr_select_category", GetConnectionString(), parameters);
+            //DataTable dt = dl.SelectDatatable("pr_select_category", GetConnectionString(), parameters);
+            DataTable dt = dl.SelectDatatable("Get_Category", GetConnectionString(), parameters);
             return dt;
         }
     }

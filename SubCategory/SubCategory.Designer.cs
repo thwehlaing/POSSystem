@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
+            this.cboCategory = new System.Windows.Forms.ComboBox();
             this.pLabel4 = new POS_Control.PLabel();
-            this.pTextBox1 = new POS_Control.PTextBox();
+            this.txtSubCategory = new POS_Control.PTextBox();
             this.pLabel5 = new POS_Control.PLabel();
             this.pLabel6 = new POS_Control.PLabel();
             this.panel1.SuspendLayout();
@@ -40,10 +40,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cboStatus);
+            this.panel1.Controls.Add(this.cboCategory);
             this.panel1.Controls.Add(this.pLabel4);
-            this.panel1.Controls.Add(this.pTextBox1);
+            this.panel1.Controls.Add(this.txtSubCategory);
             this.panel1.Controls.Add(this.pLabel5);
             this.panel1.Controls.Add(this.pLabel6);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -52,23 +52,25 @@
             this.panel1.Size = new System.Drawing.Size(800, 339);
             this.panel1.TabIndex = 40;
             // 
-            // comboBox2
+            // cboStatus
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(194, 172);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(254, 29);
-            this.comboBox2.TabIndex = 59;
+            this.cboStatus.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.ItemHeight = 21;
+            this.cboStatus.Location = new System.Drawing.Point(194, 173);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(128, 29);
+            this.cboStatus.TabIndex = 59;
             // 
-            // comboBox1
+            // cboCategory
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 62);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(254, 29);
-            this.comboBox1.TabIndex = 58;
+            this.cboCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.ItemHeight = 21;
+            this.cboCategory.Location = new System.Drawing.Point(194, 62);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(254, 29);
+            this.cboCategory.TabIndex = 58;
             // 
             // pLabel4
             // 
@@ -83,19 +85,19 @@
             this.pLabel4.Text = "အခြေအနေ";
             this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pTextBox1
+            // txtSubCategory
             // 
-            this.pTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pTextBox1.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.pTextBox1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.pTextBox1.IsDatatableOccurs = null;
-            this.pTextBox1.IsErrorOccurs = false;
-            this.pTextBox1.Location = new System.Drawing.Point(193, 117);
-            this.pTextBox1.MinimumSize = new System.Drawing.Size(100, 20);
-            this.pTextBox1.Name = "pTextBox1";
-            this.pTextBox1.Size = new System.Drawing.Size(255, 30);
-            this.pTextBox1.TabIndex = 56;
-            this.pTextBox1.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtSubCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSubCategory.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtSubCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSubCategory.IsDatatableOccurs = null;
+            this.txtSubCategory.IsErrorOccurs = false;
+            this.txtSubCategory.Location = new System.Drawing.Point(193, 117);
+            this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtSubCategory.Name = "txtSubCategory";
+            this.txtSubCategory.Size = new System.Drawing.Size(255, 30);
+            this.txtSubCategory.TabIndex = 56;
+            this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // pLabel5
             // 
@@ -142,10 +144,10 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cboStatus;
+        private ComboBox cboCategory;
         private POS_Control.PLabel pLabel4;
-        private POS_Control.PTextBox pTextBox1;
+        private POS_Control.PTextBox txtSubCategory;
         private POS_Control.PLabel pLabel5;
         private POS_Control.PLabel pLabel6;
     }
