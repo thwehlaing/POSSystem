@@ -111,144 +111,145 @@ namespace POSBase
             {
                 switch (btn.ButtonType)
                 {
-                //    case ButtonType.BType.Close:
-                //        if (bbl.ShowMessage("Q003") == DialogResult.Yes)
-                //        {
-                //            BaseEntity be = new BaseEntity();
-                //            be.OperatorCD = OperatorCD;
-                //            be.ProgramID = ProgramID;
-                //            be.PC = PCID;
-                //            bbl.D_Exclusive_Number_Remove(be);
-                //            this.Close();
-                //        }
-                //        else
-                //        {
-                //            if (PreviousCtrl != null)
-                //                PreviousCtrl.Focus();
-                //            return;
-                //        }
-                //        break;
-                //    case ButtonType.BType.New:
-                //        if (programEntity.Insertable.Equals("1"))
-                //            SetMode(btn, "1");
-                //        break;
-                //    case ButtonType.BType.Update:
-                //        if (programEntity.Updatable.Equals("1"))
-                //            SetMode(btn, "2");
-                //        break;
-                //    case ButtonType.BType.Delete:
-                //        if (programEntity.Deletable.Equals("1"))
-                //            SetMode(btn, "3");
-                //        break;
-                //    case ButtonType.BType.Inquiry:
-                //        if (programEntity.Inquirable.Equals("1"))
-                //            SetMode(btn, "4");
-                //        break;
-                //    case ButtonType.BType.Cancel:
-                //        if (bbl.ShowMessage("Q004") != DialogResult.Yes)
-                //        {
-                //            //cboMode.Enabled = false;
-                //            if (PreviousCtrl != null)
-                //                PreviousCtrl.Focus();
-                //        }
-                //        else
-                //        {
-                //            //cboMode.Enabled = true;
-                //            FunctionProcess(btn.Tag.ToString());
-                //        }
-                //        break;
-                //    case ButtonType.BType.Import:
-                //        FunctionProcess(btn.Tag.ToString());
-                //        break;
-                //    case ButtonType.BType.Confirm:
-                //        FunctionProcess(btn.Tag.ToString());
-                //        break;
-                //    case ButtonType.BType.Display:
-                //        FunctionProcess(btn.Tag.ToString());
-                //        break;
-                //    case ButtonType.BType.Memory:
-                //        FunctionProcess(btn.Tag.ToString());
-                //        break;
-                //    case ButtonType.BType.Save:
-                //        if (cboMode.SelectedValue == null)
-                //        {
-                //            if (bbl.ShowMessage("Q101") != DialogResult.Yes)
-                //            {
-                //                //cboMode.Enabled = false;
-                //                if (PreviousCtrl != null)
-                //                    PreviousCtrl.Focus();
-                //            }
-                //            else
-                //            {
-                //                //cboMode.Enabled = true;
-                //                FunctionProcess(btn.Tag.ToString());
-                //            }
-                //        }
-                //        else if (cboMode.SelectedValue.ToString() == "1" || cboMode.SelectedValue.ToString() == "2")
-                //        {
-                //            if (ErrorCheck(PanelTitle) && ErrorCheck(this.Controls.Find("PanelDetail", true)[0] as Panel))
-                //            {
-                //                if (bbl.ShowMessage("Q101") != DialogResult.Yes)
-                //                {
-                //                    //cboMode.Enabled = false;
-                //                    if (PreviousCtrl != null)
-                //                        PreviousCtrl.Focus();
-                //                }
-                //                else
-                //                {
-                //                    //cboMode.Enabled = true;
-                //                    FunctionProcess(btn.Tag.ToString());
-                //                }
-                //            }
-                //        }
-                //        else if (cboMode.SelectedValue.ToString() == "3")
-                //        {
-                //            if (bbl.ShowMessage("Q102") != DialogResult.Yes)
-                //            {
-                //                //cboMode.Enabled = false;
-                //                if (PreviousCtrl != null)
-                //                    PreviousCtrl.Focus();
-                //            }
-                //            else
-                //            {
-                //                //cboMode.Enabled = true;
-                //                FunctionProcess(btn.Tag.ToString());
-                //            }
-                //        }
-                //        break;
-                //    case ButtonType.BType.Process:
-                //        if (bbl.ShowMessage("Q002") != DialogResult.Yes)
-                //        {
-                //            if (PreviousCtrl != null)
-                //                PreviousCtrl.Focus();
-                //        }
-                //        else
-                //            FunctionProcess(btn.Tag.ToString());
-                //        break;
-                //    case ButtonType.BType.ExcelExport:
-                //        if (ErrorCheck(this.Controls.Find("PanelDetail", true)[0] as Panel))
-                //        {
-                //            if (bbl.ShowMessage("Q205") != DialogResult.Yes)
-                //            {
-                //                if (PreviousCtrl != null)
-                //                    PreviousCtrl.Focus();
-                //            }
-                //            else
-                //                FunctionProcess(btn.Tag.ToString());
-                //        }
-                //        break;
-                //    case ButtonType.BType.CSVExport:
-                //        if (ErrorCheck(this.Controls.Find("PanelDetail", true)[0] as Panel))
-                //        {
-                //            if (bbl.ShowMessage("Q203") != DialogResult.Yes)
-                //            {
-                //                if (PreviousCtrl != null)
-                //                    PreviousCtrl.Focus();
-                //            }
-                //            else
-                //                FunctionProcess(btn.Tag.ToString());
-                //        }
-                //        break;
+                    case ButtonType.BType.Close:
+                        //if (bbl.ShowMessage("Q003") == DialogResult.Yes)
+                        //{
+                        //    BaseEntity be = new BaseEntity();
+                        //    be.OperatorCD = OperatorCD;
+                        //    be.ProgramID = ProgramID;
+                        //    be.PC = PCID;
+                        //    bbl.D_Exclusive_Number_Remove(be);
+                        //    this.Close();
+                        //}
+                        //else
+                        //{
+                        //    if (PreviousCtrl != null)
+                        //        PreviousCtrl.Focus();
+                        //    return;
+                        //}
+                        break;
+                    //case ButtonType.BType.New:
+                    //    FunctionProcess(btn.Tag.ToString());
+                    //    break;
+                    //case ButtonType.BType.Update:
+                    //    if (programEntity.Updatable.Equals("1"))
+                    //        SetMode(btn, "2");
+                    //    break;
+                    //    case ButtonType.BType.Delete:
+                    //        if (programEntity.Deletable.Equals("1"))
+                    //            SetMode(btn, "3");
+                    //        break;
+                    //    case ButtonType.BType.Inquiry:
+                    //        if (programEntity.Inquirable.Equals("1"))
+                    //            SetMode(btn, "4");
+                    //        break;
+                    //    case ButtonType.BType.Cancel:
+                    //        if (bbl.ShowMessage("Q004") != DialogResult.Yes)
+                    //        {
+                    //            //cboMode.Enabled = false;
+                    //            if (PreviousCtrl != null)
+                    //                PreviousCtrl.Focus();
+                    //        }
+                    //        else
+                    //        {
+                    //            //cboMode.Enabled = true;
+                    //            FunctionProcess(btn.Tag.ToString());
+                    //        }
+                    //        break;
+                    //    case ButtonType.BType.Import:
+                    //        FunctionProcess(btn.Tag.ToString());
+                    //        break;
+                    //    case ButtonType.BType.Confirm:
+                    //        FunctionProcess(btn.Tag.ToString());
+                    //        break;
+                    //    case ButtonType.BType.Display:
+                    //        FunctionProcess(btn.Tag.ToString());
+                    //        break;
+                    //    case ButtonType.BType.Memory:
+                    //        FunctionProcess(btn.Tag.ToString());
+                    //        break;
+                    case ButtonType.BType.Save:
+                        FunctionProcess(btn.Tag.ToString());
+                        break;
+                        //        if (cboMode.SelectedValue == null)
+                        //        {
+                        //            if (bbl.ShowMessage("Q101") != DialogResult.Yes)
+                        //            {
+                        //                //cboMode.Enabled = false;
+                        //                if (PreviousCtrl != null)
+                        //                    PreviousCtrl.Focus();
+                        //            }
+                        //            else
+                        //            {
+                        //                //cboMode.Enabled = true;
+                        //                FunctionProcess(btn.Tag.ToString());
+                        //            }
+                        //        }
+                        //        else if (cboMode.SelectedValue.ToString() == "1" || cboMode.SelectedValue.ToString() == "2")
+                        //        {
+                        //            if (ErrorCheck(PanelTitle) && ErrorCheck(this.Controls.Find("PanelDetail", true)[0] as Panel))
+                        //            {
+                        //                if (bbl.ShowMessage("Q101") != DialogResult.Yes)
+                        //                {
+                        //                    //cboMode.Enabled = false;
+                        //                    if (PreviousCtrl != null)
+                        //                        PreviousCtrl.Focus();
+                        //                }
+                        //                else
+                        //                {
+                        //                    //cboMode.Enabled = true;
+                        //                    FunctionProcess(btn.Tag.ToString());
+                        //                }
+                        //            }
+                        //        }
+                        //        else if (cboMode.SelectedValue.ToString() == "3")
+                        //        {
+                        //            if (bbl.ShowMessage("Q102") != DialogResult.Yes)
+                        //            {
+                        //                //cboMode.Enabled = false;
+                        //                if (PreviousCtrl != null)
+                        //                    PreviousCtrl.Focus();
+                        //            }
+                        //            else
+                        //            {
+                        //                //cboMode.Enabled = true;
+                        //                FunctionProcess(btn.Tag.ToString());
+                        //            }
+                        //        }
+                        //        break;
+                        //    case ButtonType.BType.Process:
+                        //        if (bbl.ShowMessage("Q002") != DialogResult.Yes)
+                        //        {
+                        //            if (PreviousCtrl != null)
+                        //                PreviousCtrl.Focus();
+                        //        }
+                        //        else
+                        //            FunctionProcess(btn.Tag.ToString());
+                        //        break;
+                        //    case ButtonType.BType.ExcelExport:
+                        //        if (ErrorCheck(this.Controls.Find("PanelDetail", true)[0] as Panel))
+                        //        {
+                        //            if (bbl.ShowMessage("Q205") != DialogResult.Yes)
+                        //            {
+                        //                if (PreviousCtrl != null)
+                        //                    PreviousCtrl.Focus();
+                        //            }
+                        //            else
+                        //                FunctionProcess(btn.Tag.ToString());
+                        //        }
+                        //        break;
+                        //    case ButtonType.BType.CSVExport:
+                        //        if (ErrorCheck(this.Controls.Find("PanelDetail", true)[0] as Panel))
+                        //        {
+                        //            if (bbl.ShowMessage("Q203") != DialogResult.Yes)
+                        //            {
+                        //                if (PreviousCtrl != null)
+                        //                    PreviousCtrl.Focus();
+                        //            }
+                        //            else
+                        //                FunctionProcess(btn.Tag.ToString());
+                        //        }
+                        //        break;
                 }
             }
         }
@@ -290,6 +291,11 @@ namespace POSBase
             }
 
             button.Visible = visible;
+        }
+
+        private void BtnF2_Click(object sender, EventArgs e)
+        {
+            FunctionProcess(BtnF2.Tag.ToString());
         }
     }
 }

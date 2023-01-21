@@ -57,6 +57,9 @@
             this.cboStatus.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cboStatus.FormattingEnabled = true;
             this.cboStatus.ItemHeight = 21;
+            this.cboStatus.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
             this.cboStatus.Location = new System.Drawing.Point(194, 173);
             this.cboStatus.Name = "cboStatus";
             this.cboStatus.Size = new System.Drawing.Size(128, 29);

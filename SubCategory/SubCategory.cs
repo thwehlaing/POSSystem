@@ -1,4 +1,5 @@
-﻿using Entity;
+﻿using BL;
+using Entity;
 using POSBase;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,8 @@ namespace SubCategory
 {
     public partial class SubCategory : BaseForm
     {
-        BaseEntity base_entity;
+        BaseEntity base_entity=new BaseEntity();
+        BaseBL bbl = new BaseBL();
         public SubCategory()
         {
             InitializeComponent();
@@ -26,8 +28,20 @@ namespace SubCategory
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Display, F2, "ထည့်မည်", true);
+            BindCatgory();
             cboCategory.Focus();
         }
+
+        private void BindCatgory()
+        {
+            CategoryBL cbl = new CategoryBL();
+            DataTable dtCategory = new DataTable();
+            dtCategory = cbl.Category_Select();
+            cboCategory.DataSource = dtCategory;
+            cboCategory.DisplayMember = "CategoryName";
+            cboCategory.ValueMember = "CategoryCD";         
+        }
+
         public override void FunctionProcess(string tagID)
         {
             if (tagID == "12")
@@ -39,7 +53,11 @@ namespace SubCategory
 
         private void DBProcess()
         {
-            SubCategoryEntity entity = GetInsertSubCategory();
+            SubCategoryEntity obj = GetInsertSubCategory();
+            SubCategoryBL bl = new SubCategoryBL();
+            bool return_Bl = bl.SubCategory_CUD(obj);
+            if (return_Bl)
+                bbl.ShowMessage("I101");
         }
 
         private SubCategoryEntity GetInsertSubCategory()
@@ -49,7 +67,7 @@ namespace SubCategory
             obj.SubCode = "";
             obj.SubName = txtSubCategory.Text;
             obj.CreatedDate = DateTime.Now;
-            obj.InsertOperator = base_entity.OperatorCD;
+            obj.CreatedUser = base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;
             return obj;
         }

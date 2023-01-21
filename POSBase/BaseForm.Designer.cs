@@ -113,8 +113,10 @@
             this.BtnF1.Name = "BtnF1";
             this.BtnF1.Size = new System.Drawing.Size(130, 48);
             this.BtnF1.TabIndex = 38;
+            this.BtnF1.Tag = "1";
             this.BtnF1.Text = "(F1)";
             this.BtnF1.UseVisualStyleBackColor = false;
+            this.BtnF1.Click += new System.EventHandler(this.btnFunctionClick);
             // 
             // tableLayoutPanel3
             // 
@@ -143,8 +145,10 @@
             this.BtnF2.Name = "BtnF2";
             this.BtnF2.Size = new System.Drawing.Size(130, 48);
             this.BtnF2.TabIndex = 39;
-            this.BtnF2.Text = "(F1)";
+            this.BtnF2.Tag = "2";
+            this.BtnF2.Text = "(F2)";
             this.BtnF2.UseVisualStyleBackColor = false;
+            this.BtnF2.Click += new System.EventHandler(this.btnFunctionClick);
             // 
             // BaseForm
             // 
