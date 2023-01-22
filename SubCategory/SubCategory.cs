@@ -39,7 +39,7 @@ namespace SubCategory
             dtCategory = cbl.Category_Select();
             cboCategory.DataSource = dtCategory;
             cboCategory.DisplayMember = "CategoryName";
-            cboCategory.ValueMember = "CategoryCD";         
+            cboCategory.ValueMember = "CategoryCD";
         }
 
         public override void FunctionProcess(string tagID)
@@ -63,8 +63,9 @@ namespace SubCategory
         private SubCategoryEntity GetInsertSubCategory()
         {
             SubCategoryEntity obj = new SubCategoryEntity();
-            obj.CategoryCD = cboCategory.SelectedValue.ToString();          
-            obj.SubName = txtSubCategory.Text;            
+            obj.CategoryCD = cboCategory.SelectedValue.ToString();
+            obj.SubName = txtSubCategory.Text;
+            obj.Status = chkStatus.Checked == true ? "1" : "0";
             obj.CreatedDate = DateTime.Now;
             obj.CreatedUser = base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;

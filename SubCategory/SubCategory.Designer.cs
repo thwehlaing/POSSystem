@@ -29,15 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboCategory = new System.Windows.Forms.ComboBox();
             this.txtSubCategory = new POS_Control.PTextBox();
             this.pLabel5 = new POS_Control.PLabel();
             this.pLabel6 = new POS_Control.PLabel();
+            this.cboCategory = new POS_Control.PCombo();
+            this.chkStatus = new POS_Control.PCheckBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.chkStatus);
             this.panel1.Controls.Add(this.cboCategory);
             this.panel1.Controls.Add(this.txtSubCategory);
             this.panel1.Controls.Add(this.pLabel5);
@@ -47,16 +49,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 339);
             this.panel1.TabIndex = 40;
-            // 
-            // cboCategory
-            // 
-            this.cboCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.ItemHeight = 21;
-            this.cboCategory.Location = new System.Drawing.Point(194, 62);
-            this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(254, 29);
-            this.cboCategory.TabIndex = 58;
             // 
             // txtSubCategory
             // 
@@ -98,6 +90,32 @@
             this.pLabel6.Text = "အမျိုးအစား";
             this.pLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cboCategory
+            // 
+            this.cboCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.IsDatatableOccurs = null;
+            this.cboCategory.IsErrorOccurs = false;
+            this.cboCategory.Location = new System.Drawing.Point(193, 62);
+            this.cboCategory.MinimumSize = new System.Drawing.Size(100, 0);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.Size = new System.Drawing.Size(255, 29);
+            this.cboCategory.TabIndex = 57;
+            // 
+            // chkStatus
+            // 
+            this.chkStatus.Checked = true;
+            this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStatus.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.chkStatus.IsDatatableOccurs = null;
+            this.chkStatus.IsErrorOccurs = false;
+            this.chkStatus.Location = new System.Drawing.Point(193, 170);
+            this.chkStatus.Name = "chkStatus";
+            this.chkStatus.Size = new System.Drawing.Size(117, 25);
+            this.chkStatus.TabIndex = 58;
+            this.chkStatus.Text = "အသုံးပြုနေဆဲ";
+            this.chkStatus.UseVisualStyleBackColor = true;
+            // 
             // SubCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -117,9 +135,10 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox cboCategory;
         private POS_Control.PTextBox txtSubCategory;
         private POS_Control.PLabel pLabel5;
         private POS_Control.PLabel pLabel6;
+        private POS_Control.PCombo cboCategory;
+        private POS_Control.PCheckBox chkStatus;
     }
 }
