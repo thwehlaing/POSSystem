@@ -64,9 +64,7 @@ namespace SubCategory
         {
             SubCategoryEntity obj = new SubCategoryEntity();
             obj.CategoryCD = cboCategory.SelectedValue.ToString();          
-            obj.SubName = txtSubCategory.Text;
-            string selected =cboStatus.GetItemText(cboStatus.SelectedItem);
-            obj.Status = cboStatus.SelectedText.ToString();
+            obj.SubName = txtSubCategory.Text;            
             obj.CreatedDate = DateTime.Now;
             obj.CreatedUser = base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;

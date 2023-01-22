@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboStatus = new System.Windows.Forms.ComboBox();
             this.cboCategory = new System.Windows.Forms.ComboBox();
-            this.pLabel4 = new POS_Control.PLabel();
             this.txtSubCategory = new POS_Control.PTextBox();
             this.pLabel5 = new POS_Control.PLabel();
             this.pLabel6 = new POS_Control.PLabel();
@@ -40,9 +38,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.cboStatus);
             this.panel1.Controls.Add(this.cboCategory);
-            this.panel1.Controls.Add(this.pLabel4);
             this.panel1.Controls.Add(this.txtSubCategory);
             this.panel1.Controls.Add(this.pLabel5);
             this.panel1.Controls.Add(this.pLabel6);
@@ -51,19 +47,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 339);
             this.panel1.TabIndex = 40;
-            // 
-            // cboStatus
-            // 
-            this.cboStatus.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cboStatus.FormattingEnabled = true;
-            this.cboStatus.ItemHeight = 21;
-            this.cboStatus.Items.AddRange(new object[] {
-            "Active",
-            "InActive"});
-            this.cboStatus.Location = new System.Drawing.Point(194, 173);
-            this.cboStatus.Name = "cboStatus";
-            this.cboStatus.Size = new System.Drawing.Size(128, 29);
-            this.cboStatus.TabIndex = 59;
             // 
             // cboCategory
             // 
@@ -74,19 +57,6 @@
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.Size = new System.Drawing.Size(254, 29);
             this.cboCategory.TabIndex = 58;
-            // 
-            // pLabel4
-            // 
-            this.pLabel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel4.Location = new System.Drawing.Point(96, 172);
-            this.pLabel4.Name = "pLabel4";
-            this.pLabel4.Size = new System.Drawing.Size(100, 30);
-            this.pLabel4.TabIndex = 57;
-            this.pLabel4.Text = "အခြေအနေ";
-            this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSubCategory
             // 
@@ -147,9 +117,7 @@
         #endregion
 
         private Panel panel1;
-        private ComboBox cboStatus;
         private ComboBox cboCategory;
-        private POS_Control.PLabel pLabel4;
         private POS_Control.PTextBox txtSubCategory;
         private POS_Control.PLabel pLabel5;
         private POS_Control.PLabel pLabel6;
