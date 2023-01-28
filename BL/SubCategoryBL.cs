@@ -23,7 +23,7 @@ namespace BL
             DBAccessBL dbl = new DBAccessBL();
             obj.Sqlprms = new SqlParameter[5];            
             obj.Sqlprms[0] = new SqlParameter("@CategoryCD", SqlDbType.VarChar) { Value = obj.CategoryCD };
-            obj.Sqlprms[1] = new SqlParameter("@SubName", SqlDbType.VarChar) { Value = obj.SubName };
+            obj.Sqlprms[1] = new SqlParameter("@SubName", SqlDbType.NVarChar) { Value = obj.SubName };
             obj.Sqlprms[2] = new SqlParameter("@Status", SqlDbType.VarChar) { Value = obj.Status };
             obj.Sqlprms[3] = new SqlParameter("@CreatedDate", SqlDbType.DateTime) { Value = obj.CreatedDate };
             obj.Sqlprms[4] = new SqlParameter("@CreatedUser", SqlDbType.VarChar) { Value = obj.CreatedUser };
