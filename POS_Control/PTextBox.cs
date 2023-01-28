@@ -6,11 +6,12 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Entity.SearchType;
 using static POS_Control.PTextBox;
 
 namespace POS_Control
 {
-    public class PTextBox:TextBox
+    public class PTextBox : TextBox
     {
         BaseBL bl = new BaseBL();
         ErrorCheck errchk;
@@ -23,7 +24,7 @@ namespace POS_Control
             Time = 4,//Time format
             YearMonth = 5 //2019/01 format   
         }
-       
+
 
         private PTextBoxType PType { get; set; }
         [Browsable(true)]
@@ -41,14 +42,16 @@ namespace POS_Control
 
         [Browsable(true)]
         [Category("POS Properties")]
-        [Description("Select Default Keyboard")]
-        [DisplayName("Default Language")]
-        public DefKey DefaultKeyboard { get; set; } = 0;
-        public enum DefKey
-        {
-            English = 0,
-            Myanmar = 1
-        }
+        [Description("NextControlName")]
+        [DisplayName("NextControlName")]
+        public string NextControlName { get; set; }
+        public Control NextControl { get; set; }
+
+        [Browsable(true)]
+        [Category("POS Properties")]
+        [Description("SearchType")]
+        [DisplayName("SearchType")]
+        public ScType SearchType { get; set; }
 
         public PTextBox()
         {
@@ -74,19 +77,51 @@ namespace POS_Control
             (bool, DataTable) r_value = errchk.Check(this);
             IsErrorOccurs = r_value.Item1;
             IsDatatableOccurs = r_value.Item2;
-            //if (!IsErrorOccurs)
-            //{
-            //    if (NextControl != null)
-            //        NextControl.Focus();
-            //}
-
-            //if (cf.IsByteLengthOver(MaxLength, Text))
-            //{
-            //    IsErrorOccurs = true;
-            //    MessageBox.Show("入力された文字が長すぎます", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    this.Focus();
-            //}
+            if (!IsErrorOccurs)
+            {
+                Control nextControl = this.TopLevelControl.Controls.Find(NextControlName, true)[0];
+                nextControl.Focus();
+            }
             return IsErrorOccurs;
+        }
+
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (!ErrorCheck())
+                {
+                    e.Handled = true;
+                    e.SuppressKeyPress = true;
+                    base.OnKeyDown(e);
+                }
+            }
+        }
+        [Browsable(true)]
+        [Category("POS Properties")]
+        [Description("Select Default Keyboard")]
+        [DisplayName("Default Language")]
+        public DefKey DefaultKeyboard { get; set; } = 0;
+        public enum DefKey
+        {
+            English = 0,
+            Myanmar = 1
+        }
+        protected override void OnEnter(EventArgs e)
+        {
+            this.BackColor = Color.FromArgb(224, 255, 255);
+
+            this.ImeMode = ImeMode.NoControl;
+            if (DefaultKeyboard == DefKey.Myanmar)
+            {
+                InputLanguage.CurrentInputLanguage = InputLanguage.FromCulture(new System.Globalization.CultureInfo("my-MM"));
+            }
+
+        }
+        protected override void OnLeave(EventArgs e)
+        {
+            this.BackColor = Color.White;
+            base.OnLeave(e);
         }
     }
 }

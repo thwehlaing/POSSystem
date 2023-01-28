@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POSMenu", "POSMenu\POSMenu.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Category", "Category\Category.csproj", "{2C620466-8905-4F38-B9A1-D72A7E0474EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubCategory", "SubCategory\SubCategory.csproj", "{21DB1DDD-A294-4197-893A-945B067B215D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubCategory", "SubCategory\SubCategory.csproj", "{21DB1DDD-A294-4197-893A-945B067B215D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Search", "POS_Search\POS_Search.csproj", "{CEADFC55-792F-47CD-9290-979D2B0F13D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{21DB1DDD-A294-4197-893A-945B067B215D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21DB1DDD-A294-4197-893A-945B067B215D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21DB1DDD-A294-4197-893A-945B067B215D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEADFC55-792F-47CD-9290-979D2B0F13D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEADFC55-792F-47CD-9290-979D2B0F13D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEADFC55-792F-47CD-9290-979D2B0F13D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEADFC55-792F-47CD-9290-979D2B0F13D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

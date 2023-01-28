@@ -14,6 +14,9 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using Label = System.Windows.Forms.Label;
 
 namespace POSBase
 {
@@ -30,6 +33,7 @@ namespace POSBase
         protected string LoginDate { get; set; }
         #endregion
         protected string ProgramID { get; set; }
+        protected string ProgramName { get; set; }
 
         #region Function Button
         protected PButton F1 { get => BtnF1; set => BtnF1 = value; }
@@ -37,12 +41,13 @@ namespace POSBase
         #endregion
         public BaseForm()
         {
-            InitializeComponent();
+            InitializeComponent();           
             tspCurrentDate.Text ="Date :"+ DateTime.Now.ToString("dd/MM/yyyy");           
         }
         
         protected void StartProgram()
         {
+            BaseTitle.Text = ProgramName;
             string filePath = string.Empty;
             ReadIniFile readIni = new ReadIniFile();
            
@@ -293,9 +298,41 @@ namespace POSBase
             button.Visible = visible;
         }
 
-        private void BtnF2_Click(object sender, EventArgs e)
+        protected bool ErrorCheck(Panel panel)
         {
-            FunctionProcess(BtnF2.Tag.ToString());
+            Dictionary<int, Control> dic = new Dictionary<int, Control>();
+
+            foreach (Control ctrl in panel.Controls)
+            {
+                if (!(ctrl is Label))
+                    dic.Add(ctrl.TabIndex, ctrl);
+            }
+
+
+            foreach (KeyValuePair<int, Control> ctrldic in dic.OrderBy(key => key.Key))
+            {
+                Control ctrl = ctrldic.Value as Control;
+
+                if ((ctrl is PTextBox))
+                {
+                    PTextBox st = ctrl as PTextBox;
+                    if (st.ErrorCheck())
+                        return false;
+                }
+                if (ctrl is PCombo)
+                {
+                    PCombo sc = ctrl as PCombo;
+                    if (sc.ErrorCheck())
+                        return false;
+                }
+                if (ctrl is PCheckBox)
+                {
+                    PCheckBox sch = ctrl as PCheckBox;
+                    if (sch.ErrorCheck())
+                        return false;
+                }
+            }
+            return true;
         }
     }
 }
