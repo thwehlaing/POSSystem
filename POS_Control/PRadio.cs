@@ -41,7 +41,7 @@ namespace POS_Control
         }
         protected override void OnLeave(EventArgs e)
         {
-            this.BackColor = Color.White;
+            this.BackColor = Color.GhostWhite;
             base.OnLeave(e);
         }
     }

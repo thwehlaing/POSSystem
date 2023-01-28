@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace POS_Search
 {
-    public partial class Category_Search : Form
+    public partial class Category_Search : Search_Base
     {
         public Category_Search()
         {
             InitializeComponent();
+            Search_Form_Name = "ပစ္စည်းအမျိုးအစား";
         }
     }
 }

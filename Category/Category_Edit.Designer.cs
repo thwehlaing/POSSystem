@@ -1,6 +1,6 @@
 ﻿namespace Category
 {
-    partial class Category
+    partial class Category_Edit
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panelDetail = new System.Windows.Forms.Panel();
+            this.txtName = new POS_Search.Search_TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdo_active = new POS_Control.PRadio();
             this.rdo_inactive = new POS_Control.PRadio();
-            this.txtName = new POS_Control.PTextBox();
             this.pLabel1 = new POS_Control.PLabel();
             this.panelDetail.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -40,13 +40,30 @@
             // 
             // panelDetail
             // 
-            this.panelDetail.Controls.Add(this.panel1);
             this.panelDetail.Controls.Add(this.txtName);
+            this.panelDetail.Controls.Add(this.panel1);
             this.panelDetail.Controls.Add(this.pLabel1);
-            this.panelDetail.Location = new System.Drawing.Point(0, 58);
+            this.panelDetail.Location = new System.Drawing.Point(0, 59);
             this.panelDetail.Name = "panelDetail";
             this.panelDetail.Size = new System.Drawing.Size(1710, 832);
-            this.panelDetail.TabIndex = 13;
+            this.panelDetail.TabIndex = 40;
+            // 
+            // txtName
+            // 
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
+            this.txtName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName.IsDatatableOccurs = null;
+            this.txtName.IsErrorOccurs = false;
+            this.txtName.Location = new System.Drawing.Point(131, 23);
+            this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtName.Name = "txtName";
+            this.txtName.NextControl = this.txtName;
+            this.txtName.NextControlName = "rdo_active";
+            this.txtName.SearchType = Entity.SearchType.ScType.Category;
+            this.txtName.Size = new System.Drawing.Size(307, 30);
+            this.txtName.TabIndex = 5;
+            this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // panel1
             // 
@@ -85,22 +102,6 @@
             this.rdo_inactive.Text = "အသုံးမပြု";
             this.rdo_inactive.UseVisualStyleBackColor = true;
             // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.IsDatatableOccurs = null;
-            this.txtName.IsErrorOccurs = false;
-            this.txtName.Location = new System.Drawing.Point(131, 23);
-            this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtName.Name = "txtName";
-            this.txtName.NextControl = null;
-            this.txtName.NextControlName = "rdo_active";
-            this.txtName.Size = new System.Drawing.Size(307, 30);
-            this.txtName.TabIndex = 1;
-            this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
-            // 
             // pLabel1
             // 
             this.pLabel1.BackColor = System.Drawing.Color.Red;
@@ -114,15 +115,16 @@
             this.pLabel1.Text = "နာမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Category
+            // Category_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1713, 961);
             this.Controls.Add(this.panelDetail);
-            this.Name = "Category";
-            this.Text = "Category";
-            this.Load += new System.EventHandler(this.Category_Load);
+            this.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
+            this.Name = "Category_Edit";
+            this.Text = "Category_Edit";
+            this.Load += new System.EventHandler(this.Category_Edit_Load);
             this.Controls.SetChildIndex(this.panelDetail, 0);
             this.panelDetail.ResumeLayout(false);
             this.panelDetail.PerformLayout();
@@ -135,10 +137,10 @@
         #endregion
 
         private Panel panelDetail;
-        private POS_Control.PLabel pLabel1;
-        private POS_Control.PTextBox txtName;
-        private POS_Control.PRadio rdo_inactive;
-        private POS_Control.PRadio rdo_active;
         private Panel panel1;
+        private POS_Control.PRadio rdo_active;
+        private POS_Control.PRadio rdo_inactive;
+        private POS_Control.PLabel pLabel1;
+        private POS_Search.Search_TextBox txtName;
     }
 }

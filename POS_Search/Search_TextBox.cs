@@ -1,13 +1,22 @@
-﻿using System;
+﻿using BL;
+using POS_Control;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
+using static Entity.SearchType;
 
 namespace POS_Search
 {
-    public class Search_TextBox:TextBox
+    public class Search_TextBox:PTextBox
     {
+        BaseBL bl = new BaseBL();
+        ErrorCheck errchk;
+      
         protected override void OnKeyDown(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.F9)
@@ -17,7 +26,14 @@ namespace POS_Search
         }
         public void Search()
         {
-           
+            switch (this.SearchType)
+            {
+                case Entity.SearchType.ScType.Category:
+
+                    Category_Search cate_Search = new Category_Search();
+                    cate_Search.ShowDialog();
+                    break;
+            }
         }
     }
 }

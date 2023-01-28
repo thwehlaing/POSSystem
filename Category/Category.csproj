@@ -13,6 +13,7 @@
     <ProjectReference Include="..\Entity\Entity.csproj" />
     <ProjectReference Include="..\POSBase\POSBase.csproj" />
     <ProjectReference Include="..\POS_Control\POS_Control.csproj" />
+    <ProjectReference Include="..\POS_Search\POS_Search.csproj" />
   </ItemGroup>
 
 </Project>

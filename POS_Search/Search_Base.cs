@@ -14,6 +14,7 @@ namespace POS_Search
 {
     public partial class Search_Base : Form
     {
+        public string Search_Form_Name { get; set; }
         public Search_Base()
         {
             InitializeComponent();
@@ -45,6 +46,11 @@ namespace POS_Search
 
         public virtual void FunctionProcess(string tagID)
         {
+        }
+
+        private void Search_Base_Load(object sender, EventArgs e)
+        {
+            lbl_Search_Form_Name.Text = Search_Form_Name;
         }
     }
 }

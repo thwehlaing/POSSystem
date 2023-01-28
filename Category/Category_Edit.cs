@@ -1,5 +1,4 @@
 ﻿using Entity;
-using POS_Control;
 using POSBase;
 using System;
 using System.Collections.Generic;
@@ -13,24 +12,24 @@ using System.Windows.Forms;
 
 namespace Category
 {
-    public partial class Category : BaseForm
+    public partial class Category_Edit : BaseForm
     {
-        public Category()
+        public Category_Edit()
         {
             InitializeComponent();
         }
 
-        private void Category_Load(object sender, EventArgs e)
+        private void Category_Edit_Load(object sender, EventArgs e)
         {
-            ProgramID = "Category";
-            ProgramName = "ပစ္စည်းအမျိုးအစား သိမ်းခြင်း";
+            ProgramID = "Category_Edit";
+            ProgramName = "ပစ္စည်းအမျိုးအစား ပြင်ခြင်း";
             txtName.Focus();
 
             StartProgram();
 
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-           
-            SetButton(ButtonType.BType.Display, F2, "သိမ်းမည်", true);
+
+            SetButton(ButtonType.BType.Display, F2, "ပြင်ခြင်း", true);
         }
         public override void FunctionProcess(string tagID)
         {
@@ -38,7 +37,7 @@ namespace Category
             {
                 if (ErrorCheck(panelDetail))
                 {
-                   
+
                 }
             }
             base.FunctionProcess(tagID);
