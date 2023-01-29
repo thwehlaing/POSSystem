@@ -44,7 +44,7 @@ namespace BL
 
                 MessageBoxButtons msgbtn = dtMsg.Rows[0]["MessageButton"].ToString().Equals("1") ? MessageBoxButtons.OK :
                                            dtMsg.Rows[0]["MessageButton"].ToString().Equals("2") ? MessageBoxButtons.OKCancel :
-                                           dtMsg.Rows[0]["MessageButton"].ToString().Equals("3") ? MessageBoxButtons.RetryCancel :
+                                           //dtMsg.Rows[0]["MessageButton"].ToString().Equals("3") ? MessageBoxButtons.RetryCancel :
                                            dtMsg.Rows[0]["MessageButton"].ToString().Equals("4") ? MessageBoxButtons.YesNo :
                                            dtMsg.Rows[0]["MessageButton"].ToString().Equals("5") ? MessageBoxButtons.YesNoCancel :
                                            MessageBoxButtons.AbortRetryIgnore;
