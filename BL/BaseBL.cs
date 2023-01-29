@@ -50,10 +50,10 @@ namespace BL
                                            MessageBoxButtons.AbortRetryIgnore;
 
                 MessageBoxIcon msgicon = dtMsg.Rows[0]["MessageMark"].ToString().Equals("1") ? MessageBoxIcon.Information :
-                                         dtMsg.Rows[0]["MessageMark"].ToString().Equals("2") ? MessageBoxIcon.Asterisk :
+                                         //dtMsg.Rows[0]["MessageMark"].ToString().Equals("2") ? MessageBoxIcon.Asterisk :
                                          dtMsg.Rows[0]["MessageMark"].ToString().Equals("3") ? MessageBoxIcon.Question :
                                          dtMsg.Rows[0]["MessageMark"].ToString().Equals("4") ? MessageBoxIcon.Error :
-                                         dtMsg.Rows[0]["MessageMark"].ToString().Equals("5") ? MessageBoxIcon.Stop :
+                                         //dtMsg.Rows[0]["MessageMark"].ToString().Equals("5") ? MessageBoxIcon.Stop :
                                          dtMsg.Rows[0]["MessageMark"].ToString().Equals("6") ? MessageBoxIcon.Exclamation :
                                          MessageBoxIcon.None;
                 if (me.MessageID == "Q003")
