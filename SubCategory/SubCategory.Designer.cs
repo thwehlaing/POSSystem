@@ -28,27 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSubCategory = new POS_Control.PTextBox();
-            this.pLabel5 = new POS_Control.PLabel();
-            this.pLabel6 = new POS_Control.PLabel();
+            this.panelDetail = new System.Windows.Forms.Panel();
+            this.pLabel1 = new POS_Control.PLabel();
             this.cboCategory = new POS_Control.PCombo();
-            this.chkStatus = new POS_Control.PCheckBox();
+            this.pLabel2 = new POS_Control.PLabel();
+            this.txtSubCategory = new POS_Control.PTextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.rdo_active = new POS_Control.PRadio();
+            this.rdo_inactive = new POS_Control.PRadio();
+            this.panelDetail.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // panelDetail
             // 
-            this.panel1.Controls.Add(this.chkStatus);
-            this.panel1.Controls.Add(this.cboCategory);
-            this.panel1.Controls.Add(this.txtSubCategory);
-            this.panel1.Controls.Add(this.pLabel5);
-            this.panel1.Controls.Add(this.pLabel6);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 57);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 339);
-            this.panel1.TabIndex = 40;
+            this.panelDetail.Controls.Add(this.panel1);
+            this.panelDetail.Controls.Add(this.txtSubCategory);
+            this.panelDetail.Controls.Add(this.pLabel2);
+            this.panelDetail.Controls.Add(this.cboCategory);
+            this.panelDetail.Controls.Add(this.pLabel1);
+            this.panelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDetail.Location = new System.Drawing.Point(0, 57);
+            this.panelDetail.Name = "panelDetail";
+            this.panelDetail.Size = new System.Drawing.Size(1713, 839);
+            this.panelDetail.TabIndex = 40;
+            // 
+            // pLabel1
+            // 
+            this.pLabel1.BackColor = System.Drawing.Color.Red;
+            this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Location = new System.Drawing.Point(170, 82);
+            this.pLabel1.Name = "pLabel1";
+            this.pLabel1.Size = new System.Drawing.Size(165, 35);
+            this.pLabel1.TabIndex = 0;
+            this.pLabel1.Text = "အမျိုးအစား";
+            this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cboCategory
+            // 
+            this.cboCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboCategory.FormattingEnabled = true;
+            this.cboCategory.IsDatatableOccurs = null;
+            this.cboCategory.IsErrorOccurs = false;
+            this.cboCategory.Location = new System.Drawing.Point(336, 82);
+            this.cboCategory.MinimumSize = new System.Drawing.Size(100, 0);
+            this.cboCategory.Name = "cboCategory";
+            this.cboCategory.NextControl = null;
+            this.cboCategory.NextControlName = null;
+            this.cboCategory.Size = new System.Drawing.Size(309, 35);
+            this.cboCategory.TabIndex = 1;
+            // 
+            // pLabel2
+            // 
+            this.pLabel2.BackColor = System.Drawing.Color.Red;
+            this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel2.Location = new System.Drawing.Point(170, 157);
+            this.pLabel2.Name = "pLabel2";
+            this.pLabel2.Size = new System.Drawing.Size(165, 35);
+            this.pLabel2.TabIndex = 2;
+            this.pLabel2.Text = "အမျိုးအစား(ခွဲ)";
+            this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtSubCategory
             // 
@@ -57,75 +100,68 @@
             this.txtSubCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubCategory.IsDatatableOccurs = null;
             this.txtSubCategory.IsErrorOccurs = false;
-            this.txtSubCategory.Location = new System.Drawing.Point(193, 117);
+            this.txtSubCategory.Location = new System.Drawing.Point(335, 157);
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
-            this.txtSubCategory.Size = new System.Drawing.Size(255, 30);
-            this.txtSubCategory.TabIndex = 56;
+            this.txtSubCategory.NextControl = null;
+            this.txtSubCategory.NextControlName = null;
+            this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
+            this.txtSubCategory.Size = new System.Drawing.Size(310, 35);
+            this.txtSubCategory.TabIndex = 3;
             this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
-            // pLabel5
+            // panel1
             // 
-            this.pLabel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel5.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel5.Location = new System.Drawing.Point(96, 117);
-            this.pLabel5.Name = "pLabel5";
-            this.pLabel5.Size = new System.Drawing.Size(100, 30);
-            this.pLabel5.TabIndex = 55;
-            this.pLabel5.Text = "အမျိုးအစား(ခွဲ)";
-            this.pLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel1.Controls.Add(this.rdo_active);
+            this.panel1.Controls.Add(this.rdo_inactive);
+            this.panel1.Location = new System.Drawing.Point(170, 225);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(292, 72);
+            this.panel1.TabIndex = 5;
             // 
-            // pLabel6
+            // rdo_active
             // 
-            this.pLabel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel6.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel6.Location = new System.Drawing.Point(96, 62);
-            this.pLabel6.Name = "pLabel6";
-            this.pLabel6.Size = new System.Drawing.Size(100, 30);
-            this.pLabel6.TabIndex = 54;
-            this.pLabel6.Text = "အမျိုးအစား";
-            this.pLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rdo_active.AutoSize = true;
+            this.rdo_active.Checked = true;
+            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_active.Location = new System.Drawing.Point(4, 20);
+            this.rdo_active.Margin = new System.Windows.Forms.Padding(4);
+            this.rdo_active.Name = "rdo_active";
+            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControlName = "BtnF2";
+            this.rdo_active.Size = new System.Drawing.Size(82, 31);
+            this.rdo_active.TabIndex = 2;
+            this.rdo_active.TabStop = true;
+            this.rdo_active.Text = "အသုံးပြု";
+            this.rdo_active.UseVisualStyleBackColor = true;
             // 
-            // cboCategory
+            // rdo_inactive
             // 
-            this.cboCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.IsDatatableOccurs = null;
-            this.cboCategory.IsErrorOccurs = false;
-            this.cboCategory.Location = new System.Drawing.Point(193, 62);
-            this.cboCategory.MinimumSize = new System.Drawing.Size(100, 0);
-            this.cboCategory.Name = "cboCategory";
-            this.cboCategory.Size = new System.Drawing.Size(255, 29);
-            this.cboCategory.TabIndex = 57;
-            // 
-            // chkStatus
-            // 
-            this.chkStatus.Checked = true;
-            this.chkStatus.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkStatus.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.chkStatus.IsDatatableOccurs = null;
-            this.chkStatus.IsErrorOccurs = false;
-            this.chkStatus.Location = new System.Drawing.Point(193, 170);
-            this.chkStatus.Name = "chkStatus";
-            this.chkStatus.Size = new System.Drawing.Size(117, 25);
-            this.chkStatus.TabIndex = 58;
-            this.chkStatus.Text = "အသုံးပြုနေဆဲ";
-            this.chkStatus.UseVisualStyleBackColor = true;
+            this.rdo_inactive.AutoSize = true;
+            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_inactive.Location = new System.Drawing.Point(129, 20);
+            this.rdo_inactive.Margin = new System.Windows.Forms.Padding(4);
+            this.rdo_inactive.Name = "rdo_inactive";
+            this.rdo_inactive.NextControl = null;
+            this.rdo_inactive.NextControlName = "BtnF2";
+            this.rdo_inactive.Size = new System.Drawing.Size(91, 31);
+            this.rdo_inactive.TabIndex = 3;
+            this.rdo_inactive.Text = "အသုံးမပြု";
+            this.rdo_inactive.UseVisualStyleBackColor = true;
             // 
             // SubCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1713, 961);
+            this.Controls.Add(this.panelDetail);
             this.Name = "SubCategory";
-            this.Text = "SubCategory";
+            this.Text = "အမျိုးအစား(ခွဲ)";
             this.Load += new System.EventHandler(this.SubCategory_Load);
-            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panelDetail, 0);
+            this.panelDetail.ResumeLayout(false);
+            this.panelDetail.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -134,11 +170,13 @@
 
         #endregion
 
-        private Panel panel1;
-        private POS_Control.PTextBox txtSubCategory;
-        private POS_Control.PLabel pLabel5;
-        private POS_Control.PLabel pLabel6;
+        private Panel panelDetail;
+        private POS_Control.PLabel pLabel1;
         private POS_Control.PCombo cboCategory;
-        private POS_Control.PCheckBox chkStatus;
+        private POS_Control.PLabel pLabel2;
+        private POS_Control.PTextBox txtSubCategory;
+        private Panel panel1;
+        private POS_Control.PRadio rdo_active;
+        private POS_Control.PRadio rdo_inactive;
     }
 }

@@ -1,7 +1,4 @@
-﻿using BL;
-using Entity;
-using POSBase;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using POSBase;
+using Entity;
+using BL;
+
 
 namespace SubCategory
 {
     public partial class SubCategory : BaseForm
     {
-        BaseEntity base_entity=new BaseEntity();
+        BaseEntity base_entity = new BaseEntity();
         BaseBL bbl = new BaseBL();
         public SubCategory()
         {
@@ -25,13 +26,15 @@ namespace SubCategory
         private void SubCategory_Load(object sender, EventArgs e)
         {
             ProgramID = "SubCategory";
-            StartProgram();
-            SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
-            BindCatgory();
+            ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) သိမ်းခြင်း";
             cboCategory.Focus();
-        }
 
+            StartProgram();
+
+            SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
+            SetButton(ButtonType.BType.Display, F2, "သိမ်းမည်", true);
+            BindCatgory();
+        }
         private void BindCatgory()
         {
             CategoryBL cbl = new CategoryBL();
@@ -45,7 +48,7 @@ namespace SubCategory
         public override void FunctionProcess(string tagID)
         {
             if (tagID == "2")
-            {              
+            {
                 DBProcess();
             }
             base.FunctionProcess(tagID);
@@ -65,7 +68,7 @@ namespace SubCategory
             SubCategoryEntity obj = new SubCategoryEntity();
             obj.CategoryCD = cboCategory.SelectedValue.ToString();
             obj.SubName = txtSubCategory.Text;
-            obj.Status = chkStatus.Checked == true ? "1" : "0";
+            obj.Status = rdo_active.Checked == true ? "1" : "0";
             obj.CreatedDate = DateTime.Now;
             obj.CreatedUser = base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;
@@ -75,7 +78,7 @@ namespace SubCategory
         private void ErrorCheck()
         {
             //E102
-           //txtSubCategory.e0
+            //txtSubCategory.e0
         }
     }
 }
