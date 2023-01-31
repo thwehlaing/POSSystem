@@ -1,4 +1,5 @@
-﻿using Entity;
+﻿using BL;
+using Entity;
 using POS_Control;
 using POSBase;
 using System;
@@ -31,6 +32,12 @@ namespace Category
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
            
             SetButton(ButtonType.BType.Display, F2, "သိမ်းမည်", true);
+
+            ErrorChek();
+        }
+        private void ErrorChek()
+        {
+            txtName.CheckRequired(true);
         }
         public override void FunctionProcess(string tagID)
         {
@@ -38,10 +45,18 @@ namespace Category
             {
                 if (ErrorCheck(panelDetail))
                 {
-                   
+                    DBProcess();
                 }
             }
             base.FunctionProcess(tagID);
+        }
+        private void DBProcess()
+        {
+            CategoryEntity entity = new CategoryEntity();
+            entity.CategoryName = txtName.Text;
+            entity.Status = rdo_active.Checked ? "1" : "0";
+            CategoryBL bl = new CategoryBL();
+            
         }
     }
 }

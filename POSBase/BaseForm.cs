@@ -90,17 +90,17 @@ namespace POSBase
         {
             string[] cmds = System.Environment.GetCommandLineArgs();
 
-            //if (cmds.Length < 4)
-            //    return false;
+            if (cmds.Length < 4)
+                return false;
 
-            //CompanyCD = cmds[1];
-            //OperatorCD = cmds[2];
-            //PCID = cmds[3];
+            CompanyCD = cmds[1];
+            OperatorCD = cmds[2];
+            PCID = cmds[3];
 
-            //if (string.IsNullOrWhiteSpace(CompanyCD)
-            //    || string.IsNullOrWhiteSpace(OperatorCD)
-            //    || string.IsNullOrWhiteSpace(PCID))
-            //    return false;
+            if (string.IsNullOrWhiteSpace(CompanyCD)
+                || string.IsNullOrWhiteSpace(OperatorCD)
+                || string.IsNullOrWhiteSpace(PCID))
+                return false;
 
             return true;
         }

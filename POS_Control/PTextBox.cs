@@ -67,8 +67,6 @@ namespace POS_Control
         {
             get => base.AutoSize; set => base.AutoSize = value;
         }
-        public bool E101;
-        public string E101Type;
 
         public bool IsErrorOccurs { get; set; }
         public DataTable IsDatatableOccurs { get; set; }
@@ -122,6 +120,11 @@ namespace POS_Control
         {
             this.BackColor = Color.White;
             base.OnLeave(e);
+        }
+        public bool E101;
+        public void CheckRequired(bool value)
+        {
+            E101 = value;
         }
     }
 }

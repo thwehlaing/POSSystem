@@ -51,7 +51,7 @@ namespace POS_Control
             {
                 if (string.IsNullOrWhiteSpace(PTextBox.Text))
                 {
-                    ShowErrorMessage("E102");
+                    ShowErrorMessage("E101");
                     PTextBox.Focus();
                     return (true, rDt);
                 }
