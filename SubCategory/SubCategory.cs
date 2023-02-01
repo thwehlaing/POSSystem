@@ -34,6 +34,7 @@ namespace SubCategory
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Display, F2, "သိမ်းမည်", true);
             BindCatgory();
+            ErrorCheck();
         }
         private void BindCatgory()
         {
@@ -75,10 +76,9 @@ namespace SubCategory
             return obj;
         }
 
-        private void ErrorCheck()
+        public void ErrorCheck()
         {
-            //E102
-            //txtSubCategory.e0
+            
         }
     }
 }

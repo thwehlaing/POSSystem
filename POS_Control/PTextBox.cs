@@ -53,6 +53,17 @@ namespace POS_Control
         [DisplayName("SearchType")]
         public ScType SearchType { get; set; }
 
+        public bool E101;
+        public string E101Type;
+        public bool E102;
+        public string E102Type;
+
+        public Control ctrlE101_1;
+        public Control ctrlE101_2;
+        public Control ctrlE101_3;
+        public Control ctrlE102_1;
+        public Control ctrlE102_2;
+
         public PTextBox()
         {
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -66,9 +77,7 @@ namespace POS_Control
         public override bool AutoSize
         {
             get => base.AutoSize; set => base.AutoSize = value;
-        }
-        public bool E101;
-        public string E101Type;
+        }       
 
         public bool IsErrorOccurs { get; set; }
         public DataTable IsDatatableOccurs { get; set; }
@@ -122,6 +131,18 @@ namespace POS_Control
         {
             this.BackColor = Color.White;
             base.OnLeave(e);
+        }
+        public void E101Check(bool value, string type, Control ctrl1, Control ctrl2, Control ctrl3)
+        {
+            E101 = value;
+            E101Type = type;
+            ctrlE101_1 = ctrl1;
+            ctrlE101_2 = ctrl2;
+            ctrlE101_3 = ctrl3;
+        }
+        public void E102Check(bool value)
+        {
+            E102 = value;
         }
     }
 }
