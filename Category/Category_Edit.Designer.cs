@@ -34,12 +34,14 @@
             this.rdo_active = new POS_Control.PRadio();
             this.rdo_inactive = new POS_Control.PRadio();
             this.pLabel1 = new POS_Control.PLabel();
+            this.btnSearch = new POS_Control.PButton();
             this.panelDetail.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDetail
             // 
+            this.panelDetail.Controls.Add(this.btnSearch);
             this.panelDetail.Controls.Add(this.txtName);
             this.panelDetail.Controls.Add(this.panel1);
             this.panelDetail.Controls.Add(this.pLabel1);
@@ -115,6 +117,20 @@
             this.pLabel1.Text = "နာမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(438, 23);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "...";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // Category_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -142,5 +158,6 @@
         private POS_Control.PRadio rdo_inactive;
         private POS_Control.PLabel pLabel1;
         private POS_Search.Search_TextBox txtName;
+        private POS_Control.PButton btnSearch;
     }
 }

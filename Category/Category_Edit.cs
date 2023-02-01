@@ -1,4 +1,5 @@
 ﻿using Entity;
+using POS_Search;
 using POSBase;
 using System;
 using System.Collections.Generic;
@@ -41,6 +42,12 @@ namespace Category
                 }
             }
             base.FunctionProcess(tagID);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Category_Search cate_Search = new Category_Search();
+            cate_Search.ShowDialog();
         }
     }
 }
