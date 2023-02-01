@@ -50,6 +50,7 @@ namespace SubCategory
         {
             if (tagID == "2")
             {
+                ErrorCheck(PanelDetail);
                 DBProcess();
             }
             base.FunctionProcess(tagID);
@@ -78,7 +79,7 @@ namespace SubCategory
 
         public void ErrorCheck()
         {
-            
+            txtSubCategory.CheckRequired(true);
         }
     }
 }

@@ -70,6 +70,14 @@ namespace POS_Control
 
         public bool IsErrorOccurs { get; set; }
         public DataTable IsDatatableOccurs { get; set; }
+
+        //public bool E101;
+        //public string E101Type;
+
+        //public Control ctrlE101_1;
+        //public Control ctrlE101_2;
+        //public Control ctrlE101_3;
+
         public bool ErrorCheck()
         {
             (bool, DataTable) r_value = errchk.Check(this);

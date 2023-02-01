@@ -261,6 +261,7 @@ namespace POSBase
 
         public virtual void FunctionProcess(string tagID)
         {
+            //MessageBox.Show("Go");
         }
 
         protected void SetButton(ButtonType.BType buttonType, PButton button, string buttonText, bool visible)

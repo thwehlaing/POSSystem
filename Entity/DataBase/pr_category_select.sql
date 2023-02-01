@@ -11,7 +11,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_category_select]
+CREATE PROCEDURE [dbo].[pr_category_select]
 AS
 BEGIN
 	select * from Category where Status='1'

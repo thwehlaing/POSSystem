@@ -11,7 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BL\BL.csproj" />
     <ProjectReference Include="..\Entity\Entity.csproj" />
-    <ProjectReference Include="..\POSBase\POSBase.csproj" />
+    <ProjectReference Include="..\POSBase\POSBase.csproj" />   
   </ItemGroup>
 
 </Project>
