@@ -28,11 +28,9 @@ namespace SubCategory
             ProgramID = "SubCategory";
             ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) သိမ်းခြင်း";
             cboCategory.Focus();
-
             StartProgram();
-
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Display, F2, "သိမ်းမည်", true);
+            SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
             BindCatgory();
             ErrorCheck();
         }
@@ -41,6 +39,9 @@ namespace SubCategory
             CategoryBL cbl = new CategoryBL();
             DataTable dtCategory = new DataTable();
             dtCategory = cbl.Category_Select();
+            DataRow dr = dtCategory.NewRow();
+            dr["CategoryCD"] = "-1";
+            dtCategory.Rows.InsertAt(dr, 0);
             cboCategory.DataSource = dtCategory;
             cboCategory.DisplayMember = "CategoryName";
             cboCategory.ValueMember = "CategoryCD";
@@ -50,8 +51,10 @@ namespace SubCategory
         {
             if (tagID == "2")
             {
-                ErrorCheck(PanelDetail);
-                DBProcess();
+                if (ErrorCheck(PanelDetail))
+                {
+                    DBProcess();
+                }
             }
             base.FunctionProcess(tagID);
         }
@@ -79,6 +82,7 @@ namespace SubCategory
 
         public void ErrorCheck()
         {
+            cboCategory.CheckRequired(true);
             txtSubCategory.CheckRequired(true);
         }
     }

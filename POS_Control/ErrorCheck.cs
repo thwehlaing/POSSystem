@@ -28,12 +28,12 @@ namespace POS_Control
                 (bool, DataTable) r_value = TextBoxErrorCheck(PTextBox);
                 return r_value;
             }
-            //if (ctrl is ComboBox)
-            //{
-            //    SCombo sCombo = ctrl as SCombo;
-            //    (bool, DataTable) r_value = ComboErrorCheck(sCombo);
-            //    return r_value;
-            //}
+            if (ctrl is PCombo)
+            {
+                PCombo pCombo = ctrl as PCombo;
+                (bool, DataTable) r_value = ComboErrorCheck(pCombo);
+                return r_value;
+            }
             //if (ctrl is SCheckBox)
             //{
             //    SCheckBox sCheckBox = ctrl as SCheckBox;
@@ -57,6 +57,36 @@ namespace POS_Control
                 }
             }
             return (false, rDt);
+        }
+
+        private (bool, DataTable) ComboErrorCheck(PCombo pCombo)
+        {
+            DataTable rDt = new DataTable();
+
+            if (pCombo.E102)
+            {
+                if (pCombo.SelectedIndex.ToString() == "-1" || pCombo.SelectedIndex.ToString() == "0")
+                {
+                    ShowErrorMessage("E102");
+                    pCombo.Focus();
+                    return (true, rDt);
+                }
+            }
+            //if (PCombo.E106)
+            //{
+            //    if (!string.IsNullOrEmpty(PCombo.ctrlE106_1.Text.ToString()) && !string.IsNullOrEmpty(PCombo.ctrlE106_2.Text.ToString()))
+            //    {
+            //        bool bl = Matches(PCombo.ctrlE106_2.SelectedValue.ToString(), PCombo.ctrlE106_1.SelectedValue.ToString());
+            //        if (!bl)
+            //        {
+            //            ShowErrorMessage("E106");
+            //            PCombo.Focus();
+            //            return (true, rDt);
+            //        }
+            //    }
+            //}
+            return (false, rDt);
+            
         }
     }
 }

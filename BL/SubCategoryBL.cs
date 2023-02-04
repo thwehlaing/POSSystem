@@ -28,7 +28,7 @@ namespace BL
             obj.Sqlprms[3] = new SqlParameter("@CreatedDate", SqlDbType.DateTime) { Value = obj.CreatedDate };
             obj.Sqlprms[4] = new SqlParameter("@CreatedUser", SqlDbType.VarChar) { Value = obj.CreatedUser };
             //obj.Sqlprms[5] = new SqlParameter("@Mode", SqlDbType.VarChar) { Value = obj.Mode };
-            bool result = dbl.InsertUpdateDeleteData("SubCategory_cud", GetConnectionString(), obj.Sqlprms);
+            bool result = dbl.InsertUpdateDeleteData("pr_subcategory_insert", GetConnectionString(), obj.Sqlprms);
             return result;
         }
     }

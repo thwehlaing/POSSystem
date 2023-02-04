@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Category", "Category\Catego
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubCategory", "SubCategory\SubCategory.csproj", "{21DB1DDD-A294-4197-893A-945B067B215D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS_Search", "POS_Search\POS_Search.csproj", "{CEADFC55-792F-47CD-9290-979D2B0F13D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS_Search", "POS_Search\POS_Search.csproj", "{CEADFC55-792F-47CD-9290-979D2B0F13D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

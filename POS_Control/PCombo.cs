@@ -61,5 +61,11 @@ namespace POS_Control
             this.BackColor = Color.White;
             base.OnLeave(e);
         }
+
+        public bool E102;
+        public void CheckRequired(bool value)
+        {
+            E102 = value;
+        }
     }
 }

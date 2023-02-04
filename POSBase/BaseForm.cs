@@ -53,12 +53,12 @@ namespace POSBase
            
             filePath = @"C:\\DBConfig\\DBConfig.ini";
             Dictionary<string, string> dicConfig = readIni.ReadConfig(filePath, "DataBase", "POSDB");
-            if (this.GetCmdLine() == false || dicConfig.Count == 0)
-            {
-                //起動時エラー    DB接続不可能
-                this.Close();
-                System.Environment.Exit(0);
-            }
+            //if (this.GetCmdLine() == false || dicConfig.Count == 0)
+            //{
+            //    //起動時エラー    DB接続不可能
+            //    this.Close();
+            //    System.Environment.Exit(0);
+            //}
 
             BaseBL.IEntity.DatabaseServer = dicConfig["DatabaseServer"];
             BaseBL.IEntity.DatabaseName = dicConfig["DatabaseName"];
@@ -261,7 +261,7 @@ namespace POSBase
 
         public virtual void FunctionProcess(string tagID)
         {
-            //MessageBox.Show("Go");
+            
         }
 
         protected void SetButton(ButtonType.BType buttonType, PButton button, string buttonText, bool visible)

@@ -49,8 +49,9 @@
             this.PanelDetail.Controls.Add(this.pLabel1);
             this.PanelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDetail.Location = new System.Drawing.Point(0, 57);
+            this.PanelDetail.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDetail.Name = "PanelDetail";
-            this.PanelDetail.Size = new System.Drawing.Size(1713, 839);
+            this.PanelDetail.Size = new System.Drawing.Size(1712, 839);
             this.PanelDetail.TabIndex = 40;
             // 
             // panel1
@@ -61,7 +62,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(292, 72);
-            this.panel1.TabIndex = 5;
+            this.panel1.TabIndex = 3;
             // 
             // rdo_active
             // 
@@ -100,14 +101,15 @@
             this.txtSubCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubCategory.IsDatatableOccurs = null;
             this.txtSubCategory.IsErrorOccurs = false;
-            this.txtSubCategory.Location = new System.Drawing.Point(335, 157);
+            this.txtSubCategory.Location = new System.Drawing.Point(334, 158);
+            this.txtSubCategory.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
             this.txtSubCategory.NextControl = null;
-            this.txtSubCategory.NextControlName = null;
+            this.txtSubCategory.NextControlName = "rdo_active";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
             this.txtSubCategory.Size = new System.Drawing.Size(310, 35);
-            this.txtSubCategory.TabIndex = 3;
+            this.txtSubCategory.TabIndex = 2;
             this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // pLabel2
@@ -116,9 +118,10 @@
             this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel2.Location = new System.Drawing.Point(170, 157);
+            this.pLabel2.Location = new System.Drawing.Point(170, 158);
+            this.pLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(165, 35);
+            this.pLabel2.Size = new System.Drawing.Size(164, 30);
             this.pLabel2.TabIndex = 2;
             this.pLabel2.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,11 +132,12 @@
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.IsDatatableOccurs = null;
             this.cboCategory.IsErrorOccurs = false;
-            this.cboCategory.Location = new System.Drawing.Point(335, 82);
+            this.cboCategory.Location = new System.Drawing.Point(334, 84);
+            this.cboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cboCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.NextControl = null;
-            this.cboCategory.NextControlName = null;
+            this.cboCategory.NextControlName = "txtSubCategory";
             this.cboCategory.Size = new System.Drawing.Size(309, 35);
             this.cboCategory.TabIndex = 1;
             // 
@@ -143,9 +147,10 @@
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(170, 82);
+            this.pLabel1.Location = new System.Drawing.Point(170, 84);
+            this.pLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(165, 35);
+            this.pLabel1.Size = new System.Drawing.Size(164, 30);
             this.pLabel1.TabIndex = 0;
             this.pLabel1.Text = "အမျိုးအစား";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -154,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1713, 961);
+            this.ClientSize = new System.Drawing.Size(1712, 961);
             this.Controls.Add(this.PanelDetail);
             this.Name = "SubCategory";
             this.Text = "အမျိုးအစား(ခွဲ)";
