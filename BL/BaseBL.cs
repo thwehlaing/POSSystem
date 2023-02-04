@@ -33,7 +33,7 @@ namespace BL
         {
             me.Sqlprms = new SqlParameter[1];
             me.Sqlprms[0] = new SqlParameter("@MessageID", me.MessageID);
-            DataTable dtMsg = bl.SelectDatatable("pr_message_select", GetConnectionString(), me.Sqlprms);
+            DataTable dtMsg = bl.SelectDatatable("Message_Select", GetConnectionString(), me.Sqlprms);
 
             string message = string.Empty;
             string MessageID;
@@ -57,9 +57,9 @@ namespace BL
                                          dtMsg.Rows[0]["MessageMark"].ToString().Equals("4") ? MessageBoxIcon.Exclamation :
                                          MessageBoxIcon.None;
                 if (me.MessageID == "Q003")
-                    return MessageBox.Show(message, me.MessageID, msgbtn, msgicon, MessageBoxDefaultButton.Button2);
+                    return MessageBox.Show(message, "", msgbtn, msgicon, MessageBoxDefaultButton.Button2);
                 else
-                    return MessageBox.Show(message, me.MessageID, msgbtn, msgicon, MessageBoxDefaultButton.Button1);
+                    return MessageBox.Show(message, "", msgbtn, msgicon, MessageBoxDefaultButton.Button1);
             }
             else
             {

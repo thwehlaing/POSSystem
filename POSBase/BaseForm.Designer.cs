@@ -84,7 +84,7 @@
             this.tspLoginUser.Image = global::POSBase.Properties.Resources.icons8_user_16;
             this.tspLoginUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspLoginUser.Name = "tspLoginUser";
-            this.tspLoginUser.Size = new System.Drawing.Size(175, 47);
+            this.tspLoginUser.Size = new System.Drawing.Size(144, 47);
             this.tspLoginUser.Text = "Welcome Admin";
             // 
             // tspCurrentDate
@@ -94,7 +94,7 @@
             this.tspCurrentDate.Image = global::POSBase.Properties.Resources.icons8_calendar_16;
             this.tspCurrentDate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspCurrentDate.Name = "tspCurrentDate";
-            this.tspCurrentDate.Size = new System.Drawing.Size(137, 47);
+            this.tspCurrentDate.Size = new System.Drawing.Size(116, 47);
             this.tspCurrentDate.Text = "MenuItem2";
             // 
             // BaseTitle
@@ -106,7 +106,7 @@
             this.BaseTitle.ForeColor = System.Drawing.Color.Black;
             this.BaseTitle.Location = new System.Drawing.Point(5, 2);
             this.BaseTitle.Name = "BaseTitle";
-            this.BaseTitle.Size = new System.Drawing.Size(35, 53);
+            this.BaseTitle.Size = new System.Drawing.Size(29, 53);
             this.BaseTitle.TabIndex = 1;
             this.BaseTitle.Text = "a";
             this.BaseTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,7 +124,7 @@
             // BtnF1
             // 
             this.BtnF1.BackColor = System.Drawing.Color.White;
-            this.BtnF1.ButtonType = Entity.ButtonType.BType.Normal;
+            this.BtnF1.ButtonType = Entity.ButtonType.BType.Close;
             this.BtnF1.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.BtnF1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnF1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -173,7 +173,7 @@
             // 
             // BaseForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(1713, 961);

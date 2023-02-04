@@ -117,21 +117,16 @@ namespace POSBase
                 switch (btn.ButtonType)
                 {
                     case ButtonType.BType.Close:
-                        //if (bbl.ShowMessage("Q003") == DialogResult.Yes)
-                        //{
-                        //    BaseEntity be = new BaseEntity();
-                        //    be.OperatorCD = OperatorCD;
-                        //    be.ProgramID = ProgramID;
-                        //    be.PC = PCID;
-                        //    bbl.D_Exclusive_Number_Remove(be);
-                        //    this.Close();
-                        //}
-                        //else
-                        //{
-                        //    if (PreviousCtrl != null)
-                        //        PreviousCtrl.Focus();
-                        //    return;
-                        //}
+                        if (bbl.ShowMessage("Q003") == DialogResult.Yes)
+                        {
+                            this.Close();
+                        }
+                        else
+                        {
+                            //if (PreviousCtrl != null)
+                            //    PreviousCtrl.Focus();
+                            return;
+                        }
                         break;
                     //case ButtonType.BType.New:
                     //    FunctionProcess(btn.Tag.ToString());
