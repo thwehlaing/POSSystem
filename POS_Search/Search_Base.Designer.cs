@@ -45,18 +45,17 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.84783F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.15218F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel1.Controls.Add(this.SBtn2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.SBtn1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 408);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 617);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(851, 44);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 44);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // SBtn2
@@ -65,9 +64,9 @@
             this.SBtn2.ButtonType = Entity.ButtonType.BType.Normal;
             this.SBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SBtn2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SBtn2.Location = new System.Drawing.Point(733, 3);
+            this.SBtn2.Location = new System.Drawing.Point(867, 3);
             this.SBtn2.Name = "SBtn2";
-            this.SBtn2.Size = new System.Drawing.Size(115, 38);
+            this.SBtn2.Size = new System.Drawing.Size(114, 38);
             this.SBtn2.TabIndex = 1;
             this.SBtn2.Text = "ယူမည်";
             this.SBtn2.UseVisualStyleBackColor = false;
@@ -80,7 +79,7 @@
             this.SBtn1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.SBtn1.Location = new System.Drawing.Point(3, 3);
             this.SBtn1.Name = "SBtn1";
-            this.SBtn1.Size = new System.Drawing.Size(117, 38);
+            this.SBtn1.Size = new System.Drawing.Size(114, 38);
             this.SBtn1.TabIndex = 0;
             this.SBtn1.Text = "ပိတ်မည်";
             this.SBtn1.UseVisualStyleBackColor = false;
@@ -131,9 +130,10 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.panel1.Controls.Add(this.lbl_Search_Form_Name);
-            this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 44);
+            this.panel1.Size = new System.Drawing.Size(984, 44);
             this.panel1.TabIndex = 1;
             // 
             // lbl_Search_Form_Name
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(851, 452);
+            this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "Search_Base";
