@@ -34,6 +34,7 @@ namespace POSBase
         #endregion
         protected string ProgramID { get; set; }
         protected string ProgramName { get; set; }
+        protected Control PreviousCtrl { get; set; }
 
         #region Function Button
         protected PButton F1 { get => BtnF1; set => BtnF1 = value; }
@@ -123,8 +124,8 @@ namespace POSBase
                         }
                         else
                         {
-                            //if (PreviousCtrl != null)
-                            //    PreviousCtrl.Focus();
+                            if (PreviousCtrl != null)
+                                PreviousCtrl.Focus();
                             return;
                         }
                         break;

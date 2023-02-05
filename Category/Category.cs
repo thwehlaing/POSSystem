@@ -26,6 +26,7 @@ namespace Category
             ProgramID = "Category";
             ProgramName = "ပစ္စည်းအမျိုးအစား သိမ်းခြင်း";
             txtName.Focus();
+            PreviousCtrl = txtName;
 
             StartProgram();
 
