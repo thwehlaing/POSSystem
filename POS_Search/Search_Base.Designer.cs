@@ -45,29 +45,32 @@
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
             this.tableLayoutPanel1.Controls.Add(this.SBtn2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.SBtn1, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 617);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 822);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(984, 44);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1125, 59);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // SBtn2
             // 
             this.SBtn2.BackColor = System.Drawing.Color.White;
-            this.SBtn2.ButtonType = Entity.ButtonType.BType.Normal;
+            this.SBtn2.ButtonType = Entity.ButtonType.BType.Save;
             this.SBtn2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SBtn2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SBtn2.Location = new System.Drawing.Point(867, 3);
+            this.SBtn2.Location = new System.Drawing.Point(991, 4);
+            this.SBtn2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SBtn2.Name = "SBtn2";
-            this.SBtn2.Size = new System.Drawing.Size(114, 38);
+            this.SBtn2.Size = new System.Drawing.Size(130, 51);
             this.SBtn2.TabIndex = 1;
+            this.SBtn2.Tag = "2";
             this.SBtn2.Text = "ယူမည်";
             this.SBtn2.UseVisualStyleBackColor = false;
             // 
@@ -77,10 +80,12 @@
             this.SBtn1.ButtonType = Entity.ButtonType.BType.Normal;
             this.SBtn1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SBtn1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SBtn1.Location = new System.Drawing.Point(3, 3);
+            this.SBtn1.Location = new System.Drawing.Point(3, 4);
+            this.SBtn1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SBtn1.Name = "SBtn1";
-            this.SBtn1.Size = new System.Drawing.Size(114, 38);
+            this.SBtn1.Size = new System.Drawing.Size(130, 51);
             this.SBtn1.TabIndex = 0;
+            this.SBtn1.Tag = "1";
             this.SBtn1.Text = "ပိတ်မည်";
             this.SBtn1.UseVisualStyleBackColor = false;
             // 
@@ -132,8 +137,9 @@
             this.panel1.Controls.Add(this.lbl_Search_Form_Name);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 44);
+            this.panel1.Size = new System.Drawing.Size(1125, 59);
             this.panel1.TabIndex = 1;
             // 
             // lbl_Search_Form_Name
@@ -143,19 +149,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Search_Form_Name.AutoSize = true;
             this.lbl_Search_Form_Name.Font = new System.Drawing.Font("Myanmar Text", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Search_Form_Name.Location = new System.Drawing.Point(3, 5);
+            this.lbl_Search_Form_Name.Location = new System.Drawing.Point(3, 7);
             this.lbl_Search_Form_Name.Name = "lbl_Search_Form_Name";
-            this.lbl_Search_Form_Name.Size = new System.Drawing.Size(25, 34);
+            this.lbl_Search_Form_Name.Size = new System.Drawing.Size(32, 43);
             this.lbl_Search_Form_Name.TabIndex = 0;
             this.lbl_Search_Form_Name.Text = "a";
             // 
             // Search_Base
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(1125, 881);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Search_Base";
             this.Text = "Search_Base";
             this.Load += new System.EventHandler(this.Search_Base_Load);

@@ -15,9 +15,26 @@ namespace POS_Search
     public partial class Search_Base : Form
     {
         public string Search_Form_Name { get; set; }
+        protected PButton F1 { get => SBtn1; set => SBtn1 = value; }
+        protected PButton F2 { get => SBtn2; set => SBtn2 = value; }
         public Search_Base()
         {
             InitializeComponent();
+        }
+        protected void SetButton(ButtonType.BType buttonType, PButton button, string buttonText, bool visible)
+        {
+            button.ButtonType = buttonType;
+            switch (buttonType)
+            {
+                case ButtonType.BType.Close:
+                    button.Text = buttonText;
+                    break;              
+                case ButtonType.BType.Save:
+                    button.Text = buttonText;
+                    break;
+            }
+
+            button.Visible = visible;
         }
         private void btnFunctionClick(object sender, EventArgs e)
         {
@@ -31,17 +48,16 @@ namespace POS_Search
         }
         protected void FireClickEvent(PButton btn, int type)
         {
-            //switch (btn.ButtonType)
-            //{
-            //    case ButtonType.BType.Close:
-            //        this.Close();
-            //        break;
-            //    case ButtonType.BType.Search:
-            //    case ButtonType.BType.Save:
-            //        FunctionProcess(btn.Tag.ToString());
-            //        break;
+            switch (btn.ButtonType)
+            {
+                case ButtonType.BType.Close:
+                    this.Close();
+                    break;
+                case ButtonType.BType.Save:                
+                    FunctionProcess(btn.Tag.ToString());
+                    break;
 
-            //}
+            }
         }
 
         public virtual void FunctionProcess(string tagID)

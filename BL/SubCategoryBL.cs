@@ -30,5 +30,14 @@ namespace BL
             bool result = dbl.InsertUpdateDeleteData("pr_subcategory_insert", GetConnectionString(), obj.Sqlprms);
             return result;
         }
+        public DataTable SubCategory_Search(SubCategoryEntity obj)
+        {
+            DBAccessBL dbl = new DBAccessBL();
+            obj.Sqlprms = new SqlParameter[2];
+            obj.Sqlprms[0] = new SqlParameter("@CategoryCD", SqlDbType.VarChar) { Value = obj.CategoryCD };
+            obj.Sqlprms[1] = new SqlParameter("@SubName", SqlDbType.NVarChar) { Value = obj.SubName };
+            DataTable dt = dbl.SelectDatatable("pr_subcategory_search", GetConnectionString(), obj.Sqlprms);
+            return dt;
+        }
     }
 }

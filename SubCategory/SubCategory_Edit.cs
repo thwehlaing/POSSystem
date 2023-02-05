@@ -46,7 +46,9 @@ namespace SubCategory
         private void btnSearch_Click(object sender, EventArgs e)
         {
             SubCategory_Search search = new SubCategory_Search();
-            search.Show();
+            search.ShowDialog();
+            txtSubName.Text = search.SubCategoryName;
+
         }
     }
 }
