@@ -23,7 +23,8 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
-   insert into SubCategory(SubCode,CategoryCD,SubName,Status,CreatedDate,CreatedUser) values('S00000001',@categorycd,@subname,@status,@createddate,@createduser)
+	DECLARE @maxsubcode varchar(10);
+	Set @maxsubcode=dbo.func_get_maxsubcode('S');
+	
+   insert into SubCategory(SubCode,CategoryCD,SubName,Status,CreatedDate,CreatedUser) values(@maxsubcode,@categorycd,@subname,@status,@createddate,@createduser)
 END
-GO

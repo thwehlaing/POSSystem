@@ -33,7 +33,7 @@ namespace BL
         {
             me.Sqlprms = new SqlParameter[1];
             me.Sqlprms[0] = new SqlParameter("@MessageID", me.MessageID);
-            DataTable dtMsg = bl.SelectDatatable("Message_Select", GetConnectionString(), me.Sqlprms);
+            DataTable dtMsg = bl.SelectDatatable("pr_message_select", GetConnectionString(), me.Sqlprms);
 
             string message = string.Empty;
             string MessageID;

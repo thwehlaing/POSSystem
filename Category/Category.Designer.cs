@@ -97,6 +97,7 @@
             this.txtName.Name = "txtName";
             this.txtName.NextControl = null;
             this.txtName.NextControlName = "rdo_active";
+            this.txtName.SearchType = Entity.SearchType.ScType.None;
             this.txtName.Size = new System.Drawing.Size(307, 30);
             this.txtName.TabIndex = 1;
             this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;

@@ -1,6 +1,6 @@
-﻿namespace Category
+﻿namespace SubCategory
 {
-    partial class Category_Edit
+    partial class SubCategory_Edit
     {
         /// <summary>
         /// Required designer variable.
@@ -28,67 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelDetail = new System.Windows.Forms.Panel();
-            this.btnSearch = new POS_Control.PButton();
-            this.txtName = new POS_Search.Search_TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdo_active = new POS_Control.PRadio();
             this.rdo_inactive = new POS_Control.PRadio();
             this.pLabel1 = new POS_Control.PLabel();
-            this.panelDetail.SuspendLayout();
+            this.pTextBox1 = new POS_Control.PTextBox();
+            this.btnSearch = new POS_Control.PButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelDetail
-            // 
-            this.panelDetail.Controls.Add(this.btnSearch);
-            this.panelDetail.Controls.Add(this.txtName);
-            this.panelDetail.Controls.Add(this.panel1);
-            this.panelDetail.Controls.Add(this.pLabel1);
-            this.panelDetail.Location = new System.Drawing.Point(0, 59);
-            this.panelDetail.Name = "panelDetail";
-            this.panelDetail.Size = new System.Drawing.Size(1710, 832);
-            this.panelDetail.TabIndex = 40;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(438, 23);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 30);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "...";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
-            this.txtName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.IsDatatableOccurs = null;
-            this.txtName.IsErrorOccurs = false;
-            this.txtName.Location = new System.Drawing.Point(131, 23);
-            this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtName.Name = "txtName";
-            this.txtName.NextControl = this.txtName;
-            this.txtName.NextControlName = "rdo_active";
-            this.txtName.SearchType = Entity.SearchType.ScType.Category;
-            this.txtName.Size = new System.Drawing.Size(307, 30);
-            this.txtName.TabIndex = 5;
-            this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.rdo_active);
             this.panel1.Controls.Add(this.rdo_inactive);
-            this.panel1.Location = new System.Drawing.Point(31, 59);
+            this.panel1.Location = new System.Drawing.Point(31, 115);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 58);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 40;
             // 
             // rdo_active
             // 
@@ -124,40 +80,72 @@
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(31, 23);
+            this.pLabel1.Location = new System.Drawing.Point(31, 80);
             this.pLabel1.Name = "pLabel1";
             this.pLabel1.Size = new System.Drawing.Size(100, 30);
-            this.pLabel1.TabIndex = 0;
-            this.pLabel1.Text = "နာမည်";
+            this.pLabel1.TabIndex = 41;
+            this.pLabel1.Text = "အမျိုးအစား (ခွဲ)";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Category_Edit
+            // pTextBox1
+            // 
+            this.pTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pTextBox1.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.pTextBox1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.pTextBox1.IsDatatableOccurs = null;
+            this.pTextBox1.IsErrorOccurs = false;
+            this.pTextBox1.Location = new System.Drawing.Point(130, 80);
+            this.pTextBox1.MinimumSize = new System.Drawing.Size(100, 20);
+            this.pTextBox1.Name = "pTextBox1";
+            this.pTextBox1.NextControl = null;
+            this.pTextBox1.NextControlName = null;
+            this.pTextBox1.SearchType = Entity.SearchType.ScType.None;
+            this.pTextBox1.Size = new System.Drawing.Size(307, 30);
+            this.pTextBox1.TabIndex = 42;
+            this.pTextBox1.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(430, 80);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 43;
+            this.btnSearch.Text = "...";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            // 
+            // SubCategory_Edit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1713, 961);
-            this.Controls.Add(this.panelDetail);
-            this.Margin = new System.Windows.Forms.Padding(9, 8, 9, 8);
-            this.Name = "Category_Edit";
-            this.Text = "Category_Edit";
-            this.Load += new System.EventHandler(this.Category_Edit_Load);
-            this.Controls.SetChildIndex(this.panelDetail, 0);
-            this.panelDetail.ResumeLayout(false);
-            this.panelDetail.PerformLayout();
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.pTextBox1);
+            this.Controls.Add(this.pLabel1);
+            this.Controls.Add(this.panel1);
+            this.Name = "SubCategory_Edit";
+            this.Text = "SubCategory_Edit";
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.pLabel1, 0);
+            this.Controls.SetChildIndex(this.pTextBox1, 0);
+            this.Controls.SetChildIndex(this.btnSearch, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Panel panelDetail;
         private Panel panel1;
         private POS_Control.PRadio rdo_active;
         private POS_Control.PRadio rdo_inactive;
         private POS_Control.PLabel pLabel1;
-        private POS_Search.Search_TextBox txtName;
+        private POS_Control.PTextBox pTextBox1;
         private POS_Control.PButton btnSearch;
     }
 }

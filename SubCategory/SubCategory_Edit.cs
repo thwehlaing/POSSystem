@@ -1,5 +1,4 @@
-﻿using POSBase;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Entity;
+using POSBase;
+using POS_Control;
 
 namespace SubCategory
 {
-    public partial class SubCategoryList : BaseForm
+    public partial class SubCategory_Edit : BaseForm
     {
-        public SubCategoryList()
+        public SubCategory_Edit()
         {
             InitializeComponent();
         }
