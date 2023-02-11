@@ -13,7 +13,7 @@ ALTER PROCEDURE [dbo].[pr_subcategory_search]
 	@SubName	nvarchar(50)
 AS
 BEGIN
-	Select SubCode,c.CategoryName,sc.SubName from SubCategory sc 
+	Select c.CategoryCD ,SubCode,c.CategoryName,sc.SubName from SubCategory sc 
 	inner join Category c 
 	on sc.CategoryCD=c.CategoryCD 
 	where sc.CategoryCD=@CategoryCD and (@SubName is null OR (SubName like @SubName +'%'))

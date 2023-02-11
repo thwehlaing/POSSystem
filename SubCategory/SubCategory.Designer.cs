@@ -94,7 +94,7 @@
             // txtSubCategory
             // 
             this.txtSubCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubCategory.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtSubCategory.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtSubCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubCategory.IsDatatableOccurs = null;
             this.txtSubCategory.IsErrorOccurs = false;

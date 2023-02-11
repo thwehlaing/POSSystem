@@ -63,7 +63,7 @@ namespace SubCategory
         {
             SubCategoryEntity obj = GetInsertSubCategory();
             SubCategoryBL bl = new SubCategoryBL();
-            bool return_Bl = bl.SubCategory_CUD(obj);
+            bool return_Bl = bl.SubCategory_Create(obj);
             if (return_Bl)
                 bbl.ShowMessage("I101");
         }

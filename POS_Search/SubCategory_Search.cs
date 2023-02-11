@@ -15,6 +15,7 @@ namespace POS_Search
 {
     public partial class SubCategory_Search : Search_Base
     {
+        public string CatCD = "";
         public string SubCategoryCD = "";
         public string SubCategoryName = "";
         public string Category_Name = "";
@@ -85,6 +86,7 @@ namespace POS_Search
         {
             if(row != null)
             {
+                CatCD = row.Cells["CategoryCD"].Value.ToString();
                 SubCategoryCD = row.Cells["SubCode"].Value.ToString();
                 Category_Name = row.Cells["CategoryName"].Value.ToString();
                 SubCategoryName = row.Cells["SubName"].Value.ToString();

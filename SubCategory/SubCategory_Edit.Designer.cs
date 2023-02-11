@@ -46,10 +46,9 @@
             this.PanelDetail.Controls.Add(this.pLabel1);
             this.PanelDetail.Controls.Add(this.panel2);
             this.PanelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDetail.Location = new System.Drawing.Point(0, 71);
-            this.PanelDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelDetail.Location = new System.Drawing.Point(0, 57);
             this.PanelDetail.Name = "PanelDetail";
-            this.PanelDetail.Size = new System.Drawing.Size(1924, 903);
+            this.PanelDetail.Size = new System.Drawing.Size(1539, 722);
             this.PanelDetail.TabIndex = 40;
             // 
             // btnSearch
@@ -58,10 +57,9 @@
             this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(547, 29);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Location = new System.Drawing.Point(438, 23);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(94, 38);
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
             this.btnSearch.TabIndex = 47;
             this.btnSearch.Text = "...";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -74,14 +72,13 @@
             this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubName.IsDatatableOccurs = null;
             this.txtSubName.IsErrorOccurs = false;
-            this.txtSubName.Location = new System.Drawing.Point(164, 29);
-            this.txtSubName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtSubName.MinimumSize = new System.Drawing.Size(124, 20);
+            this.txtSubName.Location = new System.Drawing.Point(131, 23);
+            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.NextControl = null;
-            this.txtSubName.NextControlName = null;
+            this.txtSubName.NextControlName = "rdo_active";
             this.txtSubName.SearchType = Entity.SearchType.ScType.None;
-            this.txtSubName.Size = new System.Drawing.Size(383, 35);
+            this.txtSubName.Size = new System.Drawing.Size(307, 30);
             this.txtSubName.TabIndex = 46;
             this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
@@ -91,10 +88,9 @@
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(39, 29);
-            this.pLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.pLabel1.Location = new System.Drawing.Point(31, 23);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(124, 37);
+            this.pLabel1.Size = new System.Drawing.Size(100, 30);
             this.pLabel1.TabIndex = 45;
             this.pLabel1.Text = "အမျိုးအစား (ခွဲ)";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,10 +99,9 @@
             // 
             this.panel2.Controls.Add(this.rdo_active);
             this.panel2.Controls.Add(this.rdo_inactive);
-            this.panel2.Location = new System.Drawing.Point(39, 75);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(31, 60);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 72);
+            this.panel2.Size = new System.Drawing.Size(234, 58);
             this.panel2.TabIndex = 44;
             // 
             // rdo_active
@@ -114,12 +109,11 @@
             this.rdo_active.AutoSize = true;
             this.rdo_active.Checked = true;
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdo_active.Location = new System.Drawing.Point(4, 20);
-            this.rdo_active.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
             this.rdo_active.NextControl = null;
             this.rdo_active.NextControlName = "BtnF2";
-            this.rdo_active.Size = new System.Drawing.Size(82, 31);
+            this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
             this.rdo_active.TabStop = true;
             this.rdo_active.Text = "အသုံးပြု";
@@ -129,23 +123,21 @@
             // 
             this.rdo_inactive.AutoSize = true;
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdo_inactive.Location = new System.Drawing.Point(129, 20);
-            this.rdo_inactive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
             this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
-            this.rdo_inactive.Size = new System.Drawing.Size(91, 31);
+            this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
             this.rdo_inactive.Text = "အသုံးမပြု";
             this.rdo_inactive.UseVisualStyleBackColor = true;
             // 
             // SubCategory_Edit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 30F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1539, 844);
             this.Controls.Add(this.PanelDetail);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "SubCategory_Edit";
             this.Text = "SubCategory_Edit";
             this.Load += new System.EventHandler(this.SubCategory_Edit_Load);

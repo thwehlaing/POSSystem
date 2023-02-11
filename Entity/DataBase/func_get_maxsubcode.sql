@@ -13,7 +13,7 @@ RETURNS varchar(10)
 AS
 BEGIN
    declare @maxsubcode varchar(10);	
-   Set @maxsubcode=(SELECT Concat(@start,Format(Convert(INT,SUBSTRING(SubCode, 2, Len(SubCode)))+1,'000000000')) from SubCategory)
+   Set @maxsubcode=(SELECT Concat(@start,Format(Convert(INT,SUBSTRING(max(SubCode), 2, Len(max(SubCode))))+1,'000000000')) from SubCategory)
    
    if @maxsubcode is null
 	   begin
