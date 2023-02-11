@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.pLabel1 = new POS_Control.PLabel();
-            this.cboCategory = new POS_Control.PCombo();
             this.pLabel2 = new POS_Control.PLabel();
             this.txtSubCategory = new POS_Control.PTextBox();
             this.dgvSubCategory = new POS_Control.PGridView();
-            this.btnDisplay = new POS_Control.PButton();
-            this.CategoryCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnDisplay = new POS_Control.PButton();
+            this.txtCategoryName = new POS_Control.PTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,20 +52,6 @@
             this.pLabel1.TabIndex = 2;
             this.pLabel1.Text = "အမျိုးအစား";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cboCategory
-            // 
-            this.cboCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboCategory.FormattingEnabled = true;
-            this.cboCategory.IsDatatableOccurs = null;
-            this.cboCategory.IsErrorOccurs = false;
-            this.cboCategory.Location = new System.Drawing.Point(130, 60);
-            this.cboCategory.MinimumSize = new System.Drawing.Size(100, 0);
-            this.cboCategory.Name = "cboCategory";
-            this.cboCategory.NextControl = null;
-            this.cboCategory.NextControlName = null;
-            this.cboCategory.Size = new System.Drawing.Size(339, 29);
-            this.cboCategory.TabIndex = 4;
             // 
             // pLabel2
             // 
@@ -94,7 +79,7 @@
             this.txtSubCategory.NextControl = null;
             this.txtSubCategory.NextControlName = null;
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
-            this.txtSubCategory.Size = new System.Drawing.Size(340, 30);
+            this.txtSubCategory.Size = new System.Drawing.Size(300, 30);
             this.txtSubCategory.TabIndex = 6;
             this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
@@ -103,7 +88,6 @@
             this.dgvSubCategory.AllowUserToAddRows = false;
             this.dgvSubCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CategoryCD,
             this.SubCode,
             this.CategoryName,
             this.SubName});
@@ -115,27 +99,6 @@
             this.dgvSubCategory.Size = new System.Drawing.Size(850, 450);
             this.dgvSubCategory.TabIndex = 7;
             this.dgvSubCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubCategory_CellMouseDoubleClick);
-            // 
-            // btnDisplay
-            // 
-            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDisplay.Location = new System.Drawing.Point(500, 101);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
-            this.btnDisplay.TabIndex = 8;
-            this.btnDisplay.Text = "ပြပါ";
-            this.btnDisplay.UseVisualStyleBackColor = false;
-            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
-            // 
-            // CategoryCD
-            // 
-            this.CategoryCD.DataPropertyName = "CategoryCD";
-            this.CategoryCD.HeaderText = "Column1";
-            this.CategoryCD.Name = "CategoryCD";
-            this.CategoryCD.Visible = false;
             // 
             // SubCode
             // 
@@ -164,27 +127,59 @@
             this.SubName.ReadOnly = true;
             this.SubName.Width = 350;
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.Location = new System.Drawing.Point(500, 101);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
+            this.btnDisplay.TabIndex = 8;
+            this.btnDisplay.Text = "ပြပါ";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // txtCategoryName
+            // 
+            this.txtCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCategoryName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtCategoryName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCategoryName.IsDatatableOccurs = null;
+            this.txtCategoryName.IsErrorOccurs = false;
+            this.txtCategoryName.Location = new System.Drawing.Point(130, 60);
+            this.txtCategoryName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.NextControl = null;
+            this.txtCategoryName.NextControlName = null;
+            this.txtCategoryName.ReadOnly = true;
+            this.txtCategoryName.SearchType = Entity.SearchType.ScType.None;
+            this.txtCategoryName.Size = new System.Drawing.Size(300, 30);
+            this.txtCategoryName.TabIndex = 9;
+            this.txtCategoryName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
             // SubCategory_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.txtCategoryName);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.dgvSubCategory);
             this.Controls.Add(this.txtSubCategory);
             this.Controls.Add(this.pLabel2);
-            this.Controls.Add(this.cboCategory);
             this.Controls.Add(this.pLabel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SubCategory_Search";
             this.Text = "SubCategory_Search";
             this.Load += new System.EventHandler(this.SubCategory_Search_Load);
             this.Controls.SetChildIndex(this.pLabel1, 0);
-            this.Controls.SetChildIndex(this.cboCategory, 0);
             this.Controls.SetChildIndex(this.pLabel2, 0);
             this.Controls.SetChildIndex(this.txtSubCategory, 0);
             this.Controls.SetChildIndex(this.dgvSubCategory, 0);
             this.Controls.SetChildIndex(this.btnDisplay, 0);
+            this.Controls.SetChildIndex(this.txtCategoryName, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategory)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -194,12 +189,11 @@
         #endregion
 
         private POS_Control.PLabel pLabel1;
-        private POS_Control.PCombo cboCategory;
         private POS_Control.PLabel pLabel2;
         private POS_Control.PTextBox txtSubCategory;
         private POS_Control.PGridView dgvSubCategory;
         private POS_Control.PButton btnDisplay;
-        private DataGridViewTextBoxColumn CategoryCD;
+        private POS_Control.PTextBox txtCategoryName;
         private DataGridViewTextBoxColumn SubCode;
         private DataGridViewTextBoxColumn CategoryName;
         private DataGridViewTextBoxColumn SubName;

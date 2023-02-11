@@ -19,9 +19,11 @@ namespace POS_Search
         public string SubCategoryCD = "";
         public string SubCategoryName = "";
         public string Category_Name = "";
-        public SubCategory_Search()
+        public SubCategory_Search(string CategoryCD,string CategoryName)
         {
             InitializeComponent();
+            CatCD = CategoryCD;
+            Category_Name = CategoryName;
             Search_Form_Name = "ပစ္စည်းအမျိုးအစား(ခွဲ)";
         }
 
@@ -29,30 +31,13 @@ namespace POS_Search
         {
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);
-            BindCatgory();
-            cboCategory.Focus();
-
-            cboCategory.CheckRequired(true);
-            //dgvSubCategory.UseRowNo(true);
-            //dgvSubCategory.Columns[2].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            txtCategoryName.Text = Category_Name;
         }
-        private void BindCatgory()
-        {
-            CategoryBL cbl = new CategoryBL();
-            DataTable dtCategory = new DataTable();
-            dtCategory = cbl.Category_Select();
-            DataRow dr = dtCategory.NewRow();
-            dr["CategoryCD"] = "-1";
-            dtCategory.Rows.InsertAt(dr, 0);
-            cboCategory.DataSource = dtCategory;
-            cboCategory.DisplayMember = "CategoryName";
-            cboCategory.ValueMember = "CategoryCD";
-        }
-
+       
         private void DataGridviewBind()
         {
             SubCategoryEntity entity = new SubCategoryEntity();
-            entity.CategoryCD = cboCategory.SelectedValue.ToString();
+            entity.CategoryCD = CatCD;
             entity.SubName = txtSubCategory.Text;
             SubCategoryBL sbl=new SubCategoryBL();
             DataTable dt = sbl.SubCategory_Search(entity);
@@ -85,8 +70,7 @@ namespace POS_Search
         private void GetDataGridViewData(DataGridViewRow row)
         {
             if(row != null)
-            {
-                CatCD = row.Cells["CategoryCD"].Value.ToString();
+            {                
                 SubCategoryCD = row.Cells["SubCode"].Value.ToString();
                 Category_Name = row.Cells["CategoryName"].Value.ToString();
                 SubCategoryName = row.Cells["SubName"].Value.ToString();

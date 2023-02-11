@@ -18,8 +18,7 @@ namespace SubCategory
     public partial class SubCategory_Edit : BaseForm
     {
         BaseEntity base_entity = new BaseEntity();
-        BaseBL bbl = new BaseBL();
-        string CatCode = string.Empty;
+        BaseBL bbl = new BaseBL();      
         string SubCode = string.Empty;
         public SubCategory_Edit()
         {
@@ -29,13 +28,29 @@ namespace SubCategory
         private void SubCategory_Edit_Load(object sender, EventArgs e)
         {
             ProgramID = "SubCategory_Edit";
-            ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) ပြင်ခြင်း";
-            txtSubName.Focus();
-
+            ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) ပြင်ခြင်း";          
+            PreviousCtrl =txtSubName;
+            cboCategory.Focus();
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
+            BindCatgory();
         }
+
+        private void BindCatgory()
+        {
+            CategoryBL cbl = new CategoryBL();
+            DataTable dtCategory = new DataTable();
+            dtCategory = cbl.Category_Select();
+            DataRow dr = dtCategory.NewRow();
+            dr["CategoryCD"] = "-1";
+            dtCategory.Rows.InsertAt(dr, 0);
+            cboCategory.DataSource = dtCategory;
+            cboCategory.DisplayMember = "CategoryName";
+            cboCategory.ValueMember = "CategoryCD";
+        }
+
+
         public override void FunctionProcess(string tagID)
         {
             if (tagID == "2")
@@ -54,14 +69,17 @@ namespace SubCategory
             SubCategoryBL bl = new SubCategoryBL();
             bool return_Bl = bl.SubCategory_Update(obj);
             if (return_Bl)
-                bbl.ShowMessage("I101");
+            {
+                ClearData();
+                bbl.ShowMessage("I101");                
+            }                
         }
 
         private SubCategoryEntity GetUpdateCategory()
         {
             SubCategoryEntity obj = new SubCategoryEntity();
             obj.SubCode = SubCode;
-            obj.CategoryCD = CatCode;
+            obj.CategoryCD = cboCategory.SelectedValue.ToString();
             obj.SubName = txtSubName.Text;
             obj.Status = rdo_active.Checked == true ? "1" : "0";
             obj.UpdatedDate = DateTime.Now;
@@ -71,18 +89,27 @@ namespace SubCategory
         }
         public void ErrorCheck()
         {
-           
+            cboCategory.CheckRequired(true);
             txtSubName.CheckRequired(true);
+        }
+
+        public void ClearData()
+        {
+            cboCategory.SelectedIndex = -1;
+            txtSubName.Text = "";
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SubCategory_Search search = new SubCategory_Search();
-            search.ShowDialog();
-            CatCode = search.CatCD;
-            SubCode = search.SubCategoryCD;
-            txtSubName.Text = search.SubCategoryName;
-
+            if (cboCategory.SelectedValue!= "-1")
+            {
+                SubCategory_Search search = new SubCategory_Search(cboCategory.SelectedValue.ToString(),cboCategory.Text);
+                search.ShowDialog();               
+                SubCode = search.SubCategoryCD;
+                txtSubName.Text = search.SubCategoryName;
+            }
+            else
+                bbl.ShowMessage("E101");
         }
     }
 }

@@ -27,6 +27,7 @@ namespace SubCategory
         {
             ProgramID = "SubCategory";
             ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) သိမ်းခြင်း";
+            PreviousCtrl = cboCategory;
             cboCategory.Focus();
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
@@ -65,7 +66,10 @@ namespace SubCategory
             SubCategoryBL bl = new SubCategoryBL();
             bool return_Bl = bl.SubCategory_Create(obj);
             if (return_Bl)
+            {
                 bbl.ShowMessage("I101");
+                ClearData();
+            }  
         }
 
         private SubCategoryEntity GetInsertSubCategory()
@@ -83,6 +87,11 @@ namespace SubCategory
         {
             cboCategory.CheckRequired(true);
             txtSubCategory.CheckRequired(true);
+        }
+        public void ClearData()
+        {
+            cboCategory.SelectedIndex = -1;
+            txtSubCategory.Text = "";
         }
     }
 }

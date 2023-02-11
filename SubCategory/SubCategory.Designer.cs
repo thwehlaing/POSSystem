@@ -105,7 +105,7 @@
             this.txtSubCategory.NextControl = null;
             this.txtSubCategory.NextControlName = "rdo_active";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
-            this.txtSubCategory.Size = new System.Drawing.Size(248, 30);
+            this.txtSubCategory.Size = new System.Drawing.Size(344, 30);
             this.txtSubCategory.TabIndex = 2;
             this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
@@ -135,7 +135,7 @@
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.NextControl = null;
             this.cboCategory.NextControlName = "txtSubCategory";
-            this.cboCategory.Size = new System.Drawing.Size(248, 29);
+            this.cboCategory.Size = new System.Drawing.Size(344, 29);
             this.cboCategory.TabIndex = 1;
             // 
             // pLabel1
