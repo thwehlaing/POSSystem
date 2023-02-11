@@ -79,7 +79,6 @@ namespace SubCategory
             obj.ProgramID = base_entity.ProgramID;
             return obj;
         }
-
         public void ErrorCheck()
         {
             cboCategory.CheckRequired(true);
