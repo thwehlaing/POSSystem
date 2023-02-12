@@ -8,14 +8,87 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using POSBase;
+using BL;
+using Entity;
 
 namespace SubCategory
 {
     public partial class SubCategoryList : BaseForm
     {
+        BaseEntity base_entity = new BaseEntity();
+        BaseBL bbl = new BaseBL();
         public SubCategoryList()
         {
             InitializeComponent();
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SubCategoryList_Load(object sender, EventArgs e)
+        {
+            ProgramID = "SubCategory_Edit";
+            ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) ပြင်ခြင်း";
+            PreviousCtrl = cboCategory;
+            cboCategory.Focus();
+            StartProgram();
+            SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
+            SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
+            BindCatgory();
+        }
+
+        private void BindCatgory()
+        {
+            CategoryBL cbl = new CategoryBL();
+            DataTable dtCategory = new DataTable();
+            dtCategory = cbl.Category_Select();
+            DataRow dr = dtCategory.NewRow();
+            dr["CategoryCD"] = "-1";
+            dtCategory.Rows.InsertAt(dr, 0);
+            cboCategory.DataSource = dtCategory;
+            cboCategory.DisplayMember = "CategoryName";
+            cboCategory.ValueMember = "CategoryCD";
+        }
+
+
+        public override void FunctionProcess(string tagID)
+        {
+            if (tagID == "2")
+            {
+                if (ErrorCheck(PanelDetail))
+                {
+                    DBProcess();
+                }
+            }
+            base.FunctionProcess(tagID);
+        }
+
+        private void DBProcess()
+        {
+            SubCategoryEntity obj = GetCategory();
+            SubCategoryBL bl = new SubCategoryBL();
+            DataTable dt = bl.SubCategory_Select(obj);
+            dgvSubcategory.DataSource = dt;
+        }
+
+        private SubCategoryEntity GetCategory()
+        {
+            SubCategoryEntity obj = new SubCategoryEntity();
+            obj.CategoryCD = cboCategory.SelectedValue.ToString();          
+            obj.SubName = txtSubName.Text;           
+            return obj;
+        }
+        public void ErrorCheck()
+        {
+            cboCategory.CheckRequired(true);            
+        }
+
+        public void ClearData()
+        {
+            cboCategory.SelectedIndex = -1;
+            txtSubName.Text = "";
         }
     }
 }

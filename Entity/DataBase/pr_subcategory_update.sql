@@ -17,12 +17,12 @@ ALTER PROCEDURE [dbo].[pr_subcategory_update]
 	@CategoryCD varchar(10),
 	@SubName nvarchar(50),	
 	@Status	varchar(10),
-	@UpdatedDate	datetime,
+	
 	@UpdatedUser	varchar(50)	
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
-	
-   update SubCategory set SubName=@SubName,Status=@Status,UpdateDate=@UpdatedDate,UpdatedUser=@UpdatedUser where SubCode=@SubCode and CategoryCD=@CategoryCD
+	DECLARE @SysDatetime datetime = GETDATE()
+   update SubCategory set SubName=@SubName,Status=@Status,UpdateDate=@SysDatetime,UpdatedUser=@UpdatedUser where SubCode=@SubCode and CategoryCD=@CategoryCD
 END

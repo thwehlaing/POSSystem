@@ -35,8 +35,7 @@ namespace BL
             me.Sqlprms[0] = new SqlParameter("@MessageID", me.MessageID);
             DataTable dtMsg = bl.SelectDatatable("pr_message_select", GetConnectionString(), me.Sqlprms);
 
-            string message = string.Empty;
-            string MessageID;
+            string message = string.Empty;            
             if (dtMsg.Rows.Count > 0)
             {
                 message = ReplaceMessage(dtMsg.Rows[0]["MessageText1"].ToString(), me);

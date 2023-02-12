@@ -77,8 +77,7 @@ namespace SubCategory
             SubCategoryEntity obj = new SubCategoryEntity();
             obj.CategoryCD = cboCategory.SelectedValue.ToString();
             obj.SubName = txtSubCategory.Text;
-            obj.Status = rdo_active.Checked == true ? "1" : "0";
-            obj.CreatedDate = DateTime.Now;
+            obj.Status = rdo_active.Checked == true ? "1" : "0";           
             obj.CreatedUser = base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;
             return obj;

@@ -81,8 +81,7 @@ namespace SubCategory
             obj.SubCode = SubCode;
             obj.CategoryCD = cboCategory.SelectedValue.ToString();
             obj.SubName = txtSubName.Text;
-            obj.Status = rdo_active.Checked == true ? "1" : "0";
-            obj.UpdatedDate = DateTime.Now;
+            obj.Status = rdo_active.Checked == true ? "1" : "0";           
             obj.UpdatedUser= base_entity.OperatorCD;
             obj.ProgramID = base_entity.ProgramID;
             return obj;

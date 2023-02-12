@@ -16,9 +16,8 @@ namespace Entity
         public string MessageID { get; set; }
 
         public string OperatorCD { get; set; }
-        public string ProgramID { get; set; }       
-        public DateTime CreatedDate { get; set; }
-        public DateTime UpdatedDate { get; set; }
+        public string ProgramID { get; set; }  
+       
         public string CreatedUser { get; set; }
         public string UpdatedUser { get; set; }
     }
