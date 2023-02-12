@@ -11,7 +11,6 @@ namespace Entity
         public string SubCode { get; set; }
         public string CategoryCD { get; set; }
         public string SubName { get; set; }
-        public string Status { get; set; }
-        public string Mode { get; set; }
+        public string Status { get; set; }        
     }
 }
