@@ -17,8 +17,7 @@ namespace SubCategory
 {
     public partial class SubCategory_Edit : BaseForm
     {
-        BaseEntity base_entity = new BaseEntity();
-        BaseBL bbl = new BaseBL();      
+        BaseBL bbl = new BaseBL();
         string SubCode = string.Empty;
         public SubCategory_Edit()
         {
@@ -71,7 +70,7 @@ namespace SubCategory
             if (return_Bl)
             {
                 ClearData();
-                bbl.ShowMessage("I101");                
+                bl.ShowMessage("I101");                
             }                
         }
 
@@ -82,8 +81,8 @@ namespace SubCategory
             obj.CategoryCD = cboCategory.SelectedValue.ToString();
             obj.SubName = txtSubName.Text;
             obj.Status = rdo_active.Checked == true ? "1" : "0";           
-            obj.UpdatedUser= base_entity.OperatorCD;
-            obj.ProgramID = base_entity.ProgramID;
+            obj.UpdatedUser= obj.OperatorCD;
+            obj.ProgramID = obj.ProgramID;
             return obj;
         }
         public void ErrorCheck()

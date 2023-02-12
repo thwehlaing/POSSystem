@@ -15,7 +15,6 @@ namespace SubCategory
 {
     public partial class SubCategoryList : BaseForm
     {
-        BaseEntity base_entity = new BaseEntity();
         BaseBL bbl = new BaseBL();
         public SubCategoryList()
         {
@@ -110,7 +109,7 @@ namespace SubCategory
                     SubCategoryBL bl = new SubCategoryBL();
                     SubCategoryEntity obj = new SubCategoryEntity();
                     obj.SubCode = dgvSubcategory.Rows[e.RowIndex].Cells["SubCode"].Value.ToString();
-                    obj.UpdatedUser = base_entity.OperatorCD;
+                    obj.UpdatedUser = obj.OperatorCD;
                     bool return_Bl = bl.SubCategory_Delete(obj);
                     if (return_Bl)
                     {

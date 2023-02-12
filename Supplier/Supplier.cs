@@ -17,7 +17,7 @@ namespace Supplier
     public partial class Supplier : BaseForm
     {
         BaseBL bl = new BaseBL();
-        
+        SupplierBL sbl = new SupplierBL();
         public Supplier()
         {
             InitializeComponent();
