@@ -21,10 +21,6 @@ namespace SubCategory
             InitializeComponent();
         }
 
-        private void btnDisplay_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void SubCategoryList_Load(object sender, EventArgs e)
         {
@@ -90,14 +86,6 @@ namespace SubCategory
             txtSubName.Text = "";
         }
 
-        private void btnDisplay_Click_1(object sender, EventArgs e)
-        {
-            if (ErrorCheck(PanelDetail))
-            {
-                DBProcess();
-            }
-        }
-
         private void dgvSubcategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
@@ -121,6 +109,12 @@ namespace SubCategory
             }
         }
 
-       
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            if (ErrorCheck(PanelDetail))
+            {
+                DBProcess();
+            }
+        }
     }
 }

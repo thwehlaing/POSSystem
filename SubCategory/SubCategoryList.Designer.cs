@@ -135,7 +135,7 @@
             this.btnDisplay.TabIndex = 50;
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
-            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click_1);
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // pLabel2
             // 
