@@ -31,14 +31,14 @@
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.txtSubName = new POS_Control.PTextBox();
             this.dgvSubcategory = new POS_Control.PGridView();
-            this.SubCatgoryCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnDisplay = new POS_Control.PButton();
             this.pLabel2 = new POS_Control.PLabel();
             this.cboCategory = new POS_Control.PCombo();
             this.pLabel1 = new POS_Control.PLabel();
+            this.SubCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PanelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubcategory)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.NextControl = null;
-            this.txtSubName.NextControlName = null;
+            this.txtSubName.NextControlName = "btnDisplay";
             this.txtSubName.SearchType = Entity.SearchType.ScType.None;
             this.txtSubName.Size = new System.Drawing.Size(307, 30);
             this.txtSubName.TabIndex = 52;
@@ -79,7 +79,7 @@
             this.dgvSubcategory.AllowUserToAddRows = false;
             this.dgvSubcategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubcategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubCatgoryCD,
+            this.SubCode,
             this.CategoryName,
             this.SubName,
             this.Action});
@@ -87,39 +87,9 @@
             this.dgvSubcategory.Name = "dgvSubcategory";
             this.dgvSubcategory.RowHeadersVisible = false;
             this.dgvSubcategory.RowTemplate.Height = 25;
-            this.dgvSubcategory.Size = new System.Drawing.Size(1504, 794);
+            this.dgvSubcategory.Size = new System.Drawing.Size(1433, 628);
             this.dgvSubcategory.TabIndex = 51;
-            // 
-            // SubCatgoryCD
-            // 
-            this.SubCatgoryCD.DataPropertyName = "SubCatgoryCD";
-            this.SubCatgoryCD.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
-            this.SubCatgoryCD.Name = "SubCatgoryCD";
-            this.SubCatgoryCD.Width = 300;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "အမျိုးအစား";
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.Width = 500;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
-            this.SubName.Name = "SubName";
-            this.SubName.Width = 500;
-            // 
-            // Action
-            // 
-            this.Action.DataPropertyName = "SubCatgoryCD";
-            this.Action.HeaderText = "လုပ်ဆောင်ချက်";
-            this.Action.Name = "Action";
-            this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Action.Text = "ဖျက်ရန်";
-            this.Action.Width = 200;
+            this.dgvSubcategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubcategory_CellContentClick);
             // 
             // btnDisplay
             // 
@@ -133,6 +103,7 @@
             this.btnDisplay.TabIndex = 50;
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click_1);
             // 
             // pLabel2
             // 
@@ -157,7 +128,7 @@
             this.cboCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboCategory.Name = "cboCategory";
             this.cboCategory.NextControl = null;
-            this.cboCategory.NextControlName = null;
+            this.cboCategory.NextControlName = "txtSubName";
             this.cboCategory.Size = new System.Drawing.Size(300, 29);
             this.cboCategory.TabIndex = 48;
             // 
@@ -173,6 +144,38 @@
             this.pLabel1.TabIndex = 47;
             this.pLabel1.Text = "အမျိုးအစား";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SubCode
+            // 
+            this.SubCode.DataPropertyName = "SubCode";
+            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
+            this.SubCode.Name = "SubCode";
+            this.SubCode.Width = 300;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "အမျိုးအစား";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.Width = 500;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
+            this.SubName.Name = "SubName";
+            this.SubName.Width = 500;
+            // 
+            // Action
+            // 
+            this.Action.DataPropertyName = "SubCatgoryCD";
+            this.Action.HeaderText = "လုပ်ဆောင်ချက်";
+            this.Action.Name = "Action";
+            this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Action.Text = "ဖျက်ရန်";
+            this.Action.UseColumnTextForButtonValue = true;
+            this.Action.Width = 130;
             // 
             // SubCategoryList
             // 
@@ -198,13 +201,13 @@
         private Panel PanelDetail;
         private POS_Control.PTextBox txtSubName;
         private POS_Control.PGridView dgvSubcategory;
-        private DataGridViewTextBoxColumn SubCatgoryCD;
-        private DataGridViewTextBoxColumn CategoryName;
-        private DataGridViewTextBoxColumn SubName;
-        private DataGridViewButtonColumn Action;
         private POS_Control.PButton btnDisplay;
         private POS_Control.PLabel pLabel2;
         private POS_Control.PCombo cboCategory;
         private POS_Control.PLabel pLabel1;
+        private DataGridViewTextBoxColumn SubCode;
+        private DataGridViewTextBoxColumn CategoryName;
+        private DataGridViewTextBoxColumn SubName;
+        private DataGridViewButtonColumn Action;
     }
 }

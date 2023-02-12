@@ -66,7 +66,7 @@ namespace SubCategory
         }
 
         private void DBProcess()
-        {
+        {           
             SubCategoryEntity obj = GetCategory();
             SubCategoryBL bl = new SubCategoryBL();
             DataTable dt = bl.SubCategory_Select(obj);
@@ -90,5 +90,38 @@ namespace SubCategory
             cboCategory.SelectedIndex = -1;
             txtSubName.Text = "";
         }
+
+        private void btnDisplay_Click_1(object sender, EventArgs e)
+        {
+            if (ErrorCheck(PanelDetail))
+            {
+                DBProcess();
+            }
+        }
+
+        private void dgvSubcategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&
+                e.RowIndex >= 0)
+            {              
+                if (bbl.ShowMessage("Q004") == DialogResult.Yes)
+                {
+                    SubCategoryBL bl = new SubCategoryBL();
+                    SubCategoryEntity obj = new SubCategoryEntity();
+                    obj.SubCode = dgvSubcategory.Rows[e.RowIndex].Cells["SubCode"].Value.ToString();
+                    obj.UpdatedUser = base_entity.OperatorCD;
+                    bool return_Bl = bl.SubCategory_Delete(obj);
+                    if (return_Bl)
+                    {
+                        dgvSubcategory.Rows.RemoveAt(e.RowIndex);
+                        bbl.ShowMessage("I101");
+                        DBProcess();
+                    }
+                }
+            }
+        }
+
+       
     }
 }
