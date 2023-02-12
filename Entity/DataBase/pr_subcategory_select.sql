@@ -14,7 +14,7 @@ GO
 ALTER PROCEDURE [dbo].[pr_subcategory_select]
 	-- Add the parameters for the stored procedure here
 	@CategoryCD varchar(10),
-	@SubName	varchar(50)
+	@SubName	nvarchar(50)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
