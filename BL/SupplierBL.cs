@@ -24,5 +24,14 @@ namespace BL
             return result;
         }
 
+        public DataTable Supplier_Search(SupplierEntity obj)
+        {
+            DBAccessBL dbl = new DBAccessBL();
+            obj.Sqlprms = new SqlParameter[1];
+            obj.Sqlprms[0] = new SqlParameter("@SupplierName", SqlDbType.NVarChar) { Value = obj.SupplierName };          
+            DataTable dt = dbl.SelectDatatable("pr_supplier_search", GetConnectionString(), obj.Sqlprms);
+            return dt;
+        }
+
     }
 }

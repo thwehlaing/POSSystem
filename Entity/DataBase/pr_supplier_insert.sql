@@ -26,7 +26,7 @@ BEGIN
 	DECLARE @SysDatetime datetime = GETDATE()
 	DECLARE @maxsubcode varchar(10);
 	EXEC pr_CounterType_GetNewID 
-        @CounterKey = 2, 
+        @CounterKey = 3, 
         @NewID = @maxsubcode OUTPUT
 
 		 insert into Supplier(SupplierCD,SupplierName,PhoneNo,Address,Status,CreatedDate,CreatedUser) values(@maxsubcode,@SupplierName,@PhoneNo,@Address,@Status,@SysDatetime,@CreatedUser)
