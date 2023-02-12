@@ -36,8 +36,8 @@
             this.pTextBox1 = new POS_Control.PTextBox();
             this.SubCatgoryCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SubCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubcategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(47, 80);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 29);
+            this.pLabel1.Size = new System.Drawing.Size(100, 30);
             this.pLabel1.TabIndex = 40;
             this.pLabel1.Text = "အမျိုးအစား";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,7 +76,7 @@
             this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel2.Location = new System.Drawing.Point(473, 80);
             this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(100, 29);
+            this.pLabel2.Size = new System.Drawing.Size(100, 30);
             this.pLabel2.TabIndex = 42;
             this.pLabel2.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -101,7 +101,7 @@
             this.dgvSubcategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SubCatgoryCD,
             this.CategoryName,
-            this.SubCategory,
+            this.SubName,
             this.Action});
             this.dgvSubcategory.Location = new System.Drawing.Point(44, 129);
             this.dgvSubcategory.Name = "dgvSubcategory";
@@ -129,26 +129,33 @@
             // 
             // SubCatgoryCD
             // 
+            this.SubCatgoryCD.DataPropertyName = "SubCatgoryCD";
             this.SubCatgoryCD.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
             this.SubCatgoryCD.Name = "SubCatgoryCD";
             this.SubCatgoryCD.Width = 300;
             // 
             // CategoryName
             // 
+            this.CategoryName.DataPropertyName = "CategoryName";
             this.CategoryName.HeaderText = "အမျိုးအစား";
             this.CategoryName.Name = "CategoryName";
             this.CategoryName.Width = 500;
             // 
-            // SubCategory
+            // SubName
             // 
-            this.SubCategory.HeaderText = "အမျိုးအစားခွဲ";
-            this.SubCategory.Name = "SubCategory";
-            this.SubCategory.Width = 500;
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
+            this.SubName.Name = "SubName";
+            this.SubName.Width = 500;
             // 
             // Action
             // 
+            this.Action.DataPropertyName = "SubCatgoryCD";
             this.Action.HeaderText = "လုပ်ဆောင်ချက်";
             this.Action.Name = "Action";
+            this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Action.Text = "ဖျက်ရန်";
             this.Action.Width = 200;
             // 
             // SubCategoryList
@@ -188,7 +195,7 @@
         private POS_Control.PTextBox pTextBox1;
         private DataGridViewTextBoxColumn SubCatgoryCD;
         private DataGridViewTextBoxColumn CategoryName;
-        private DataGridViewTextBoxColumn SubCategory;
-        private DataGridViewTextBoxColumn Action;
+        private DataGridViewTextBoxColumn SubName;
+        private DataGridViewButtonColumn Action;
     }
 }
