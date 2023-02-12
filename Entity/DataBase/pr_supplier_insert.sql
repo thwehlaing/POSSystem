@@ -11,7 +11,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_supplier_insert]
+CREATE PROCEDURE [dbo].[pr_supplier_insert]
 	-- Add the parameters for the stored procedure here
 	@SupplierName	nvarchar(50),
 	@PhoneNo	nvarchar(20),
