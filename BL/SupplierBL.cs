@@ -46,6 +46,15 @@ namespace BL
             bool result = dbl.InsertUpdateDeleteData("pr_supplier_update", GetConnectionString(), obj.Sqlprms);
             return result;
         }
-
+        public bool Supplier_Delete(SupplierEntity obj)
+        {
+            DBAccessBL dbl = new DBAccessBL();
+            obj.Sqlprms = new SqlParameter[2];
+            obj.Sqlprms[0] = new SqlParameter("@SupplierCD", SqlDbType.VarChar) { Value = obj.SupplierCD };
+            obj.Sqlprms[1] = new SqlParameter("@UpdatedUser", SqlDbType.VarChar) { Value = obj.UpdatedUser };
+            bool result = dbl.InsertUpdateDeleteData("pr_supplier_delete", GetConnectionString(), obj.Sqlprms);
+            return result;
+        }
+       
     }
 }

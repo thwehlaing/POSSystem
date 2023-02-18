@@ -24,14 +24,15 @@ namespace SubCategory
 
         private void SubCategoryList_Load(object sender, EventArgs e)
         {
-            ProgramID = "SubCategory_Edit";
-            ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) ပြင်ခြင်း";
+            ProgramID = "SubCategoryList";
+            ProgramName = "ပစ္စည်းအမျိုးအစား(ခွဲ) ပြခြင်း";
             PreviousCtrl = cboCategory;
             cboCategory.Focus();
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
+            SetButton(ButtonType.BType.Save, F2, "ပြခြင်း", true);
             BindCatgory();
+            ErrorCheck();
         }
 
         private void BindCatgory()
@@ -64,7 +65,7 @@ namespace SubCategory
         {           
             SubCategoryEntity obj = GetCategory();
             SubCategoryBL bl = new SubCategoryBL();
-            DataTable dt = bl.SubCategory_Select(obj);
+            DataTable dt = bl.SubCategory_Select(obj);            
             dgvSubcategory.DataSource = dt;
         }
 
@@ -102,8 +103,7 @@ namespace SubCategory
                     if (return_Bl)
                     {
                         dgvSubcategory.Rows.RemoveAt(e.RowIndex);
-                        bbl.ShowMessage("I101");
-                        DBProcess();
+                        bbl.ShowMessage("I102");                        
                     }
                 }
             }
