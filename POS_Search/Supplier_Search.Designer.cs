@@ -36,7 +36,6 @@
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,34 +91,35 @@
             this.SupplierCD,
             this.SupplierName,
             this.PhoneNo,
-            this.Address,
-            this.Action});
-            this.dgvSupplier.Location = new System.Drawing.Point(12, 117);
+            this.Address});
+            this.dgvSupplier.Location = new System.Drawing.Point(15, 117);
             this.dgvSupplier.Name = "dgvSupplier";
             this.dgvSupplier.RowHeadersVisible = false;
             this.dgvSupplier.RowTemplate.Height = 25;
-            this.dgvSupplier.Size = new System.Drawing.Size(860, 478);
+            this.dgvSupplier.Size = new System.Drawing.Size(850, 478);
             this.dgvSupplier.TabIndex = 12;
+            this.dgvSupplier.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSupplier_CellMouseDoubleClick);
             // 
             // SupplierCD
             // 
             this.SupplierCD.DataPropertyName = "SupplierCD";
             this.SupplierCD.HeaderText = "ကုဒ်နံပါတ်";
             this.SupplierCD.Name = "SupplierCD";
+            this.SupplierCD.Width = 150;
             // 
             // SupplierName
             // 
             this.SupplierName.DataPropertyName = "SupplierName";
             this.SupplierName.HeaderText = "အမည်";
             this.SupplierName.Name = "SupplierName";
-            this.SupplierName.Width = 160;
+            this.SupplierName.Width = 200;
             // 
             // PhoneNo
             // 
             this.PhoneNo.DataPropertyName = "PhoneNo";
             this.PhoneNo.HeaderText = "ဖုန်းနံပါတ်";
             this.PhoneNo.Name = "PhoneNo";
-            this.PhoneNo.Width = 150;
+            this.PhoneNo.Width = 200;
             // 
             // Address
             // 
@@ -127,12 +127,6 @@
             this.Address.HeaderText = "လိပ်စာ";
             this.Address.Name = "Address";
             this.Address.Width = 300;
-            // 
-            // Action
-            // 
-            this.Action.HeaderText = "လုပ်ဆောင်ချက်";
-            this.Action.Name = "Action";
-            this.Action.Width = 150;
             // 
             // Supplier_Search
             // 
@@ -166,6 +160,5 @@
         private DataGridViewTextBoxColumn SupplierName;
         private DataGridViewTextBoxColumn PhoneNo;
         private DataGridViewTextBoxColumn Address;
-        private DataGridViewTextBoxColumn Action;
     }
 }

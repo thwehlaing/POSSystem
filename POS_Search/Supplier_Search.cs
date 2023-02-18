@@ -14,10 +14,10 @@ namespace POS_Search
 {
     public partial class Supplier_Search : Search_Base
     {
-        public string SupplierCD = "";
-        public string SupplierName = "";
-        public string PhoneNo = "";
-        public string Address = "";
+        public string Code = "";
+        public string Name = "";
+        public string PNo = "";
+        public string SAddress = "";
         public Supplier_Search()
         {
             InitializeComponent();
@@ -39,7 +39,37 @@ namespace POS_Search
             SupplierEntity entity = new SupplierEntity();
             entity.SupplierName = txtSubCategory.Text;            
             SupplierBL sbl = new SupplierBL();
-            
+            dgvSupplier.DataSource = sbl.Supplier_Search(entity);
         }
+
+        private void dgvSupplier_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                GetDataGridViewData(dgvSupplier.Rows[e.RowIndex]);
+            }
+        }
+        public override void FunctionProcess(string tagID)
+        {
+            if (tagID == "2")
+            {
+                DataGridViewRow row = dgvSupplier.CurrentRow;
+                GetDataGridViewData(row);
+            }
+            base.FunctionProcess(tagID);
+        }
+
+        private void GetDataGridViewData(DataGridViewRow row)
+        {
+            if (row != null)
+            {
+                Code = row.Cells["SupplierCD"].Value.ToString();
+                Name = row.Cells["SupplierName"].Value.ToString();
+                PNo = row.Cells["PhoneNo"].Value.ToString();
+                SAddress = row.Cells["Address"].Value.ToString();
+            }
+            this.Close();
+        }
+       
     }
 }

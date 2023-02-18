@@ -46,7 +46,7 @@
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(31, 60);
+            this.pLabel1.Location = new System.Drawing.Point(17, 64);
             this.pLabel1.Name = "pLabel1";
             this.pLabel1.Size = new System.Drawing.Size(100, 30);
             this.pLabel1.TabIndex = 2;
@@ -59,7 +59,7 @@
             this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel2.Location = new System.Drawing.Point(33, 101);
+            this.pLabel2.Location = new System.Drawing.Point(19, 105);
             this.pLabel2.Name = "pLabel2";
             this.pLabel2.Size = new System.Drawing.Size(100, 30);
             this.pLabel2.TabIndex = 5;
@@ -73,7 +73,7 @@
             this.txtSubCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubCategory.IsDatatableOccurs = null;
             this.txtSubCategory.IsErrorOccurs = false;
-            this.txtSubCategory.Location = new System.Drawing.Point(130, 101);
+            this.txtSubCategory.Location = new System.Drawing.Point(116, 105);
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
             this.txtSubCategory.NextControl = null;
@@ -133,7 +133,7 @@
             this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDisplay.Location = new System.Drawing.Point(500, 101);
+            this.btnDisplay.Location = new System.Drawing.Point(486, 105);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(100, 30);
             this.btnDisplay.TabIndex = 8;
@@ -148,7 +148,7 @@
             this.txtCategoryName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtCategoryName.IsDatatableOccurs = null;
             this.txtCategoryName.IsErrorOccurs = false;
-            this.txtCategoryName.Location = new System.Drawing.Point(130, 60);
+            this.txtCategoryName.Location = new System.Drawing.Point(116, 64);
             this.txtCategoryName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtCategoryName.Name = "txtCategoryName";
             this.txtCategoryName.NextControl = null;

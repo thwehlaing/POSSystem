@@ -57,7 +57,7 @@ namespace POS_Search
             }
 
         }
-        public virtual void FunctionProcess(string tagID)
+        public override void FunctionProcess(string tagID)
         {
             if (tagID == "2")
             {

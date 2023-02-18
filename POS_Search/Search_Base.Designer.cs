@@ -71,6 +71,7 @@
             this.SBtn2.Tag = "2";
             this.SBtn2.Text = "ယူမည်";
             this.SBtn2.UseVisualStyleBackColor = false;
+            this.SBtn2.Click += new System.EventHandler(this.btnFunctionClick);
             // 
             // SBtn1
             // 
@@ -85,6 +86,7 @@
             this.SBtn1.Tag = "1";
             this.SBtn1.Text = "ပိတ်မည်";
             this.SBtn1.UseVisualStyleBackColor = false;
+            this.SBtn1.Click += new System.EventHandler(this.btnFunctionClick);
             // 
             // tableLayoutPanel2
             // 
