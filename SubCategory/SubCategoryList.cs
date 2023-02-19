@@ -65,8 +65,17 @@ namespace SubCategory
         {           
             SubCategoryEntity obj = GetCategory();
             SubCategoryBL bl = new SubCategoryBL();
-            DataTable dt = bl.SubCategory_Select(obj);            
-            dgvSubcategory.DataSource = dt;
+            dgvSubcategory.Rows.Clear();
+            DataTable dt = bl.SubCategory_Select(obj);
+
+            if (dt.Rows.Count > 0)
+                dgvSubcategory.Rows.Add(dt.Rows.Count);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                dgvSubcategory.Rows[i].Cells["SubCode"].Value = dt.Rows[i]["SubCode"].ToString();
+                dgvSubcategory.Rows[i].Cells["CategoryName"].Value = dt.Rows[i]["CategoryName"].ToString();
+                dgvSubcategory.Rows[i].Cells["SubName"].Value = dt.Rows[i]["SubName"].ToString();
+            }           
         }
 
         private SubCategoryEntity GetCategory()

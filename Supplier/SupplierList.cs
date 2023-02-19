@@ -58,8 +58,19 @@ namespace Supplier
             SupplierEntity entity = GetSupplier();
             SupplierBL bl = new SupplierBL();
             dgvSupplier.Rows.Clear();
-            dgvSupplier.DataSource = bl.Supplier_Search(entity);
+            DataTable dt = bl.Supplier_Search(entity); 
+            if(dt.Rows.Count>0)
+                dgvSupplier.Rows.Add(dt.Rows.Count);
+            for(int i=0;i<dt.Rows.Count;i++)
+            {
+                dgvSupplier.Rows[i].Cells["SupplierCD"].Value = dt.Rows[i]["SupplierCD"].ToString();
+                dgvSupplier.Rows[i].Cells["SupplierName"].Value = dt.Rows[i]["SupplierName"].ToString();
+                dgvSupplier.Rows[i].Cells["PhoneNo"].Value = dt.Rows[i]["PhoneNo"].ToString();
+                dgvSupplier.Rows[i].Cells["Address"].Value = dt.Rows[i]["Address"].ToString();               
+            }
         }
+
+        
 
         private SupplierEntity GetSupplier()
         {

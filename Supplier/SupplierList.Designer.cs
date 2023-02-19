@@ -100,7 +100,7 @@
             this.dgvSupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSupplier.RowHeadersVisible = false;
             this.dgvSupplier.RowTemplate.Height = 25;
-            this.dgvSupplier.Size = new System.Drawing.Size(1006, 600);
+            this.dgvSupplier.Size = new System.Drawing.Size(1006, 824);
             this.dgvSupplier.TabIndex = 16;
             this.dgvSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellContentClick);
             // 
@@ -142,6 +142,7 @@
             // 
             // SupplierCode
             // 
+            this.SupplierCode.DataPropertyName = "SupplierCD";
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.SupplierCode.DefaultCellStyle = dataGridViewCellStyle6;

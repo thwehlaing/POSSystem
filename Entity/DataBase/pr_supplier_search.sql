@@ -22,5 +22,5 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	Select SupplierCD,SupplierName,PhoneNo,Address from Supplier where Status='1' and SupplierName is null or SupplierName like @SupplierName+'%'
+	Select SupplierCD,SupplierName,PhoneNo,Address from Supplier where Status='1' and (SupplierName is null or SupplierName like @SupplierName+'%')
 END
