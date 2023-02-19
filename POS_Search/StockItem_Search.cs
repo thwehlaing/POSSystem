@@ -14,6 +14,7 @@ namespace POS_Search
 {
     public partial class StockItem_Search : Search_Base
     {
+        public string ItmCD = string.Empty;
         public string SCode = string.Empty;
         public string SName = string.Empty;
         public string ItmName = string.Empty;
@@ -62,6 +63,7 @@ namespace POS_Search
             for(int i = 0; i < dt.Rows.Count; i++)
             {
                 dgvStockItem.Rows[i].Cells["ItemCD"].Value = dt.Rows[i]["ItemCD"].ToString();
+                dgvStockItem.Rows[i].Cells["UOMCD"].Value = dt.Rows[i]["UOMCD"].ToString();
                 dgvStockItem.Rows[i].Cells["SubName"].Value = dt.Rows[i]["SubName"].ToString();
                 dgvStockItem.Rows[i].Cells["ItemName"].Value = dt.Rows[i]["ItemName"].ToString();
                 dgvStockItem.Rows[i].Cells["Qty"].Value = dt.Rows[i]["Qty"].ToString();
@@ -83,7 +85,8 @@ namespace POS_Search
         {
             if (row != null)
             {
-                ItmName = row.Cells["ItmName"].Value.ToString();
+                ItmCD = row.Cells["ItemCD"].Value.ToString();
+                ItmName = row.Cells["ItemName"].Value.ToString();
                 Quantity =Convert.ToInt32(row.Cells["Qty"].Value.ToString());
                 UOMCode = row.Cells["UOMCD"].Value.ToString();
                 SalePrice = Convert.ToDouble(row.Cells["LastSalePrice"].Value.ToString());

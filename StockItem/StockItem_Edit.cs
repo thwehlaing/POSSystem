@@ -16,6 +16,7 @@ namespace StockItem
 {
     public partial class StockItem_Edit : BaseForm
     {
+        string ItemCD = string.Empty;
         public StockItem_Edit()
         {
             InitializeComponent();
@@ -29,7 +30,7 @@ namespace StockItem
             cboSubCategory.Focus();
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
+            SetButton(ButtonType.BType.Save, F2, "ပြင်မည်", true);
             BindSubCatgory();
             BindUOM();
             ErrorCheck();
@@ -66,6 +67,8 @@ namespace StockItem
             {
                 StockItem_Search search = new StockItem_Search(cboSubCategory.SelectedValue.ToString(), cboSubCategory.Text);
                 search.ShowDialog();
+                cboSubCategory.Enabled = false;
+                ItemCD = search.ItmCD;
                 txtQty.Text = search.Quantity.ToString();
                 txtStockName.Text = search.ItmName;
                 txtPrice.Text = search.SalePrice.ToString();
@@ -74,6 +77,48 @@ namespace StockItem
                 txtBarCode.Text = search.BCode;
             }
         }
+
+        public override void FunctionProcess(string tagID)
+        {
+            if (tagID == "2")
+            {
+                if (ErrorCheck(PanelDetail))
+                {
+                    DBProcess();
+                }
+            }
+            base.FunctionProcess(tagID);
+        }
+
+        private void DBProcess()
+        {
+            StockItemEntity obj = GetUpdateStockItem();
+            StockItemBL bl = new StockItemBL();
+            bool return_Bl = bl.StockItem_Update(obj);
+            if (return_Bl)
+            {
+                bl.ShowMessage("I101");
+                ClearData();
+            }
+        }
+
+        private StockItemEntity GetUpdateStockItem()
+        {
+            StockItemEntity entity = new StockItemEntity();
+            entity.ItemCD = ItemCD;
+            entity.ItemName = txtStockName.Text;
+            entity.SubCode = cboSubCategory.SelectedValue.ToString();
+            entity.UOMCD = cboUOM.SelectedValue.ToString();
+            entity.Qty = Convert.ToInt32(txtQty.Text);
+            entity.BarCode = txtBarCode.Text;
+            entity.ReOrderQty = Convert.ToInt32(txtReorderQty.Text);
+            entity.LastSalePrice = Convert.ToDouble(txtPrice.Text);
+            entity.Status = rdo_active.Checked == true ? "1" : "0";
+            entity.UpdatedUser = entity.OperatorCD;
+            entity.ProgramID = entity.ProgramID;
+            return entity;
+        }
+
         private void ErrorCheck()
         {
             cboSubCategory.CheckRequired(true);
@@ -86,6 +131,7 @@ namespace StockItem
         }
         private void ClearData()
         {
+            cboSubCategory.Enabled = true;
             cboSubCategory.SelectedIndex = -1;
             txtStockName.Text = "";
             cboUOM.SelectedIndex = -1;
