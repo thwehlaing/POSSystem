@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SubCategory", "SubCategory\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POS_Search", "POS_Search\POS_Search.csproj", "{CEADFC55-792F-47CD-9290-979D2B0F13D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supplier", "Supplier\Supplier.csproj", "{83B63650-7A5C-49C4-9C70-1CDFBA3C0DED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Supplier", "Supplier\Supplier.csproj", "{83B63650-7A5C-49C4-9C70-1CDFBA3C0DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockItem", "StockItem\StockItem.csproj", "{83EFB390-5234-4594-8690-53F9D74C98EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{83B63650-7A5C-49C4-9C70-1CDFBA3C0DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83B63650-7A5C-49C4-9C70-1CDFBA3C0DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83B63650-7A5C-49C4-9C70-1CDFBA3C0DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83EFB390-5234-4594-8690-53F9D74C98EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83EFB390-5234-4594-8690-53F9D74C98EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83EFB390-5234-4594-8690-53F9D74C98EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83EFB390-5234-4594-8690-53F9D74C98EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

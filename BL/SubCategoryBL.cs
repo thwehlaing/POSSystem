@@ -62,5 +62,13 @@ namespace BL
             bool result  = dbl.InsertUpdateDeleteData("pr_subcategory_delete", GetConnectionString(), obj.Sqlprms);
             return result;
         }
+
+        public DataTable SubCategory_SelectAll()
+        {
+            DBAccessBL dbl = new DBAccessBL();
+            var parameters = new SqlParameter[] { };
+            DataTable dt = dbl.SelectDatatable("pr_subcategory_selectall", GetConnectionString(), parameters);
+            return dt;
+        }
     }
 }

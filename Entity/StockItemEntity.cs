@@ -13,9 +13,10 @@ namespace Entity
         public string SubCode { get; set; }
         public string ItemName { get; set; }
         public string UOMCD { get; set; }
-        public string Qty { get; set; }
-        public string LastSalePrice { get; set; }
+        public int Qty { get; set; }
+        public double LastSalePrice { get; set; }
         public string BarCode { get; set; }
-        public string ReOrderQty { get; set; }
+        public int ReOrderQty { get; set; }
+        public string Status { get; set; }
     }
 }
