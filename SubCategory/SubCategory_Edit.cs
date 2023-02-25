@@ -64,7 +64,7 @@ namespace SubCategory
 
         private void DBProcess()
         {
-            SubCategoryEntity obj = GetUpdateCategory();
+            SubCategoryEntity obj = GetUpdateSubCategory();
             SubCategoryBL bl = new SubCategoryBL();
             bool return_Bl = bl.SubCategory_Update(obj);
             if (return_Bl)
@@ -74,7 +74,7 @@ namespace SubCategory
             }                
         }
 
-        private SubCategoryEntity GetUpdateCategory()
+        private SubCategoryEntity GetUpdateSubCategory()
         {
             SubCategoryEntity obj = new SubCategoryEntity();
             obj.SubCode = SubCode;

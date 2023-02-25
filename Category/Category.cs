@@ -32,7 +32,7 @@ namespace Category
 
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
            
-            SetButton(ButtonType.BType.Display, F2, "သိမ်းမည်", true);
+            SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
 
             ErrorChek();
         }
@@ -54,10 +54,17 @@ namespace Category
         private void DBProcess()
         {
             CategoryEntity entity = new CategoryEntity();
+            entity.OperatorCD = entity.OperatorCD;
             entity.CategoryName = txtName.Text;
             entity.Status = rdo_active.Checked ? "1" : "0";
             CategoryBL bl = new CategoryBL();
-            
+            bool result=bl.Category_Insert(entity);
+            if (result)
+            {
+                bl.ShowMessage("I101");
+                txtName.Text = "";
+                rdo_active.Checked = true;
+            }
         }
     }
 }

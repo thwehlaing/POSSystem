@@ -10,11 +10,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
+using BL;
 
 namespace Category
 {
     public partial class Category_Edit : BaseForm
     {
+        string CatCD = string.Empty;
         public Category_Edit()
         {
             InitializeComponent();
@@ -30,15 +33,15 @@ namespace Category
 
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
 
-            SetButton(ButtonType.BType.Display, F2, "ပြင်ခြင်း", true);
+            SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
         }
         public override void FunctionProcess(string tagID)
         {
             if (tagID == "2")
             {
-                if (ErrorCheck(panelDetail))
+                if (!txtName.IsErrorOccurs)
                 {
-
+                    DBProcess();
                 }
             }
             base.FunctionProcess(tagID);
@@ -48,6 +51,30 @@ namespace Category
         {
             Category_Search cate_Search = new Category_Search();
             cate_Search.ShowDialog();
+            txtName.Text = cate_Search.Category_Name;
+            CatCD = cate_Search.CategoryCD;
+        }
+
+        private void DBProcess()
+        {
+            CategoryEntity obj = GetUpdateCategory();
+            CategoryBL bl = new CategoryBL();
+            bool return_Bl = bl.Category_Update(obj);
+            if (return_Bl)
+            {
+                bl.ShowMessage("I101");
+            }
+        }
+
+        private CategoryEntity GetUpdateCategory()
+        {
+            CategoryEntity obj = new CategoryEntity();
+            obj.CategoryCD = CatCD;
+            obj.CategoryName = txtName.Text;
+            obj.Status = rdo_active.Checked == true ? "1" : "0";
+            obj.UpdatedUser = obj.OperatorCD;
+            obj.ProgramID = obj.ProgramID;
+            return obj;
         }
     }
 }
