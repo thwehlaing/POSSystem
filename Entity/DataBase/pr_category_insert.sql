@@ -17,6 +17,12 @@ CREATE PROCEDURE [dbo].[pr_category_insert]
 	@Operator   varchar(10)
 AS
 BEGIN
+
+Declare @maxcatcd varchar(12)
+	Exec pr_CounterType_GetNewID
+		@CounterKey = 1, 
+        @NewID = @maxcatcd OUTPUT
+
 	INSERT INTO Category
          (
           CategoryCD,
@@ -27,10 +33,10 @@ BEGIN
 		 )
 		  VALUES
            (
-		   1
+		  @maxcatcd
            ,@CategoryName
            ,@Status           
-           ,SYSDATETIME()
+           ,GetDate()
            ,@Operator
            );
 END
