@@ -72,5 +72,14 @@ namespace BL
             bool result = dbl.InsertUpdateDeleteData("pr_stockitem_delete", GetConnectionString(), obj.Sqlprms);
             return result;
         }
+
+        public DataTable StockItem_SelectBySubCategory(StockItemEntity obj)
+        {
+            DBAccessBL dbl = new DBAccessBL();
+            obj.Sqlprms = new SqlParameter[1];
+            obj.Sqlprms[0] = new SqlParameter("@SubCode", SqlDbType.VarChar) { Value = obj.SubCode };
+            DataTable dt = dbl.SelectDatatable("pr_stockitem_selectbysubcategory", GetConnectionString(), obj.Sqlprms);
+            return dt;
+        }
     }
 }

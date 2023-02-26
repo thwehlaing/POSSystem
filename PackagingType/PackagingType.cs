@@ -43,7 +43,10 @@ namespace PackagingType
         {
             if (tagID == "2")
             {
-                DBProcess();
+                if (ErrorCheck(PanelDetail))
+                {
+                    DBProcess();
+                }                
             }
             base.FunctionProcess(tagID);
         }
