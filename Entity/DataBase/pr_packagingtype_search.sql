@@ -1,5 +1,5 @@
 ﻿BEGIN TRY 
- Drop Procedure [dbo].[pr_category_delete]
+ Drop Procedure [dbo].[pr_packagingtype_search]
 END try
 BEGIN CATCH END CATCH 
 SET ANSI_NULLS ON
@@ -11,10 +11,9 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE [dbo].[pr_category_delete]
+CREATE PROCEDURE [dbo].[pr_packagingtype_search] 
 	-- Add the parameters for the stored procedure here
-	@CategoryCD varchar(10),
-	@Operator varchar(50)
+	@PackTypeName nvarchar(50)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
@@ -22,6 +21,5 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update Category Set Status='0',UpdatedDate=getdate(),UpdatedUser=@Operator where CategoryCD=@CategoryCD
+	Select * from PackagingType where Status='1' and (@PackTypeName is null or PackTypeName like @PackTypeName+'%')
 END
-GO

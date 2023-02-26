@@ -1,5 +1,5 @@
 ﻿BEGIN TRY 
- Drop Procedure [dbo].[pr_category_delete]
+ Drop Procedure [dbo].[pr_packagingtype_delete]
 END try
 BEGIN CATCH END CATCH 
 SET ANSI_NULLS ON
@@ -11,17 +11,21 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-CREATE PROCEDURE [dbo].[pr_category_delete]
+CREATE PROCEDURE [dbo].[pr_packagingtype_insert]
 	-- Add the parameters for the stored procedure here
-	@CategoryCD varchar(10),
-	@Operator varchar(50)
+	@PackTypeName nvarchar(50),
+	@Qty	int,
+	@Status varchar(10),
+	@CreatedUser varchar(50)
 AS
 BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-
+	Declare @maxptcd varchar(12)
+	Exec pr_CounterType_GetNewID
+		@CounterKey = 5, 
+        @NewID = @maxptcd OUTPUT
     -- Insert statements for procedure here
-	update Category Set Status='0',UpdatedDate=getdate(),UpdatedUser=@Operator where CategoryCD=@CategoryCD
+	insert into PackagingType(PackTypeCode,PackTypeName,Qty,Status,CreatedDate,CreatedUser) values(@maxptcd,@PackTypeName,@Qty,@Status,GETDATE(),@CreatedUser)
 END
-GO
