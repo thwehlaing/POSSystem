@@ -58,7 +58,8 @@ namespace Category
             }
         }
 
-        private void dgvCategory_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             var senderGrid = (DataGridView)sender;
             if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn &&

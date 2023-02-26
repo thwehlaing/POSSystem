@@ -44,9 +44,9 @@
             // 
             this.PanelDetail.Controls.Add(this.dgvCategory);
             this.PanelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDetail.Location = new System.Drawing.Point(0, 91);
+            this.PanelDetail.Location = new System.Drawing.Point(0, 57);
             this.PanelDetail.Name = "PanelDetail";
-            this.PanelDetail.Size = new System.Drawing.Size(1924, 866);
+            this.PanelDetail.Size = new System.Drawing.Size(1924, 939);
             this.PanelDetail.TabIndex = 40;
             // 
             // dgvCategory
@@ -87,7 +87,7 @@
             this.dgvCategory.RowTemplate.Height = 25;
             this.dgvCategory.Size = new System.Drawing.Size(1003, 779);
             this.dgvCategory.TabIndex = 44;
-            this.dgvCategory.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentDoubleClick);
+            this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
             // 
             // CatCD
             // 

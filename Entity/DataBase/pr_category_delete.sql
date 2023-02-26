@@ -22,6 +22,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update Category Set Status='1',UpdatedDate=getdate(),UpdatedUser=@Operator where CategoryCD=@CategoryCD
+	update Category Set Status='0',UpdatedDate=getdate(),UpdatedUser=@Operator where CategoryCD=@CategoryCD
 END
 GO
