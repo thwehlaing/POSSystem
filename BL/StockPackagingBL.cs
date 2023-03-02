@@ -21,5 +21,13 @@ namespace BL
             entity.Sqlprms[3] = new SqlParameter("@CreatedUser", SqlDbType.VarChar) { Value = entity.OperatorCD };
             return dl.InsertUpdateDeleteData("pr_stockpackaging_insert", GetConnectionString(), entity.Sqlprms);
         }
+
+        public DataTable StockPackaging_Select(StockPackagingEntity entity)
+        {
+            DBAccessBL dl = new DBAccessBL();
+            entity.Sqlprms = new SqlParameter[1];
+            entity.Sqlprms[0] = new SqlParameter("@ItemCD", SqlDbType.VarChar) { Value = entity.ItemCD };
+            return dl.SelectDatatable("pr_stockpackaging_select", GetConnectionString(), entity.Sqlprms);
+        }
     }
 }
