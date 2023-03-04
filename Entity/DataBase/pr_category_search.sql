@@ -11,7 +11,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_category_search] 
+CREATE PROCEDURE [dbo].[pr_category_search] 
 	-- Add the parameters for the stored procedure here
 	@CategoryName nvarchar(50)
 AS

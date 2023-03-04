@@ -11,7 +11,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_subcategory_select]
+CREATE PROCEDURE [dbo].[pr_subcategory_select]
 	-- Add the parameters for the stored procedure here
 	@CategoryCD varchar(10),
 	@SubName	nvarchar(50)

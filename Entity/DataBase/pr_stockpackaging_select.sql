@@ -11,7 +11,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_stockpackaging_select]
+CREATE PROCEDURE [dbo].[pr_stockpackaging_select]
 	-- Add the parameters for the stored procedure here
 	@ItemCD varchar(12)
 AS

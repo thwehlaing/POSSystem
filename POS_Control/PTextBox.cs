@@ -78,7 +78,7 @@ namespace POS_Control
         //public Control ctrlE101_2;
         //public Control ctrlE101_3;
 
-        public bool ErrorCheck()
+        public  bool ErrorCheck()
         {
             (bool, DataTable) r_value = errchk.Check(this);
             IsErrorOccurs = r_value.Item1;

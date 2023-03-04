@@ -12,7 +12,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_supplier_search]
+CREATE PROCEDURE [dbo].[pr_supplier_search]
 	-- Add the parameters for the stored procedure here
 	@SupplierName nvarchar(50)
 AS

@@ -63,6 +63,7 @@ namespace Category
             {
                 bl.ShowMessage("I101");
                 txtName.Text = "";
+                txtName.Focus();
                 rdo_active.Checked = true;
             }
         }

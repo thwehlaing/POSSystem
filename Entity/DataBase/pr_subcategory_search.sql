@@ -7,7 +7,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_subcategory_search]
+CREATE PROCEDURE [dbo].[pr_subcategory_search]
 	-- Add the parameters for the stored procedure here
 	@CategoryCD	varchar(10),
 	@SubName	nvarchar(50)

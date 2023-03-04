@@ -34,6 +34,12 @@ namespace Category
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
 
             SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
+
+            ErrorChek();
+        }
+        private void ErrorChek()
+        {
+            txtName.CheckRequired(true);
         }
         public override void FunctionProcess(string tagID)
         {
@@ -63,6 +69,7 @@ namespace Category
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                txtName.Focus();
             }
         }
 

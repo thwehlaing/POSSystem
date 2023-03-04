@@ -11,7 +11,7 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
-ALTER PROCEDURE [dbo].[pr_supplier_delete]
+CREATE PROCEDURE [dbo].[pr_supplier_delete]
 	-- Add the parameters for the stored procedure here
 	@SupplierCD varchar(10),
 	@UpdatedUser varchar(50)

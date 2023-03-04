@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvCategory = new POS_Control.PGridView();
+            this.CatCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCategoryName = new POS_Control.PTextBox();
             this.pLabel1 = new POS_Control.PLabel();
             this.btnDisplay = new POS_Control.PButton();
-            this.CatCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +52,18 @@
             this.dgvCategory.TabIndex = 21;
             this.dgvCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCategory_CellMouseDoubleClick);
             // 
+            // CatCD
+            // 
+            this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
+            this.CatCD.Name = "CatCD";
+            this.CatCD.Width = 200;
+            // 
+            // CatName
+            // 
+            this.CatName.HeaderText = "အမည်";
+            this.CatName.Name = "CatName";
+            this.CatName.Width = 650;
+            // 
             // txtCategoryName
             // 
             this.txtCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -62,8 +74,8 @@
             this.txtCategoryName.Location = new System.Drawing.Point(115, 62);
             this.txtCategoryName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.NextControl = null;
-            this.txtCategoryName.NextControlName = null;
+            this.txtCategoryName.NextControl = this.btnDisplay;
+            this.txtCategoryName.NextControlName = "btnDisplay";
             this.txtCategoryName.SearchType = Entity.SearchType.ScType.None;
             this.txtCategoryName.Size = new System.Drawing.Size(311, 30);
             this.txtCategoryName.TabIndex = 20;
@@ -95,18 +107,6 @@
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
-            // 
-            // CatCD
-            // 
-            this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
-            this.CatCD.Name = "CatCD";
-            this.CatCD.Width = 200;
-            // 
-            // CatName
-            // 
-            this.CatName.HeaderText = "အမည်";
-            this.CatName.Name = "CatName";
-            this.CatName.Width = 650;
             // 
             // Category_Search
             // 

@@ -15,10 +15,12 @@ namespace POS_Search
     public class Search_TextBox:PTextBox
     {
         BaseBL bl = new BaseBL();
-        ErrorCheck errchk;
-      
         protected override void OnKeyDown(KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ErrorCheck();
+            }
             if (e.KeyCode == Keys.F9)
             {
                 Search();
