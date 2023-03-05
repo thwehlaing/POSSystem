@@ -34,6 +34,7 @@ namespace SubCategory
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
             BindCatgory();
+            ErrorCheck();
         }
 
         private void BindCatgory()
