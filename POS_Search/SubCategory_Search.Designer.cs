@@ -77,8 +77,8 @@
             this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
-            this.txtSubCategory.NextControl = null;
-            this.txtSubCategory.NextControlName = null;
+            this.txtSubCategory.NextControl = this.btnDisplay;
+            this.txtSubCategory.NextControlName = "btnDisplay";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
             this.txtSubCategory.Size = new System.Drawing.Size(300, 30);
             this.txtSubCategory.TabIndex = 6;
