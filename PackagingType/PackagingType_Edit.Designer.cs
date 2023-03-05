@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelDetail = new System.Windows.Forms.Panel();
+            this.btnSearch = new POS_Control.PButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rdo_active = new POS_Control.PRadio();
             this.rdo_inactive = new POS_Control.PRadio();
@@ -36,7 +37,6 @@
             this.lblQty = new POS_Control.PLabel();
             this.txtPackTypeName = new POS_Control.PTextBox();
             this.pLabel2 = new POS_Control.PLabel();
-            this.btnSearch = new POS_Control.PButton();
             this.PanelDetail.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,20 @@
             this.PanelDetail.Name = "PanelDetail";
             this.PanelDetail.Size = new System.Drawing.Size(1713, 839);
             this.PanelDetail.TabIndex = 40;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(449, 25);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 86;
+            this.btnSearch.Text = "...";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel2
             // 
@@ -130,6 +144,7 @@
             this.txtPackTypeName.IsDatatableOccurs = null;
             this.txtPackTypeName.IsErrorOccurs = false;
             this.txtPackTypeName.Location = new System.Drawing.Point(127, 25);
+            this.txtPackTypeName.MaxLength = 50;
             this.txtPackTypeName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackTypeName.Name = "txtPackTypeName";
             this.txtPackTypeName.NextControl = null;
@@ -151,20 +166,6 @@
             this.pLabel2.TabIndex = 71;
             this.pLabel2.Text = "အမည်";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(449, 25);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 30);
-            this.btnSearch.TabIndex = 86;
-            this.btnSearch.Text = "...";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // PackagingType_Edit
             // 

@@ -100,6 +100,7 @@
             this.txtSubCategory.IsErrorOccurs = false;
             this.txtSubCategory.Location = new System.Drawing.Point(131, 60);
             this.txtSubCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(80, 20);
             this.txtSubCategory.Name = "txtSubCategory";
             this.txtSubCategory.NextControl = null;

@@ -148,6 +148,7 @@
             this.txtBarCode.IsDatatableOccurs = null;
             this.txtBarCode.IsErrorOccurs = false;
             this.txtBarCode.Location = new System.Drawing.Point(129, 226);
+            this.txtBarCode.MaxLength = 50;
             this.txtBarCode.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.NextControl = null;
@@ -265,6 +266,7 @@
             this.txtStockName.IsDatatableOccurs = null;
             this.txtStockName.IsErrorOccurs = false;
             this.txtStockName.Location = new System.Drawing.Point(129, 66);
+            this.txtStockName.MaxLength = 100;
             this.txtStockName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtStockName.Name = "txtStockName";
             this.txtStockName.NextControl = null;

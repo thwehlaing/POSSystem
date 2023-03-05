@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.dgvPackagingType = new POS_Control.PGridView();
-            this.txtPackTypeName = new POS_Control.PTextBox();
-            this.pLabel1 = new POS_Control.PLabel();
-            this.btnDisplay = new POS_Control.PButton();
             this.PackTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PackTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPackTypeName = new POS_Control.PTextBox();
+            this.pLabel1 = new POS_Control.PLabel();
+            this.btnDisplay = new POS_Control.PButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackagingType)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,14 +54,33 @@
             this.dgvPackagingType.TabIndex = 25;
             this.dgvPackagingType.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackagingType_CellContentDoubleClick);
             // 
+            // PackTypeCode
+            // 
+            this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
+            this.PackTypeCode.Name = "PackTypeCode";
+            this.PackTypeCode.Width = 150;
+            // 
+            // PackTypeName
+            // 
+            this.PackTypeName.HeaderText = "အမည်";
+            this.PackTypeName.Name = "PackTypeName";
+            this.PackTypeName.Width = 580;
+            // 
+            // Qty
+            // 
+            this.Qty.HeaderText = "ပမာဏ";
+            this.Qty.Name = "Qty";
+            this.Qty.Width = 125;
+            // 
             // txtPackTypeName
             // 
             this.txtPackTypeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPackTypeName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtPackTypeName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtPackTypeName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPackTypeName.IsDatatableOccurs = null;
             this.txtPackTypeName.IsErrorOccurs = false;
             this.txtPackTypeName.Location = new System.Drawing.Point(115, 63);
+            this.txtPackTypeName.MaxLength = 50;
             this.txtPackTypeName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackTypeName.Name = "txtPackTypeName";
             this.txtPackTypeName.NextControl = null;
@@ -97,24 +116,6 @@
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
-            // 
-            // PackTypeCode
-            // 
-            this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
-            this.PackTypeCode.Name = "PackTypeCode";
-            this.PackTypeCode.Width = 150;
-            // 
-            // PackTypeName
-            // 
-            this.PackTypeName.HeaderText = "အမည်";
-            this.PackTypeName.Name = "PackTypeName";
-            this.PackTypeName.Width = 580;
-            // 
-            // Qty
-            // 
-            this.Qty.HeaderText = "ပမာဏ";
-            this.Qty.Name = "Qty";
-            this.Qty.Width = 125;
             // 
             // PackagingType_Search
             // 

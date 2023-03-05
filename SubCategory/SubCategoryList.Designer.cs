@@ -67,6 +67,7 @@
             this.txtSubName.IsDatatableOccurs = null;
             this.txtSubName.IsErrorOccurs = false;
             this.txtSubName.Location = new System.Drawing.Point(558, 19);
+            this.txtSubName.MaxLength = 50;
             this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubName.Name = "txtSubName";
             this.txtSubName.NextControl = null;

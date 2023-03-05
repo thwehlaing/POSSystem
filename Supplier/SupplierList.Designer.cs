@@ -174,6 +174,7 @@
             this.txtSupplierName.IsDatatableOccurs = null;
             this.txtSupplierName.IsErrorOccurs = false;
             this.txtSupplierName.Location = new System.Drawing.Point(122, 20);
+            this.txtSupplierName.MaxLength = 50;
             this.txtSupplierName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSupplierName.Name = "txtSupplierName";
             this.txtSupplierName.NextControl = null;

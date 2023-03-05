@@ -33,7 +33,6 @@
             this.pLabel1 = new POS_Control.PLabel();
             this.txtName = new POS_Control.PTextBox();
             this.dgvStockItem = new POS_Control.PGridView();
-            this.txtSubName = new POS_Control.PTextBox();
             this.ItemCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +42,7 @@
             this.ReorderQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UOMCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSubName = new POS_Control.PTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockItem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,11 +89,12 @@
             // txtName
             // 
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.IsDatatableOccurs = null;
             this.txtName.IsErrorOccurs = false;
             this.txtName.Location = new System.Drawing.Point(115, 90);
+            this.txtName.MaxLength = 100;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtName.Name = "txtName";
             this.txtName.NextControl = null;
@@ -124,24 +125,6 @@
             this.dgvStockItem.Size = new System.Drawing.Size(860, 479);
             this.dgvStockItem.TabIndex = 15;
             this.dgvStockItem.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockItem_CellContentDoubleClick);
-            // 
-            // txtSubName
-            // 
-            this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSubName.IsDatatableOccurs = null;
-            this.txtSubName.IsErrorOccurs = false;
-            this.txtSubName.Location = new System.Drawing.Point(115, 52);
-            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtSubName.Name = "txtSubName";
-            this.txtSubName.NextControl = null;
-            this.txtSubName.NextControlName = null;
-            this.txtSubName.ReadOnly = true;
-            this.txtSubName.SearchType = Entity.SearchType.ScType.None;
-            this.txtSubName.Size = new System.Drawing.Size(311, 30);
-            this.txtSubName.TabIndex = 16;
-            this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // ItemCD
             // 
@@ -191,6 +174,24 @@
             this.UOMCD.HeaderText = "UOMCD";
             this.UOMCD.Name = "UOMCD";
             this.UOMCD.Visible = false;
+            // 
+            // txtSubName
+            // 
+            this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSubName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSubName.IsDatatableOccurs = null;
+            this.txtSubName.IsErrorOccurs = false;
+            this.txtSubName.Location = new System.Drawing.Point(115, 52);
+            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtSubName.Name = "txtSubName";
+            this.txtSubName.NextControl = null;
+            this.txtSubName.NextControlName = null;
+            this.txtSubName.ReadOnly = true;
+            this.txtSubName.SearchType = Entity.SearchType.ScType.None;
+            this.txtSubName.Size = new System.Drawing.Size(311, 30);
+            this.txtSubName.TabIndex = 16;
+            this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // StockItem_Search
             // 

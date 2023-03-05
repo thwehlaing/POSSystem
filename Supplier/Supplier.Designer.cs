@@ -97,11 +97,12 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtAddress.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtAddress.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtAddress.IsDatatableOccurs = null;
             this.txtAddress.IsErrorOccurs = false;
             this.txtAddress.Location = new System.Drawing.Point(130, 121);
+            this.txtAddress.MaxLength = 200;
             this.txtAddress.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.NextControl = null;
@@ -132,6 +133,7 @@
             this.txtPhoneNo.IsDatatableOccurs = null;
             this.txtPhoneNo.IsErrorOccurs = false;
             this.txtPhoneNo.Location = new System.Drawing.Point(130, 75);
+            this.txtPhoneNo.MaxLength = 20;
             this.txtPhoneNo.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPhoneNo.Name = "txtPhoneNo";
             this.txtPhoneNo.NextControl = null;
@@ -157,11 +159,12 @@
             // txtSupplierName
             // 
             this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSupplierName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtSupplierName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtSupplierName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSupplierName.IsDatatableOccurs = null;
             this.txtSupplierName.IsErrorOccurs = false;
             this.txtSupplierName.Location = new System.Drawing.Point(130, 30);
+            this.txtSupplierName.MaxLength = 50;
             this.txtSupplierName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSupplierName.Name = "txtSupplierName";
             this.txtSupplierName.NextControl = null;

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelDetail = new System.Windows.Forms.Panel();
+            this.btnSearch = new POS_Control.PButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rdo_active = new POS_Control.PRadio();
             this.rdo_inactive = new POS_Control.PRadio();
@@ -46,7 +47,6 @@
             this.pLabel2 = new POS_Control.PLabel();
             this.cboSubCategory = new POS_Control.PCombo();
             this.pLabel1 = new POS_Control.PLabel();
-            this.btnSearch = new POS_Control.PButton();
             this.PanelDetail.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -70,10 +70,24 @@
             this.PanelDetail.Controls.Add(this.cboSubCategory);
             this.PanelDetail.Controls.Add(this.pLabel1);
             this.PanelDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelDetail.Location = new System.Drawing.Point(0, 91);
+            this.PanelDetail.Location = new System.Drawing.Point(0, 57);
             this.PanelDetail.Name = "PanelDetail";
-            this.PanelDetail.Size = new System.Drawing.Size(1924, 866);
+            this.PanelDetail.Size = new System.Drawing.Size(1924, 939);
             this.PanelDetail.TabIndex = 40;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(447, 64);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.TabIndex = 85;
+            this.btnSearch.Text = "...";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel2
             // 
@@ -150,6 +164,7 @@
             this.txtBarCode.IsDatatableOccurs = null;
             this.txtBarCode.IsErrorOccurs = false;
             this.txtBarCode.Location = new System.Drawing.Point(125, 224);
+            this.txtBarCode.MaxLength = 50;
             this.txtBarCode.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtBarCode.Name = "txtBarCode";
             this.txtBarCode.NextControl = null;
@@ -267,6 +282,7 @@
             this.txtStockName.IsDatatableOccurs = null;
             this.txtStockName.IsErrorOccurs = false;
             this.txtStockName.Location = new System.Drawing.Point(125, 64);
+            this.txtStockName.MaxLength = 100;
             this.txtStockName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtStockName.Name = "txtStockName";
             this.txtStockName.NextControl = null;
@@ -315,20 +331,6 @@
             this.pLabel1.TabIndex = 70;
             this.pLabel1.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(447, 64);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 30);
-            this.btnSearch.TabIndex = 85;
-            this.btnSearch.Text = "...";
-            this.btnSearch.UseVisualStyleBackColor = false;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // StockItem_Edit
             // 

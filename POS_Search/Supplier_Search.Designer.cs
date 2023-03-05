@@ -61,6 +61,7 @@
             this.txtSubCategory.IsDatatableOccurs = null;
             this.txtSubCategory.IsErrorOccurs = false;
             this.txtSubCategory.Location = new System.Drawing.Point(112, 65);
+            this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
             this.txtSubCategory.NextControl = null;
