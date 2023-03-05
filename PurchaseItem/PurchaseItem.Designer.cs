@@ -81,7 +81,7 @@
             this.txtUOMPrice.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtUOMPrice.Name = "txtUOMPrice";
             this.txtUOMPrice.NextControl = null;
-            this.txtUOMPrice.NextControlName = "BtnF2";
+            this.txtUOMPrice.NextControlName = "txtPackQty";
             this.txtUOMPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtUOMPrice.Size = new System.Drawing.Size(187, 30);
             this.txtUOMPrice.TabIndex = 106;
@@ -111,7 +111,7 @@
             this.txtUOMQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtUOMQty.Name = "txtUOMQty";
             this.txtUOMQty.NextControl = null;
-            this.txtUOMQty.NextControlName = "BtnF2";
+            this.txtUOMQty.NextControlName = "txtUOMPrice";
             this.txtUOMQty.SearchType = Entity.SearchType.ScType.None;
             this.txtUOMQty.Size = new System.Drawing.Size(187, 30);
             this.txtUOMQty.TabIndex = 102;
@@ -140,7 +140,7 @@
             this.cboTradeType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboTradeType.Name = "cboTradeType";
             this.cboTradeType.NextControl = null;
-            this.cboTradeType.NextControlName = "cboPackagingType";
+            this.cboTradeType.NextControlName = "txtUOMQty";
             this.cboTradeType.Size = new System.Drawing.Size(322, 29);
             this.cboTradeType.TabIndex = 100;
             // 
@@ -167,7 +167,7 @@
             this.cboCashType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboCashType.Name = "cboCashType";
             this.cboCashType.NextControl = null;
-            this.cboCashType.NextControlName = "cboPackagingType";
+            this.cboCashType.NextControlName = "cboTradeType";
             this.cboCashType.Size = new System.Drawing.Size(322, 29);
             this.cboCashType.TabIndex = 98;
             // 
@@ -222,7 +222,7 @@
             this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboItemName.Name = "cboItemName";
             this.cboItemName.NextControl = null;
-            this.cboItemName.NextControlName = "cboPackagingType";
+            this.cboItemName.NextControlName = "cboCashType";
             this.cboItemName.Size = new System.Drawing.Size(322, 29);
             this.cboItemName.TabIndex = 94;
             // 
@@ -250,7 +250,7 @@
             this.txtPackPrice.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackPrice.Name = "txtPackPrice";
             this.txtPackPrice.NextControl = null;
-            this.txtPackPrice.NextControlName = "BtnF2";
+            this.txtPackPrice.NextControlName = "dtpSaleDate";
             this.txtPackPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtPackPrice.Size = new System.Drawing.Size(187, 30);
             this.txtPackPrice.TabIndex = 112;
@@ -280,7 +280,7 @@
             this.txtPackQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackQty.Name = "txtPackQty";
             this.txtPackQty.NextControl = null;
-            this.txtPackQty.NextControlName = "BtnF2";
+            this.txtPackQty.NextControlName = "txtPackPrice";
             this.txtPackQty.SearchType = Entity.SearchType.ScType.None;
             this.txtPackQty.Size = new System.Drawing.Size(187, 30);
             this.txtPackQty.TabIndex = 110;
