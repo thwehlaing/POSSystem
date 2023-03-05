@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class TransactionLedgerEntity
+    public class TransactionLedgerEntity:BaseEntity
     {
         public string LedgerNo { get; set; }
         public string ItemCD { get; set; }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    public class SaleInvoiceEntity
+    public class SaleInvoiceEntity:BaseEntity
     {
         public string InvoiceNo { get; set; }
         public DateTime InvoiceDate { get; set; }

@@ -115,5 +115,51 @@ namespace SaleItem
                 BindStockItemBySubCategory();
             }
         }
+
+        public override void FunctionProcess(string tagID)
+        {
+            if (tagID == "2")
+            {
+                if (ErrorCheck(PanelDetail))
+                {
+                    DBProcess();
+                }
+            }
+            base.FunctionProcess(tagID);
+        }
+        private void DBProcess()
+        {
+            SaleItemEntity obj = GetInsertSaleItem();
+            SaleItemBL bl = new SaleItemBL();
+            bool return_Bl = bl.SaleItem_Create(obj);
+            if (return_Bl)
+            {
+                bl.ShowMessage("I101");
+                CleardData();
+            }
+        }
+        private SaleItemEntity GetInsertSaleItem()
+        {
+            SaleItemEntity obj = new SaleItemEntity();
+            obj.ItemCD = cboItemName.SelectedValue.ToString();
+            obj.CashSaleCD = cboCashType.SelectedValue.ToString();
+            obj.GoodSaleCD = cboTradeType.SelectedValue.ToString();
+            obj.Qty = Convert.ToInt32(txtQty.Text);
+            obj.UOMCD = cboUOM.SelectedValue.ToString();
+            obj.Price = Convert.ToDouble(txtPrice.Text);
+            obj.SaleDate = DateTime.Now;
+            return obj;
+        }
+
+        private void CleardData()
+        {
+            cboSubCategory.SelectedValue = "-1";
+            cboCashType.SelectedValue = "-1";
+            cboTradeType.SelectedValue = "-1";
+            cboUOM.SelectedValue = "-1";
+            cboItemName.SelectedValue = "-1";
+            txtQty.Text = "";
+            txtPrice.Text = "";
+        }
     }
 }
