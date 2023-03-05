@@ -4,6 +4,8 @@ END try
 BEGIN CATCH END CATCH 
 SET ANSI_NULLS ON
 GO
+SET ANSI_NULLS ON
+GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
@@ -18,9 +20,10 @@ CREATE PROCEDURE [dbo].[pr_category_insert]
 AS
 BEGIN
 
-Declare @maxcatcd varchar(12)
+Declare @maxcatcd varchar(20)
 	Exec pr_CounterType_GetNewID
 		@CounterKey = 1, 
+		@Type='Mst',
         @NewID = @maxcatcd OUTPUT
 
 	INSERT INTO Category

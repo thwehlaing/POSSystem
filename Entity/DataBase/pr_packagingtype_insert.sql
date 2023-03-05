@@ -22,9 +22,10 @@ BEGIN
 	-- SET NOCOUNT ON added to prevent extra result sets from
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
-	Declare @maxptcd varchar(12)
+	Declare @maxptcd varchar(20)
 	Exec pr_CounterType_GetNewID
 		@CounterKey = 5, 
+		@Type='Mst',
         @NewID = @maxptcd OUTPUT
     -- Insert statements for procedure here
 	insert into PackagingType(PackTypeCode,PackTypeName,Qty,Status,CreatedDate,CreatedUser) values(@maxptcd,@PackTypeName,@Qty,@Status,GETDATE(),@CreatedUser)

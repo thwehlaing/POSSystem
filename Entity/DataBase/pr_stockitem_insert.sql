@@ -29,9 +29,10 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 	Declare @SysDatetime Datetime=GetDate()
-	Declare @maxitemcd varchar(12)
+	Declare @maxitemcd varchar(20)
 	Exec pr_CounterType_GetNewID
 		@CounterKey = 4, 
+		@Type='Mst',
         @NewID = @maxitemcd OUTPUT
     -- Insert statements for procedure here
 	insert into StockItem(ItemCD,SubCode,ItemName,UOMCD,Qty,LastSalePrice,BarCode,ReorderQty,Status,CreatedDate,CreatedUser)
