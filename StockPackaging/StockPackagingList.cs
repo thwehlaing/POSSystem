@@ -75,6 +75,7 @@ namespace StockPackaging
             StockPackagingBL bl = new StockPackagingBL();
             StockPackagingEntity obj = GetStockPackagingList();
             DataTable dt = bl.StockPackaging_Select(obj);
+            dgvStockPackaging.Rows.Clear();
             if (dt.Rows.Count > 0)
                 dgvStockPackaging.Rows.Add(dt.Rows.Count);
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -106,6 +107,53 @@ namespace StockPackaging
         {
             cboSubCategory.SelectedValue = "-1";
             cboStockItem.SelectedValue = "-1";
+        }
+
+        private void dgvStockPackaging_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                if (senderGrid.Columns[e.ColumnIndex].Name == "btnDelete")
+                {
+                    StockPackagingBL bl = new StockPackagingBL();
+                    if (bl.ShowMessage("Q004") == DialogResult.Yes)
+                    {
+                        StockPackagingEntity obj = new StockPackagingEntity();
+                        obj.ItemCD = dgvStockPackaging.Rows[e.RowIndex].Cells["ItemCD"].Value.ToString();
+                        obj.PackTypeCode = dgvStockPackaging.Rows[e.RowIndex].Cells["PackTypeCode"].Value.ToString();
+                        bool return_Bl = bl.StockPackaging_Delete(obj);
+                        if (return_Bl)
+                        {
+                            dgvStockPackaging.Rows.RemoveAt(e.RowIndex);
+                            bl.ShowMessage("I102");
+                        }
+                    }
+                }
+                else if(senderGrid.Columns[e.ColumnIndex].Name == "btnEdit")
+                {
+                    senderGrid.CurrentCell = senderGrid.Rows[e.RowIndex].Cells[2];
+                    senderGrid.Rows[e.RowIndex].Cells[2].Selected = true;
+                    senderGrid.BeginEdit(true);                   
+                    btnEdit.Name = "btnUpdate";
+                    btnEdit.Text = "သိမ်းမည်";
+                }    
+                else if (senderGrid.Columns[e.ColumnIndex].Name == "btnUpdate")
+                {
+                    StockPackagingBL bl = new StockPackagingBL();
+                    StockPackagingEntity obj = new StockPackagingEntity();
+                    obj.ItemCD = dgvStockPackaging.Rows[e.RowIndex].Cells["ItemCD"].Value.ToString();
+                    obj.PackTypeCode = dgvStockPackaging.Rows[e.RowIndex].Cells["PackTypeCode"].Value.ToString();
+                    obj.Qty = Convert.ToInt32(dgvStockPackaging.Rows[e.RowIndex].Cells["Qty"].Value.ToString());
+                    obj.UpdatedUser = obj.OperatorCD;
+                    bool return_Bl = bl.StockPackaging_Update(obj);
+                    if (return_Bl)
+                    {                        
+                        bl.ShowMessage("I101");
+                        BindDataGridView();
+                    }
+                }
+            }
         }
     }
 }

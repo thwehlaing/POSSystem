@@ -41,8 +41,8 @@
             this.PackTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OpenQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Action1 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Action2 = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.PanelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockPackaging)).BeginInit();
             this.SuspendLayout();
@@ -147,8 +147,8 @@
             this.PackTypeCode,
             this.Qty,
             this.OpenQty,
-            this.Action1,
-            this.Action2});
+            this.btnEdit,
+            this.btnDelete});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -163,17 +163,20 @@
             this.dgvStockPackaging.RowTemplate.Height = 25;
             this.dgvStockPackaging.Size = new System.Drawing.Size(1203, 716);
             this.dgvStockPackaging.TabIndex = 0;
+            this.dgvStockPackaging.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockPackaging_CellContentClick);
             // 
             // ItemCD
             // 
             this.ItemCD.HeaderText = "ကုန်ပစ္စည်းကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
+            this.ItemCD.ReadOnly = true;
             this.ItemCD.Width = 250;
             // 
             // PackTypeCode
             // 
             this.PackTypeCode.HeaderText = "အထုပ်အမျိုးအစား ကုဒ်နံပါတ်";
             this.PackTypeCode.Name = "PackTypeCode";
+            this.PackTypeCode.ReadOnly = true;
             this.PackTypeCode.Width = 250;
             // 
             // Qty
@@ -186,27 +189,28 @@
             // 
             this.OpenQty.HeaderText = "အဖွင့်ပမာဏ";
             this.OpenQty.Name = "OpenQty";
+            this.OpenQty.ReadOnly = true;
             this.OpenQty.Width = 200;
             // 
-            // Action1
+            // btnEdit
             // 
-            this.Action1.HeaderText = "လုပ်ဆောင်ချက်";
-            this.Action1.Name = "Action1";
-            this.Action1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Action1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Action1.Text = "ပယ်ဖျက်ရန်";
-            this.Action1.UseColumnTextForButtonValue = true;
-            this.Action1.Width = 150;
+            this.btnEdit.HeaderText = "လုပ်တောင်ချက်";
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnEdit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnEdit.Text = "ပြင်ဆင်ရန်";
+            this.btnEdit.UseColumnTextForButtonValue = true;
+            this.btnEdit.Width = 150;
             // 
-            // Action2
+            // btnDelete
             // 
-            this.Action2.HeaderText = "လုပ်တောင်ချက်";
-            this.Action2.Name = "Action2";
-            this.Action2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Action2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Action2.Text = "ပြင်ဆင်ရန်";
-            this.Action2.UseColumnTextForButtonValue = true;
-            this.Action2.Width = 150;
+            this.btnDelete.HeaderText = "လုပ်ဆောင်ချက်";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.btnDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.btnDelete.Text = "ပယ်ဖျက်ရန်";
+            this.btnDelete.UseColumnTextForButtonValue = true;
+            this.btnDelete.Width = 150;
             // 
             // StockPackagingList
             // 
@@ -238,7 +242,7 @@
         private DataGridViewTextBoxColumn PackTypeCode;
         private DataGridViewTextBoxColumn Qty;
         private DataGridViewTextBoxColumn OpenQty;
-        private DataGridViewButtonColumn Action1;
-        private DataGridViewButtonColumn Action2;
+        private DataGridViewButtonColumn btnEdit;
+        private DataGridViewButtonColumn btnDelete;
     }
 }
