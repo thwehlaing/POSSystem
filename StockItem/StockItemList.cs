@@ -28,7 +28,7 @@ namespace StockItem
             cboSubCategory.Focus();
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
+            SetButton(ButtonType.BType.Save, F2, "ပြမည်", true);
             cboSubCategory.CheckRequired(true);
             BindSubCatgory();
         }
