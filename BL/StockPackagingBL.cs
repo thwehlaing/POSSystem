@@ -17,7 +17,7 @@ namespace BL
             entity.Sqlprms = new SqlParameter[4];
             entity.Sqlprms[0] = new SqlParameter("@ItemCD", SqlDbType.VarChar) { Value = entity.ItemCD.ToString() };
             entity.Sqlprms[1] = new SqlParameter("@PackTypeCode", SqlDbType.VarChar) { Value = entity.PackTypeCode.ToString() };
-            entity.Sqlprms[2] = new SqlParameter("@Qty", SqlDbType.Int) { Value = entity.Qty };
+            entity.Sqlprms[2] = new SqlParameter("@PackQty", SqlDbType.Int) { Value = entity.PackQty };
             entity.Sqlprms[3] = new SqlParameter("@CreatedUser", SqlDbType.VarChar) { Value = entity.OperatorCD };
             return dl.InsertUpdateDeleteData("pr_stockpackaging_insert", GetConnectionString(), entity.Sqlprms);
         }
@@ -44,7 +44,7 @@ namespace BL
             entity.Sqlprms = new SqlParameter[4];
             entity.Sqlprms[0] = new SqlParameter("@ItemCD", SqlDbType.VarChar) { Value = entity.ItemCD.ToString() };
             entity.Sqlprms[1] = new SqlParameter("@PackTypeCode", SqlDbType.VarChar) { Value = entity.PackTypeCode.ToString() };
-            entity.Sqlprms[2] = new SqlParameter("@Qty", SqlDbType.Int) { Value = entity.Qty };
+            entity.Sqlprms[2] = new SqlParameter("@PackQty", SqlDbType.Int) { Value = entity.PackQty };
             entity.Sqlprms[3] = new SqlParameter("@UpdatedUser", SqlDbType.VarChar) { Value = entity.OperatorCD };
             return dl.InsertUpdateDeleteData("pr_stockpackaging_update", GetConnectionString(), entity.Sqlprms);
         }

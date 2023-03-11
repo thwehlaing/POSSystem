@@ -15,7 +15,7 @@ CREATE PROCEDURE [dbo].[pr_stockpackaging_update]
 	-- Add the parameters for the stored procedure here
 	@ItemCD varchar(12),
 	@PackTypeCode varchar(10),
-	@Qty int,
+	@PackQty int,
 	@UpdatedUser varchar(50)
 AS
 BEGIN
@@ -24,5 +24,6 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	update StockPackaging set Qty=@Qty,UpdatedDate=GETDATE(),UpdatedUser=@UpdatedUser where ItemCD=@ItemCD and PackTypeCode=@PackTypeCode
+	update StockPackaging set PackQty=@PackQty,UpdatedDate=GETDATE(),UpdatedUser=@UpdatedUser where ItemCD=@ItemCD and PackTypeCode=@PackTypeCode
 END
+

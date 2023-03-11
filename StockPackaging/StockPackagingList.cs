@@ -82,8 +82,12 @@ namespace StockPackaging
             {
                 dgvStockPackaging.Rows[i].Cells["ItemCD"].Value = dt.Rows[i]["ItemCD"].ToString();
                 dgvStockPackaging.Rows[i].Cells["PackTypeCode"].Value = dt.Rows[i]["PackTypeCode"].ToString();
-                dgvStockPackaging.Rows[i].Cells["Qty"].Value = dt.Rows[i]["Qty"].ToString();
+                dgvStockPackaging.Rows[i].Cells["PackQty"].Value = dt.Rows[i]["PackQty"].ToString();
                 dgvStockPackaging.Rows[i].Cells["OpenQty"].Value = dt.Rows[i]["OpenQty"].ToString();
+                DataGridViewButtonCell btnEdit = (DataGridViewButtonCell)dgvStockPackaging.Rows[i].Cells["btnEdit"];
+                btnEdit.Value = "ပြင်ဆင်ရန်";
+                DataGridViewButtonCell btnDelete = (DataGridViewButtonCell)dgvStockPackaging.Rows[i].Cells["btnDelete"];
+                btnDelete.Value = "ပယ်ဖျက်ရန်";
             }
         }
 
@@ -132,27 +136,31 @@ namespace StockPackaging
                 }
                 else if(senderGrid.Columns[e.ColumnIndex].Name == "btnEdit")
                 {
-                    senderGrid.CurrentCell = senderGrid.Rows[e.RowIndex].Cells[2];
-                    senderGrid.Rows[e.RowIndex].Cells[2].Selected = true;
-                    senderGrid.BeginEdit(true);                   
-                    btnEdit.Name = "btnUpdate";
-                    btnEdit.Text = "သိမ်းမည်";
-                }    
-                else if (senderGrid.Columns[e.ColumnIndex].Name == "btnUpdate")
-                {
-                    StockPackagingBL bl = new StockPackagingBL();
-                    StockPackagingEntity obj = new StockPackagingEntity();
-                    obj.ItemCD = dgvStockPackaging.Rows[e.RowIndex].Cells["ItemCD"].Value.ToString();
-                    obj.PackTypeCode = dgvStockPackaging.Rows[e.RowIndex].Cells["PackTypeCode"].Value.ToString();
-                    obj.Qty = Convert.ToInt32(dgvStockPackaging.Rows[e.RowIndex].Cells["Qty"].Value.ToString());
-                    obj.UpdatedUser = obj.OperatorCD;
-                    bool return_Bl = bl.StockPackaging_Update(obj);
-                    if (return_Bl)
-                    {                        
-                        bl.ShowMessage("I101");
-                        BindDataGridView();
+                    DataGridViewButtonColumn btn = senderGrid.Columns[e.ColumnIndex] as DataGridViewButtonColumn;
+                    if (btn.Text == "ပြင်ဆင်ရန်")
+                    {
+                        senderGrid.CurrentCell = senderGrid.Rows[e.RowIndex].Cells[2];
+                        senderGrid.Rows[e.RowIndex].Cells[2].Selected = true;
+                        senderGrid.BeginEdit(true);
+                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                        buttonCell.Value = "သိမ်းမည်";
                     }
-                }
+                    else
+                    {
+                        StockPackagingBL bl = new StockPackagingBL();
+                        StockPackagingEntity obj = new StockPackagingEntity();
+                        obj.ItemCD = dgvStockPackaging.Rows[e.RowIndex].Cells["ItemCD"].Value.ToString();
+                        obj.PackTypeCode = dgvStockPackaging.Rows[e.RowIndex].Cells["PackTypeCode"].Value.ToString();
+                        obj.PackQty = Convert.ToInt32(dgvStockPackaging.Rows[e.RowIndex].Cells["PackQty"].Value.ToString());
+                        obj.UpdatedUser = obj.OperatorCD;
+                        bool return_Bl = bl.StockPackaging_Update(obj);
+                        if (return_Bl)
+                        {
+                            bl.ShowMessage("I101");
+                            BindDataGridView();
+                        }
+                    }          
+                } 
             }
         }
     }

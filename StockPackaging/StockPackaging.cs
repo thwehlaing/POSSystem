@@ -110,7 +110,7 @@ namespace StockPackaging
             StockPackagingEntity obj = new StockPackagingEntity();
             obj.ItemCD = cboItemName.SelectedValue.ToString();
             obj.PackTypeCode = cboPackagingType.SelectedValue.ToString();
-            obj.Qty = Convert.ToInt32(txtQty.Text);
+            obj.PackQty = Convert.ToInt32(txtQty.Text);
             obj.CreatedUser = obj.OperatorCD;
             return obj;
         }
