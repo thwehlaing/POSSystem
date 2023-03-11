@@ -70,8 +70,9 @@ namespace SubCategory
             bool return_Bl = bl.SubCategory_Update(obj);
             if (return_Bl)
             {
+                bl.ShowMessage("I101");
+                cboCategory.Focus();
                 ClearData();
-                bl.ShowMessage("I101");                
             }                
         }
 

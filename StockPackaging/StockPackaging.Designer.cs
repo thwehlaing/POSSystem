@@ -94,7 +94,7 @@
             this.txtQty.Location = new System.Drawing.Point(124, 142);
             this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtQty.Name = "txtQty";
-            this.txtQty.NextControl = this.BtnF2;
+            //this.txtQty.NextControl = this.BtnF2;
             this.txtQty.NextControlName = "BtnF2";
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);

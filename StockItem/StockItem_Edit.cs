@@ -98,6 +98,7 @@ namespace StockItem
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                cboSubCategory.Focus();
                 ClearData();
             }
         }

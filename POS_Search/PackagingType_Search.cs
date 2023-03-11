@@ -47,7 +47,7 @@ namespace POS_Search
             {
                 dgvPackagingType.Rows[i].Cells["PackTypeCode"].Value = dt.Rows[i]["PackTypeCode"].ToString();
                 dgvPackagingType.Rows[i].Cells["PackTypeName"].Value = dt.Rows[i]["PackTypeName"].ToString();
-                dgvPackagingType.Rows[i].Cells["Qty"].Value = dt.Rows[i]["Qty"].ToString();
+                dgvPackagingType.Rows[i].Cells["UOMQty"].Value = dt.Rows[i]["UOMQty"].ToString();
             }
         }
         public override void FunctionProcess(string tagID)
@@ -65,7 +65,7 @@ namespace POS_Search
             {
                 PTypeCD = row.Cells["PackTypeCode"].Value.ToString();
                 PTypeName = row.Cells["PackTypeName"].Value.ToString();
-                PQty = Convert.ToInt32(row.Cells["Qty"].Value.ToString());
+                PQty = Convert.ToInt32(row.Cells["UOMQty"].Value.ToString());
             }
             this.Close();
         }

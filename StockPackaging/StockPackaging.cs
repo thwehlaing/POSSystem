@@ -101,6 +101,7 @@ namespace StockPackaging
             if (result)
             {
                 bl.ShowMessage("I101");
+                cboSubCategory.Focus();
                 ClearData();
             }
         }

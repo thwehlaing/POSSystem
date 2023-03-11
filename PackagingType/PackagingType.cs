@@ -61,6 +61,7 @@ namespace PackagingType
                 bl.ShowMessage("I101");
                 txtPackTypeName.Text = "";
                 txtQty.Text = "";
+                txtPackTypeName.Focus();
             }
         }
 
@@ -68,7 +69,7 @@ namespace PackagingType
         {
             PackagingTypeEntity entity = new PackagingTypeEntity();
             entity.PackTypeName = txtPackTypeName.Text;           
-            entity.Qty = Convert.ToInt32(txtQty.Text);
+            entity.UOMQty = Convert.ToInt32(txtQty.Text);
             entity.Status = rdo_active.Checked == true ? "1" : "0";
             entity.CreatedUser = entity.OperatorCD;
             entity.ProgramID = entity.ProgramID;

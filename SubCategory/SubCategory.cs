@@ -67,6 +67,7 @@ namespace SubCategory
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                cboCategory.Focus();
                 ClearData();
             }  
         }

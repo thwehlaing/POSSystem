@@ -14,7 +14,7 @@ GO
 CREATE PROCEDURE [dbo].[pr_packagingtype_insert]
 	-- Add the parameters for the stored procedure here
 	@PackTypeName nvarchar(50),
-	@Qty	int,
+	@UOMQty	int,
 	@Status varchar(10),
 	@CreatedUser varchar(50)
 AS
@@ -28,5 +28,6 @@ BEGIN
 		@Type='Mst',
         @NewID = @maxptcd OUTPUT
     -- Insert statements for procedure here
-	insert into PackagingType(PackTypeCode,PackTypeName,Qty,Status,CreatedDate,CreatedUser) values(@maxptcd,@PackTypeName,@Qty,@Status,GETDATE(),@CreatedUser)
+	insert into PackagingType(PackTypeCode,PackTypeName,UOMQty,Status,CreatedDate,CreatedUser) values(@maxptcd,@PackTypeName,@UOMQty,@Status,GETDATE(),@CreatedUser)
 END
+

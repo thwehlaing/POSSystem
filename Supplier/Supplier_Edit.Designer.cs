@@ -91,7 +91,7 @@
             this.rdo_active.Location = new System.Drawing.Point(5, 26);
             this.rdo_active.Margin = new System.Windows.Forms.Padding(5);
             this.rdo_active.Name = "rdo_active";
-            this.rdo_active.NextControl = this.BtnF2;
+            //this.rdo_active.NextControl = this.BtnF2;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -106,7 +106,7 @@
             this.rdo_inactive.Location = new System.Drawing.Point(177, 26);
             this.rdo_inactive.Margin = new System.Windows.Forms.Padding(5);
             this.rdo_inactive.Name = "rdo_inactive";
-            this.rdo_inactive.NextControl = this.BtnF2;
+            //this.rdo_inactive.NextControl = this.BtnF2;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;

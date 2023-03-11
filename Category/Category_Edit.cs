@@ -69,7 +69,8 @@ namespace Category
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
-                txtName.Focus();
+                txtName.Text = "";
+               txtName.Focus();
             }
         }
 

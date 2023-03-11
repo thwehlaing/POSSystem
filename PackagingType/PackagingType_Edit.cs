@@ -60,7 +60,7 @@ namespace PackagingType
             base.FunctionProcess(tagID);
         }
 
-        private void DoProcess()
+        private void DBProcess()
         {
             PackagingTypeEntity entity = GetUpdatePackagingType();
             PackagingTypeBL bl = new PackagingTypeBL();
@@ -70,6 +70,7 @@ namespace PackagingType
                 bl.ShowMessage("I101");
                 txtPackTypeName.Text = "";
                 txtQty.Text = "";
+                txtPackTypeName.Focus();
             }
         }
         private PackagingTypeEntity GetUpdatePackagingType()
@@ -77,7 +78,7 @@ namespace PackagingType
             PackagingTypeEntity entity = new PackagingTypeEntity();
             entity.PackTypeCode = PTypeCode;
             entity.PackTypeName = txtPackTypeName.Text;
-            entity.Qty = Convert.ToInt32(txtQty.Text);
+            entity.UOMQty = Convert.ToInt32(txtQty.Text);
             entity.Status = rdo_active.Checked ? "1" : "0";
             entity.UpdatedUser = entity.OperatorCD;
             return entity;

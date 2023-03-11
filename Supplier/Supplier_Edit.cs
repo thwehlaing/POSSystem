@@ -62,6 +62,7 @@ namespace Supplier
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                txtSupplierName.Focus();
                 ClearData();
             }
         }
