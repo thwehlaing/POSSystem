@@ -70,7 +70,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControl = this.BtnF2;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -84,7 +84,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            this.rdo_inactive.NextControl = null;
+            this.rdo_inactive.NextControl = this.BtnF2;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(80, 20);
             this.txtSubCategory.Name = "txtSubCategory";
-            this.txtSubCategory.NextControl = null;
+            this.txtSubCategory.NextControl = this.rdo_active;
             this.txtSubCategory.NextControlName = "rdo_active";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
             this.txtSubCategory.Size = new System.Drawing.Size(344, 30);
@@ -134,7 +134,7 @@
             this.cboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cboCategory.MinimumSize = new System.Drawing.Size(81, 0);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.NextControl = null;
+            this.cboCategory.NextControl = this.txtSubCategory;
             this.cboCategory.NextControlName = "txtSubCategory";
             this.cboCategory.Size = new System.Drawing.Size(344, 29);
             this.cboCategory.TabIndex = 1;

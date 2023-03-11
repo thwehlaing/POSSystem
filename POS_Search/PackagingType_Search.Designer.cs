@@ -58,13 +58,14 @@
             // 
             this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
             this.PackTypeCode.Name = "PackTypeCode";
+            this.PackTypeCode.Visible = false;
             this.PackTypeCode.Width = 150;
             // 
             // PackTypeName
             // 
             this.PackTypeName.HeaderText = "အမည်";
             this.PackTypeName.Name = "PackTypeName";
-            this.PackTypeName.Width = 580;
+            this.PackTypeName.Width = 730;
             // 
             // Qty
             // 
@@ -83,8 +84,8 @@
             this.txtPackTypeName.MaxLength = 50;
             this.txtPackTypeName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackTypeName.Name = "txtPackTypeName";
-            this.txtPackTypeName.NextControl = null;
-            this.txtPackTypeName.NextControlName = null;
+            this.txtPackTypeName.NextControl = this.btnDisplay;
+            this.txtPackTypeName.NextControlName = "btnDisplay";
             this.txtPackTypeName.SearchType = Entity.SearchType.ScType.None;
             this.txtPackTypeName.Size = new System.Drawing.Size(311, 30);
             this.txtPackTypeName.TabIndex = 24;

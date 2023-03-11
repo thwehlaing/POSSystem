@@ -69,7 +69,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControl = this.BtnF2;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -83,7 +83,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            this.rdo_inactive.NextControl = null;
+            this.rdo_inactive.NextControl = this.BtnF2;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.txtQty.Location = new System.Drawing.Point(122, 68);
             this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtQty.Name = "txtQty";
-            this.txtQty.NextControl = null;
+            this.txtQty.NextControl = this.rdo_active;
             this.txtQty.NextControlName = "rdo_active";
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
@@ -131,7 +131,7 @@
             this.txtPackTypeName.MaxLength = 50;
             this.txtPackTypeName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackTypeName.Name = "txtPackTypeName";
-            this.txtPackTypeName.NextControl = null;
+            this.txtPackTypeName.NextControl = this.txtQty;
             this.txtPackTypeName.NextControlName = "txtQty";
             this.txtPackTypeName.SearchType = Entity.SearchType.ScType.None;
             this.txtPackTypeName.Size = new System.Drawing.Size(322, 30);

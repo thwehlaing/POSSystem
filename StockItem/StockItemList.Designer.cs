@@ -73,7 +73,7 @@
             this.cboSubCategory.Location = new System.Drawing.Point(124, 18);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
-            this.cboSubCategory.NextControl = null;
+            this.cboSubCategory.NextControl = this.txtName;
             this.cboSubCategory.NextControlName = "txtName";
             this.cboSubCategory.Size = new System.Drawing.Size(311, 29);
             this.cboSubCategory.TabIndex = 22;
@@ -112,7 +112,7 @@
             this.dgvStockItem.Name = "dgvStockItem";
             this.dgvStockItem.RowHeadersVisible = false;
             this.dgvStockItem.RowTemplate.Height = 25;
-            this.dgvStockItem.Size = new System.Drawing.Size(1374, 598);
+            this.dgvStockItem.Size = new System.Drawing.Size(1273, 598);
             this.dgvStockItem.TabIndex = 21;
             this.dgvStockItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockItem_CellContentClick);
             // 
@@ -120,6 +120,7 @@
             // 
             this.ItemCD.HeaderText = "ကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
+            this.ItemCD.Visible = false;
             // 
             // SubName
             // 
@@ -181,8 +182,8 @@
             this.txtName.MaxLength = 100;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtName.Name = "txtName";
-            this.txtName.NextControl = null;
-            this.txtName.NextControlName = null;
+            this.txtName.NextControl = this.btnDisplay;
+            this.txtName.NextControlName = "btnDisplay";
             this.txtName.SearchType = Entity.SearchType.ScType.None;
             this.txtName.Size = new System.Drawing.Size(311, 30);
             this.txtName.TabIndex = 20;

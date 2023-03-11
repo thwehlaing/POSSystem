@@ -65,7 +65,7 @@
             this.cboSubCategory.Location = new System.Drawing.Point(124, 23);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
-            this.cboSubCategory.NextControl = null;
+            this.cboSubCategory.NextControl = this.cboItemName;
             this.cboSubCategory.NextControlName = "cboItemName";
             this.cboSubCategory.Size = new System.Drawing.Size(322, 29);
             this.cboSubCategory.TabIndex = 80;
@@ -94,7 +94,7 @@
             this.txtQty.Location = new System.Drawing.Point(124, 142);
             this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtQty.Name = "txtQty";
-            this.txtQty.NextControl = null;
+            this.txtQty.NextControl = this.BtnF2;
             this.txtQty.NextControlName = "BtnF2";
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
@@ -123,7 +123,7 @@
             this.cboPackagingType.Location = new System.Drawing.Point(124, 101);
             this.cboPackagingType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboPackagingType.Name = "cboPackagingType";
-            this.cboPackagingType.NextControl = null;
+            this.cboPackagingType.NextControl = this.txtQty;
             this.cboPackagingType.NextControlName = "txtQty";
             this.cboPackagingType.Size = new System.Drawing.Size(322, 29);
             this.cboPackagingType.TabIndex = 60;
@@ -150,7 +150,7 @@
             this.cboItemName.Location = new System.Drawing.Point(124, 61);
             this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboItemName.Name = "cboItemName";
-            this.cboItemName.NextControl = null;
+            this.cboItemName.NextControl = this.cboPackagingType;
             this.cboItemName.NextControlName = "cboPackagingType";
             this.cboItemName.Size = new System.Drawing.Size(322, 29);
             this.cboItemName.TabIndex = 58;

@@ -65,7 +65,7 @@
             this.cboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cboCategory.MinimumSize = new System.Drawing.Size(81, 0);
             this.cboCategory.Name = "cboCategory";
-            this.cboCategory.NextControl = null;
+            this.cboCategory.NextControl = this.txtSubName;
             this.cboCategory.NextControlName = "txtSubName";
             this.cboCategory.Size = new System.Drawing.Size(300, 29);
             this.cboCategory.TabIndex = 49;
@@ -109,7 +109,7 @@
             this.txtSubName.MaxLength = 50;
             this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubName.Name = "txtSubName";
-            this.txtSubName.NextControl = null;
+            this.txtSubName.NextControl = this.rdo_active;
             this.txtSubName.NextControlName = "rdo_active";
             this.txtSubName.SearchType = Entity.SearchType.ScType.None;
             this.txtSubName.Size = new System.Drawing.Size(300, 30);
@@ -145,7 +145,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControl = this.BtnF2;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -159,7 +159,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            this.rdo_inactive.NextControl = null;
+            this.rdo_inactive.NextControl = this.BtnF2;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;

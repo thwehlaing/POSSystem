@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.dgvCategory = new POS_Control.PGridView();
+            this.txtCategoryName = new POS_Control.PTextBox();
+            this.btnDisplay = new POS_Control.PButton();
+            this.pLabel1 = new POS_Control.PLabel();
             this.CatCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtCategoryName = new POS_Control.PTextBox();
-            this.pLabel1 = new POS_Control.PLabel();
-            this.btnDisplay = new POS_Control.PButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,18 +52,6 @@
             this.dgvCategory.TabIndex = 21;
             this.dgvCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCategory_CellMouseDoubleClick);
             // 
-            // CatCD
-            // 
-            this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
-            this.CatCD.Name = "CatCD";
-            this.CatCD.Width = 200;
-            // 
-            // CatName
-            // 
-            this.CatName.HeaderText = "အမည်";
-            this.CatName.Name = "CatName";
-            this.CatName.Width = 650;
-            // 
             // txtCategoryName
             // 
             this.txtCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -81,19 +69,6 @@
             this.txtCategoryName.TabIndex = 20;
             this.txtCategoryName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
-            // pLabel1
-            // 
-            this.pLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(15, 62);
-            this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 30);
-            this.pLabel1.TabIndex = 19;
-            this.pLabel1.Text = "အမည်";
-            this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -107,6 +82,32 @@
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // pLabel1
+            // 
+            this.pLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Location = new System.Drawing.Point(15, 62);
+            this.pLabel1.Name = "pLabel1";
+            this.pLabel1.Size = new System.Drawing.Size(100, 30);
+            this.pLabel1.TabIndex = 19;
+            this.pLabel1.Text = "အမည်";
+            this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // CatCD
+            // 
+            this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
+            this.CatCD.Name = "CatCD";
+            this.CatCD.Visible = false;
+            this.CatCD.Width = 200;
+            // 
+            // CatName
+            // 
+            this.CatName.HeaderText = "အမည်";
+            this.CatName.Name = "CatName";
+            this.CatName.Width = 850;
             // 
             // Category_Search
             // 

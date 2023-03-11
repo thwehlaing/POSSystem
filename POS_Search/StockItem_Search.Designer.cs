@@ -97,8 +97,8 @@
             this.txtName.MaxLength = 100;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtName.Name = "txtName";
-            this.txtName.NextControl = null;
-            this.txtName.NextControlName = null;
+            this.txtName.NextControl = this.btnDisplay;
+            this.txtName.NextControlName = "btnDisplay";
             this.txtName.SearchType = Entity.SearchType.ScType.None;
             this.txtName.Size = new System.Drawing.Size(311, 30);
             this.txtName.TabIndex = 14;
@@ -130,6 +130,7 @@
             // 
             this.ItemCD.HeaderText = "ကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
+            this.ItemCD.Visible = false;
             // 
             // SubName
             // 
@@ -141,7 +142,7 @@
             // 
             this.ItemName.HeaderText = "အမည်";
             this.ItemName.Name = "ItemName";
-            this.ItemName.Width = 150;
+            this.ItemName.Width = 250;
             // 
             // Qty
             // 

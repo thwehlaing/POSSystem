@@ -61,7 +61,7 @@
             this.dgvPackagingType.Name = "dgvPackagingType";
             this.dgvPackagingType.RowHeadersVisible = false;
             this.dgvPackagingType.RowTemplate.Height = 25;
-            this.dgvPackagingType.Size = new System.Drawing.Size(985, 571);
+            this.dgvPackagingType.Size = new System.Drawing.Size(833, 571);
             this.dgvPackagingType.TabIndex = 26;
             this.dgvPackagingType.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackagingType_CellContentClick);
             // 
@@ -69,6 +69,7 @@
             // 
             this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
             this.PackTypeCode.Name = "PackTypeCode";
+            this.PackTypeCode.Visible = false;
             this.PackTypeCode.Width = 150;
             // 
             // PackTypeName

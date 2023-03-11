@@ -89,7 +89,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControl = this.BtnF2;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            this.rdo_inactive.NextControl = null;
+            this.rdo_inactive.NextControl = this.BtnF2;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
@@ -120,7 +120,7 @@
             this.txtReorderQty.Location = new System.Drawing.Point(129, 270);
             this.txtReorderQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtReorderQty.Name = "txtReorderQty";
-            this.txtReorderQty.NextControl = null;
+            this.txtReorderQty.NextControl = this.rdo_active;
             this.txtReorderQty.NextControlName = "rdo_active";
             this.txtReorderQty.SearchType = Entity.SearchType.ScType.None;
             this.txtReorderQty.Size = new System.Drawing.Size(187, 30);
@@ -151,7 +151,7 @@
             this.txtBarCode.MaxLength = 50;
             this.txtBarCode.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtBarCode.Name = "txtBarCode";
-            this.txtBarCode.NextControl = null;
+            this.txtBarCode.NextControl = this.txtReorderQty;
             this.txtBarCode.NextControlName = "txtReorderQty";
             this.txtBarCode.SearchType = Entity.SearchType.ScType.None;
             this.txtBarCode.Size = new System.Drawing.Size(187, 30);
@@ -181,7 +181,7 @@
             this.txtPrice.Location = new System.Drawing.Point(129, 184);
             this.txtPrice.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.NextControl = null;
+            this.txtPrice.NextControl = this.txtBarCode;
             this.txtPrice.NextControlName = "txtBarCode";
             this.txtPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtPrice.Size = new System.Drawing.Size(187, 30);
@@ -211,7 +211,7 @@
             this.txtQty.Location = new System.Drawing.Point(129, 144);
             this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtQty.Name = "txtQty";
-            this.txtQty.NextControl = null;
+            this.txtQty.NextControl = this.txtPrice;
             this.txtQty.NextControlName = "txtPrice";
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
@@ -240,7 +240,7 @@
             this.cboUOM.Location = new System.Drawing.Point(129, 105);
             this.cboUOM.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboUOM.Name = "cboUOM";
-            this.cboUOM.NextControl = null;
+            this.cboUOM.NextControl = this.txtQty;
             this.cboUOM.NextControlName = "txtQty";
             this.cboUOM.Size = new System.Drawing.Size(187, 29);
             this.cboUOM.TabIndex = 60;
@@ -269,7 +269,7 @@
             this.txtStockName.MaxLength = 100;
             this.txtStockName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtStockName.Name = "txtStockName";
-            this.txtStockName.NextControl = null;
+            this.txtStockName.NextControl = this.cboUOM;
             this.txtStockName.NextControlName = "cboUOM";
             this.txtStockName.SearchType = Entity.SearchType.ScType.None;
             this.txtStockName.Size = new System.Drawing.Size(322, 30);
@@ -298,7 +298,7 @@
             this.cboSubCategory.Location = new System.Drawing.Point(129, 26);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
-            this.cboSubCategory.NextControl = null;
+            this.cboSubCategory.NextControl = this.txtStockName;
             this.cboSubCategory.NextControlName = "txtStockName";
             this.cboSubCategory.Size = new System.Drawing.Size(322, 29);
             this.cboSubCategory.TabIndex = 56;

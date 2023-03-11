@@ -73,7 +73,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControl = this.BtnF2;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -87,7 +87,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            this.rdo_inactive.NextControl = null;
+            this.rdo_inactive.NextControl = this.BtnF2;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
@@ -105,7 +105,7 @@
             this.txtAddress.MaxLength = 200;
             this.txtAddress.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.NextControl = null;
+            this.txtAddress.NextControl = this.rdo_active;
             this.txtAddress.NextControlName = "rdo_active";
             this.txtAddress.SearchType = Entity.SearchType.ScType.None;
             this.txtAddress.Size = new System.Drawing.Size(322, 30);
@@ -136,7 +136,7 @@
             this.txtPhoneNo.MaxLength = 20;
             this.txtPhoneNo.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.NextControl = null;
+            this.txtPhoneNo.NextControl = this.txtAddress;
             this.txtPhoneNo.NextControlName = "txtAddress";
             this.txtPhoneNo.SearchType = Entity.SearchType.ScType.None;
             this.txtPhoneNo.Size = new System.Drawing.Size(322, 30);
@@ -167,7 +167,7 @@
             this.txtSupplierName.MaxLength = 50;
             this.txtSupplierName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.NextControl = null;
+            this.txtSupplierName.NextControl = this.txtPhoneNo;
             this.txtSupplierName.NextControlName = "txtPhoneNo";
             this.txtSupplierName.SearchType = Entity.SearchType.ScType.None;
             this.txtSupplierName.Size = new System.Drawing.Size(322, 30);

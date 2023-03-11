@@ -70,7 +70,7 @@
             this.cboSubCategory.Location = new System.Drawing.Point(122, 17);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
-            this.cboSubCategory.NextControl = null;
+            this.cboSubCategory.NextControl = this.cboStockItem;
             this.cboSubCategory.NextControlName = "cboItemName";
             this.cboSubCategory.Size = new System.Drawing.Size(322, 29);
             this.cboSubCategory.TabIndex = 82;
@@ -112,8 +112,8 @@
             this.cboStockItem.Location = new System.Drawing.Point(580, 15);
             this.cboStockItem.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboStockItem.Name = "cboStockItem";
-            this.cboStockItem.NextControl = null;
-            this.cboStockItem.NextControlName = null;
+            this.cboStockItem.NextControl = this.btnDisplay;
+            this.cboStockItem.NextControlName = "btnDisplay";
             this.cboStockItem.Size = new System.Drawing.Size(322, 29);
             this.cboStockItem.TabIndex = 2;
             // 

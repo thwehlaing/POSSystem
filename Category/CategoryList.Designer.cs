@@ -85,7 +85,7 @@
             this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCategory.RowHeadersVisible = false;
             this.dgvCategory.RowTemplate.Height = 25;
-            this.dgvCategory.Size = new System.Drawing.Size(1003, 779);
+            this.dgvCategory.Size = new System.Drawing.Size(805, 779);
             this.dgvCategory.TabIndex = 44;
             this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
             // 
@@ -93,6 +93,7 @@
             // 
             this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
             this.CatCD.Name = "CatCD";
+            this.CatCD.Visible = false;
             this.CatCD.Width = 200;
             // 
             // CatName

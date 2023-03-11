@@ -31,12 +31,12 @@
             this.pLabel1 = new POS_Control.PLabel();
             this.pLabel2 = new POS_Control.PLabel();
             this.txtSubCategory = new POS_Control.PTextBox();
+            this.btnDisplay = new POS_Control.PButton();
             this.dgvSubCategory = new POS_Control.PGridView();
+            this.txtCategoryName = new POS_Control.PTextBox();
             this.SubCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDisplay = new POS_Control.PButton();
-            this.txtCategoryName = new POS_Control.PTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -84,6 +84,20 @@
             this.txtSubCategory.TabIndex = 6;
             this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.Location = new System.Drawing.Point(486, 105);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
+            this.btnDisplay.TabIndex = 8;
+            this.btnDisplay.Text = "ပြပါ";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
             // dgvSubCategory
             // 
             this.dgvSubCategory.AllowUserToAddRows = false;
@@ -100,47 +114,6 @@
             this.dgvSubCategory.Size = new System.Drawing.Size(850, 450);
             this.dgvSubCategory.TabIndex = 7;
             this.dgvSubCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubCategory_CellMouseDoubleClick);
-            // 
-            // SubCode
-            // 
-            this.SubCode.DataPropertyName = "SubCode";
-            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
-            this.SubCode.MinimumWidth = 6;
-            this.SubCode.Name = "SubCode";
-            this.SubCode.ReadOnly = true;
-            this.SubCode.Width = 150;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "အမျိုးအစား";
-            this.CategoryName.MinimumWidth = 6;
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.ReadOnly = true;
-            this.CategoryName.Width = 350;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
-            this.SubName.MinimumWidth = 6;
-            this.SubName.Name = "SubName";
-            this.SubName.ReadOnly = true;
-            this.SubName.Width = 350;
-            // 
-            // btnDisplay
-            // 
-            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDisplay.Location = new System.Drawing.Point(486, 105);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
-            this.btnDisplay.TabIndex = 8;
-            this.btnDisplay.Text = "ပြပါ";
-            this.btnDisplay.UseVisualStyleBackColor = false;
-            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // txtCategoryName
             // 
@@ -159,6 +132,34 @@
             this.txtCategoryName.Size = new System.Drawing.Size(300, 30);
             this.txtCategoryName.TabIndex = 9;
             this.txtCategoryName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
+            // SubCode
+            // 
+            this.SubCode.DataPropertyName = "SubCode";
+            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
+            this.SubCode.MinimumWidth = 6;
+            this.SubCode.Name = "SubCode";
+            this.SubCode.ReadOnly = true;
+            this.SubCode.Visible = false;
+            this.SubCode.Width = 150;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "အမျိုးအစား";
+            this.CategoryName.MinimumWidth = 6;
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            this.CategoryName.Width = 395;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
+            this.SubName.MinimumWidth = 6;
+            this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
+            this.SubName.Width = 450;
             // 
             // SubCategory_Search
             // 

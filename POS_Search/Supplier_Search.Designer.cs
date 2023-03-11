@@ -64,8 +64,8 @@
             this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
-            this.txtSubCategory.NextControl = null;
-            this.txtSubCategory.NextControlName = null;
+            this.txtSubCategory.NextControl = this.btnDisplay;
+            this.txtSubCategory.NextControlName = "btnDisplay";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
             this.txtSubCategory.Size = new System.Drawing.Size(300, 30);
             this.txtSubCategory.TabIndex = 10;
@@ -106,6 +106,7 @@
             this.SupplierCD.DataPropertyName = "SupplierCD";
             this.SupplierCD.HeaderText = "ကုဒ်နံပါတ်";
             this.SupplierCD.Name = "SupplierCD";
+            this.SupplierCD.Visible = false;
             this.SupplierCD.Width = 150;
             // 
             // SupplierName
@@ -127,7 +128,7 @@
             this.Address.DataPropertyName = "Address";
             this.Address.HeaderText = "လိပ်စာ";
             this.Address.Name = "Address";
-            this.Address.Width = 300;
+            this.Address.Width = 445;
             // 
             // Supplier_Search
             // 
