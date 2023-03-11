@@ -41,6 +41,7 @@ namespace Supplier
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
+            ErrorCheck();
         }
 
         public override void FunctionProcess(string tagID)
