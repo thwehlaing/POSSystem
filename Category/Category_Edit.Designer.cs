@@ -31,8 +31,8 @@
             this.panelDetail = new System.Windows.Forms.Panel();
             this.btnSearch = new POS_Control.PButton();
             this.txtName = new POS_Search.Search_TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.rdo_active = new POS_Control.PRadio();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.rdo_inactive = new POS_Control.PRadio();
             this.pLabel1 = new POS_Control.PLabel();
             this.panelDetail.SuspendLayout();
@@ -66,6 +66,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -77,10 +78,26 @@
             this.txtName.Name = "txtName";
             this.txtName.NextControl = this.rdo_active;
             this.txtName.NextControlName = "rdo_active";
+            this.txtName.ReadOnly = true;
             this.txtName.SearchType = Entity.SearchType.ScType.Category;
             this.txtName.Size = new System.Drawing.Size(307, 30);
             this.txtName.TabIndex = 5;
             this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
+            // rdo_active
+            // 
+            this.rdo_active.AutoSize = true;
+            this.rdo_active.Checked = true;
+            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_active.Location = new System.Drawing.Point(3, 16);
+            this.rdo_active.Name = "rdo_active";
+            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControlName = "BtnF2";
+            this.rdo_active.Size = new System.Drawing.Size(70, 25);
+            this.rdo_active.TabIndex = 2;
+            this.rdo_active.TabStop = true;
+            this.rdo_active.Text = "အသုံးပြု";
+            this.rdo_active.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -91,28 +108,13 @@
             this.panel1.Size = new System.Drawing.Size(234, 58);
             this.panel1.TabIndex = 4;
             // 
-            // rdo_active
-            // 
-            this.rdo_active.AutoSize = true;
-            this.rdo_active.Checked = true;
-            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdo_active.Location = new System.Drawing.Point(3, 16);
-            this.rdo_active.Name = "rdo_active";
-            //this.rdo_active.NextControl = this.BtnF2;
-            this.rdo_active.NextControlName = "BtnF2";
-            this.rdo_active.Size = new System.Drawing.Size(70, 25);
-            this.rdo_active.TabIndex = 2;
-            this.rdo_active.TabStop = true;
-            this.rdo_active.Text = "အသုံးပြု";
-            this.rdo_active.UseVisualStyleBackColor = true;
-            // 
             // rdo_inactive
             // 
             this.rdo_inactive.AutoSize = true;
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            //this.rdo_inactive.NextControl = this.BtnF2;
+            this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;

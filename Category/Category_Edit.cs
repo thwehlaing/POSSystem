@@ -27,7 +27,7 @@ namespace Category
         {
             ProgramID = "Category_Edit";
             ProgramName = "ပစ္စည်းအမျိုးအစား ပြင်ခြင်း";
-            txtName.Focus();
+            //txtName.Focus();
 
             StartProgram();
 
@@ -45,7 +45,7 @@ namespace Category
         {
             if (tagID == "2")
             {
-                if (!txtName.IsErrorOccurs)
+                if (ErrorCheck(panelDetail))
                 {
                     DBProcess();
                 }
@@ -70,7 +70,7 @@ namespace Category
             {
                 bl.ShowMessage("I101");
                 txtName.Text = "";
-               txtName.Focus();
+               //txtName.Focus();
             }
         }
 
