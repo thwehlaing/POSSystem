@@ -28,19 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvPackagingType = new POS_Control.PGridView();
-            this.txtPackTypeName = new POS_Control.PTextBox();
-            this.btnDisplay = new POS_Control.PButton();
-            this.pLabel1 = new POS_Control.PLabel();
             this.PackTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PackTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UOMQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtPackTypeName = new POS_Control.PTextBox();
+            this.btnDisplay = new POS_Control.PButton();
+            this.pLabel1 = new POS_Control.PLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackagingType)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPackagingType
             // 
             this.dgvPackagingType.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackagingType.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPackagingType.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackagingType.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.PackTypeCode,
@@ -48,11 +58,38 @@
             this.UOMQty});
             this.dgvPackagingType.Location = new System.Drawing.Point(12, 105);
             this.dgvPackagingType.Name = "dgvPackagingType";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPackagingType.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPackagingType.RowHeadersVisible = false;
             this.dgvPackagingType.RowTemplate.Height = 25;
             this.dgvPackagingType.Size = new System.Drawing.Size(860, 494);
             this.dgvPackagingType.TabIndex = 25;
             this.dgvPackagingType.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackagingType_CellContentDoubleClick);
+            // 
+            // PackTypeCode
+            // 
+            this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
+            this.PackTypeCode.Name = "PackTypeCode";
+            this.PackTypeCode.Visible = false;
+            this.PackTypeCode.Width = 150;
+            // 
+            // PackTypeName
+            // 
+            this.PackTypeName.HeaderText = "အမည်";
+            this.PackTypeName.Name = "PackTypeName";
+            this.PackTypeName.Width = 730;
+            // 
+            // UOMQty
+            // 
+            this.UOMQty.HeaderText = "ပမာဏ";
+            this.UOMQty.Name = "UOMQty";
+            this.UOMQty.Width = 125;
             // 
             // txtPackTypeName
             // 
@@ -98,25 +135,6 @@
             this.pLabel1.TabIndex = 23;
             this.pLabel1.Text = "အမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // PackTypeCode
-            // 
-            this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
-            this.PackTypeCode.Name = "PackTypeCode";
-            this.PackTypeCode.Visible = false;
-            this.PackTypeCode.Width = 150;
-            // 
-            // PackTypeName
-            // 
-            this.PackTypeName.HeaderText = "အမည်";
-            this.PackTypeName.Name = "PackTypeName";
-            this.PackTypeName.Width = 730;
-            // 
-            // UOMQty
-            // 
-            this.UOMQty.HeaderText = "ပမာဏ";
-            this.UOMQty.Name = "UOMQty";
-            this.UOMQty.Width = 125;
             // 
             // PackagingType_Search
             // 

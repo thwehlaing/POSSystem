@@ -32,13 +32,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.cboSubCategory = new POS_Control.PCombo();
-            this.pLabel3 = new POS_Control.PLabel();
-            this.btnDisplay = new POS_Control.PButton();
             this.cboStockItem = new POS_Control.PCombo();
+            this.btnDisplay = new POS_Control.PButton();
+            this.pLabel3 = new POS_Control.PLabel();
             this.pLabel1 = new POS_Control.PLabel();
             this.dgvStockPackaging = new POS_Control.PGridView();
             this.ItemCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PackTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PackTypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PackQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OpenQty = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEdit = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -76,18 +78,19 @@
             this.cboSubCategory.TabIndex = 82;
             this.cboSubCategory.SelectedIndexChanged += new System.EventHandler(this.cboSubCategory_SelectedIndexChanged);
             // 
-            // pLabel3
+            // cboStockItem
             // 
-            this.pLabel3.BackColor = System.Drawing.Color.LightCyan;
-            this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel3.Location = new System.Drawing.Point(22, 17);
-            this.pLabel3.Name = "pLabel3";
-            this.pLabel3.Size = new System.Drawing.Size(100, 30);
-            this.pLabel3.TabIndex = 81;
-            this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
-            this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cboStockItem.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboStockItem.FormattingEnabled = true;
+            this.cboStockItem.IsDatatableOccurs = null;
+            this.cboStockItem.IsErrorOccurs = false;
+            this.cboStockItem.Location = new System.Drawing.Point(580, 15);
+            this.cboStockItem.MinimumSize = new System.Drawing.Size(100, 0);
+            this.cboStockItem.Name = "cboStockItem";
+            this.cboStockItem.NextControl = this.btnDisplay;
+            this.cboStockItem.NextControlName = "btnDisplay";
+            this.cboStockItem.Size = new System.Drawing.Size(322, 29);
+            this.cboStockItem.TabIndex = 2;
             // 
             // btnDisplay
             // 
@@ -103,19 +106,18 @@
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
-            // cboStockItem
+            // pLabel3
             // 
-            this.cboStockItem.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboStockItem.FormattingEnabled = true;
-            this.cboStockItem.IsDatatableOccurs = null;
-            this.cboStockItem.IsErrorOccurs = false;
-            this.cboStockItem.Location = new System.Drawing.Point(580, 15);
-            this.cboStockItem.MinimumSize = new System.Drawing.Size(100, 0);
-            this.cboStockItem.Name = "cboStockItem";
-            this.cboStockItem.NextControl = this.btnDisplay;
-            this.cboStockItem.NextControlName = "btnDisplay";
-            this.cboStockItem.Size = new System.Drawing.Size(322, 29);
-            this.cboStockItem.TabIndex = 2;
+            this.pLabel3.BackColor = System.Drawing.Color.LightCyan;
+            this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel3.Location = new System.Drawing.Point(22, 17);
+            this.pLabel3.Name = "pLabel3";
+            this.pLabel3.Size = new System.Drawing.Size(100, 30);
+            this.pLabel3.TabIndex = 81;
+            this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
+            this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pLabel1
             // 
@@ -145,6 +147,8 @@
             this.dgvStockPackaging.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemCD,
             this.PackTypeCode,
+            this.ItemName,
+            this.PackTypeName,
             this.PackQty,
             this.OpenQty,
             this.btnEdit,
@@ -170,6 +174,7 @@
             this.ItemCD.HeaderText = "ကုန်ပစ္စည်းကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
             this.ItemCD.ReadOnly = true;
+            this.ItemCD.Visible = false;
             this.ItemCD.Width = 250;
             // 
             // PackTypeCode
@@ -177,7 +182,22 @@
             this.PackTypeCode.HeaderText = "အထုပ်အမျိုးအစား ကုဒ်နံပါတ်";
             this.PackTypeCode.Name = "PackTypeCode";
             this.PackTypeCode.ReadOnly = true;
+            this.PackTypeCode.Visible = false;
             this.PackTypeCode.Width = 250;
+            // 
+            // ItemName
+            // 
+            this.ItemName.HeaderText = "ကုန်ပစ္စည်းအမည်";
+            this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
+            this.ItemName.Width = 250;
+            // 
+            // PackTypeName
+            // 
+            this.PackTypeName.HeaderText = "ထုပ်ပိုးခြင်းအမျိုးအစား";
+            this.PackTypeName.Name = "PackTypeName";
+            this.PackTypeName.ReadOnly = true;
+            this.PackTypeName.Width = 250;
             // 
             // PackQty
             // 
@@ -238,6 +258,8 @@
         private POS_Control.PLabel pLabel3;
         private DataGridViewTextBoxColumn ItemCD;
         private DataGridViewTextBoxColumn PackTypeCode;
+        private DataGridViewTextBoxColumn ItemName;
+        private DataGridViewTextBoxColumn PackTypeName;
         private DataGridViewTextBoxColumn PackQty;
         private DataGridViewTextBoxColumn OpenQty;
         private DataGridViewButtonColumn btnEdit;

@@ -41,7 +41,7 @@ namespace PackagingType
             {
                 dgvPackagingType.Rows[i].Cells["PackTypeCode"].Value = dt.Rows[i]["PackTypeCode"].ToString();
                 dgvPackagingType.Rows[i].Cells["PackTypeName"].Value = dt.Rows[i]["PackTypeName"].ToString();
-                dgvPackagingType.Rows[i].Cells["Qty"].Value = dt.Rows[i]["Qty"].ToString();
+                dgvPackagingType.Rows[i].Cells["UOMQty"].Value = dt.Rows[i]["UOMQty"].ToString();
             }
         }
 

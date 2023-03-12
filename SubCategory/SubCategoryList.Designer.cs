@@ -32,15 +32,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.txtSubName = new POS_Control.PTextBox();
+            this.btnDisplay = new POS_Control.PButton();
             this.dgvSubcategory = new POS_Control.PGridView();
+            this.pLabel2 = new POS_Control.PLabel();
+            this.cboCategory = new POS_Control.PCombo();
+            this.pLabel1 = new POS_Control.PLabel();
             this.SubCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Action = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnDisplay = new POS_Control.PButton();
-            this.pLabel2 = new POS_Control.PLabel();
-            this.cboCategory = new POS_Control.PCombo();
-            this.pLabel1 = new POS_Control.PLabel();
             this.PanelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubcategory)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,20 @@
             this.txtSubName.TabIndex = 52;
             this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.Location = new System.Drawing.Point(884, 17);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(115, 29);
+            this.btnDisplay.TabIndex = 50;
+            this.btnDisplay.Text = "ပြပါ";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
             // dgvSubcategory
             // 
             this.dgvSubcategory.AllowUserToAddRows = false;
@@ -109,53 +123,6 @@
             this.dgvSubcategory.Size = new System.Drawing.Size(1135, 628);
             this.dgvSubcategory.TabIndex = 51;
             this.dgvSubcategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSubcategory_CellContentClick);
-            // 
-            // SubCode
-            // 
-            this.SubCode.DataPropertyName = "SubCode";
-            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
-            this.SubCode.Name = "SubCode";
-            this.SubCode.Visible = false;
-            this.SubCode.Width = 300;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "အမျိုးအစား";
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.Width = 500;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
-            this.SubName.Name = "SubName";
-            this.SubName.Width = 500;
-            // 
-            // Action
-            // 
-            this.Action.DataPropertyName = "SubCatgoryCD";
-            this.Action.HeaderText = "လုပ်ဆောင်ချက်";
-            this.Action.Name = "Action";
-            this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Action.Text = "ဖျက်ရန်";
-            this.Action.UseColumnTextForButtonValue = true;
-            this.Action.Width = 130;
-            // 
-            // btnDisplay
-            // 
-            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDisplay.Location = new System.Drawing.Point(884, 17);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(115, 29);
-            this.btnDisplay.TabIndex = 50;
-            this.btnDisplay.Text = "ပြပါ";
-            this.btnDisplay.UseVisualStyleBackColor = false;
-            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
             // 
             // pLabel2
             // 
@@ -196,6 +163,39 @@
             this.pLabel1.TabIndex = 47;
             this.pLabel1.Text = "အမျိုးအစား";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SubCode
+            // 
+            this.SubCode.DataPropertyName = "SubCode";
+            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
+            this.SubCode.Name = "SubCode";
+            this.SubCode.Visible = false;
+            this.SubCode.Width = 300;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "အမျိုးအစား";
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.Width = 500;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
+            this.SubName.Name = "SubName";
+            this.SubName.Width = 500;
+            // 
+            // Action
+            // 
+            this.Action.DataPropertyName = "SubCatgoryCD";
+            this.Action.HeaderText = "ဖျက်ရန်";
+            this.Action.Name = "Action";
+            this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Action.Text = "ဖျက်ရန်";
+            this.Action.UseColumnTextForButtonValue = true;
+            this.Action.Width = 130;
             // 
             // SubCategoryList
             // 

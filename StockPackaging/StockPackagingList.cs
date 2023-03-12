@@ -28,6 +28,7 @@ namespace StockPackaging
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြမည်", true);
             BindSubCatgory();
+            BindDataGridView();
         }
 
 
@@ -82,6 +83,8 @@ namespace StockPackaging
             {
                 dgvStockPackaging.Rows[i].Cells["ItemCD"].Value = dt.Rows[i]["ItemCD"].ToString();
                 dgvStockPackaging.Rows[i].Cells["PackTypeCode"].Value = dt.Rows[i]["PackTypeCode"].ToString();
+                dgvStockPackaging.Rows[i].Cells["ItemName"].Value = dt.Rows[i]["ItemName"].ToString();
+                dgvStockPackaging.Rows[i].Cells["PackTypeName"].Value = dt.Rows[i]["PackTypeName"].ToString();
                 dgvStockPackaging.Rows[i].Cells["PackQty"].Value = dt.Rows[i]["PackQty"].ToString();
                 dgvStockPackaging.Rows[i].Cells["OpenQty"].Value = dt.Rows[i]["OpenQty"].ToString();
                 DataGridViewButtonCell btnEdit = (DataGridViewButtonCell)dgvStockPackaging.Rows[i].Cells["btnEdit"];
@@ -93,8 +96,8 @@ namespace StockPackaging
 
         private StockPackagingEntity GetStockPackagingList()
         {
-            StockPackagingEntity obj = new StockPackagingEntity();  
-            if(cboStockItem.SelectedValue != "-1")
+            StockPackagingEntity obj = new StockPackagingEntity();
+            if (cboStockItem.SelectedValue != "-1")
                 obj.ItemCD = cboStockItem.SelectedValue.ToString();
             return obj;
         }
@@ -135,14 +138,14 @@ namespace StockPackaging
                     }
                 }
                 else if(senderGrid.Columns[e.ColumnIndex].Name == "btnEdit")
-                {
-                    DataGridViewButtonColumn btn = senderGrid.Columns[e.ColumnIndex] as DataGridViewButtonColumn;
-                    if (btn.Text == "ပြင်ဆင်ရန်")
+                {                  
+                    DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    if (buttonCell.Value.ToString() == "ပြင်ဆင်ရန်")
                     {
                         senderGrid.CurrentCell = senderGrid.Rows[e.RowIndex].Cells[2];
-                        senderGrid.Rows[e.RowIndex].Cells[2].Selected = true;
+                        senderGrid.Rows[e.RowIndex].Cells["PackQty"].Selected = true;
                         senderGrid.BeginEdit(true);
-                        DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                        //DataGridViewButtonCell buttonCell = (DataGridViewButtonCell)senderGrid.Rows[e.RowIndex].Cells[e.ColumnIndex];
                         buttonCell.Value = "သိမ်းမည်";
                     }
                     else

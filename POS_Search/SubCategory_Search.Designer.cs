@@ -28,15 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pLabel1 = new POS_Control.PLabel();
             this.pLabel2 = new POS_Control.PLabel();
             this.txtSubCategory = new POS_Control.PTextBox();
             this.btnDisplay = new POS_Control.PButton();
             this.dgvSubCategory = new POS_Control.PGridView();
-            this.txtCategoryName = new POS_Control.PTextBox();
             this.SubCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtCategoryName = new POS_Control.PTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategory)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +103,14 @@
             // dgvSubCategory
             // 
             this.dgvSubCategory.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSubCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSubCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SubCode,
@@ -108,30 +118,20 @@
             this.SubName});
             this.dgvSubCategory.Location = new System.Drawing.Point(18, 150);
             this.dgvSubCategory.Name = "dgvSubCategory";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSubCategory.RowHeadersVisible = false;
             this.dgvSubCategory.RowHeadersWidth = 51;
             this.dgvSubCategory.RowTemplate.Height = 25;
             this.dgvSubCategory.Size = new System.Drawing.Size(850, 450);
             this.dgvSubCategory.TabIndex = 7;
             this.dgvSubCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubCategory_CellMouseDoubleClick);
-            // 
-            // txtCategoryName
-            // 
-            this.txtCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCategoryName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtCategoryName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtCategoryName.IsDatatableOccurs = null;
-            this.txtCategoryName.IsErrorOccurs = false;
-            this.txtCategoryName.Location = new System.Drawing.Point(116, 64);
-            this.txtCategoryName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtCategoryName.Name = "txtCategoryName";
-            this.txtCategoryName.NextControl = null;
-            this.txtCategoryName.NextControlName = null;
-            this.txtCategoryName.ReadOnly = true;
-            this.txtCategoryName.SearchType = Entity.SearchType.ScType.None;
-            this.txtCategoryName.Size = new System.Drawing.Size(300, 30);
-            this.txtCategoryName.TabIndex = 9;
-            this.txtCategoryName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // SubCode
             // 
@@ -160,6 +160,24 @@
             this.SubName.Name = "SubName";
             this.SubName.ReadOnly = true;
             this.SubName.Width = 450;
+            // 
+            // txtCategoryName
+            // 
+            this.txtCategoryName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCategoryName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtCategoryName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtCategoryName.IsDatatableOccurs = null;
+            this.txtCategoryName.IsErrorOccurs = false;
+            this.txtCategoryName.Location = new System.Drawing.Point(116, 64);
+            this.txtCategoryName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtCategoryName.Name = "txtCategoryName";
+            this.txtCategoryName.NextControl = null;
+            this.txtCategoryName.NextControlName = null;
+            this.txtCategoryName.ReadOnly = true;
+            this.txtCategoryName.SearchType = Entity.SearchType.ScType.None;
+            this.txtCategoryName.Size = new System.Drawing.Size(300, 30);
+            this.txtCategoryName.TabIndex = 9;
+            this.txtCategoryName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // SubCategory_Search
             // 

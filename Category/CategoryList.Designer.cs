@@ -104,7 +104,7 @@
             // 
             // Action
             // 
-            this.Action.HeaderText = "လုပ်ဆောင်ချက်";
+            this.Action.HeaderText = "ဖျက်ရန်";
             this.Action.Name = "Action";
             this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;

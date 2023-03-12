@@ -18,7 +18,7 @@ namespace BL
             DataTable dt = dl.SelectDatatable("pr_uom_select", GetConnectionString(), parameters);
             return dt;
         }
-
+      
         public bool StockItem_Create(StockItemEntity obj)
         {
             DBAccessBL dbl = new DBAccessBL();

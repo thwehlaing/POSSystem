@@ -21,5 +21,8 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	Select * from StockPackaging where (@ItemCD is null or ItemCD=@ItemCD)
+	Select sp.ItemCD,sp.PackTypeCode,st.ItemName,pt.PackTypeName,PackQty,OpenQty from StockPackaging sp 
+	inner join StockItem st on sp.ItemCD=st.ItemCD
+	inner join PackagingType pt on sp.PackTypeCode=pt.PackTypeCode
+	where (@ItemCD is null or sp.ItemCD=@ItemCD)
 END

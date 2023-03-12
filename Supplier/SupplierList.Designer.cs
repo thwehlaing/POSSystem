@@ -38,14 +38,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.dgvSupplier = new POS_Control.PGridView();
+            this.btnDisplay = new POS_Control.PButton();
+            this.txtSupplierName = new POS_Control.PTextBox();
+            this.pLabel2 = new POS_Control.PLabel();
             this.SupplierCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierCode = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnDisplay = new POS_Control.PButton();
-            this.txtSupplierName = new POS_Control.PTextBox();
-            this.pLabel2 = new POS_Control.PLabel();
             this.PanelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
@@ -104,55 +104,6 @@
             this.dgvSupplier.TabIndex = 16;
             this.dgvSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellContentClick);
             // 
-            // SupplierCD
-            // 
-            this.SupplierCD.DataPropertyName = "SupplierCD";
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierCD.DefaultCellStyle = dataGridViewCellStyle2;
-            this.SupplierCD.HeaderText = "ကုဒ်နံပါတ်";
-            this.SupplierCD.Name = "SupplierCD";
-            this.SupplierCD.Visible = false;
-            this.SupplierCD.Width = 150;
-            // 
-            // SupplierName
-            // 
-            this.SupplierName.DataPropertyName = "SupplierName";
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.SupplierName.HeaderText = "အမည်";
-            this.SupplierName.Name = "SupplierName";
-            this.SupplierName.Width = 350;
-            // 
-            // PhoneNo
-            // 
-            this.PhoneNo.DataPropertyName = "PhoneNo";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.PhoneNo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.PhoneNo.HeaderText = "ဖုန်းနံပါတ်";
-            this.PhoneNo.Name = "PhoneNo";
-            this.PhoneNo.Width = 200;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Address.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Address.HeaderText = "လိပ်စာ";
-            this.Address.Name = "Address";
-            this.Address.Width = 300;
-            // 
-            // SupplierCode
-            // 
-            this.SupplierCode.DataPropertyName = "SupplierCD";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.SupplierCode.DefaultCellStyle = dataGridViewCellStyle6;
-            this.SupplierCode.HeaderText = "လုပ်ဆောင်ချက်";
-            this.SupplierCode.Name = "SupplierCode";
-            this.SupplierCode.Text = "ဖျက်ရန်";
-            this.SupplierCode.UseColumnTextForButtonValue = true;
-            this.SupplierCode.Width = 150;
-            // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -197,6 +148,55 @@
             this.pLabel2.TabIndex = 13;
             this.pLabel2.Text = "ထောက်ပံ့သူ";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SupplierCD
+            // 
+            this.SupplierCD.DataPropertyName = "SupplierCD";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierCD.DefaultCellStyle = dataGridViewCellStyle2;
+            this.SupplierCD.HeaderText = "ကုဒ်နံပါတ်";
+            this.SupplierCD.Name = "SupplierCD";
+            this.SupplierCD.Visible = false;
+            this.SupplierCD.Width = 150;
+            // 
+            // SupplierName
+            // 
+            this.SupplierName.DataPropertyName = "SupplierName";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.SupplierName.HeaderText = "အမည်";
+            this.SupplierName.Name = "SupplierName";
+            this.SupplierName.Width = 350;
+            // 
+            // PhoneNo
+            // 
+            this.PhoneNo.DataPropertyName = "PhoneNo";
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.PhoneNo.DefaultCellStyle = dataGridViewCellStyle4;
+            this.PhoneNo.HeaderText = "ဖုန်းနံပါတ်";
+            this.PhoneNo.Name = "PhoneNo";
+            this.PhoneNo.Width = 200;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Address.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Address.HeaderText = "လိပ်စာ";
+            this.Address.Name = "Address";
+            this.Address.Width = 300;
+            // 
+            // SupplierCode
+            // 
+            this.SupplierCode.DataPropertyName = "SupplierCD";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.SupplierCode.DefaultCellStyle = dataGridViewCellStyle6;
+            this.SupplierCode.HeaderText = "ဖျက်ရန်";
+            this.SupplierCode.Name = "SupplierCode";
+            this.SupplierCode.Text = "ဖျက်ရန်";
+            this.SupplierCode.UseColumnTextForButtonValue = true;
+            this.SupplierCode.Width = 150;
             // 
             // SupplierList
             // 
