@@ -70,7 +70,7 @@
             this.dgvPackagingType.RowTemplate.Height = 25;
             this.dgvPackagingType.Size = new System.Drawing.Size(860, 494);
             this.dgvPackagingType.TabIndex = 25;
-            this.dgvPackagingType.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackagingType_CellContentDoubleClick);
+            this.dgvPackagingType.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPackagingType_CellContentClick);
             // 
             // PackTypeCode
             // 

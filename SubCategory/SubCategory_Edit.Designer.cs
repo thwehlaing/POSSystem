@@ -30,12 +30,12 @@
         {
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.cboCategory = new POS_Control.PCombo();
+            this.txtSubName = new POS_Control.PTextBox();
+            this.rdo_active = new POS_Control.PRadio();
             this.pLabel2 = new POS_Control.PLabel();
             this.btnSearch = new POS_Control.PButton();
-            this.txtSubName = new POS_Control.PTextBox();
             this.pLabel1 = new POS_Control.PLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.rdo_active = new POS_Control.PRadio();
             this.rdo_inactive = new POS_Control.PRadio();
             this.PanelDetail.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +70,41 @@
             this.cboCategory.Size = new System.Drawing.Size(300, 29);
             this.cboCategory.TabIndex = 49;
             // 
+            // txtSubName
+            // 
+            this.txtSubName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSubName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSubName.IsDatatableOccurs = null;
+            this.txtSubName.IsErrorOccurs = false;
+            this.txtSubName.Location = new System.Drawing.Point(131, 55);
+            this.txtSubName.MaxLength = 50;
+            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtSubName.Name = "txtSubName";
+            this.txtSubName.NextControl = this.rdo_active;
+            this.txtSubName.NextControlName = "rdo_active";
+            this.txtSubName.ReadOnly = true;
+            this.txtSubName.SearchType = Entity.SearchType.ScType.None;
+            this.txtSubName.Size = new System.Drawing.Size(300, 30);
+            this.txtSubName.TabIndex = 46;
+            this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
+            // rdo_active
+            // 
+            this.rdo_active.AutoSize = true;
+            this.rdo_active.Checked = true;
+            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_active.Location = new System.Drawing.Point(3, 16);
+            this.rdo_active.Name = "rdo_active";
+            this.rdo_active.NextControl = null;
+            this.rdo_active.NextControlName = "BtnF2";
+            this.rdo_active.Size = new System.Drawing.Size(70, 25);
+            this.rdo_active.TabIndex = 2;
+            this.rdo_active.TabStop = true;
+            this.rdo_active.Text = "အသုံးပြု";
+            this.rdo_active.UseVisualStyleBackColor = true;
+            // 
             // pLabel2
             // 
             this.pLabel2.BackColor = System.Drawing.Color.Red;
@@ -98,24 +133,6 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSubName
-            // 
-            this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSubName.IsDatatableOccurs = null;
-            this.txtSubName.IsErrorOccurs = false;
-            this.txtSubName.Location = new System.Drawing.Point(131, 55);
-            this.txtSubName.MaxLength = 50;
-            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtSubName.Name = "txtSubName";
-            this.txtSubName.NextControl = this.rdo_active;
-            this.txtSubName.NextControlName = "rdo_active";
-            this.txtSubName.SearchType = Entity.SearchType.ScType.None;
-            this.txtSubName.Size = new System.Drawing.Size(300, 30);
-            this.txtSubName.TabIndex = 46;
-            this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
-            // 
             // pLabel1
             // 
             this.pLabel1.BackColor = System.Drawing.Color.Red;
@@ -138,28 +155,13 @@
             this.panel2.Size = new System.Drawing.Size(234, 58);
             this.panel2.TabIndex = 44;
             // 
-            // rdo_active
-            // 
-            this.rdo_active.AutoSize = true;
-            this.rdo_active.Checked = true;
-            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdo_active.Location = new System.Drawing.Point(3, 16);
-            this.rdo_active.Name = "rdo_active";
-            //this.rdo_active.NextControl = this.BtnF2;
-            this.rdo_active.NextControlName = "BtnF2";
-            this.rdo_active.Size = new System.Drawing.Size(70, 25);
-            this.rdo_active.TabIndex = 2;
-            this.rdo_active.TabStop = true;
-            this.rdo_active.Text = "အသုံးပြု";
-            this.rdo_active.UseVisualStyleBackColor = true;
-            // 
             // rdo_inactive
             // 
             this.rdo_inactive.AutoSize = true;
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            //this.rdo_inactive.NextControl = this.BtnF2;
+            this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;

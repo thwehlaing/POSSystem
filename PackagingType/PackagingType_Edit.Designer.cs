@@ -85,7 +85,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            //this.rdo_active.NextControl = this.BtnF2;
+            this.rdo_active.NextControl = null;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -99,7 +99,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            //this.rdo_inactive.NextControl = this.BtnF2;
+            this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
@@ -138,6 +138,7 @@
             // 
             // txtPackTypeName
             // 
+            this.txtPackTypeName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.txtPackTypeName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPackTypeName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtPackTypeName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -149,6 +150,7 @@
             this.txtPackTypeName.Name = "txtPackTypeName";
             this.txtPackTypeName.NextControl = this.txtQty;
             this.txtPackTypeName.NextControlName = "txtQty";
+            this.txtPackTypeName.ReadOnly = true;
             this.txtPackTypeName.SearchType = Entity.SearchType.ScType.None;
             this.txtPackTypeName.Size = new System.Drawing.Size(322, 30);
             this.txtPackTypeName.TabIndex = 72;

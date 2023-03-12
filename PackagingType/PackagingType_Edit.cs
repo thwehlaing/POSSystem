@@ -28,7 +28,7 @@ namespace PackagingType
             ProgramName = "ထုပ်ပိုးခြင်းအမျိုးအစား ပြင်ဆင်ချက်";
             StartProgram();
             PreviousCtrl = txtPackTypeName;
-            txtPackTypeName.Focus();
+            //txtPackTypeName.Focus();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြင်မည်", true);
             ErrorCheck();
@@ -70,7 +70,7 @@ namespace PackagingType
                 bl.ShowMessage("I101");
                 txtPackTypeName.Text = "";
                 txtQty.Text = "";
-                txtPackTypeName.Focus();
+                //txtPackTypeName.Focus();
             }
         }
         private PackagingTypeEntity GetUpdatePackagingType()

@@ -28,6 +28,7 @@ namespace POS_Search
             txtPackTypeName.Focus();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);
+            DataGridviewBind();
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
@@ -70,7 +71,7 @@ namespace POS_Search
             this.Close();
         }
 
-        private void dgvPackagingType_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPackagingType_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {

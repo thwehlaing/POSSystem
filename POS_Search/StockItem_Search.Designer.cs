@@ -142,7 +142,7 @@
             this.dgvStockItem.RowTemplate.Height = 25;
             this.dgvStockItem.Size = new System.Drawing.Size(860, 479);
             this.dgvStockItem.TabIndex = 15;
-            this.dgvStockItem.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockItem_CellContentDoubleClick);
+            this.dgvStockItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockItem_CellContentClick);
             // 
             // ItemCD
             // 

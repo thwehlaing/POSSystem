@@ -36,6 +36,7 @@ namespace POS_Search
             txtName.Focus();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);
+            DataGridviewBind();
         }       
         private void btnDisplay_Click(object sender, EventArgs e)
         {
@@ -76,10 +77,7 @@ namespace POS_Search
 
         private void dgvStockItem_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                GetDataGridViewData(dgvStockItem.Rows[e.RowIndex]);
-            }
+
         }
         private void GetDataGridViewData(DataGridViewRow row)
         {
@@ -94,6 +92,14 @@ namespace POS_Search
                 BCode = row.Cells["BarCode"].Value.ToString();
             }
             this.Close();
+        }
+
+        private void dgvStockItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                GetDataGridViewData(dgvStockItem.Rows[e.RowIndex]);
+            }
         }
     }
 }

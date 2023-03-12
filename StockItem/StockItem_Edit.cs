@@ -63,7 +63,7 @@ namespace StockItem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!cboSubCategory.IsErrorOccurs)
+            if (cboSubCategory.SelectedValue.ToString()!="-1")
             {
                 StockItem_Search search = new StockItem_Search(cboSubCategory.SelectedValue.ToString(), cboSubCategory.Text);
                 search.ShowDialog();
