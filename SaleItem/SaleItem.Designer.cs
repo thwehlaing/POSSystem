@@ -43,8 +43,8 @@
             this.cboCashType = new POS_Control.PCombo();
             this.pLabel2 = new POS_Control.PLabel();
             this.cboSubCategory = new POS_Control.PCombo();
-            this.pLabel3 = new POS_Control.PLabel();
             this.cboItemName = new POS_Control.PCombo();
+            this.pLabel3 = new POS_Control.PLabel();
             this.pLabel1 = new POS_Control.PLabel();
             this.PanelDetail.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -120,7 +120,7 @@
             this.txtPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtPrice.Size = new System.Drawing.Size(187, 30);
             this.txtPrice.TabIndex = 106;
-            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Price;
             // 
             // pLabel7
             // 
@@ -177,7 +177,7 @@
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
             this.txtQty.TabIndex = 102;
-            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
             // 
             // pLabel5
             // 
@@ -261,19 +261,6 @@
             this.cboSubCategory.TabIndex = 96;
             this.cboSubCategory.SelectedIndexChanged += new System.EventHandler(this.cboSubCategory_SelectedIndexChanged);
             // 
-            // pLabel3
-            // 
-            this.pLabel3.BackColor = System.Drawing.Color.Red;
-            this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel3.Location = new System.Drawing.Point(25, 27);
-            this.pLabel3.Name = "pLabel3";
-            this.pLabel3.Size = new System.Drawing.Size(122, 30);
-            this.pLabel3.TabIndex = 95;
-            this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
-            this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // cboItemName
             // 
             this.cboItemName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -287,6 +274,19 @@
             this.cboItemName.NextControlName = "cboCashType";
             this.cboItemName.Size = new System.Drawing.Size(322, 29);
             this.cboItemName.TabIndex = 94;
+            // 
+            // pLabel3
+            // 
+            this.pLabel3.BackColor = System.Drawing.Color.Red;
+            this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel3.Location = new System.Drawing.Point(25, 27);
+            this.pLabel3.Name = "pLabel3";
+            this.pLabel3.Size = new System.Drawing.Size(122, 30);
+            this.pLabel3.TabIndex = 95;
+            this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
+            this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pLabel1
             // 

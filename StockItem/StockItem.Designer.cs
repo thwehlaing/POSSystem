@@ -89,7 +89,7 @@
             this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
-            //this.rdo_active.NextControl = this.BtnF2;
+            this.rdo_active.NextControl = null;
             this.rdo_active.NextControlName = "BtnF2";
             this.rdo_active.Size = new System.Drawing.Size(70, 25);
             this.rdo_active.TabIndex = 2;
@@ -103,7 +103,7 @@
             this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
-            //this.rdo_inactive.NextControl = this.BtnF2;
+            this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
             this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
             this.rdo_inactive.TabIndex = 3;
@@ -186,7 +186,7 @@
             this.txtPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtPrice.Size = new System.Drawing.Size(187, 30);
             this.txtPrice.TabIndex = 64;
-            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Price;
             // 
             // pLabel5
             // 
@@ -216,7 +216,7 @@
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
             this.txtQty.TabIndex = 62;
-            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
             // 
             // pLabel4
             // 

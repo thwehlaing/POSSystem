@@ -202,7 +202,7 @@
             this.txtPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtPrice.Size = new System.Drawing.Size(187, 30);
             this.txtPrice.TabIndex = 79;
-            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Price;
             // 
             // pLabel5
             // 
@@ -232,7 +232,7 @@
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
             this.txtQty.TabIndex = 77;
-            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
             // 
             // pLabel4
             // 

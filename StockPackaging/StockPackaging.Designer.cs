@@ -30,12 +30,12 @@
         {
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.cboSubCategory = new POS_Control.PCombo();
-            this.pLabel3 = new POS_Control.PLabel();
-            this.txtQty = new POS_Control.PTextBox();
-            this.pLabel4 = new POS_Control.PLabel();
-            this.cboPackagingType = new POS_Control.PCombo();
-            this.pLabel2 = new POS_Control.PLabel();
             this.cboItemName = new POS_Control.PCombo();
+            this.cboPackagingType = new POS_Control.PCombo();
+            this.txtQty = new POS_Control.PTextBox();
+            this.pLabel3 = new POS_Control.PLabel();
+            this.pLabel4 = new POS_Control.PLabel();
+            this.pLabel2 = new POS_Control.PLabel();
             this.pLabel1 = new POS_Control.PLabel();
             this.PanelDetail.SuspendLayout();
             this.SuspendLayout();
@@ -71,48 +71,19 @@
             this.cboSubCategory.TabIndex = 80;
             this.cboSubCategory.SelectedIndexChanged += new System.EventHandler(this.cboSubCategory_SelectedIndexChanged);
             // 
-            // pLabel3
+            // cboItemName
             // 
-            this.pLabel3.BackColor = System.Drawing.Color.Red;
-            this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel3.Location = new System.Drawing.Point(24, 23);
-            this.pLabel3.Name = "pLabel3";
-            this.pLabel3.Size = new System.Drawing.Size(100, 30);
-            this.pLabel3.TabIndex = 79;
-            this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
-            this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtQty
-            // 
-            this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtQty.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtQty.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtQty.IsDatatableOccurs = null;
-            this.txtQty.IsErrorOccurs = false;
-            this.txtQty.Location = new System.Drawing.Point(124, 142);
-            this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtQty.Name = "txtQty";
-            //this.txtQty.NextControl = this.BtnF2;
-            this.txtQty.NextControlName = "BtnF2";
-            this.txtQty.SearchType = Entity.SearchType.ScType.None;
-            this.txtQty.Size = new System.Drawing.Size(187, 30);
-            this.txtQty.TabIndex = 71;
-            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
-            // 
-            // pLabel4
-            // 
-            this.pLabel4.BackColor = System.Drawing.Color.Red;
-            this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel4.Location = new System.Drawing.Point(24, 142);
-            this.pLabel4.Name = "pLabel4";
-            this.pLabel4.Size = new System.Drawing.Size(100, 30);
-            this.pLabel4.TabIndex = 70;
-            this.pLabel4.Text = "ပမာဏ";
-            this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.cboItemName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboItemName.FormattingEnabled = true;
+            this.cboItemName.IsDatatableOccurs = null;
+            this.cboItemName.IsErrorOccurs = false;
+            this.cboItemName.Location = new System.Drawing.Point(124, 61);
+            this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
+            this.cboItemName.Name = "cboItemName";
+            this.cboItemName.NextControl = this.cboPackagingType;
+            this.cboItemName.NextControlName = "cboPackagingType";
+            this.cboItemName.Size = new System.Drawing.Size(322, 29);
+            this.cboItemName.TabIndex = 58;
             // 
             // cboPackagingType
             // 
@@ -128,6 +99,49 @@
             this.cboPackagingType.Size = new System.Drawing.Size(322, 29);
             this.cboPackagingType.TabIndex = 60;
             // 
+            // txtQty
+            // 
+            this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtQty.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtQty.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtQty.IsDatatableOccurs = null;
+            this.txtQty.IsErrorOccurs = false;
+            this.txtQty.Location = new System.Drawing.Point(124, 142);
+            this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtQty.Name = "txtQty";
+            this.txtQty.NextControl = null;
+            this.txtQty.NextControlName = "BtnF2";
+            this.txtQty.SearchType = Entity.SearchType.ScType.None;
+            this.txtQty.Size = new System.Drawing.Size(187, 30);
+            this.txtQty.TabIndex = 71;
+            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
+            // 
+            // pLabel3
+            // 
+            this.pLabel3.BackColor = System.Drawing.Color.Red;
+            this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel3.Location = new System.Drawing.Point(24, 23);
+            this.pLabel3.Name = "pLabel3";
+            this.pLabel3.Size = new System.Drawing.Size(100, 30);
+            this.pLabel3.TabIndex = 79;
+            this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
+            this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pLabel4
+            // 
+            this.pLabel4.BackColor = System.Drawing.Color.Red;
+            this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel4.Location = new System.Drawing.Point(24, 142);
+            this.pLabel4.Name = "pLabel4";
+            this.pLabel4.Size = new System.Drawing.Size(100, 30);
+            this.pLabel4.TabIndex = 70;
+            this.pLabel4.Text = "ပမာဏ";
+            this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pLabel2
             // 
             this.pLabel2.BackColor = System.Drawing.Color.Red;
@@ -140,20 +154,6 @@
             this.pLabel2.TabIndex = 59;
             this.pLabel2.Text = "ထုပ်ပိုးခြင်းအမည်";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cboItemName
-            // 
-            this.cboItemName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboItemName.FormattingEnabled = true;
-            this.cboItemName.IsDatatableOccurs = null;
-            this.cboItemName.IsErrorOccurs = false;
-            this.cboItemName.Location = new System.Drawing.Point(124, 61);
-            this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
-            this.cboItemName.Name = "cboItemName";
-            this.cboItemName.NextControl = this.cboPackagingType;
-            this.cboItemName.NextControlName = "cboPackagingType";
-            this.cboItemName.Size = new System.Drawing.Size(322, 29);
-            this.cboItemName.TabIndex = 58;
             // 
             // pLabel1
             // 
