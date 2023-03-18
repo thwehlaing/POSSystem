@@ -42,6 +42,12 @@ namespace POS_Control
 
         [Browsable(true)]
         [Category("POS Properties")]
+        [Description("Allow Minus")]
+        [DisplayName("AllowMinus")]
+        public bool AllowMinus { get; set; } = false;
+
+        [Browsable(true)]
+        [Category("POS Properties")]
         [Description("NextControlName")]
         [DisplayName("NextControlName")]
         public string NextControlName { get; set; }
@@ -90,7 +96,58 @@ namespace POS_Control
             }
             return IsErrorOccurs;
         }
+        //restrict key
+        protected override void OnKeyPress(KeyPressEventArgs e)
+        {
+            if (PType == PTextBoxType.Price)
+            {
+                e.Handled = !IsPriceKey(e.KeyChar, AllowMinus);
+            }
+            else if ((PType == PTextBoxType.Number))
+            {
+                e.Handled =!IsNumberKey(e.KeyChar, AllowMinus);
+            }
+            //else if ((PType == PTextBoxType.YearMonth)
+            //{
+            //    e.Handled = !cf.IsYYYYMMKey(e.KeyChar);
+            //}
+            //else if ((PType == PTextBoxType.Time)
+            //{
+            //    e.Handled = !cf.IsNumberKey(e.KeyChar, AllowMinus);
+            //}
+               
+            else
+            {
+                e.Handled = false;
+            }
+            base.OnKeyPress(e);
+        }
 
+        public bool IsPriceKey(char c, bool AllowMinus)
+        {
+            if (char.IsDigit(c) || c == '\b' || c == ',' || c == '.' || c == '\u0016' || c == '\u0001' || c == '\u0003' || c == '\u0018' || (c == '-' && AllowMinus) || c == '\r')
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool IsNumberKey(char c, bool AllowMinus)
+        {
+            int byteCount = Encoding.GetEncoding("Shift_JIS").GetByteCount(c.ToString());
+            if (byteCount > 1)
+            {
+                return false;
+            }
+
+            if (char.IsDigit(c) || c == '\b' || (c == '-' && AllowMinus) || c == '\u0016' || c == '\u0001' || c == '\u0003' || c == '\u0018' || c == '\r')
+            {
+                return true;
+            }
+
+            return false;
+        }
         protected override void OnKeyDown(KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
