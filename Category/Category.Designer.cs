@@ -87,6 +87,7 @@
             // 
             // txtName
             // 
+            this.txtName.AllowMinus = false;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtName.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -102,7 +103,6 @@
             this.txtName.Size = new System.Drawing.Size(307, 35);
             this.txtName.TabIndex = 1;
             this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
-            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
             // 
             // pLabel1
             // 

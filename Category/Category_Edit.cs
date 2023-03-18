@@ -40,6 +40,7 @@ namespace Category
         private void ErrorChek()
         {
             txtName.CheckRequired(true);
+            txtName.CheckExist(true, "Category_Edit", "EDIT");
         }
         public override void FunctionProcess(string tagID)
         {

@@ -124,6 +124,7 @@ namespace StockItem
         {
             cboSubCategory.CheckRequired(true);
             txtStockName.CheckRequired(true);
+            txtStockName.CheckExist(true, "StockItem", "EDIT");
             cboUOM.CheckRequired(true);
             txtQty.CheckRequired(true);
             txtPrice.CheckRequired(true);

@@ -55,6 +55,14 @@ namespace BL
             bool result = dbl.InsertUpdateDeleteData("pr_supplier_delete", GetConnectionString(), obj.Sqlprms);
             return result;
         }
-       
+        public DataTable Supplier_ExistCheck(string SupplierName)
+        {
+            SupplierEntity entity = new SupplierEntity();
+            DBAccessBL dl = new DBAccessBL();
+            entity.Sqlprms = new SqlParameter[2];
+            entity.Sqlprms[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = SupplierName };
+            entity.Sqlprms[1] = new SqlParameter("@TableName", SqlDbType.NVarChar) { Value = "Supplier" };
+            return dl.SelectDatatable("pr_existcheck", GetConnectionString(), entity.Sqlprms);
+        }
     }
 }

@@ -187,9 +187,19 @@ namespace POS_Control
             base.OnLeave(e);
         }
         public bool E101;
+        public bool E103;
+        public string E103_Type;
+        public string E103_Mode;
         public void CheckRequired(bool value)
         {
             E101 = value;
+        }
+
+        public void CheckExist(bool value,string type,string mode)
+        {
+            E103 = value;
+            E103_Type = type;
+            E103_Mode = mode;
         }
     }
 }

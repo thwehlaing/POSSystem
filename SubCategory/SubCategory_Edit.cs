@@ -91,6 +91,7 @@ namespace SubCategory
         {
             cboCategory.CheckRequired(true);
             txtSubName.CheckRequired(true);
+            txtSubName.CheckExist(true, "SubCategory", "EDIT");
         }
 
         public void ClearData()

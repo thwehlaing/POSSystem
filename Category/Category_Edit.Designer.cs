@@ -66,7 +66,8 @@
             // 
             // txtName
             // 
-            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtName.AllowMinus = false;
+            this.txtName.BackColor = System.Drawing.Color.White;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtName.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -78,7 +79,6 @@
             this.txtName.Name = "txtName";
             this.txtName.NextControl = this.rdo_active;
             this.txtName.NextControlName = "rdo_active";
-            this.txtName.ReadOnly = true;
             this.txtName.SearchType = Entity.SearchType.ScType.Category;
             this.txtName.Size = new System.Drawing.Size(307, 35);
             this.txtName.TabIndex = 5;

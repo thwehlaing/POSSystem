@@ -53,5 +53,15 @@ namespace BL
             obj.Sqlprms[1] = new SqlParameter("@UpdatedUser", SqlDbType.VarChar) { Value = obj.UpdatedUser };
             return dl.InsertUpdateDeleteData("pr_packagingtype_delete", GetConnectionString(), obj.Sqlprms);
         }
+
+        public DataTable PackagingType_ExistCheck(string SupplierName)
+        {
+            PackagingTypeEntity entity = new PackagingTypeEntity();
+            DBAccessBL dl = new DBAccessBL();
+            entity.Sqlprms = new SqlParameter[2];
+            entity.Sqlprms[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = SupplierName };
+            entity.Sqlprms[1] = new SqlParameter("@TableName", SqlDbType.NVarChar) { Value = "PackagingType" };
+            return dl.SelectDatatable("pr_existcheck", GetConnectionString(), entity.Sqlprms);
+        }
     }
 }

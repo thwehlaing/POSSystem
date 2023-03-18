@@ -83,6 +83,7 @@ namespace Supplier
         public void ErrorCheck()
         {
             txtSupplierName.CheckRequired(true);
+            txtSupplierName.CheckExist(true, "Supplier", "EDIT");
             txtPhoneNo.CheckRequired(true);
             txtAddress.CheckRequired(true);
         }

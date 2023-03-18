@@ -46,6 +46,7 @@ namespace PackagingType
         private void ErrorCheck()
         {
             txtPackTypeName.CheckRequired(true);
+            txtPackTypeName.CheckExist(true, "PackagingType_Edit", "EDIT");
             txtQty.CheckRequired(true);
         }
         public override void FunctionProcess(string tagID)

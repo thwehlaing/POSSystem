@@ -86,6 +86,7 @@ namespace SubCategory
         {
             cboCategory.CheckRequired(true);
             txtSubCategory.CheckRequired(true);
+            txtSubCategory.CheckExist(true, "SubCategory","NEW");
         }
         public void ClearData()
         {

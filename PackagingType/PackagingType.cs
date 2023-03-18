@@ -36,6 +36,7 @@ namespace PackagingType
         private void ErrorCheck()
         {
             txtPackTypeName.CheckRequired(true);
+            txtPackTypeName.CheckExist(true, "PackagingType","NEW");
             txtQty.CheckRequired(true);
         }
 

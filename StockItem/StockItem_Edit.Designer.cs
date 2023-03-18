@@ -128,6 +128,7 @@
             // 
             // txtReorderQty
             // 
+            this.txtReorderQty.AllowMinus = false;
             this.txtReorderQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtReorderQty.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
             this.txtReorderQty.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -151,13 +152,14 @@
             this.pLabel7.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel7.Location = new System.Drawing.Point(25, 268);
             this.pLabel7.Name = "pLabel7";
-            this.pLabel7.Size = new System.Drawing.Size(100, 30);
+            this.pLabel7.Size = new System.Drawing.Size(100, 35);
             this.pLabel7.TabIndex = 82;
             this.pLabel7.Text = "အနဲဆုံးလက်ကျန်";
             this.pLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtBarCode
             // 
+            this.txtBarCode.AllowMinus = false;
             this.txtBarCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtBarCode.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
             this.txtBarCode.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -182,13 +184,14 @@
             this.pLabel6.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel6.Location = new System.Drawing.Point(25, 224);
             this.pLabel6.Name = "pLabel6";
-            this.pLabel6.Size = new System.Drawing.Size(100, 30);
+            this.pLabel6.Size = new System.Drawing.Size(100, 35);
             this.pLabel6.TabIndex = 80;
             this.pLabel6.Text = "ဘားကုဒ်";
             this.pLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtPrice
             // 
+            this.txtPrice.AllowMinus = false;
             this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPrice.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
             this.txtPrice.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -212,13 +215,14 @@
             this.pLabel5.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel5.Location = new System.Drawing.Point(25, 182);
             this.pLabel5.Name = "pLabel5";
-            this.pLabel5.Size = new System.Drawing.Size(100, 30);
+            this.pLabel5.Size = new System.Drawing.Size(100, 35);
             this.pLabel5.TabIndex = 78;
             this.pLabel5.Text = "စျေးနှုန်း";
             this.pLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtQty
             // 
+            this.txtQty.AllowMinus = false;
             this.txtQty.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtQty.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
             this.txtQty.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -242,7 +246,7 @@
             this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel4.Location = new System.Drawing.Point(25, 142);
             this.pLabel4.Name = "pLabel4";
-            this.pLabel4.Size = new System.Drawing.Size(100, 30);
+            this.pLabel4.Size = new System.Drawing.Size(100, 35);
             this.pLabel4.TabIndex = 76;
             this.pLabel4.Text = "ပမာဏ";
             this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -269,14 +273,15 @@
             this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel3.Location = new System.Drawing.Point(25, 103);
             this.pLabel3.Name = "pLabel3";
-            this.pLabel3.Size = new System.Drawing.Size(100, 30);
+            this.pLabel3.Size = new System.Drawing.Size(100, 35);
             this.pLabel3.TabIndex = 74;
             this.pLabel3.Text = "ယူနစ်";
             this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtStockName
             // 
-            this.txtStockName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.txtStockName.AllowMinus = false;
+            this.txtStockName.BackColor = System.Drawing.Color.White;
             this.txtStockName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtStockName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtStockName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -301,7 +306,7 @@
             this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel2.Location = new System.Drawing.Point(25, 64);
             this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(100, 30);
+            this.pLabel2.Size = new System.Drawing.Size(100, 35);
             this.pLabel2.TabIndex = 72;
             this.pLabel2.Text = "အမည်";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,7 +333,7 @@
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(25, 24);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 30);
+            this.pLabel1.Size = new System.Drawing.Size(100, 35);
             this.pLabel1.TabIndex = 70;
             this.pLabel1.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

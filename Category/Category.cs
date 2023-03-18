@@ -39,6 +39,7 @@ namespace Category
         private void ErrorChek()
         {
             txtName.CheckRequired(true);
+            txtName.CheckExist(true, "Category","NEW");
         }
         public override void FunctionProcess(string tagID)
         {
@@ -68,19 +69,5 @@ namespace Category
             }
         }
 
-        private void txtName_Enter(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtName.Text))
-            {
-                CategoryEntity entity = new CategoryEntity();
-                entity.CategoryName = txtName.Text;
-                CategoryBL bl = new CategoryBL();
-                bool result = bl.Category_ExistCheck(entity);
-                if (result)
-                {
-                    bl.ShowMessage("E103");
-                }
-            }
-        }
     }
 }
