@@ -55,5 +55,17 @@ namespace BL
             entity.Sqlprms[0] = new SqlParameter("@CategoryName", SqlDbType.NVarChar) { Value = entity.CategoryName.ToString() };
             return dl.SelectDatatable("pr_category_search", GetConnectionString(), entity.Sqlprms);
         }
+
+        public bool Category_ExistCheck(CategoryEntity entity)
+        {
+            bool result = false;
+            DBAccessBL dl = new DBAccessBL();
+            entity.Sqlprms = new SqlParameter[1];
+            entity.Sqlprms[0] = new SqlParameter("@CategoryName", SqlDbType.NVarChar) { Value = entity.CategoryName.ToString() };
+            DataTable dtresult= dl.SelectDatatable("pr_category_existcheck", GetConnectionString(), entity.Sqlprms);
+            if (dtresult.Rows.Count > 0)            
+                result = true;
+            return result;
+        }
     }
 }

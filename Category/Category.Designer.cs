@@ -102,6 +102,7 @@
             this.txtName.Size = new System.Drawing.Size(307, 35);
             this.txtName.TabIndex = 1;
             this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtName.Enter += new System.EventHandler(this.txtName_Enter);
             // 
             // pLabel1
             // 
