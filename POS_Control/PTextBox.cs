@@ -56,12 +56,12 @@ namespace POS_Control
         public PTextBox()
         {
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular);
+            this.Font = new System.Drawing.Font("Myanmar Text", 11F, System.Drawing.FontStyle.Regular);
             //cf = new CommonFunction();
             bl = new BaseBL();
             errchk = new ErrorCheck();
 
-            base.MinimumSize = new Size(100, 20);
+            base.MinimumSize = new Size(100, 30);
         }
         public override bool AutoSize
         {
