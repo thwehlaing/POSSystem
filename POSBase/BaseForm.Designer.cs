@@ -158,7 +158,7 @@
             // 
             this.BtnF2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.BtnF2.BackColor = System.Drawing.Color.White;
-            this.BtnF2.ButtonType = Entity.ButtonType.BType.Save;
+            this.BtnF2.ButtonType = Entity.ButtonType.BType.Normal;
             this.BtnF2.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.BtnF2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnF2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);

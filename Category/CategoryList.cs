@@ -27,7 +27,7 @@ namespace Category
             ProgramName = "ပစ္စည်းအမျိုးအစား ပြခြင်း";
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "ပြခြင်း", true);
+            SetButton(ButtonType.BType.Display, F2, "ပြခြင်း", true);
             DBProcess();
         }
 
