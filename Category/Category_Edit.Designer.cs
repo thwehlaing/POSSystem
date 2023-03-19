@@ -56,7 +56,7 @@
             this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(434, 23);
+            this.btnSearch.Location = new System.Drawing.Point(454, 23);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 35);
             this.btnSearch.TabIndex = 6;
@@ -73,7 +73,7 @@
             this.txtName.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.IsDatatableOccurs = null;
             this.txtName.IsErrorOccurs = false;
-            this.txtName.Location = new System.Drawing.Point(127, 23);
+            this.txtName.Location = new System.Drawing.Point(147, 23);
             this.txtName.MaxLength = 50;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtName.Name = "txtName";
@@ -129,7 +129,7 @@
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(27, 23);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 35);
+            this.pLabel1.Size = new System.Drawing.Size(120, 35);
             this.pLabel1.TabIndex = 0;
             this.pLabel1.Text = "နာမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

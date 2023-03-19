@@ -55,10 +55,15 @@ namespace BL
                                          //dtMsg.Rows[0]["MessageMark"].ToString().Equals("5") ? MessageBoxIcon.Stop :
                                          dtMsg.Rows[0]["MessageMark"].ToString().Equals("4") ? MessageBoxIcon.Exclamation :
                                          MessageBoxIcon.None;
+                //if (me.MessageID == "Q003")
+                //    return MessageBox.Show(message, "", msgbtn, msgicon, MessageBoxDefaultButton.Button2);
+                //else
+                //    return MessageBox.Show(message, "", msgbtn, msgicon, MessageBoxDefaultButton.Button1);
+
                 if (me.MessageID == "Q003")
-                    return MessageBox.Show(message, "", msgbtn, msgicon, MessageBoxDefaultButton.Button2);
+                    return MessageBox.Show("Data does not exist", "", msgbtn, msgicon, MessageBoxDefaultButton.Button2);
                 else
-                    return MessageBox.Show(message, "", msgbtn, msgicon, MessageBoxDefaultButton.Button1);
+                    return MessageBox.Show("Data does not exist", "", msgbtn, msgicon, MessageBoxDefaultButton.Button1);
             }
             else
             {

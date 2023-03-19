@@ -31,6 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,14 +39,14 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.dgvSupplier = new POS_Control.PGridView();
-            this.btnDisplay = new POS_Control.PButton();
-            this.txtSupplierName = new POS_Control.PTextBox();
-            this.pLabel2 = new POS_Control.PLabel();
             this.SupplierCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupplierCode = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnDisplay = new POS_Control.PButton();
+            this.txtSupplierName = new POS_Control.PTextBox();
+            this.pLabel2 = new POS_Control.PLabel();
             this.PanelDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupplier)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +68,7 @@
             this.dgvSupplier.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -99,55 +100,12 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSupplier.RowHeadersVisible = false;
-            this.dgvSupplier.RowTemplate.Height = 25;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dgvSupplier.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvSupplier.RowTemplate.Height = 35;
             this.dgvSupplier.Size = new System.Drawing.Size(1006, 659);
             this.dgvSupplier.TabIndex = 16;
             this.dgvSupplier.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSupplier_CellContentClick);
-            // 
-            // btnDisplay
-            // 
-            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
-            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDisplay.Location = new System.Drawing.Point(492, 20);
-            this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
-            this.btnDisplay.TabIndex = 15;
-            this.btnDisplay.Text = "ပြပါ";
-            this.btnDisplay.UseVisualStyleBackColor = false;
-            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
-            // 
-            // txtSupplierName
-            // 
-            this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSupplierName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
-            this.txtSupplierName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSupplierName.IsDatatableOccurs = null;
-            this.txtSupplierName.IsErrorOccurs = false;
-            this.txtSupplierName.Location = new System.Drawing.Point(122, 20);
-            this.txtSupplierName.MaxLength = 50;
-            this.txtSupplierName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.NextControl = this.btnDisplay;
-            this.txtSupplierName.NextControlName = "btnDisplay";
-            this.txtSupplierName.SearchType = Entity.SearchType.ScType.None;
-            this.txtSupplierName.Size = new System.Drawing.Size(300, 30);
-            this.txtSupplierName.TabIndex = 14;
-            this.txtSupplierName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
-            // 
-            // pLabel2
-            // 
-            this.pLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel2.Location = new System.Drawing.Point(25, 20);
-            this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(100, 30);
-            this.pLabel2.TabIndex = 13;
-            this.pLabel2.Text = "ထောက်ပံ့သူ";
-            this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SupplierCD
             // 
@@ -197,6 +155,52 @@
             this.SupplierCode.Text = "ဖျက်ရန်";
             this.SupplierCode.UseColumnTextForButtonValue = true;
             this.SupplierCode.Width = 150;
+            // 
+            // btnDisplay
+            // 
+            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
+            this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.Location = new System.Drawing.Point(514, 20);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
+            this.btnDisplay.TabIndex = 15;
+            this.btnDisplay.Text = "ပြပါ";
+            this.btnDisplay.UseVisualStyleBackColor = false;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // txtSupplierName
+            // 
+            this.txtSupplierName.AllowMinus = false;
+            this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSupplierName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
+            this.txtSupplierName.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSupplierName.IsDatatableOccurs = null;
+            this.txtSupplierName.IsErrorOccurs = false;
+            this.txtSupplierName.Location = new System.Drawing.Point(144, 20);
+            this.txtSupplierName.MaxLength = 50;
+            this.txtSupplierName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtSupplierName.Name = "txtSupplierName";
+            this.txtSupplierName.NextControl = this.btnDisplay;
+            this.txtSupplierName.NextControlName = "btnDisplay";
+            this.txtSupplierName.SearchType = Entity.SearchType.ScType.None;
+            this.txtSupplierName.Size = new System.Drawing.Size(300, 35);
+            this.txtSupplierName.TabIndex = 14;
+            this.txtSupplierName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
+            // pLabel2
+            // 
+            this.pLabel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel2.Location = new System.Drawing.Point(25, 20);
+            this.pLabel2.Name = "pLabel2";
+            this.pLabel2.Size = new System.Drawing.Size(120, 35);
+            this.pLabel2.TabIndex = 13;
+            this.pLabel2.Text = "ထောက်ပံ့သူ";
+            this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SupplierList
             // 

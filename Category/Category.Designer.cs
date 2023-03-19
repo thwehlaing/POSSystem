@@ -93,7 +93,7 @@
             this.txtName.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtName.IsDatatableOccurs = null;
             this.txtName.IsErrorOccurs = false;
-            this.txtName.Location = new System.Drawing.Point(141, 23);
+            this.txtName.Location = new System.Drawing.Point(151, 23);
             this.txtName.MaxLength = 50;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtName.Name = "txtName";
@@ -112,7 +112,7 @@
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(31, 23);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(110, 35);
+            this.pLabel1.Size = new System.Drawing.Size(120, 35);
             this.pLabel1.TabIndex = 0;
             this.pLabel1.Text = "နာမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

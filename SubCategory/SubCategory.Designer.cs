@@ -67,12 +67,12 @@
             // 
             this.rdo_active.AutoSize = true;
             this.rdo_active.Checked = true;
-            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
             this.rdo_active.NextControl = null;
             this.rdo_active.NextControlName = "BtnF2";
-            this.rdo_active.Size = new System.Drawing.Size(72, 27);
+            this.rdo_active.Size = new System.Drawing.Size(79, 31);
             this.rdo_active.TabIndex = 2;
             this.rdo_active.TabStop = true;
             this.rdo_active.Text = "အသုံးပြု";
@@ -81,24 +81,25 @@
             // rdo_inactive
             // 
             this.rdo_inactive.AutoSize = true;
-            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
             this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
-            this.rdo_inactive.Size = new System.Drawing.Size(80, 27);
+            this.rdo_inactive.Size = new System.Drawing.Size(88, 31);
             this.rdo_inactive.TabIndex = 3;
             this.rdo_inactive.Text = "အသုံးမပြု";
             this.rdo_inactive.UseVisualStyleBackColor = true;
             // 
             // txtSubCategory
             // 
+            this.txtSubCategory.AllowMinus = false;
             this.txtSubCategory.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSubCategory.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
             this.txtSubCategory.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubCategory.IsDatatableOccurs = null;
             this.txtSubCategory.IsErrorOccurs = false;
-            this.txtSubCategory.Location = new System.Drawing.Point(131, 67);
+            this.txtSubCategory.Location = new System.Drawing.Point(151, 67);
             this.txtSubCategory.Margin = new System.Windows.Forms.Padding(2);
             this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(80, 20);
@@ -115,11 +116,11 @@
             this.pLabel2.BackColor = System.Drawing.Color.Red;
             this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel2.Location = new System.Drawing.Point(31, 67);
             this.pLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(100, 35);
+            this.pLabel2.Size = new System.Drawing.Size(120, 35);
             this.pLabel2.TabIndex = 2;
             this.pLabel2.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,7 +131,7 @@
             this.cboCategory.FormattingEnabled = true;
             this.cboCategory.IsDatatableOccurs = null;
             this.cboCategory.IsErrorOccurs = false;
-            this.cboCategory.Location = new System.Drawing.Point(131, 23);
+            this.cboCategory.Location = new System.Drawing.Point(151, 23);
             this.cboCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cboCategory.MinimumSize = new System.Drawing.Size(81, 0);
             this.cboCategory.Name = "cboCategory";
@@ -144,11 +145,11 @@
             this.pLabel1.BackColor = System.Drawing.Color.Red;
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(31, 23);
             this.pLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 35);
+            this.pLabel1.Size = new System.Drawing.Size(120, 35);
             this.pLabel1.TabIndex = 0;
             this.pLabel1.Text = "အမျိုးအစား";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -30,6 +30,7 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.cboSubCategory = new POS_Control.PCombo();
             this.cboStockItem = new POS_Control.PCombo();
@@ -65,31 +66,31 @@
             // 
             // cboSubCategory
             // 
-            this.cboSubCategory.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboSubCategory.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cboSubCategory.FormattingEnabled = true;
             this.cboSubCategory.IsDatatableOccurs = null;
             this.cboSubCategory.IsErrorOccurs = false;
-            this.cboSubCategory.Location = new System.Drawing.Point(122, 17);
+            this.cboSubCategory.Location = new System.Drawing.Point(142, 17);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
             this.cboSubCategory.NextControl = this.cboStockItem;
             this.cboSubCategory.NextControlName = "cboItemName";
-            this.cboSubCategory.Size = new System.Drawing.Size(322, 29);
+            this.cboSubCategory.Size = new System.Drawing.Size(322, 35);
             this.cboSubCategory.TabIndex = 82;
             this.cboSubCategory.SelectedIndexChanged += new System.EventHandler(this.cboSubCategory_SelectedIndexChanged);
             // 
             // cboStockItem
             // 
-            this.cboStockItem.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboStockItem.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cboStockItem.FormattingEnabled = true;
             this.cboStockItem.IsDatatableOccurs = null;
             this.cboStockItem.IsErrorOccurs = false;
-            this.cboStockItem.Location = new System.Drawing.Point(580, 15);
+            this.cboStockItem.Location = new System.Drawing.Point(600, 15);
             this.cboStockItem.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboStockItem.Name = "cboStockItem";
             this.cboStockItem.NextControl = this.btnDisplay;
             this.cboStockItem.NextControlName = "btnDisplay";
-            this.cboStockItem.Size = new System.Drawing.Size(322, 29);
+            this.cboStockItem.Size = new System.Drawing.Size(322, 35);
             this.cboStockItem.TabIndex = 2;
             // 
             // btnDisplay
@@ -97,10 +98,10 @@
             this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDisplay.Location = new System.Drawing.Point(937, 15);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(102, 30);
+            this.btnDisplay.Size = new System.Drawing.Size(102, 35);
             this.btnDisplay.TabIndex = 3;
             this.btnDisplay.Text = "ပြမည်";
             this.btnDisplay.UseVisualStyleBackColor = false;
@@ -111,10 +112,10 @@
             this.pLabel3.BackColor = System.Drawing.Color.LightCyan;
             this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel3.Location = new System.Drawing.Point(22, 17);
             this.pLabel3.Name = "pLabel3";
-            this.pLabel3.Size = new System.Drawing.Size(100, 30);
+            this.pLabel3.Size = new System.Drawing.Size(120, 35);
             this.pLabel3.TabIndex = 81;
             this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -124,10 +125,10 @@
             this.pLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(480, 15);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 30);
+            this.pLabel1.Size = new System.Drawing.Size(120, 35);
             this.pLabel1.TabIndex = 1;
             this.pLabel1.Text = "ကုန်ပစ္စည်းအမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +138,7 @@
             this.dgvStockPackaging.AllowUserToAddRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -164,7 +165,9 @@
             this.dgvStockPackaging.Location = new System.Drawing.Point(21, 57);
             this.dgvStockPackaging.Name = "dgvStockPackaging";
             this.dgvStockPackaging.RowHeadersVisible = false;
-            this.dgvStockPackaging.RowTemplate.Height = 25;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dgvStockPackaging.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvStockPackaging.RowTemplate.Height = 35;
             this.dgvStockPackaging.Size = new System.Drawing.Size(1203, 716);
             this.dgvStockPackaging.TabIndex = 0;
             this.dgvStockPackaging.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockPackaging_CellContentClick);

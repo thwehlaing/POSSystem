@@ -94,12 +94,12 @@
             // 
             this.rdo_active.AutoSize = true;
             this.rdo_active.Checked = true;
-            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_active.Location = new System.Drawing.Point(3, 16);
             this.rdo_active.Name = "rdo_active";
             this.rdo_active.NextControl = null;
             this.rdo_active.NextControlName = "BtnF2";
-            this.rdo_active.Size = new System.Drawing.Size(70, 25);
+            this.rdo_active.Size = new System.Drawing.Size(79, 31);
             this.rdo_active.TabIndex = 2;
             this.rdo_active.TabStop = true;
             this.rdo_active.Text = "အသုံးပြု";
@@ -110,7 +110,7 @@
             this.pLabel2.BackColor = System.Drawing.Color.Red;
             this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel2.Location = new System.Drawing.Point(31, 18);
             this.pLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pLabel2.Name = "pLabel2";
@@ -124,7 +124,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnSearch.Location = new System.Drawing.Point(431, 60);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 35);
@@ -138,7 +138,7 @@
             this.pLabel1.BackColor = System.Drawing.Color.Red;
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(31, 60);
             this.pLabel1.Name = "pLabel1";
             this.pLabel1.Size = new System.Drawing.Size(100, 35);
@@ -158,12 +158,12 @@
             // rdo_inactive
             // 
             this.rdo_inactive.AutoSize = true;
-            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rdo_inactive.Location = new System.Drawing.Point(103, 16);
             this.rdo_inactive.Name = "rdo_inactive";
             this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
-            this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
+            this.rdo_inactive.Size = new System.Drawing.Size(88, 31);
             this.rdo_inactive.TabIndex = 3;
             this.rdo_inactive.Text = "အသုံးမပြု";
             this.rdo_inactive.UseVisualStyleBackColor = true;

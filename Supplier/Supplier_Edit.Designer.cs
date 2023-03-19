@@ -64,10 +64,10 @@
             this.btnSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSearch.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(446, 27);
+            this.btnSearch.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSearch.Location = new System.Drawing.Point(469, 27);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 30);
+            this.btnSearch.Size = new System.Drawing.Size(75, 35);
             this.btnSearch.TabIndex = 62;
             this.btnSearch.Text = "...";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -80,20 +80,20 @@
             this.panel2.Location = new System.Drawing.Point(28, 162);
             this.panel2.Margin = new System.Windows.Forms.Padding(5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(419, 93);
+            this.panel2.Size = new System.Drawing.Size(235, 71);
             this.panel2.TabIndex = 61;
             // 
             // rdo_active
             // 
             this.rdo_active.AutoSize = true;
             this.rdo_active.Checked = true;
-            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdo_active.Location = new System.Drawing.Point(5, 26);
+            this.rdo_active.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_active.Location = new System.Drawing.Point(7, 20);
             this.rdo_active.Margin = new System.Windows.Forms.Padding(5);
             this.rdo_active.Name = "rdo_active";
             this.rdo_active.NextControl = null;
             this.rdo_active.NextControlName = "BtnF2";
-            this.rdo_active.Size = new System.Drawing.Size(70, 25);
+            this.rdo_active.Size = new System.Drawing.Size(79, 31);
             this.rdo_active.TabIndex = 2;
             this.rdo_active.TabStop = true;
             this.rdo_active.Text = "အသုံးပြု";
@@ -102,13 +102,13 @@
             // rdo_inactive
             // 
             this.rdo_inactive.AutoSize = true;
-            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdo_inactive.Location = new System.Drawing.Point(177, 26);
+            this.rdo_inactive.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdo_inactive.Location = new System.Drawing.Point(108, 20);
             this.rdo_inactive.Margin = new System.Windows.Forms.Padding(5);
             this.rdo_inactive.Name = "rdo_inactive";
             this.rdo_inactive.NextControl = null;
             this.rdo_inactive.NextControlName = "BtnF2";
-            this.rdo_inactive.Size = new System.Drawing.Size(78, 25);
+            this.rdo_inactive.Size = new System.Drawing.Size(88, 31);
             this.rdo_inactive.TabIndex = 3;
             this.rdo_inactive.Text = "အသုံးမပြု";
             this.rdo_inactive.UseVisualStyleBackColor = true;
@@ -118,10 +118,10 @@
             this.txtAddress.AllowMinus = false;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAddress.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
-            this.txtAddress.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtAddress.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtAddress.IsDatatableOccurs = null;
             this.txtAddress.IsErrorOccurs = false;
-            this.txtAddress.Location = new System.Drawing.Point(125, 122);
+            this.txtAddress.Location = new System.Drawing.Point(148, 122);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(5);
             this.txtAddress.MaxLength = 200;
             this.txtAddress.MinimumSize = new System.Drawing.Size(170, 20);
@@ -129,7 +129,7 @@
             this.txtAddress.NextControl = this.rdo_active;
             this.txtAddress.NextControlName = "rdo_active";
             this.txtAddress.SearchType = Entity.SearchType.ScType.None;
-            this.txtAddress.Size = new System.Drawing.Size(322, 30);
+            this.txtAddress.Size = new System.Drawing.Size(322, 35);
             this.txtAddress.TabIndex = 60;
             this.txtAddress.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
@@ -138,11 +138,11 @@
             this.pLabel4.BackColor = System.Drawing.Color.Red;
             this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel4.Location = new System.Drawing.Point(28, 122);
             this.pLabel4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.pLabel4.Name = "pLabel4";
-            this.pLabel4.Size = new System.Drawing.Size(100, 35);
+            this.pLabel4.Size = new System.Drawing.Size(120, 35);
             this.pLabel4.TabIndex = 59;
             this.pLabel4.Text = "လိပ်စာ";
             this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,10 +152,10 @@
             this.txtPhoneNo.AllowMinus = false;
             this.txtPhoneNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhoneNo.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtPhoneNo.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPhoneNo.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPhoneNo.IsDatatableOccurs = null;
             this.txtPhoneNo.IsErrorOccurs = false;
-            this.txtPhoneNo.Location = new System.Drawing.Point(125, 76);
+            this.txtPhoneNo.Location = new System.Drawing.Point(148, 76);
             this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(5);
             this.txtPhoneNo.MaxLength = 20;
             this.txtPhoneNo.MinimumSize = new System.Drawing.Size(170, 20);
@@ -163,7 +163,7 @@
             this.txtPhoneNo.NextControl = this.txtAddress;
             this.txtPhoneNo.NextControlName = "txtAddress";
             this.txtPhoneNo.SearchType = Entity.SearchType.ScType.None;
-            this.txtPhoneNo.Size = new System.Drawing.Size(322, 30);
+            this.txtPhoneNo.Size = new System.Drawing.Size(322, 35);
             this.txtPhoneNo.TabIndex = 58;
             this.txtPhoneNo.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
@@ -172,11 +172,11 @@
             this.pLabel2.BackColor = System.Drawing.Color.Red;
             this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel2.Location = new System.Drawing.Point(28, 76);
             this.pLabel2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(100, 35);
+            this.pLabel2.Size = new System.Drawing.Size(120, 35);
             this.pLabel2.TabIndex = 57;
             this.pLabel2.Text = "ဖုန်းနံပါတ်";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -187,10 +187,10 @@
             this.txtSupplierName.BackColor = System.Drawing.Color.White;
             this.txtSupplierName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSupplierName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
-            this.txtSupplierName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSupplierName.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSupplierName.IsDatatableOccurs = null;
             this.txtSupplierName.IsErrorOccurs = false;
-            this.txtSupplierName.Location = new System.Drawing.Point(125, 27);
+            this.txtSupplierName.Location = new System.Drawing.Point(148, 27);
             this.txtSupplierName.Margin = new System.Windows.Forms.Padding(5);
             this.txtSupplierName.MaxLength = 50;
             this.txtSupplierName.MinimumSize = new System.Drawing.Size(170, 20);
@@ -198,7 +198,7 @@
             this.txtSupplierName.NextControl = this.txtPhoneNo;
             this.txtSupplierName.NextControlName = "txtPhoneNo";
             this.txtSupplierName.SearchType = Entity.SearchType.ScType.None;
-            this.txtSupplierName.Size = new System.Drawing.Size(322, 30);
+            this.txtSupplierName.Size = new System.Drawing.Size(322, 35);
             this.txtSupplierName.TabIndex = 56;
             this.txtSupplierName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
@@ -207,11 +207,11 @@
             this.pLabel1.BackColor = System.Drawing.Color.Red;
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(28, 27);
             this.pLabel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 35);
+            this.pLabel1.Size = new System.Drawing.Size(120, 35);
             this.pLabel1.TabIndex = 55;
             this.pLabel1.Text = "ထောက်ပံ့သူ";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
