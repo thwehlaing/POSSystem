@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDisplay = new POS_Control.PButton();
             this.pLabel2 = new POS_Control.PLabel();
             this.pLabel1 = new POS_Control.PLabel();
@@ -97,8 +99,8 @@
             this.txtName.MaxLength = 100;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtName.Name = "txtName";
-            this.txtName.NextControl = null;
-            this.txtName.NextControlName = null;
+            this.txtName.NextControl = this.btnDisplay;
+            this.txtName.NextControlName = "btnDisplay";
             this.txtName.SearchType = Entity.SearchType.ScType.None;
             this.txtName.Size = new System.Drawing.Size(311, 30);
             this.txtName.TabIndex = 14;
@@ -107,6 +109,14 @@
             // dgvStockItem
             // 
             this.dgvStockItem.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvStockItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStockItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemCD,
@@ -120,16 +130,25 @@
             this.UOMCD});
             this.dgvStockItem.Location = new System.Drawing.Point(12, 132);
             this.dgvStockItem.Name = "dgvStockItem";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvStockItem.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStockItem.RowHeadersVisible = false;
             this.dgvStockItem.RowTemplate.Height = 25;
             this.dgvStockItem.Size = new System.Drawing.Size(860, 479);
             this.dgvStockItem.TabIndex = 15;
-            this.dgvStockItem.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockItem_CellContentDoubleClick);
+            this.dgvStockItem.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStockItem_CellContentClick);
             // 
             // ItemCD
             // 
             this.ItemCD.HeaderText = "ကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
+            this.ItemCD.Visible = false;
             // 
             // SubName
             // 
@@ -141,7 +160,7 @@
             // 
             this.ItemName.HeaderText = "အမည်";
             this.ItemName.Name = "ItemName";
-            this.ItemName.Width = 150;
+            this.ItemName.Width = 250;
             // 
             // Qty
             // 

@@ -31,8 +31,8 @@ namespace SubCategory
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြခြင်း", true);
-            BindCatgory();
-            ErrorCheck();
+            BindCatgory();           
+            DBProcess();
         }
 
         private void BindCatgory()
@@ -81,14 +81,14 @@ namespace SubCategory
         private SubCategoryEntity GetCategory()
         {
             SubCategoryEntity obj = new SubCategoryEntity();
-            obj.CategoryCD = cboCategory.SelectedValue.ToString();          
+            obj.CategoryCD = cboCategory.SelectedValue.ToString()=="-1"?"": cboCategory.SelectedValue.ToString();          
             obj.SubName = txtSubName.Text;           
             return obj;
         }
-        public void ErrorCheck()
-        {
-            cboCategory.CheckRequired(true);            
-        }
+        //public void ErrorCheck()
+        //{
+        //    cboCategory.CheckRequired(true);            
+        //}
 
         public void ClearData()
         {
@@ -120,10 +120,10 @@ namespace SubCategory
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            if (ErrorCheck(PanelDetail))
-            {
+            //if (ErrorCheck(PanelDetail))
+            //{
                 DBProcess();
-            }
+            //}
         }
     }
 }

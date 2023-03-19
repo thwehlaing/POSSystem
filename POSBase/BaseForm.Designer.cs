@@ -79,22 +79,23 @@
             // 
             // tspLoginUser
             // 
-            this.tspLoginUser.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tspLoginUser.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tspLoginUser.ForeColor = System.Drawing.Color.Black;
             this.tspLoginUser.Image = global::POSBase.Properties.Resources.icons8_user_16;
             this.tspLoginUser.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspLoginUser.Name = "tspLoginUser";
-            this.tspLoginUser.Size = new System.Drawing.Size(144, 47);
+            this.tspLoginUser.Size = new System.Drawing.Size(170, 47);
             this.tspLoginUser.Text = "Welcome Admin";
             // 
             // tspCurrentDate
             // 
-            this.tspCurrentDate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tspCurrentDate.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tspCurrentDate.ForeColor = System.Drawing.Color.Black;
             this.tspCurrentDate.Image = global::POSBase.Properties.Resources.icons8_calendar_16;
+            this.tspCurrentDate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tspCurrentDate.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tspCurrentDate.Name = "tspCurrentDate";
-            this.tspCurrentDate.Size = new System.Drawing.Size(116, 47);
+            this.tspCurrentDate.Size = new System.Drawing.Size(132, 47);
             this.tspCurrentDate.Text = "MenuItem2";
             // 
             // BaseTitle
@@ -127,7 +128,7 @@
             this.BtnF1.ButtonType = Entity.ButtonType.BType.Close;
             this.BtnF1.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.BtnF1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnF1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnF1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnF1.Location = new System.Drawing.Point(3, 3);
             this.BtnF1.Name = "BtnF1";
             this.BtnF1.Size = new System.Drawing.Size(168, 59);
@@ -161,7 +162,7 @@
             this.BtnF2.ButtonType = Entity.ButtonType.BType.Normal;
             this.BtnF2.FlatAppearance.BorderColor = System.Drawing.Color.CornflowerBlue;
             this.BtnF2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnF2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnF2.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BtnF2.Location = new System.Drawing.Point(1541, 3);
             this.BtnF2.Name = "BtnF2";
             this.BtnF2.Size = new System.Drawing.Size(169, 59);

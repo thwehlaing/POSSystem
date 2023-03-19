@@ -70,5 +70,15 @@ namespace BL
             DataTable dt = dbl.SelectDatatable("pr_subcategory_selectall", GetConnectionString(), parameters);
             return dt;
         }
+
+        public DataTable SubCategory_ExistCheck(string SubName)
+        {
+            SubCategoryEntity entity = new SubCategoryEntity();
+            DBAccessBL dl = new DBAccessBL();
+            entity.Sqlprms = new SqlParameter[2];
+            entity.Sqlprms[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = SubName };
+            entity.Sqlprms[1] = new SqlParameter("@TableName", SqlDbType.NVarChar) { Value = "SubCategory" };
+            return dl.SelectDatatable("pr_existcheck", GetConnectionString(), entity.Sqlprms);
+        }
     }
 }

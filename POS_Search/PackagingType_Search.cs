@@ -28,6 +28,7 @@ namespace POS_Search
             txtPackTypeName.Focus();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);
+            DataGridviewBind();
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace POS_Search
             {
                 dgvPackagingType.Rows[i].Cells["PackTypeCode"].Value = dt.Rows[i]["PackTypeCode"].ToString();
                 dgvPackagingType.Rows[i].Cells["PackTypeName"].Value = dt.Rows[i]["PackTypeName"].ToString();
-                dgvPackagingType.Rows[i].Cells["Qty"].Value = dt.Rows[i]["Qty"].ToString();
+                dgvPackagingType.Rows[i].Cells["UOMQty"].Value = dt.Rows[i]["UOMQty"].ToString();
             }
         }
         public override void FunctionProcess(string tagID)
@@ -65,12 +66,12 @@ namespace POS_Search
             {
                 PTypeCD = row.Cells["PackTypeCode"].Value.ToString();
                 PTypeName = row.Cells["PackTypeName"].Value.ToString();
-                PQty = Convert.ToInt32(row.Cells["Qty"].Value.ToString());
+                PQty = Convert.ToInt32(row.Cells["UOMQty"].Value.ToString());
             }
             this.Close();
         }
 
-        private void dgvPackagingType_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPackagingType_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {

@@ -67,6 +67,7 @@ namespace SubCategory
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                cboCategory.Focus();
                 ClearData();
             }  
         }
@@ -85,6 +86,7 @@ namespace SubCategory
         {
             cboCategory.CheckRequired(true);
             txtSubCategory.CheckRequired(true);
+            txtSubCategory.CheckExist(true, "SubCategory","NEW");
         }
         public void ClearData()
         {

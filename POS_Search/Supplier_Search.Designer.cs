@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDisplay = new POS_Control.PButton();
             this.txtSubCategory = new POS_Control.PTextBox();
             this.pLabel2 = new POS_Control.PLabel();
@@ -64,8 +66,8 @@
             this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
-            this.txtSubCategory.NextControl = null;
-            this.txtSubCategory.NextControlName = null;
+            this.txtSubCategory.NextControl = this.btnDisplay;
+            this.txtSubCategory.NextControlName = "btnDisplay";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
             this.txtSubCategory.Size = new System.Drawing.Size(300, 30);
             this.txtSubCategory.TabIndex = 10;
@@ -87,6 +89,14 @@
             // dgvSupplier
             // 
             this.dgvSupplier.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupplier.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSupplier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupplier.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SupplierCD,
@@ -95,6 +105,14 @@
             this.Address});
             this.dgvSupplier.Location = new System.Drawing.Point(15, 117);
             this.dgvSupplier.Name = "dgvSupplier";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupplier.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSupplier.RowHeadersVisible = false;
             this.dgvSupplier.RowTemplate.Height = 25;
             this.dgvSupplier.Size = new System.Drawing.Size(850, 478);
@@ -106,6 +124,7 @@
             this.SupplierCD.DataPropertyName = "SupplierCD";
             this.SupplierCD.HeaderText = "ကုဒ်နံပါတ်";
             this.SupplierCD.Name = "SupplierCD";
+            this.SupplierCD.Visible = false;
             this.SupplierCD.Width = 150;
             // 
             // SupplierName
@@ -127,7 +146,7 @@
             this.Address.DataPropertyName = "Address";
             this.Address.HeaderText = "လိပ်စာ";
             this.Address.Name = "Address";
-            this.Address.Width = 300;
+            this.Address.Width = 445;
             // 
             // Supplier_Search
             // 

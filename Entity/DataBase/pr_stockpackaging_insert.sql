@@ -10,7 +10,7 @@ CREATE PROCEDURE [dbo].[pr_stockpackaging_insert]
 	-- Add the parameters for the stored procedure here
 	@ItemCD varchar(12),
 	@PackTypeCode varchar(10),
-	@Qty int,
+	@PackQty int,
 	@CreatedUser varchar(50)
 AS
 BEGIN
@@ -19,6 +19,7 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	insert into StockPackaging(ItemCD,PackTypeCode,Qty,CreatedDate,CreatedUser) values(@ItemCD,@PackTypeCode,@Qty,GETDATE(),@CreatedUser)
+	insert into StockPackaging(ItemCD,PackTypeCode,PackQty,OpenQty,CreatedDate,CreatedUser) values(@ItemCD,@PackTypeCode,@PackQty,@PackQty,GETDATE(),@CreatedUser)
 END
+
 GO

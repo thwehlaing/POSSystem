@@ -32,6 +32,7 @@ namespace POS_Search
         {
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);
+            DataGridviewBind();
         }
 
         private void DataGridviewBind()

@@ -28,24 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCategory = new POS_Control.PGridView();
             this.CatCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CatName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCategoryName = new POS_Control.PTextBox();
-            this.pLabel1 = new POS_Control.PLabel();
             this.btnDisplay = new POS_Control.PButton();
+            this.pLabel1 = new POS_Control.PLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCategory
             // 
             this.dgvCategory.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CatCD,
             this.CatName});
             this.dgvCategory.Location = new System.Drawing.Point(12, 104);
             this.dgvCategory.Name = "dgvCategory";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCategory.RowHeadersVisible = false;
             this.dgvCategory.RowTemplate.Height = 25;
             this.dgvCategory.Size = new System.Drawing.Size(860, 494);
@@ -56,13 +74,14 @@
             // 
             this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
             this.CatCD.Name = "CatCD";
+            this.CatCD.Visible = false;
             this.CatCD.Width = 200;
             // 
             // CatName
             // 
             this.CatName.HeaderText = "အမည်";
             this.CatName.Name = "CatName";
-            this.CatName.Width = 650;
+            this.CatName.Width = 850;
             // 
             // txtCategoryName
             // 
@@ -81,19 +100,6 @@
             this.txtCategoryName.TabIndex = 20;
             this.txtCategoryName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
-            // pLabel1
-            // 
-            this.pLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(15, 62);
-            this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 30);
-            this.pLabel1.TabIndex = 19;
-            this.pLabel1.Text = "အမည်";
-            this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -107,6 +113,19 @@
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // pLabel1
+            // 
+            this.pLabel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel1.Location = new System.Drawing.Point(15, 62);
+            this.pLabel1.Name = "pLabel1";
+            this.pLabel1.Size = new System.Drawing.Size(100, 30);
+            this.pLabel1.TabIndex = 19;
+            this.pLabel1.Text = "အမည်";
+            this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Category_Search
             // 

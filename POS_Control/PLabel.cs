@@ -31,7 +31,7 @@ namespace POS_Control
         {
             base.InitLayout();
             base.AutoSize = false;
-            base.Height = 30;
+            base.Height = 35;
         }
     }
 }

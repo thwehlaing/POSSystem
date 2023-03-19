@@ -39,6 +39,7 @@ namespace Category
         private void ErrorChek()
         {
             txtName.CheckRequired(true);
+            txtName.CheckExist(true, "Category","NEW");
         }
         public override void FunctionProcess(string tagID)
         {
@@ -67,5 +68,6 @@ namespace Category
                 rdo_active.Checked = true;
             }
         }
+
     }
 }

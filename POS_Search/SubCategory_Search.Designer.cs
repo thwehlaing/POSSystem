@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pLabel1 = new POS_Control.PLabel();
             this.pLabel2 = new POS_Control.PLabel();
             this.txtSubCategory = new POS_Control.PTextBox();
+            this.btnDisplay = new POS_Control.PButton();
             this.dgvSubCategory = new POS_Control.PGridView();
             this.SubCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDisplay = new POS_Control.PButton();
             this.txtCategoryName = new POS_Control.PTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubCategory)).BeginInit();
             this.SuspendLayout();
@@ -77,56 +79,12 @@
             this.txtSubCategory.MaxLength = 50;
             this.txtSubCategory.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtSubCategory.Name = "txtSubCategory";
-            this.txtSubCategory.NextControl = null;
-            this.txtSubCategory.NextControlName = null;
+            this.txtSubCategory.NextControl = this.btnDisplay;
+            this.txtSubCategory.NextControlName = "btnDisplay";
             this.txtSubCategory.SearchType = Entity.SearchType.ScType.None;
             this.txtSubCategory.Size = new System.Drawing.Size(300, 30);
             this.txtSubCategory.TabIndex = 6;
             this.txtSubCategory.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
-            // 
-            // dgvSubCategory
-            // 
-            this.dgvSubCategory.AllowUserToAddRows = false;
-            this.dgvSubCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSubCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SubCode,
-            this.CategoryName,
-            this.SubName});
-            this.dgvSubCategory.Location = new System.Drawing.Point(18, 150);
-            this.dgvSubCategory.Name = "dgvSubCategory";
-            this.dgvSubCategory.RowHeadersVisible = false;
-            this.dgvSubCategory.RowHeadersWidth = 51;
-            this.dgvSubCategory.RowTemplate.Height = 25;
-            this.dgvSubCategory.Size = new System.Drawing.Size(850, 450);
-            this.dgvSubCategory.TabIndex = 7;
-            this.dgvSubCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubCategory_CellMouseDoubleClick);
-            // 
-            // SubCode
-            // 
-            this.SubCode.DataPropertyName = "SubCode";
-            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
-            this.SubCode.MinimumWidth = 6;
-            this.SubCode.Name = "SubCode";
-            this.SubCode.ReadOnly = true;
-            this.SubCode.Width = 150;
-            // 
-            // CategoryName
-            // 
-            this.CategoryName.DataPropertyName = "CategoryName";
-            this.CategoryName.HeaderText = "အမျိုးအစား";
-            this.CategoryName.MinimumWidth = 6;
-            this.CategoryName.Name = "CategoryName";
-            this.CategoryName.ReadOnly = true;
-            this.CategoryName.Width = 350;
-            // 
-            // SubName
-            // 
-            this.SubName.DataPropertyName = "SubName";
-            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
-            this.SubName.MinimumWidth = 6;
-            this.SubName.Name = "SubName";
-            this.SubName.ReadOnly = true;
-            this.SubName.Width = 350;
             // 
             // btnDisplay
             // 
@@ -141,6 +99,67 @@
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // dgvSubCategory
+            // 
+            this.dgvSubCategory.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubCategory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSubCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSubCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SubCode,
+            this.CategoryName,
+            this.SubName});
+            this.dgvSubCategory.Location = new System.Drawing.Point(18, 150);
+            this.dgvSubCategory.Name = "dgvSubCategory";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSubCategory.RowHeadersVisible = false;
+            this.dgvSubCategory.RowHeadersWidth = 51;
+            this.dgvSubCategory.RowTemplate.Height = 25;
+            this.dgvSubCategory.Size = new System.Drawing.Size(850, 450);
+            this.dgvSubCategory.TabIndex = 7;
+            this.dgvSubCategory.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubCategory_CellMouseDoubleClick);
+            // 
+            // SubCode
+            // 
+            this.SubCode.DataPropertyName = "SubCode";
+            this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
+            this.SubCode.MinimumWidth = 6;
+            this.SubCode.Name = "SubCode";
+            this.SubCode.ReadOnly = true;
+            this.SubCode.Visible = false;
+            this.SubCode.Width = 150;
+            // 
+            // CategoryName
+            // 
+            this.CategoryName.DataPropertyName = "CategoryName";
+            this.CategoryName.HeaderText = "အမျိုးအစား";
+            this.CategoryName.MinimumWidth = 6;
+            this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
+            this.CategoryName.Width = 395;
+            // 
+            // SubName
+            // 
+            this.SubName.DataPropertyName = "SubName";
+            this.SubName.HeaderText = "အမျိုးအစားခွဲ";
+            this.SubName.MinimumWidth = 6;
+            this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
+            this.SubName.Width = 450;
             // 
             // txtCategoryName
             // 

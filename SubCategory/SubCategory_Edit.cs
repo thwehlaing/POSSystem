@@ -34,6 +34,7 @@ namespace SubCategory
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြင်ခြင်း", true);
             BindCatgory();
+            ErrorCheck();
         }
 
         private void BindCatgory()
@@ -69,8 +70,9 @@ namespace SubCategory
             bool return_Bl = bl.SubCategory_Update(obj);
             if (return_Bl)
             {
+                bl.ShowMessage("I101");
+                cboCategory.Focus();
                 ClearData();
-                bl.ShowMessage("I101");                
             }                
         }
 
@@ -89,6 +91,7 @@ namespace SubCategory
         {
             cboCategory.CheckRequired(true);
             txtSubName.CheckRequired(true);
+            txtSubName.CheckExist(true, "SubCategory", "EDIT");
         }
 
         public void ClearData()

@@ -63,7 +63,7 @@ namespace StockItem
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!cboSubCategory.IsErrorOccurs)
+            if (cboSubCategory.SelectedValue.ToString()!="-1")
             {
                 StockItem_Search search = new StockItem_Search(cboSubCategory.SelectedValue.ToString(), cboSubCategory.Text);
                 search.ShowDialog();
@@ -98,6 +98,7 @@ namespace StockItem
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                cboSubCategory.Focus();
                 ClearData();
             }
         }
@@ -123,6 +124,7 @@ namespace StockItem
         {
             cboSubCategory.CheckRequired(true);
             txtStockName.CheckRequired(true);
+            txtStockName.CheckExist(true, "StockItem", "EDIT");
             cboUOM.CheckRequired(true);
             txtQty.CheckRequired(true);
             txtPrice.CheckRequired(true);

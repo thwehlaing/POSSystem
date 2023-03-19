@@ -100,12 +100,12 @@
             this.txtQty.Location = new System.Drawing.Point(122, 68);
             this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtQty.Name = "txtQty";
-            this.txtQty.NextControl = null;
+            this.txtQty.NextControl = this.rdo_active;
             this.txtQty.NextControlName = "rdo_active";
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
             this.txtQty.TabIndex = 62;
-            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
             // 
             // lblQty
             // 
@@ -131,7 +131,7 @@
             this.txtPackTypeName.MaxLength = 50;
             this.txtPackTypeName.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackTypeName.Name = "txtPackTypeName";
-            this.txtPackTypeName.NextControl = null;
+            this.txtPackTypeName.NextControl = this.txtQty;
             this.txtPackTypeName.NextControlName = "txtQty";
             this.txtPackTypeName.SearchType = Entity.SearchType.ScType.None;
             this.txtPackTypeName.Size = new System.Drawing.Size(322, 30);

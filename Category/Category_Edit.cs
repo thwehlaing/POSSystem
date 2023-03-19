@@ -27,7 +27,7 @@ namespace Category
         {
             ProgramID = "Category_Edit";
             ProgramName = "ပစ္စည်းအမျိုးအစား ပြင်ခြင်း";
-            txtName.Focus();
+            //txtName.Focus();
 
             StartProgram();
 
@@ -40,12 +40,13 @@ namespace Category
         private void ErrorChek()
         {
             txtName.CheckRequired(true);
+            txtName.CheckExist(true, "Category_Edit", "EDIT");
         }
         public override void FunctionProcess(string tagID)
         {
             if (tagID == "2")
             {
-                if (!txtName.IsErrorOccurs)
+                if (ErrorCheck(panelDetail))
                 {
                     DBProcess();
                 }
@@ -69,7 +70,8 @@ namespace Category
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
-                txtName.Focus();
+                txtName.Text = "";
+               //txtName.Focus();
             }
         }
 

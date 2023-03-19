@@ -10,7 +10,7 @@ namespace Entity
     {
         public string PackTypeCode { get; set; }
         public string PackTypeName { get; set; }
-        public int Qty { get; set; }
+        public int UOMQty { get; set; }
         public string Status { get; set; }
     }
 }

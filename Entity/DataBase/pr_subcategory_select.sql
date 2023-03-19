@@ -24,5 +24,6 @@ BEGIN
     -- Insert statements for procedure here
 	SELECT s.SubCode,c.CategoryName,s.SubName from SubCategory s
 	inner join Category c on s.CategoryCD=c.CategoryCD 
-	where c.CategoryCD=@CategoryCD and (@SubName is null OR (SubName like @SubName +'%')) and s.Status='1'
+	where (@CategoryCD is null OR c.CategoryCD=@CategoryCD) 
+	and (@SubName is null OR (SubName like @SubName +'%')) and s.Status='1'
 END

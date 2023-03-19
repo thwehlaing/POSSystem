@@ -79,6 +79,7 @@ namespace StockItem
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                cboSubCategory.Focus();
                 ClearData();
             }
         }
@@ -103,6 +104,7 @@ namespace StockItem
         {
             cboSubCategory.CheckRequired(true);
             txtStockName.CheckRequired(true);
+            txtStockName.CheckExist(true,"StockItem","NEW");
             cboUOM.CheckRequired(true);
             txtQty.CheckRequired(true);
             txtPrice.CheckRequired(true);

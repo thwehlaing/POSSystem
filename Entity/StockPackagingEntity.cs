@@ -10,7 +10,7 @@ namespace Entity
     {
         public string ItemCD { get; set; }
         public string PackTypeCode { get; set;}
-        public int Qty { get; set; }
+        public int PackQty { get; set; }
         public int OpenQty { get; set; }
     }
 }

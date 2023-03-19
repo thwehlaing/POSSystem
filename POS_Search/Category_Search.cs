@@ -25,7 +25,8 @@ namespace POS_Search
         private void Category_Search_Load(object sender, EventArgs e)
         {
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);           
+            SetButton(ButtonType.BType.Save, F2, "ယူမည်", true);
+            DataGridviewBind();
         }
         private void btnDisplay_Click(object sender, EventArgs e)
         {

@@ -43,8 +43,8 @@
             this.cboCashType = new POS_Control.PCombo();
             this.pLabel2 = new POS_Control.PLabel();
             this.cboSubCategory = new POS_Control.PCombo();
-            this.pLabel3 = new POS_Control.PLabel();
             this.cboItemName = new POS_Control.PCombo();
+            this.pLabel3 = new POS_Control.PLabel();
             this.pLabel1 = new POS_Control.PLabel();
             this.PanelDetail.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,12 +115,12 @@
             this.txtPrice.Location = new System.Drawing.Point(147, 258);
             this.txtPrice.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.NextControl = null;
+            this.txtPrice.NextControl = this.dtpSaleDate;
             this.txtPrice.NextControlName = "dtpSaleDate";
             this.txtPrice.SearchType = Entity.SearchType.ScType.None;
             this.txtPrice.Size = new System.Drawing.Size(187, 30);
             this.txtPrice.TabIndex = 106;
-            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtPrice.TextBoxType = POS_Control.PTextBox.PTextBoxType.Price;
             // 
             // pLabel7
             // 
@@ -144,7 +144,7 @@
             this.cboUOM.Location = new System.Drawing.Point(145, 219);
             this.cboUOM.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboUOM.Name = "cboUOM";
-            this.cboUOM.NextControl = null;
+            this.cboUOM.NextControl = this.txtPrice;
             this.cboUOM.NextControlName = "txtPrice";
             this.cboUOM.Size = new System.Drawing.Size(189, 29);
             this.cboUOM.TabIndex = 104;
@@ -172,12 +172,12 @@
             this.txtQty.Location = new System.Drawing.Point(147, 180);
             this.txtQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtQty.Name = "txtQty";
-            this.txtQty.NextControl = null;
+            this.txtQty.NextControl = this.cboUOM;
             this.txtQty.NextControlName = "cboUOM";
             this.txtQty.SearchType = Entity.SearchType.ScType.None;
             this.txtQty.Size = new System.Drawing.Size(187, 30);
             this.txtQty.TabIndex = 102;
-            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            this.txtQty.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
             // 
             // pLabel5
             // 
@@ -201,7 +201,7 @@
             this.cboTradeType.Location = new System.Drawing.Point(147, 141);
             this.cboTradeType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboTradeType.Name = "cboTradeType";
-            this.cboTradeType.NextControl = null;
+            this.cboTradeType.NextControl = this.txtQty;
             this.cboTradeType.NextControlName = "txtQty";
             this.cboTradeType.Size = new System.Drawing.Size(322, 29);
             this.cboTradeType.TabIndex = 100;
@@ -228,7 +228,7 @@
             this.cboCashType.Location = new System.Drawing.Point(147, 104);
             this.cboCashType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboCashType.Name = "cboCashType";
-            this.cboCashType.NextControl = null;
+            this.cboCashType.NextControl = this.cboTradeType;
             this.cboCashType.NextControlName = "cboTradeType";
             this.cboCashType.Size = new System.Drawing.Size(322, 29);
             this.cboCashType.TabIndex = 98;
@@ -255,11 +255,25 @@
             this.cboSubCategory.Location = new System.Drawing.Point(147, 27);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
-            this.cboSubCategory.NextControl = null;
+            this.cboSubCategory.NextControl = this.cboItemName;
             this.cboSubCategory.NextControlName = "cboItemName";
             this.cboSubCategory.Size = new System.Drawing.Size(322, 29);
             this.cboSubCategory.TabIndex = 96;
             this.cboSubCategory.SelectedIndexChanged += new System.EventHandler(this.cboSubCategory_SelectedIndexChanged);
+            // 
+            // cboItemName
+            // 
+            this.cboItemName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cboItemName.FormattingEnabled = true;
+            this.cboItemName.IsDatatableOccurs = null;
+            this.cboItemName.IsErrorOccurs = false;
+            this.cboItemName.Location = new System.Drawing.Point(147, 65);
+            this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
+            this.cboItemName.Name = "cboItemName";
+            this.cboItemName.NextControl = this.cboCashType;
+            this.cboItemName.NextControlName = "cboCashType";
+            this.cboItemName.Size = new System.Drawing.Size(322, 29);
+            this.cboItemName.TabIndex = 94;
             // 
             // pLabel3
             // 
@@ -273,20 +287,6 @@
             this.pLabel3.TabIndex = 95;
             this.pLabel3.Text = "အမျိုးအစား(ခွဲ)";
             this.pLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // cboItemName
-            // 
-            this.cboItemName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cboItemName.FormattingEnabled = true;
-            this.cboItemName.IsDatatableOccurs = null;
-            this.cboItemName.IsErrorOccurs = false;
-            this.cboItemName.Location = new System.Drawing.Point(147, 65);
-            this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
-            this.cboItemName.Name = "cboItemName";
-            this.cboItemName.NextControl = null;
-            this.cboItemName.NextControlName = "cboCashType";
-            this.cboItemName.Size = new System.Drawing.Size(322, 29);
-            this.cboItemName.TabIndex = 94;
             // 
             // pLabel1
             // 

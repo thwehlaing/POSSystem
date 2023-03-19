@@ -12,7 +12,7 @@ namespace POS_Control
         {
             this.EnableHeadersVisualStyles = false;
             this.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(224, 255, 255);
-            this.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular);
+            this.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Myanmar Text", 11F, System.Drawing.FontStyle.Regular);
         }
     }
 }

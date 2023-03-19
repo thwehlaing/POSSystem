@@ -18,7 +18,7 @@ namespace BL
             DataTable dt = dl.SelectDatatable("pr_uom_select", GetConnectionString(), parameters);
             return dt;
         }
-
+      
         public bool StockItem_Create(StockItemEntity obj)
         {
             DBAccessBL dbl = new DBAccessBL();
@@ -80,6 +80,15 @@ namespace BL
             obj.Sqlprms[0] = new SqlParameter("@SubCode", SqlDbType.VarChar) { Value = obj.SubCode };
             DataTable dt = dbl.SelectDatatable("pr_stockitem_selectbysubcategory", GetConnectionString(), obj.Sqlprms);
             return dt;
+        }
+        public DataTable StockItem_ExistCheck(string SubName)
+        {
+            StockItemEntity entity = new StockItemEntity();
+            DBAccessBL dl = new DBAccessBL();
+            entity.Sqlprms = new SqlParameter[2];
+            entity.Sqlprms[0] = new SqlParameter("@Name", SqlDbType.NVarChar) { Value = SubName };
+            entity.Sqlprms[1] = new SqlParameter("@TableName", SqlDbType.NVarChar) { Value = "StockItem" };
+            return dl.SelectDatatable("pr_existcheck", GetConnectionString(), entity.Sqlprms);
         }
     }
 }

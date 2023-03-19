@@ -54,7 +54,7 @@
             this.pLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel8.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel8.Location = new System.Drawing.Point(24, 432);
+            this.pLabel8.Location = new System.Drawing.Point(29, 402);
             this.pLabel8.Name = "pLabel8";
             this.pLabel8.Size = new System.Drawing.Size(125, 30);
             this.pLabel8.TabIndex = 108;
@@ -65,7 +65,7 @@
             // 
             this.dtpSaleDate.CalendarFont = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpSaleDate.Font = new System.Drawing.Font("Myanmar Text", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpSaleDate.Location = new System.Drawing.Point(149, 432);
+            this.dtpSaleDate.Location = new System.Drawing.Point(152, 402);
             this.dtpSaleDate.Name = "dtpSaleDate";
             this.dtpSaleDate.Size = new System.Drawing.Size(155, 32);
             this.dtpSaleDate.TabIndex = 107;
@@ -77,7 +77,7 @@
             this.txtUOMPrice.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUOMPrice.IsDatatableOccurs = null;
             this.txtUOMPrice.IsErrorOccurs = false;
-            this.txtUOMPrice.Location = new System.Drawing.Point(150, 311);
+            this.txtUOMPrice.Location = new System.Drawing.Point(153, 281);
             this.txtUOMPrice.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtUOMPrice.Name = "txtUOMPrice";
             this.txtUOMPrice.NextControl = null;
@@ -93,7 +93,7 @@
             this.pLabel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel7.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel7.Location = new System.Drawing.Point(26, 311);
+            this.pLabel7.Location = new System.Drawing.Point(29, 281);
             this.pLabel7.Name = "pLabel7";
             this.pLabel7.Size = new System.Drawing.Size(124, 30);
             this.pLabel7.TabIndex = 105;
@@ -107,7 +107,7 @@
             this.txtUOMQty.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUOMQty.IsDatatableOccurs = null;
             this.txtUOMQty.IsErrorOccurs = false;
-            this.txtUOMQty.Location = new System.Drawing.Point(151, 271);
+            this.txtUOMQty.Location = new System.Drawing.Point(150, 241);
             this.txtUOMQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtUOMQty.Name = "txtUOMQty";
             this.txtUOMQty.NextControl = null;
@@ -123,7 +123,7 @@
             this.pLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel5.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel5.Location = new System.Drawing.Point(27, 271);
+            this.pLabel5.Location = new System.Drawing.Point(28, 241);
             this.pLabel5.Name = "pLabel5";
             this.pLabel5.Size = new System.Drawing.Size(124, 30);
             this.pLabel5.TabIndex = 101;
@@ -136,7 +136,7 @@
             this.cboTradeType.FormattingEnabled = true;
             this.cboTradeType.IsDatatableOccurs = null;
             this.cboTradeType.IsErrorOccurs = false;
-            this.cboTradeType.Location = new System.Drawing.Point(151, 232);
+            this.cboTradeType.Location = new System.Drawing.Point(150, 202);
             this.cboTradeType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboTradeType.Name = "cboTradeType";
             this.cboTradeType.NextControl = null;
@@ -150,7 +150,7 @@
             this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel4.Location = new System.Drawing.Point(29, 232);
+            this.pLabel4.Location = new System.Drawing.Point(28, 202);
             this.pLabel4.Name = "pLabel4";
             this.pLabel4.Size = new System.Drawing.Size(122, 30);
             this.pLabel4.TabIndex = 99;
@@ -163,7 +163,7 @@
             this.cboCashType.FormattingEnabled = true;
             this.cboCashType.IsDatatableOccurs = null;
             this.cboCashType.IsErrorOccurs = false;
-            this.cboCashType.Location = new System.Drawing.Point(151, 195);
+            this.cboCashType.Location = new System.Drawing.Point(150, 165);
             this.cboCashType.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboCashType.Name = "cboCashType";
             this.cboCashType.NextControl = null;
@@ -177,7 +177,7 @@
             this.pLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel2.Location = new System.Drawing.Point(29, 194);
+            this.pLabel2.Location = new System.Drawing.Point(28, 164);
             this.pLabel2.Name = "pLabel2";
             this.pLabel2.Size = new System.Drawing.Size(122, 30);
             this.pLabel2.TabIndex = 97;
@@ -190,7 +190,7 @@
             this.cboSubCategory.FormattingEnabled = true;
             this.cboSubCategory.IsDatatableOccurs = null;
             this.cboSubCategory.IsErrorOccurs = false;
-            this.cboSubCategory.Location = new System.Drawing.Point(151, 118);
+            this.cboSubCategory.Location = new System.Drawing.Point(150, 88);
             this.cboSubCategory.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSubCategory.Name = "cboSubCategory";
             this.cboSubCategory.NextControl = null;
@@ -205,7 +205,7 @@
             this.pLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel3.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel3.Location = new System.Drawing.Point(29, 118);
+            this.pLabel3.Location = new System.Drawing.Point(28, 88);
             this.pLabel3.Name = "pLabel3";
             this.pLabel3.Size = new System.Drawing.Size(122, 30);
             this.pLabel3.TabIndex = 95;
@@ -218,7 +218,7 @@
             this.cboItemName.FormattingEnabled = true;
             this.cboItemName.IsDatatableOccurs = null;
             this.cboItemName.IsErrorOccurs = false;
-            this.cboItemName.Location = new System.Drawing.Point(151, 156);
+            this.cboItemName.Location = new System.Drawing.Point(150, 126);
             this.cboItemName.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboItemName.Name = "cboItemName";
             this.cboItemName.NextControl = null;
@@ -232,7 +232,7 @@
             this.pLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel1.Location = new System.Drawing.Point(29, 156);
+            this.pLabel1.Location = new System.Drawing.Point(28, 126);
             this.pLabel1.Name = "pLabel1";
             this.pLabel1.Size = new System.Drawing.Size(122, 30);
             this.pLabel1.TabIndex = 93;
@@ -246,7 +246,7 @@
             this.txtPackPrice.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPackPrice.IsDatatableOccurs = null;
             this.txtPackPrice.IsErrorOccurs = false;
-            this.txtPackPrice.Location = new System.Drawing.Point(148, 391);
+            this.txtPackPrice.Location = new System.Drawing.Point(153, 361);
             this.txtPackPrice.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackPrice.Name = "txtPackPrice";
             this.txtPackPrice.NextControl = null;
@@ -262,7 +262,7 @@
             this.pLabel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel6.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel6.Location = new System.Drawing.Point(24, 391);
+            this.pLabel6.Location = new System.Drawing.Point(29, 361);
             this.pLabel6.Name = "pLabel6";
             this.pLabel6.Size = new System.Drawing.Size(124, 30);
             this.pLabel6.TabIndex = 111;
@@ -276,7 +276,7 @@
             this.txtPackQty.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtPackQty.IsDatatableOccurs = null;
             this.txtPackQty.IsErrorOccurs = false;
-            this.txtPackQty.Location = new System.Drawing.Point(149, 351);
+            this.txtPackQty.Location = new System.Drawing.Point(153, 321);
             this.txtPackQty.MinimumSize = new System.Drawing.Size(100, 20);
             this.txtPackQty.Name = "txtPackQty";
             this.txtPackQty.NextControl = null;
@@ -292,7 +292,7 @@
             this.pLabel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel9.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel9.Location = new System.Drawing.Point(25, 351);
+            this.pLabel9.Location = new System.Drawing.Point(29, 321);
             this.pLabel9.Name = "pLabel9";
             this.pLabel9.Size = new System.Drawing.Size(124, 30);
             this.pLabel9.TabIndex = 109;

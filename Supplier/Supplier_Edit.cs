@@ -41,6 +41,7 @@ namespace Supplier
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
+            ErrorCheck();
         }
 
         public override void FunctionProcess(string tagID)
@@ -62,6 +63,7 @@ namespace Supplier
             if (return_Bl)
             {
                 bl.ShowMessage("I101");
+                txtSupplierName.Focus();
                 ClearData();
             }
         }
@@ -81,6 +83,7 @@ namespace Supplier
         public void ErrorCheck()
         {
             txtSupplierName.CheckRequired(true);
+            txtSupplierName.CheckExist(true, "Supplier", "EDIT");
             txtPhoneNo.CheckRequired(true);
             txtAddress.CheckRequired(true);
         }

@@ -56,6 +56,46 @@ namespace POS_Control
                     return (true, rDt);
                 }
             }
+
+            if (PTextBox.E103 && !string.IsNullOrWhiteSpace(PTextBox.Text))
+            {                
+                switch (PTextBox.E103_Type)
+                {
+                    case "Category":
+                        CategoryBL bl = new CategoryBL();
+                        rDt = bl.Category_ExistCheck(PTextBox.Text);                      
+                        break;
+                    case "Supplier":
+                        SupplierBL sBL = new SupplierBL();
+                        rDt = sBL.Supplier_ExistCheck(PTextBox.Text);                        
+                        break;
+                    case "SubCategory":
+                        SubCategoryBL scBL = new SubCategoryBL();
+                        rDt = scBL.SubCategory_ExistCheck(PTextBox.Text);                       
+                        break;
+                    case "PackagingType":
+                        PackagingTypeBL ptBL = new PackagingTypeBL();
+                        rDt = ptBL.PackagingType_ExistCheck(PTextBox.Text);                       
+                        break;
+                    case "StockItem":
+                        StockItemBL BL = new StockItemBL();
+                        rDt = BL.StockItem_ExistCheck(PTextBox.Text);                       
+                        break;
+                }
+
+                if (rDt.Rows.Count>0 && PTextBox.E103_Mode=="NEW")
+                {
+                    ShowErrorMessage("E103");
+                    PTextBox.Focus();
+                    return (true, rDt);
+                }
+                else if(rDt.Rows.Count == 0 && PTextBox.E103_Mode == "EDIT")
+                {
+                    ShowErrorMessage("E104");
+                    PTextBox.Focus();
+                    return (true, rDt);
+                }
+            }
             return (false, rDt);
         }
 

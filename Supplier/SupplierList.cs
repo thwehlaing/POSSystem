@@ -31,6 +31,7 @@ namespace Supplier
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြခြင်း", true);
             txtSupplierName.CheckRequired(true);
+            DBProcess();
         }
 
         private void btnDisplay_Click(object sender, EventArgs e)

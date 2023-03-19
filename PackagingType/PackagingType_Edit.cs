@@ -28,7 +28,7 @@ namespace PackagingType
             ProgramName = "ထုပ်ပိုးခြင်းအမျိုးအစား ပြင်ဆင်ချက်";
             StartProgram();
             PreviousCtrl = txtPackTypeName;
-            txtPackTypeName.Focus();
+            //txtPackTypeName.Focus();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "ပြင်မည်", true);
             ErrorCheck();
@@ -46,6 +46,7 @@ namespace PackagingType
         private void ErrorCheck()
         {
             txtPackTypeName.CheckRequired(true);
+            txtPackTypeName.CheckExist(true, "PackagingType_Edit", "EDIT");
             txtQty.CheckRequired(true);
         }
         public override void FunctionProcess(string tagID)
@@ -60,7 +61,7 @@ namespace PackagingType
             base.FunctionProcess(tagID);
         }
 
-        private void DoProcess()
+        private void DBProcess()
         {
             PackagingTypeEntity entity = GetUpdatePackagingType();
             PackagingTypeBL bl = new PackagingTypeBL();
@@ -70,6 +71,7 @@ namespace PackagingType
                 bl.ShowMessage("I101");
                 txtPackTypeName.Text = "";
                 txtQty.Text = "";
+                //txtPackTypeName.Focus();
             }
         }
         private PackagingTypeEntity GetUpdatePackagingType()
@@ -77,7 +79,7 @@ namespace PackagingType
             PackagingTypeEntity entity = new PackagingTypeEntity();
             entity.PackTypeCode = PTypeCode;
             entity.PackTypeName = txtPackTypeName.Text;
-            entity.Qty = Convert.ToInt32(txtQty.Text);
+            entity.UOMQty = Convert.ToInt32(txtQty.Text);
             entity.Status = rdo_active.Checked ? "1" : "0";
             entity.UpdatedUser = entity.OperatorCD;
             return entity;
