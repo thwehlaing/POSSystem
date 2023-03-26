@@ -29,7 +29,7 @@ namespace Supplier
             txtSupplierName.Focus();
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "ပြခြင်း", true);
+            SetButton(ButtonType.BType.Display, F2, "ပြမည်", true);
             txtSupplierName.CheckRequired(true);
             DBProcess();
         }
