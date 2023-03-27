@@ -121,6 +121,7 @@
             this.dgvSubcategory.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSubcategory.Location = new System.Drawing.Point(21, 70);
             this.dgvSubcategory.Name = "dgvSubcategory";
+            this.dgvSubcategory.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -142,6 +143,7 @@
             this.SubCode.DataPropertyName = "SubCode";
             this.SubCode.HeaderText = "အမျိုးအစားခွဲကုဒ်နံပါတ်";
             this.SubCode.Name = "SubCode";
+            this.SubCode.ReadOnly = true;
             this.SubCode.Visible = false;
             this.SubCode.Width = 300;
             // 
@@ -150,6 +152,7 @@
             this.CategoryName.DataPropertyName = "CategoryName";
             this.CategoryName.HeaderText = "အမျိုးအစား";
             this.CategoryName.Name = "CategoryName";
+            this.CategoryName.ReadOnly = true;
             this.CategoryName.Width = 500;
             // 
             // SubName
@@ -157,6 +160,7 @@
             this.SubName.DataPropertyName = "SubName";
             this.SubName.HeaderText = "အမျိုးအစားခွဲ";
             this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
             this.SubName.Width = 500;
             // 
             // Action
@@ -164,6 +168,7 @@
             this.Action.DataPropertyName = "SubCatgoryCD";
             this.Action.HeaderText = "ဖျက်ရန်";
             this.Action.Name = "Action";
+            this.Action.ReadOnly = true;
             this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Action.Text = "ဖျက်ရန်";

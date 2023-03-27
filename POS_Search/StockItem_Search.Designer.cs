@@ -33,7 +33,6 @@
             this.btnDisplay = new POS_Control.PButton();
             this.pLabel2 = new POS_Control.PLabel();
             this.pLabel1 = new POS_Control.PLabel();
-            this.txtName = new POS_Control.PTextBox();
             this.dgvStockItem = new POS_Control.PGridView();
             this.ItemCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,18 +44,19 @@
             this.BarCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UOMCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtSubName = new POS_Control.PTextBox();
+            this.txtName = new POS_Control.PTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockItem)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDisplay
             // 
-            this.btnDisplay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnDisplay.BackColor = System.Drawing.Color.White;
             this.btnDisplay.ButtonType = Entity.ButtonType.BType.Normal;
             this.btnDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnDisplay.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnDisplay.Location = new System.Drawing.Point(488, 88);
             this.btnDisplay.Name = "btnDisplay";
-            this.btnDisplay.Size = new System.Drawing.Size(100, 30);
+            this.btnDisplay.Size = new System.Drawing.Size(100, 37);
             this.btnDisplay.TabIndex = 11;
             this.btnDisplay.Text = "ပြပါ";
             this.btnDisplay.UseVisualStyleBackColor = false;
@@ -70,7 +70,7 @@
             this.pLabel2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel2.Location = new System.Drawing.Point(15, 52);
             this.pLabel2.Name = "pLabel2";
-            this.pLabel2.Size = new System.Drawing.Size(100, 30);
+            this.pLabel2.Size = new System.Drawing.Size(100, 35);
             this.pLabel2.TabIndex = 9;
             this.pLabel2.Text = "အမျိုးအစားခွဲ";
             this.pLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -83,28 +83,10 @@
             this.pLabel1.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.pLabel1.Location = new System.Drawing.Point(15, 90);
             this.pLabel1.Name = "pLabel1";
-            this.pLabel1.Size = new System.Drawing.Size(100, 30);
+            this.pLabel1.Size = new System.Drawing.Size(100, 35);
             this.pLabel1.TabIndex = 13;
             this.pLabel1.Text = "အမည်";
             this.pLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtName
-            // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
-            this.txtName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtName.IsDatatableOccurs = null;
-            this.txtName.IsErrorOccurs = false;
-            this.txtName.Location = new System.Drawing.Point(115, 90);
-            this.txtName.MaxLength = 100;
-            this.txtName.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtName.Name = "txtName";
-            this.txtName.NextControl = this.btnDisplay;
-            this.txtName.NextControlName = "btnDisplay";
-            this.txtName.SearchType = Entity.SearchType.ScType.None;
-            this.txtName.Size = new System.Drawing.Size(311, 30);
-            this.txtName.TabIndex = 14;
-            this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // dgvStockItem
             // 
@@ -130,6 +112,7 @@
             this.UOMCD});
             this.dgvStockItem.Location = new System.Drawing.Point(12, 132);
             this.dgvStockItem.Name = "dgvStockItem";
+            this.dgvStockItem.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -148,78 +131,106 @@
             // 
             this.ItemCD.HeaderText = "ကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
+            this.ItemCD.ReadOnly = true;
             this.ItemCD.Visible = false;
             // 
             // SubName
             // 
             this.SubName.HeaderText = "အမျိုးအစားခွဲ";
             this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
             this.SubName.Width = 150;
             // 
             // ItemName
             // 
             this.ItemName.HeaderText = "အမည်";
             this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
             this.ItemName.Width = 250;
             // 
             // Qty
             // 
             this.Qty.HeaderText = "ပမာဏ";
             this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
             // 
             // UOMName
             // 
             this.UOMName.HeaderText = "ယူနစ်";
             this.UOMName.Name = "UOMName";
+            this.UOMName.ReadOnly = true;
             this.UOMName.Width = 70;
             // 
             // LastSalePrice
             // 
             this.LastSalePrice.HeaderText = "စျေးနှုန်း";
             this.LastSalePrice.Name = "LastSalePrice";
+            this.LastSalePrice.ReadOnly = true;
             // 
             // ReorderQty
             // 
             this.ReorderQty.HeaderText = "အနဲဆုံးလက်ကျန်";
             this.ReorderQty.Name = "ReorderQty";
+            this.ReorderQty.ReadOnly = true;
             // 
             // BarCode
             // 
             this.BarCode.HeaderText = "ဘားကုဒ်";
             this.BarCode.Name = "BarCode";
+            this.BarCode.ReadOnly = true;
             // 
             // UOMCD
             // 
             this.UOMCD.HeaderText = "UOMCD";
             this.UOMCD.Name = "UOMCD";
+            this.UOMCD.ReadOnly = true;
             this.UOMCD.Visible = false;
             // 
             // txtSubName
             // 
+            this.txtSubName.AllowMinus = false;
+            this.txtSubName.BackColor = System.Drawing.SystemColors.Control;
             this.txtSubName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSubName.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtSubName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
+            this.txtSubName.Font = new System.Drawing.Font("Myanmar Text", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtSubName.IsDatatableOccurs = null;
             this.txtSubName.IsErrorOccurs = false;
             this.txtSubName.Location = new System.Drawing.Point(115, 52);
-            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtSubName.MinimumSize = new System.Drawing.Size(100, 30);
             this.txtSubName.Name = "txtSubName";
-            this.txtSubName.NextControl = null;
+            this.txtSubName.NextControl = this.txtName;
             this.txtSubName.NextControlName = null;
-            this.txtSubName.ReadOnly = true;
             this.txtSubName.SearchType = Entity.SearchType.ScType.None;
-            this.txtSubName.Size = new System.Drawing.Size(311, 30);
+            this.txtSubName.Size = new System.Drawing.Size(311, 35);
             this.txtSubName.TabIndex = 16;
             this.txtSubName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
+            // 
+            // txtName
+            // 
+            this.txtName.AllowMinus = false;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtName.DefaultKeyboard = POS_Control.PTextBox.DefKey.Myanmar;
+            this.txtName.Font = new System.Drawing.Font("Myanmar Text", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName.IsDatatableOccurs = null;
+            this.txtName.IsErrorOccurs = false;
+            this.txtName.Location = new System.Drawing.Point(115, 90);
+            this.txtName.MinimumSize = new System.Drawing.Size(100, 30);
+            this.txtName.Name = "txtName";
+            this.txtName.NextControl = this.btnDisplay;
+            this.txtName.NextControlName = null;
+            this.txtName.SearchType = Entity.SearchType.ScType.None;
+            this.txtName.Size = new System.Drawing.Size(311, 35);
+            this.txtName.TabIndex = 17;
+            this.txtName.TextBoxType = POS_Control.PTextBox.PTextBoxType.Normal;
             // 
             // StockItem_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 661);
+            this.Controls.Add(this.txtName);
             this.Controls.Add(this.txtSubName);
             this.Controls.Add(this.dgvStockItem);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.pLabel1);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.pLabel2);
@@ -229,9 +240,9 @@
             this.Controls.SetChildIndex(this.pLabel2, 0);
             this.Controls.SetChildIndex(this.btnDisplay, 0);
             this.Controls.SetChildIndex(this.pLabel1, 0);
-            this.Controls.SetChildIndex(this.txtName, 0);
             this.Controls.SetChildIndex(this.dgvStockItem, 0);
             this.Controls.SetChildIndex(this.txtSubName, 0);
+            this.Controls.SetChildIndex(this.txtName, 0);
             ((System.ComponentModel.ISupportInitialize)(this.dgvStockItem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -243,9 +254,7 @@
         private POS_Control.PButton btnDisplay;
         private POS_Control.PLabel pLabel2;
         private POS_Control.PLabel pLabel1;
-        private POS_Control.PTextBox txtName;
         private POS_Control.PGridView dgvStockItem;
-        private POS_Control.PTextBox txtSubName;
         private DataGridViewTextBoxColumn ItemCD;
         private DataGridViewTextBoxColumn SubName;
         private DataGridViewTextBoxColumn ItemName;
@@ -255,5 +264,7 @@
         private DataGridViewTextBoxColumn ReorderQty;
         private DataGridViewTextBoxColumn BarCode;
         private DataGridViewTextBoxColumn UOMCD;
+        private POS_Control.PTextBox txtSubName;
+        private POS_Control.PTextBox txtName;
     }
 }

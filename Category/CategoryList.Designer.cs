@@ -77,6 +77,7 @@
             this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCategory.Location = new System.Drawing.Point(26, 23);
             this.dgvCategory.Name = "dgvCategory";
+            this.dgvCategory.ReadOnly = true;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -95,6 +96,7 @@
             // 
             this.CatCD.HeaderText = "ကုဒ်နံပါတ်";
             this.CatCD.Name = "CatCD";
+            this.CatCD.ReadOnly = true;
             this.CatCD.Visible = false;
             this.CatCD.Width = 200;
             // 
@@ -104,6 +106,7 @@
             this.CatName.DefaultCellStyle = dataGridViewCellStyle2;
             this.CatName.HeaderText = "အမည်";
             this.CatName.Name = "CatName";
+            this.CatName.ReadOnly = true;
             this.CatName.Width = 650;
             // 
             // Action
@@ -113,6 +116,7 @@
             this.Action.DefaultCellStyle = dataGridViewCellStyle3;
             this.Action.HeaderText = "ဖျက်ရန်";
             this.Action.Name = "Action";
+            this.Action.ReadOnly = true;
             this.Action.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Action.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Action.Text = "ဖျက်ရန်";

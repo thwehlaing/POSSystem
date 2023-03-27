@@ -164,6 +164,7 @@
             this.dgvStockPackaging.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStockPackaging.Location = new System.Drawing.Point(21, 57);
             this.dgvStockPackaging.Name = "dgvStockPackaging";
+            this.dgvStockPackaging.ReadOnly = true;
             this.dgvStockPackaging.RowHeadersVisible = false;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dgvStockPackaging.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -206,6 +207,7 @@
             // 
             this.PackQty.HeaderText = "ပမာဏ";
             this.PackQty.Name = "PackQty";
+            this.PackQty.ReadOnly = true;
             this.PackQty.Width = 200;
             // 
             // OpenQty
@@ -219,6 +221,7 @@
             // 
             this.btnEdit.HeaderText = "ပြင်ဆင်ရန်";
             this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ReadOnly = true;
             this.btnEdit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnEdit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnEdit.Text = "ပြင်ဆင်ရန်";
@@ -228,6 +231,7 @@
             // 
             this.btnDelete.HeaderText = "ပယ်ဖျက်ရန်";
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ReadOnly = true;
             this.btnDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnDelete.Text = "ပယ်ဖျက်ရန်";
