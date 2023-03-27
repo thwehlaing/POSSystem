@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelDetail = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pLabel1 = new POS_Control.PLabel();
@@ -50,11 +50,7 @@
             this.pLabel2 = new POS_Control.PLabel();
             this.cboSupplier = new POS_Control.PCombo();
             this.pLabel5 = new POS_Control.PLabel();
-            this.txtPNo = new POS_Control.PTextBox();
-            this.pLabel4 = new POS_Control.PLabel();
             this.dgvPurchaseItem = new POS_Control.PGridView();
-            this.pLabel8 = new POS_Control.PLabel();
-            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
             this.ItemCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PackTypeCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,6 +59,10 @@
             this.PackPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UOMPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Qty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pLabel8 = new POS_Control.PLabel();
+            this.dtpPurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.pLabel4 = new POS_Control.PLabel();
+            this.txtTotal = new POS_Control.PTextBox();
             this.PanelDetail.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPurchaseItem)).BeginInit();
@@ -70,11 +70,11 @@
             // 
             // PanelDetail
             // 
+            this.PanelDetail.Controls.Add(this.pLabel4);
+            this.PanelDetail.Controls.Add(this.txtTotal);
             this.PanelDetail.Controls.Add(this.groupBox1);
             this.PanelDetail.Controls.Add(this.cboSupplier);
             this.PanelDetail.Controls.Add(this.pLabel5);
-            this.PanelDetail.Controls.Add(this.txtPNo);
-            this.PanelDetail.Controls.Add(this.pLabel4);
             this.PanelDetail.Controls.Add(this.dgvPurchaseItem);
             this.PanelDetail.Controls.Add(this.pLabel8);
             this.PanelDetail.Controls.Add(this.dtpPurchaseDate);
@@ -100,7 +100,7 @@
             this.groupBox1.Controls.Add(this.cboPackType);
             this.groupBox1.Controls.Add(this.txtPackPrice);
             this.groupBox1.Controls.Add(this.pLabel2);
-            this.groupBox1.Location = new System.Drawing.Point(28, 63);
+            this.groupBox1.Location = new System.Drawing.Point(28, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1255, 167);
             this.groupBox1.TabIndex = 145;
@@ -325,7 +325,7 @@
             this.cboSupplier.FormattingEnabled = true;
             this.cboSupplier.IsDatatableOccurs = null;
             this.cboSupplier.IsErrorOccurs = false;
-            this.cboSupplier.Location = new System.Drawing.Point(882, 21);
+            this.cboSupplier.Location = new System.Drawing.Point(550, 8);
             this.cboSupplier.MinimumSize = new System.Drawing.Size(100, 0);
             this.cboSupplier.Name = "cboSupplier";
             this.cboSupplier.NextControl = null;
@@ -339,56 +339,24 @@
             this.pLabel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pLabel5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pLabel5.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel5.Location = new System.Drawing.Point(732, 21);
+            this.pLabel5.Location = new System.Drawing.Point(400, 8);
             this.pLabel5.Name = "pLabel5";
             this.pLabel5.Size = new System.Drawing.Size(150, 35);
             this.pLabel5.TabIndex = 143;
             this.pLabel5.Text = "ဆိုင်အမည်";
             this.pLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtPNo
-            // 
-            this.txtPNo.AllowMinus = false;
-            this.txtPNo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.txtPNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPNo.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
-            this.txtPNo.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtPNo.IsDatatableOccurs = null;
-            this.txtPNo.IsErrorOccurs = false;
-            this.txtPNo.Location = new System.Drawing.Point(194, 22);
-            this.txtPNo.MinimumSize = new System.Drawing.Size(100, 20);
-            this.txtPNo.Name = "txtPNo";
-            this.txtPNo.NextControl = null;
-            this.txtPNo.NextControlName = "txtPackPrice";
-            this.txtPNo.SearchType = Entity.SearchType.ScType.None;
-            this.txtPNo.Size = new System.Drawing.Size(165, 35);
-            this.txtPNo.TabIndex = 142;
-            this.txtPNo.TextBoxType = POS_Control.PTextBox.PTextBoxType.Number;
-            // 
-            // pLabel4
-            // 
-            this.pLabel4.BackColor = System.Drawing.Color.Red;
-            this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel4.Location = new System.Drawing.Point(44, 22);
-            this.pLabel4.Name = "pLabel4";
-            this.pLabel4.Size = new System.Drawing.Size(150, 35);
-            this.pLabel4.TabIndex = 141;
-            this.pLabel4.Text = "ကုဒ်နံပါတ်";
-            this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // dgvPurchaseItem
             // 
             this.dgvPurchaseItem.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPurchaseItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPurchaseItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPurchaseItem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPurchaseItem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ItemCD,
@@ -399,52 +367,30 @@
             this.PackPrice,
             this.UOMPrice,
             this.Qty});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPurchaseItem.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPurchaseItem.Location = new System.Drawing.Point(28, 248);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Myanmar Text", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPurchaseItem.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPurchaseItem.Location = new System.Drawing.Point(28, 230);
             this.dgvPurchaseItem.Name = "dgvPurchaseItem";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPurchaseItem.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPurchaseItem.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPurchaseItem.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dgvPurchaseItem.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dgvPurchaseItem.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPurchaseItem.RowTemplate.Height = 35;
-            this.dgvPurchaseItem.Size = new System.Drawing.Size(1255, 547);
+            this.dgvPurchaseItem.Size = new System.Drawing.Size(1255, 565);
             this.dgvPurchaseItem.TabIndex = 135;
-            // 
-            // pLabel8
-            // 
-            this.pLabel8.BackColor = System.Drawing.Color.Red;
-            this.pLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.pLabel8.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.pLabel8.Location = new System.Drawing.Point(378, 22);
-            this.pLabel8.Name = "pLabel8";
-            this.pLabel8.Size = new System.Drawing.Size(149, 35);
-            this.pLabel8.TabIndex = 126;
-            this.pLabel8.Text = "ရက်စွဲ";
-            this.pLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dtpPurchaseDate
-            // 
-            this.dtpPurchaseDate.CalendarFont = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpPurchaseDate.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpPurchaseDate.Location = new System.Drawing.Point(527, 22);
-            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
-            this.dtpPurchaseDate.Size = new System.Drawing.Size(184, 35);
-            this.dtpPurchaseDate.TabIndex = 125;
             // 
             // ItemCD
             // 
@@ -494,6 +440,60 @@
             this.Qty.Name = "Qty";
             this.Qty.Width = 150;
             // 
+            // pLabel8
+            // 
+            this.pLabel8.BackColor = System.Drawing.Color.Red;
+            this.pLabel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel8.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel8.Location = new System.Drawing.Point(46, 9);
+            this.pLabel8.Name = "pLabel8";
+            this.pLabel8.Size = new System.Drawing.Size(149, 35);
+            this.pLabel8.TabIndex = 126;
+            this.pLabel8.Text = "ရက်စွဲ";
+            this.pLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dtpPurchaseDate
+            // 
+            this.dtpPurchaseDate.CalendarFont = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpPurchaseDate.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpPurchaseDate.Location = new System.Drawing.Point(195, 9);
+            this.dtpPurchaseDate.Name = "dtpPurchaseDate";
+            this.dtpPurchaseDate.Size = new System.Drawing.Size(184, 35);
+            this.dtpPurchaseDate.TabIndex = 125;
+            // 
+            // pLabel4
+            // 
+            this.pLabel4.BackColor = System.Drawing.Color.Red;
+            this.pLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pLabel4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.pLabel4.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.pLabel4.Location = new System.Drawing.Point(892, 8);
+            this.pLabel4.Name = "pLabel4";
+            this.pLabel4.Size = new System.Drawing.Size(150, 35);
+            this.pLabel4.TabIndex = 146;
+            this.pLabel4.Text = "စုစုပေါင်း";
+            this.pLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.AllowMinus = false;
+            this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTotal.DefaultKeyboard = POS_Control.PTextBox.DefKey.English;
+            this.txtTotal.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTotal.IsDatatableOccurs = null;
+            this.txtTotal.IsErrorOccurs = false;
+            this.txtTotal.Location = new System.Drawing.Point(1041, 8);
+            this.txtTotal.MinimumSize = new System.Drawing.Size(100, 20);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.NextControl = null;
+            this.txtTotal.NextControlName = "btnAdd";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.SearchType = Entity.SearchType.ScType.None;
+            this.txtTotal.Size = new System.Drawing.Size(161, 35);
+            this.txtTotal.TabIndex = 147;
+            this.txtTotal.TextBoxType = POS_Control.PTextBox.PTextBoxType.Price;
+            // 
             // PurchaseItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -534,8 +534,6 @@
         private POS_Control.PTextBox txtUOMPrice;
         private POS_Control.PLabel pLabel7;
         private POS_Control.PButton btnAdd;
-        private POS_Control.PTextBox txtPNo;
-        private POS_Control.PLabel pLabel4;
         private POS_Control.PCombo cboSupplier;
         private POS_Control.PLabel pLabel5;
         private GroupBox groupBox1;
@@ -547,5 +545,7 @@
         private DataGridViewTextBoxColumn PackPrice;
         private DataGridViewTextBoxColumn UOMPrice;
         private DataGridViewTextBoxColumn Qty;
+        private POS_Control.PLabel pLabel4;
+        private POS_Control.PTextBox txtTotal;
     }
 }
