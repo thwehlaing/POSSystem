@@ -103,5 +103,53 @@ namespace PurchaseItem
                 BindStockItemBySubCategory();
             }
         }
+
+        public override void FunctionProcess(string tagID)
+        {
+            if (tagID == "2")
+            {
+                if (ErrorCheck(PanelDetail))
+                {
+                    DBProcess();
+                }
+            }
+            base.FunctionProcess(tagID);
+        }
+        private void DBProcess()
+        {
+            PurchaseItemEntity entity = GetInsertPurchaseItem();
+            PurchaseItemBL bl = new PurchaseItemBL();
+            bool result = bl.PurchaseItem_Create(entity);
+            if (result)
+            {
+                bl.ShowMessage("I101");
+                CleardData();
+            }
+        }
+        private PurchaseItemEntity GetInsertPurchaseItem()
+        {
+            PurchaseItemEntity entity = new PurchaseItemEntity();
+            entity.ItemCD = cboItemName.SelectedValue.ToString();
+            entity.TradeCD = cboTradeType.SelectedValue.ToString();
+            entity.CashCD = cboCashType.SelectedValue.ToString();
+            entity.UOMQty = Convert.ToInt32(txtUOMQty.Text);
+            entity.UOMPrice =Convert.ToDouble(txtUOMPrice.Text);
+            entity.PackQty = Convert.ToInt32(txtPackQty.Text);
+            entity.PackPrice = Convert.ToDouble(txtPackPrice.Text);
+            entity.PurchaseDate = Convert.ToDateTime(dtpPurchaseDate.Text);
+            return entity;
+        }
+        private void CleardData()
+        {
+            cboSubCategory.SelectedValue = "-1";
+            cboCashType.SelectedValue = "-1";
+            cboTradeType.SelectedValue = "-1";
+            cboItemName.SelectedValue = "-1";
+            txtUOMQty.Text = "";
+            txtUOMPrice.Text = "";
+            txtPackQty.Text = "";
+            txtPackPrice.Text = "";
+            dtpPurchaseDate.Value = DateTime.Now;
+        }
     }
 }
