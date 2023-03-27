@@ -27,7 +27,7 @@ namespace PackagingType
             ProgramName = "အထုပ်ထုပ်ပိုးခြင်းအမျိုးအစား စာရင်း";
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
-            SetButton(ButtonType.BType.Save, F2, "ပြမည်", true);
+            SetButton(ButtonType.BType.Display, F2, "ပြမည်", true);
             DBProcess();
         }
         private void DBProcess()
