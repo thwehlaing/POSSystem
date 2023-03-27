@@ -17,8 +17,8 @@ namespace BL
             obj.Sqlprms = new SqlParameter[11];
             obj.Sqlprms[0] = new SqlParameter("@ItemCD", SqlDbType.VarChar) { Value = obj.ItemCD };
             obj.Sqlprms[1] = new SqlParameter("@PackTypeCode", SqlDbType.VarChar) { Value = obj.PackTypeCode };
-            obj.Sqlprms[2] = new SqlParameter("@TradeCD", SqlDbType.VarChar) { Value = obj.TradeCD };
-            obj.Sqlprms[3] = new SqlParameter("@CashCD", SqlDbType.DateTime) { Value = obj.CashCD };
+            //obj.Sqlprms[2] = new SqlParameter("@TradeCD", SqlDbType.VarChar) { Value = obj.TradeCD };
+            //obj.Sqlprms[3] = new SqlParameter("@CashCD", SqlDbType.DateTime) { Value = obj.CashCD };
             obj.Sqlprms[4] = new SqlParameter("@UOMQty", SqlDbType.Int) { Value = obj.UOMQty };
             obj.Sqlprms[5] = new SqlParameter("@UOMPrice", SqlDbType.VarChar) { Value = obj.UOMPrice };
             obj.Sqlprms[6] = new SqlParameter("@PackQty", SqlDbType.Money) { Value = obj.PackQty };

@@ -63,5 +63,13 @@ namespace BL
             entity.Sqlprms[1] = new SqlParameter("@TableName", SqlDbType.NVarChar) { Value = "PackagingType" };
             return dl.SelectDatatable("pr_existcheck", GetConnectionString(), entity.Sqlprms);
         }
+        public DataTable BindQtyPerPack(string PackTypeCode)
+        {
+            DBAccessBL dl = new DBAccessBL();
+            PackagingTypeEntity entity = new PackagingTypeEntity();
+            entity.Sqlprms = new SqlParameter[1];
+            entity.Sqlprms[0] = new SqlParameter("@PackTypeCode", SqlDbType.NVarChar) { Value = PackTypeCode };           
+            return dl.SelectDatatable("pr_packagingtype_selectQtyPerPack", GetConnectionString(), entity.Sqlprms);
+        }
     }
 }

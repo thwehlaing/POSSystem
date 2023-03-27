@@ -11,8 +11,6 @@ namespace Entity
         public string PurchaseNo { get; set; }
         public string ItemCD { get; set; }
         public string PackTypeCode { get; set; }
-        public string TradeCD { get; set; }
-        public string CashCD { get; set; }
         public int UOMQty { get; set; }
         public double UOMPrice { get; set; }
         public int PackQty { get; set; }

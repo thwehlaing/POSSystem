@@ -125,7 +125,7 @@ namespace StockPackaging
 
         private void cboSubCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboSubCategory.SelectedValue !="-1") 
+            if (cboSubCategory.SelectedIndex.ToString() == "0")
             { 
                 BindStockItemBySubCategory();
             }

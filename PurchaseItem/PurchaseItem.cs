@@ -29,20 +29,17 @@ namespace PurchaseItem
             StartProgram();
             SetButton(ButtonType.BType.Close, F1, "ပိတ်မည်", true);
             SetButton(ButtonType.BType.Save, F2, "သိမ်းမည်", true);
-            BindSubCatgory();           
-            BindCashType();
-            BindTradeType();
-            ErrorCheck();
+            BindSubCatgory();
+            BindSupplier();
+            BindPackagingType();
+            //ErrorCheck();
         }
         private void ErrorCheck()
         {
             cboSubCategory.CheckRequired(true);
-            cboItemName.CheckRequired(true);
-            cboCashType.CheckRequired(true);          
-            cboTradeType.CheckRequired(true);
-            txtUOMQty.CheckRequired(true);
+            cboItemName.CheckRequired(true);            
+            txtQtyPerPack.CheckRequired(true);
             txtUOMPrice.CheckRequired(true);
-            //dtpSaleDate.CheckRequired(true);
         }
         private void BindSubCatgory()
         {
@@ -56,6 +53,32 @@ namespace PurchaseItem
             cboSubCategory.DisplayMember = "SubName";
             cboSubCategory.ValueMember = "SubCode";
         }
+
+        private void BindPackagingType()
+        {
+            PackagingTypeBL ptcbl = new PackagingTypeBL();
+            DataTable dtpackagingtype = new DataTable();
+            dtpackagingtype = ptcbl.PackagingType_Select();
+            DataRow dr = dtpackagingtype.NewRow();
+            dr["PackTypeCode"] = "-1";
+            dtpackagingtype.Rows.InsertAt(dr, 0);
+            cboPackType.DataSource = dtpackagingtype;
+            cboPackType.DisplayMember = "PackTypeName";
+            cboPackType.ValueMember = "PackTypeCode";
+        }
+        private void BindSupplier()
+        {
+            SupplierBL sbl = new SupplierBL();
+            DataTable dtSupplier = new DataTable();
+            dtSupplier = sbl.Supplier_SelectAll();
+            DataRow dr = dtSupplier.NewRow();
+            dr["SupplierCD"] = "-1";
+            dtSupplier.Rows.InsertAt(dr, 0);
+            cboSupplier.DataSource = dtSupplier;
+            cboSupplier.DisplayMember = "SupplierName";
+            cboSupplier.ValueMember = "SupplierCD";
+        }
+
         private void BindStockItemBySubCategory()
         {
             StockItemBL scbl = new StockItemBL();
@@ -70,35 +93,9 @@ namespace PurchaseItem
             cboItemName.DisplayMember = "ItemName";
             cboItemName.ValueMember = "ItemCD";
         }
-       
-        private void BindCashType()
-        {
-            SaleItemBL sibl = new SaleItemBL();
-            DataTable dtCashType = new DataTable();
-            dtCashType = sibl.CashType_Select();
-            DataRow dr = dtCashType.NewRow();
-            dr["CashCD"] = "-1";
-            dtCashType.Rows.InsertAt(dr, 0);
-            cboCashType.DataSource = dtCashType;
-            cboCashType.DisplayMember = "CashType";
-            cboCashType.ValueMember = "CashCD";
-        }
-        private void BindTradeType()
-        {
-            SaleItemBL sibl = new SaleItemBL();
-            DataTable dtTradeType = new DataTable();
-            dtTradeType = sibl.TradeType_Select();
-            DataRow dr = dtTradeType.NewRow();
-            dr["TradeCD"] = "-1";
-            dtTradeType.Rows.InsertAt(dr, 0);
-            cboTradeType.DataSource = dtTradeType;
-            cboTradeType.DisplayMember = "TradeType";
-            cboTradeType.ValueMember = "TradeCD";
-        }
-
         private void cboSubCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cboSubCategory.SelectedValue != "-1")
+            if (cboSubCategory.SelectedIndex.ToString() != "0")
             {
                 BindStockItemBySubCategory();
             }
@@ -129,27 +126,59 @@ namespace PurchaseItem
         private PurchaseItemEntity GetInsertPurchaseItem()
         {
             PurchaseItemEntity entity = new PurchaseItemEntity();
-            entity.ItemCD = cboItemName.SelectedValue.ToString();
-            entity.TradeCD = cboTradeType.SelectedValue.ToString();
-            entity.CashCD = cboCashType.SelectedValue.ToString();
-            entity.UOMQty = Convert.ToInt32(txtUOMQty.Text);
+            entity.ItemCD = cboItemName.SelectedValue.ToString();          
+            entity.UOMQty = Convert.ToInt32(txtQtyPerPack.Text);
             entity.UOMPrice =Convert.ToDouble(txtUOMPrice.Text);
-            entity.PackQty = Convert.ToInt32(txtPackQty.Text);
+            entity.PackQty = Convert.ToInt32(txtQty.Text);
             entity.PackPrice = Convert.ToDouble(txtPackPrice.Text);
             entity.PurchaseDate = Convert.ToDateTime(dtpPurchaseDate.Text);
+            entity.SupplierCD = cboSupplier.SelectedValue.ToString();
+            entity.PackTypeCode = cboPackType.SelectedValue.ToString();
             return entity;
         }
         private void CleardData()
         {
             cboSubCategory.SelectedValue = "-1";
-            cboCashType.SelectedValue = "-1";
-            cboTradeType.SelectedValue = "-1";
             cboItemName.SelectedValue = "-1";
-            txtUOMQty.Text = "";
+            cboPackType.SelectedValue = "-1";
+            txtQtyPerPack.Text = "";
             txtUOMPrice.Text = "";
-            txtPackQty.Text = "";
+            txtQty.Text = "";
             txtPackPrice.Text = "";
-            dtpPurchaseDate.Value = DateTime.Now;
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int rowId = dgvPurchaseItem.Rows.Add();
+            DataGridViewRow row = dgvPurchaseItem.Rows[rowId];
+            dgvPurchaseItem.Rows[rowId].Cells["ItemCD"].Value = cboItemName.SelectedValue;
+            dgvPurchaseItem.Rows[rowId].Cells["PackTypeCode"].Value = cboPackType.SelectedValue;
+            dgvPurchaseItem.Rows[rowId].Cells["ItemName"].Value = cboItemName.Text;
+            dgvPurchaseItem.Rows[rowId].Cells["PackTypeName"].Value = cboPackType.Text;
+            dgvPurchaseItem.Rows[rowId].Cells["QtyPerPack"].Value = txtQtyPerPack.Text;
+            dgvPurchaseItem.Rows[rowId].Cells["PackPrice"].Value = txtPackPrice.Text;
+            dgvPurchaseItem.Rows[rowId].Cells["UOMPrice"].Value = txtUOMPrice.Text;
+            dgvPurchaseItem.Rows[rowId].Cells["Qty"].Value = txtQty.Text;
+            CleardData();
+        }
+
+        private void cboPackType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboPackType.SelectedIndex.ToString() != "0")
+            {
+                PackagingTypeBL ptbl = new PackagingTypeBL();
+                DataTable dtQtyPerPack= ptbl.BindQtyPerPack(cboPackType.SelectedValue.ToString());
+                txtQtyPerPack.Text = dtQtyPerPack.Rows[0]["UOMQty"].ToString();
+            }
+        }
+
+        private void txtPackPrice_Enter(object sender, EventArgs e)
+        {
+            string val = txtPackPrice.Text;
+            if (!string.IsNullOrEmpty(txtPackPrice.Text))
+            {
+                txtUOMPrice.Text = Math.Ceiling(Convert.ToDouble(Convert.ToInt32(txtPackPrice.Text) / Convert.ToInt32(txtQtyPerPack.Text))).ToString();
+            }
         }
     }
 }

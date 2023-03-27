@@ -64,5 +64,13 @@ namespace BL
             entity.Sqlprms[1] = new SqlParameter("@TableName", SqlDbType.NVarChar) { Value = "Supplier" };
             return dl.SelectDatatable("pr_existcheck", GetConnectionString(), entity.Sqlprms);
         }
+
+        public DataTable Supplier_SelectAll()
+        {
+            DBAccessBL dbl = new DBAccessBL();
+            var parameters = new SqlParameter[] { };
+            DataTable dt = dbl.SelectDatatable("pr_supplier_selectall", GetConnectionString(), parameters);
+            return dt;
+        }
     }
 }
