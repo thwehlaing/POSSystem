@@ -144,6 +144,7 @@
             this.dgvStockItem.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvStockItem.Location = new System.Drawing.Point(21, 66);
             this.dgvStockItem.Name = "dgvStockItem";
+            this.dgvStockItem.ReadOnly = true;
             this.dgvStockItem.RowHeadersVisible = false;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Myanmar Text", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dgvStockItem.RowsDefaultCellStyle = dataGridViewCellStyle3;
@@ -156,54 +157,63 @@
             // 
             this.ItemCD.HeaderText = "ကုဒ်နံပါတ်";
             this.ItemCD.Name = "ItemCD";
+            this.ItemCD.ReadOnly = true;
             this.ItemCD.Visible = false;
             // 
             // SubName
             // 
             this.SubName.HeaderText = "အမျိုးအစားခွဲ";
             this.SubName.Name = "SubName";
+            this.SubName.ReadOnly = true;
             this.SubName.Width = 200;
             // 
             // ItemName
             // 
             this.ItemName.HeaderText = "အမည်";
             this.ItemName.Name = "ItemName";
+            this.ItemName.ReadOnly = true;
             this.ItemName.Width = 300;
             // 
             // Qty
             // 
             this.Qty.HeaderText = "ပမာဏ";
             this.Qty.Name = "Qty";
+            this.Qty.ReadOnly = true;
             this.Qty.Width = 150;
             // 
             // UOMName
             // 
             this.UOMName.HeaderText = "ယူနစ်";
             this.UOMName.Name = "UOMName";
+            this.UOMName.ReadOnly = true;
             this.UOMName.Width = 70;
             // 
             // LastSalePrice
             // 
             this.LastSalePrice.HeaderText = "စျေးနှုန်း";
             this.LastSalePrice.Name = "LastSalePrice";
+            this.LastSalePrice.ReadOnly = true;
             this.LastSalePrice.Width = 150;
             // 
             // ReorderQty
             // 
             this.ReorderQty.HeaderText = "အနဲဆုံးလက်ကျန်";
             this.ReorderQty.Name = "ReorderQty";
+            this.ReorderQty.ReadOnly = true;
             this.ReorderQty.Width = 150;
             // 
             // BarCode
             // 
             this.BarCode.HeaderText = "ဘားကုဒ်";
             this.BarCode.Name = "BarCode";
+            this.BarCode.ReadOnly = true;
             this.BarCode.Width = 150;
             // 
             // Action
             // 
             this.Action.HeaderText = "ဖျက်ရန်";
             this.Action.Name = "Action";
+            this.Action.ReadOnly = true;
             this.Action.Text = "ဖျက်ရန်";
             this.Action.UseColumnTextForButtonValue = true;
             // 

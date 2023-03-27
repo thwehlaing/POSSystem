@@ -70,6 +70,7 @@
             this.Action});
             this.dgvPackagingType.Location = new System.Drawing.Point(21, 24);
             this.dgvPackagingType.Name = "dgvPackagingType";
+            this.dgvPackagingType.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Myanmar Text", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -90,6 +91,7 @@
             // 
             this.PackTypeCode.HeaderText = "ကုဒ်နံပါတ်";
             this.PackTypeCode.Name = "PackTypeCode";
+            this.PackTypeCode.ReadOnly = true;
             this.PackTypeCode.Visible = false;
             this.PackTypeCode.Width = 150;
             // 
@@ -97,18 +99,21 @@
             // 
             this.PackTypeName.HeaderText = "အမည်";
             this.PackTypeName.Name = "PackTypeName";
+            this.PackTypeName.ReadOnly = true;
             this.PackTypeName.Width = 580;
             // 
             // UOMQty
             // 
             this.UOMQty.HeaderText = "ပမာဏ";
             this.UOMQty.Name = "UOMQty";
+            this.UOMQty.ReadOnly = true;
             this.UOMQty.Width = 125;
             // 
             // Action
             // 
             this.Action.HeaderText = "ဖျက်ရန်";
             this.Action.Name = "Action";
+            this.Action.ReadOnly = true;
             this.Action.Text = "ဖျက်ရန်";
             this.Action.UseColumnTextForButtonValue = true;
             this.Action.Width = 125;
