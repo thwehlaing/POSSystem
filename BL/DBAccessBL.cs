@@ -40,15 +40,18 @@ namespace BL
         {
             foreach (var p in para)
             {
-                if (p.Value == null || string.IsNullOrWhiteSpace(p.Value.ToString()))
+                if (p.SqlDbType != SqlDbType.Structured)
                 {
-                    p.Value = DBNull.Value;
-                    p.SqlValue = DBNull.Value;
-                }
-                else
-                {
-                    p.Value = p.Value.ToString().Trim();
-                    p.SqlValue = p.Value.ToString().Trim();
+                    if (p.Value == null || string.IsNullOrWhiteSpace(p.Value.ToString()))
+                    {
+                        p.Value = DBNull.Value;
+                        p.SqlValue = DBNull.Value;
+                    }
+                    else
+                    {
+                        p.Value = p.Value.ToString().Trim();
+                        p.SqlValue = p.Value.ToString().Trim();
+                    }
                 }
             }
 

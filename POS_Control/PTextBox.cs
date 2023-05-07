@@ -153,7 +153,7 @@ namespace POS_Control
             if (e.KeyCode == Keys.Enter)
             {
                 if (!ErrorCheck())
-                {
+                {                    
                     e.Handled = true;
                     e.SuppressKeyPress = true;
                     base.OnKeyDown(e);
@@ -201,5 +201,6 @@ namespace POS_Control
             E103_Type = type;
             E103_Mode = mode;
         }
+
     }
 }
